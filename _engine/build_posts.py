@@ -390,13 +390,14 @@ def build_one(article, out_dir):
     lines = []
     lines += to_blocks(article["intro"])
     lines += [SPACER] + body_lines
-    lines += [SPACER, EDITOR_HEADING, SPACER] + to_blocks(article["editor_comment"])
-    # 여운형 질문 — 정리(경제 노트) 다음, 면책 앞. 글의 진짜 마지막 말이라
-    # 독자가 자기 상황을 떠올리며 자연스럽게 반응하게 된다. ('댓글' 요청 아님)
+    # '[에디터 Comment]' 라벨은 위 '자동차 노트' 헤딩과 중복이라 떼어낸다.
+    editor_txt = re.sub(r"^\s*\[\s*에디터\s*(?:Comment|코멘트)\s*\]\s*", "",
+                        str(article.get("editor_comment", "")))
+    lines += [SPACER, EDITOR_HEADING, SPACER] + to_blocks(editor_txt)
+    # 여운형 질문 — 정리 다음, 글의 진짜 마지막 말. 독자가 자기 상황을 떠올리며 반응하게 된다.
     if article.get("closing_question"):
         lines += [SPACER] + to_blocks(article["closing_question"])
-    if article.get("disclaimer"):
-        lines += [SPACER] + to_blocks(article["disclaimer"])
+    # 면책/안내문구는 사용자 요청으로 표시하지 않는다 (disclaimer 필드가 있어도 무시).
     lines += [SPACER] + [strip_markdown(h) for h in article.get("hashtags", [])]
 
     problems = validate(lines)
