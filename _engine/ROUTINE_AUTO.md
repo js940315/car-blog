@@ -1,0 +1,124 @@
+# 자동화 루틴 지시서 (매일 새벽 클라우드 에이전트용)
+
+이 문서는 매일 자동으로 자동차 포스팅을 생성하는 **클라우드 루틴(claude.ai 스케줄)**에 넣을
+지시 내용이다. 아직 **스케줄에 연결하지 않은 준비 상태**다 (Publish + Claude App 접근권한 후 연결).
+발행 자체는 네이버 정책상 수동 복붙 — 루틴은 output/ 커밋까지만 한다.
+
+---
+
+## 매일 절차 (요약)
+1. RSS 4개에서 최신 기사 수집
+2. 중복 회피(state/seen_articles_auto.json) 후 오늘 발행할 N건 선별 (권장 3~5건, 카테고리 분산)
+3. 각 기사를 PROMPT_AUTO_V1.md 규칙으로 생성
+4. 생성 결과를 build_posts 입력용 articles.json으로 **조립**(아래 조립 규칙)
+5. `python _engine/build_posts.py _engine/articles.json {MMDD}` 실행
+6. build_report.json에 problems가 비어있는지 확인 → 있으면 재작성
+7. seen_articles_auto.json 갱신 후 output/ 커밋·푸시
+
+## RSS 소스 (유효성 실측 2026-08-02)
+- 모터그래프  https://www.motorgraph.com/rss/allArticle.xml
+- 오토헤럴드  https://www.autoherald.co.kr/rss/allArticle.xml
+- 오토데일리  https://www.autodaily.co.kr/rss/allArticle.xml
+- 지피코리아  https://www.gpkorea.com/rss/allArticle.xml   (전기차·미래차 강세)
+※ RemoteTrigger 부분 업데이트가 sources를 지운 적 있음 → update 시 4개 전체를 항상 유지.
+
+## 선별·중복 회피
+- 최근 3일 내 다룬 이슈와 제목·핵심소재가 겹치면 스킵하거나 완전히 다른 관점으로만 진행.
+- 하루 카테고리 쏠림 금지(카테고리당 최대 3건). 8개 카테고리에서 고루 뽑는다.
+- 셀럽·연예인차는 확인된 사실만(PROMPT 섹션 2 가드레일). 미확인 목격담은 스킵.
+
+## 생성 규칙
+- 전적으로 `PROMPT_AUTO_V1.md`를 따른다 (제목 훅 6공식·4챕터·가독성·톤·해시태그·면책).
+- 원문 문장을 그대로 옮기지 않는다(유사문서 회피). 수치·사실은 소스 1:1 대조.
+
+---
+
+## ★ articles.json 조립 규칙 (PROMPT 출력 → build 입력 변환)
+build_posts.py는 아래 필드를 읽는다. PROMPT_AUTO 출력을 이 형태로 옮기고, 특히 **images[] 카드 스펙**을 채운다.
+
+```json
+{
+  "title": "...", "intro": "...",
+  "body_paragraphs": ["소제목/문장/【N번 사진】 마커 배열"],
+  "editor_comment": "[에디터 Comment] ...",
+  "closing_question": "여운형 질문(선택)",
+  "disclaimer": "구매판단 영향 카테고리면 표준 면책, 아니면 \"\"",
+  "hashtags": ["8개"],
+  "images": [ ...카드 스펙... ]
+}
+```
+
+### 이미지 구성 = 6장 한 세트 고정 (썸네일 1 + 사진 5)
+경제판 카드뉴스(막대·숫자·정리)를 쓰지 않는다. **실제 차 사진이 주력.**
+- **1번 = 썸네일**: `thumbnail`(그 차 사진 배경 + 후킹 문구). photo_category=모델명.
+  - 예외: 상장 종목 주가·실적이 핵심 주제일 때만 `stock_thumbnail`.
+- **2~6번 = photo_card 5장**: 실물 차 사진. **그 중 실내(인테리어) 최소 1장 필수.**
+  · 권장: 외관 → 외관 → 실내 → 외관 → 실내/디테일  (실외 3 + 실내 2)
+  · summary_card를 쓰려면 6번 1장만 대체(선택). 기본은 6장 다 사진.
+  · **캡션에 각도 특정 금지**: photo_card는 버킷에서 순환 선택돼 앞/뒤/측이 매번 다르다.
+    eyebrow·headline에 "앞모습/뒤태" 같은 각도 단정 대신 "존재감·디자인·실루엣·실물" 등 각도 무관 표현을 쓴다.
+  · depth 있는 모델(팰리세이드·쏘렌토·싼타페·GV80·EV6·테슬라Y 등)은 6~7장까지 늘려도 반복이 안 난다.
+- **데이터카드(bar/number/rank/stock)는 원칙적으로 안 씀.** 뚜렷한 비교수치가 꼭 필요할 때만 5장 중 1장.
+- 검증: 5장이면 validate가 2번 슬롯을 photo_card로 요구하므로, 1=thumbnail·2=photo_card 순서 유지.
+
+### 실내(인테리어) 버킷
+- 실내고급(제네시스 프리미엄 실내), 실내운전석(아이오닉5·EV9 콕핏).
+- 외관 모델과 **급이 맞게** 쓴다(대형 프리미엄 기사 → 제네시스 실내, 전기 SUV 기사 → 아이오닉·EV 실내).
+  실내는 정확히 같은 모델이 아니어도 '같은 급의 현대적 실내'면 허용(외관 hero는 반드시 그 모델).
+- **브랜드 로고 불일치 금지**: 타 브랜드 로고가 드러나는 실내를 쓰지 않는다. 기사 차 브랜드에 맞춰 고른다:
+  · 제네시스 → 실내고급   · 현대·기아(전기차 등) → 실내운전석   · 벤츠 → 실내벤츠
+  · BMW → 실내BMW   · 테슬라 → 실내테슬라   · 그 외 수입/프리미엄 → 실내수입
+  ※ 실내는 stock(Pexels/Unsplash) 컷이 깨끗하다. wiki 실내는 올드카가 많아 유의.
+
+### 모델 버킷 우선 규칙 (사진-차종 일치)
+- 기사가 특정 모델을 다루면 photo_category에 **모델명 버킷**을 우선 지정한다(테마 카테고리보다 우선).
+  보유 모델: 팰리세이드·싼타페·쏘렌토·스포티지·셀토스·카니발·그랜저·코나·아이오닉5·아이오닉6·
+  EV6·EV9·GV80·G80·테슬라모델Y·테슬라모델3·벤츠E클래스·BMW5시리즈.
+- 모델 버킷이 없는 차면 테마 카테고리(신차출시/전기차친환경/…/셀럽차)로 폴백.
+- **제목·본문의 차종(SUV/세단/미니밴)과 사진이 어긋나지 않게** 맞춘다. (셀럽차는 SUV=에스컬레이드류, 세단=렉서스류 보유)
+
+### 카드별 필수 필드
+- `thumbnail`: line1, line2, photo_category, (선택 accent_words)
+- `stock_thumbnail`: line1, line2, price, delta, down(true=파랑/false=빨강), logo, (선택 accent_words)
+- `photo_card`: eyebrow, headline_lines[], photo_category, (선택 number/number_unit/delta/direction/logo/credit)
+- `number_card`: eyebrow, number, number_unit, headline_lines[], (선택 delta, direction[up=빨강/down=파랑], note, logo)
+- `bar_card`: eyebrow, title_lines[], categories[], values[], (선택 highlight 인덱스, note)
+- `rank_card`: eyebrow, title_lines[], items[[label,value],...], (선택 note)
+- `summary_card`: eyebrow, title_lines[], points[], (선택 note)
+- 색 규칙(한국식): 상승/긍정 = 빨강(up), 하락/부정 = 파랑(down).
+- 데이터카드의 숫자는 반드시 본문에 인용된 소스 근거 수치만 쓴다(창작 금지).
+
+### 카테고리 → photo_category 매핑
+| PROMPT 카테고리 | photo_category |
+|---|---|
+| 신차·출시 | 신차출시 |
+| 전기차·친환경 | 전기차친환경 |
+| 자동차산업·수출 | 산업수출 |
+| 리콜·안전·정책 | 리콜안전정책 |
+| 모터스포츠·이슈 | 모터스포츠 |
+| 중고차·시장동향 | 중고차시장 |
+| 브랜드·기업이슈 | 브랜드기업 |
+| 셀럽·연예인차 | 셀럽차 |
+※ photo_category만 지정하면 빌더가 해당 폴더에서 순환 선택(중복 회피)한다. 파일명 직접지정 불필요.
+
+### 로고 사용 규칙 (assets/tickers/index.json)
+- 기사가 특정 종목을 정면으로 다룰 때만 그 종목 로고 파일명을 카드 `logo`에 넣는다.
+  예: 현대차→hyundai_0.png, 기아→kia_1.png, 테슬라→tesla_0.png, BYD→byd_0.png …
+- index.json에 후보가 있는 21종만 사용. **제네시스는 로고 미보유 → logo 생략**(수동 추가 전까지).
+- 그 기업이 블로그를 후원·보증하는 것처럼 보이게 배치하지 않는다.
+
+---
+
+## 빌드·검증·커밋
+```
+python _engine/build_posts.py _engine/articles.json {MMDD}
+```
+- 결과: output/{MMDD}/{순번}/ 에 0번 본문.txt + N번 사진.jpg
+- build_report.json 의 각 항목 problems 가 [] 인지 확인. 비어있지 않으면 그 기사만 재작성.
+- 로컬 저사양/불안정 RAM 대비: 환경변수 RENDER_CONCURRENCY 로 동시 렌더 수 조절(기본 3, 불안정하면 1).
+- assets/photos 는 .gitignore 대상이므로, output 커밋과 별개로 신규 검수 사진 추가 시 `git add -f`.
+
+## 스케줄 연결 메모 (준비 상태 — 아직 켜지 말 것)
+- 경제 루틴과 동일 방식(claude.ai 스케줄, 매일 06:00 KST 권장).
+- 연결 전 필수: repo Publish + 해당 repo에 Claude App 접근권한(없으면 push 403).
+- 첫 1~2주는 수동 검수하며 안정화 후 정착. 발행(네이버 복붙)은 항상 수동.

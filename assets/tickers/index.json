@@ -1,0 +1,344 @@
+{
+  "현대차": {
+    "그룹": "국내완성차",
+    "검색어": "Hyundai Motor Company logo",
+    "후보": [
+      {
+        "file": "hyundai_0.png",
+        "title": "File:Hyundai Motor Company logo.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "기아": {
+    "그룹": "국내완성차",
+    "검색어": "Kia logo 2021",
+    "후보": [
+      {
+        "file": "kia_1.png",
+        "title": "File:KIA logo2.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "제네시스": {
+    "그룹": "국내완성차",
+    "검색어": "Genesis Motors logo",
+    "후보": [],
+    "검수": "수동 추가 필요 — Commons에 자유이용 로고 없음(상표). 공식 프레스 로고를 이 폴더에 넣고 git add -f"
+  },
+  "KG모빌리티": {
+    "그룹": "국내완성차",
+    "검색어": "KG Mobility logo",
+    "후보": [
+      {
+        "file": "kgm_0.png",
+        "title": "File:KG Mobility brand logo.svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "kgm_1.png",
+        "title": "File:KG Mobility logo.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "현대모비스": {
+    "그룹": "국내부품타이어",
+    "검색어": "Hyundai Mobis logo",
+    "후보": [
+      {
+        "file": "mobis_0.png",
+        "title": "File:Hyundai Mobis Logo.svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "mobis_1.png",
+        "title": "File:Hyundai Mobis logo.jpg",
+        "license": "Public domain",
+        "score": 8
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "HL만도": {
+    "그룹": "국내부품타이어",
+    "검색어": "Mando Corporation logo",
+    "후보": [
+      {
+        "file": "mando_0.png",
+        "title": "File:Mando Logo.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "한온시스템": {
+    "그룹": "국내부품타이어",
+    "검색어": "Hanon Systems logo",
+    "후보": [
+      {
+        "file": "hanon_0.png",
+        "title": "File:Logo hanon.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "한국타이어": {
+    "그룹": "국내부품타이어",
+    "검색어": "Hankook Tire logo",
+    "후보": [
+      {
+        "file": "hankook_0.png",
+        "title": "File:Hankook Tire logo.svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "hankook_1.png",
+        "title": "File:Logo Hankook Tire 2025.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "금호타이어": {
+    "그룹": "국내부품타이어",
+    "검색어": "Kumho Tire logo",
+    "후보": [
+      {
+        "file": "kumho_0.png",
+        "title": "File:Kumho Tire logo (2023).svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "kumho_1.png",
+        "title": "File:KUMHO TIRE logo.png",
+        "license": "CC BY-SA 4.0",
+        "score": 8
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "넥센타이어": {
+    "그룹": "국내부품타이어",
+    "검색어": "Nexen Tire logo",
+    "후보": [
+      {
+        "file": "nexen_0.png",
+        "title": "File:NEXEN TIRE LOGO.jpg",
+        "license": "Public domain",
+        "score": 8
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "테슬라": {
+    "그룹": "해외완성차",
+    "검색어": "Tesla Motors logo",
+    "후보": [
+      {
+        "file": "tesla_0.png",
+        "title": "File:Tesla Motors Logo.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "토요타": {
+    "그룹": "해외완성차",
+    "검색어": "Toyota Motor Corporation logo",
+    "후보": [
+      {
+        "file": "toyota_2.png",
+        "title": "File:Toyota Logo.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "폭스바겐": {
+    "그룹": "해외완성차",
+    "검색어": "Volkswagen logo",
+    "후보": [
+      {
+        "file": "volkswagen_1.png",
+        "title": "File:VW logo 1937 to 1939.svg",
+        "license": "Public domain",
+        "score": 6
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "BYD": {
+    "그룹": "해외완성차",
+    "검색어": "BYD Auto logo",
+    "후보": [
+      {
+        "file": "byd_0.png",
+        "title": "File:BYD Auto 2022 logo.svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "byd_1.png",
+        "title": "File:BYD Auto Logo.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "포드": {
+    "그룹": "해외완성차",
+    "검색어": "Ford Motor Company logo",
+    "후보": [
+      {
+        "file": "ford_0.png",
+        "title": "File:Ford Motor Company Logo.svg",
+        "license": "Public domain",
+        "score": 10
+      },
+      {
+        "file": "ford_1.png",
+        "title": "File:Ford-Logo-Vector.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "GM": {
+    "그룹": "해외완성차",
+    "검색어": "General Motors company logo",
+    "후보": [
+      {
+        "file": "gm_0.png",
+        "title": "File:General Motors logo.svg",
+        "license": "Public domain",
+        "score": 7
+      },
+      {
+        "file": "gm_1.png",
+        "title": "File:Logo of General Motors.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "메르세데스벤츠": {
+    "그룹": "해외완성차",
+    "검색어": "Mercedes-Benz logo",
+    "후보": [
+      {
+        "file": "mercedes_1.png",
+        "title": "File:Mercedes-Benz Logo 2010.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "BMW": {
+    "그룹": "해외완성차",
+    "검색어": "BMW logo",
+    "후보": [
+      {
+        "file": "bmw_0.png",
+        "title": "File:BMW.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "스텔란티스": {
+    "그룹": "해외완성차",
+    "검색어": "Stellantis logo",
+    "후보": [
+      {
+        "file": "stellantis_0.png",
+        "title": "File:Stellantis logo.png",
+        "license": "Public domain",
+        "score": 8
+      },
+      {
+        "file": "stellantis_1.png",
+        "title": "File:Stellantis-blue.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "리비안": {
+    "그룹": "해외완성차",
+    "검색어": "Rivian company logo",
+    "후보": [
+      {
+        "file": "rivian_0.png",
+        "title": "File:Rivian company logo.jpg",
+        "license": "Public domain",
+        "score": 8
+      },
+      {
+        "file": "rivian_1.png",
+        "title": "File:Rivian logo and wordmark.svg",
+        "license": "Public domain",
+        "score": 7
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "루시드": {
+    "그룹": "해외완성차",
+    "검색어": "Lucid Motors logo",
+    "후보": [
+      {
+        "file": "lucid_0.png",
+        "title": "File:Lucid Motors logo.svg",
+        "license": "Public domain",
+        "score": 10
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "볼보": {
+    "그룹": "해외완성차",
+    "검색어": "Volvo Cars logo",
+    "후보": [
+      {
+        "file": "volvo_0.png",
+        "title": "File:Volvo logo.svg",
+        "license": "Public domain",
+        "score": 7
+      },
+      {
+        "file": "volvo_1.png",
+        "title": "File:Volvo-Iron-Mark-Black.svg",
+        "license": "Public domain",
+        "score": 4
+      }
+    ],
+    "검수": "OK — 육안 검수 완료"
+  },
+  "_주의": "로고는 상표다. 해당 종목을 실제로 다루는 기사에만 쓰고, 그 기업이 블로그를 후원·보증하는 것처럼 보이게 쓰지 않는다.",
+  "_추가방법": "python build_ticker_library.py --only 종목명",
+  "_검수완료": "2026-08-02 육안 검수 1차 완료. 각 종목 후보는 실제 파일과 동기화됨."
+}

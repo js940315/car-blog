@@ -1,0 +1,238 @@
+# -*- coding: utf-8 -*-
+"""카테고리별 사진 라이브러리를 미리 채워두는 도구.
+
+매일 아침 기사마다 사진을 새로 검색하면 (1) 느리고 (2) 429에 걸리고
+(3) 무관한 사진이 걸려도 아무도 못 잡는다. 그래서 미리 카테고리별로 쌓아두고
+매일은 '고르기만' 하는 구조로 간다.
+
+    python build_photo_library.py            # 전체 카테고리
+    python build_photo_library.py 수출무역    # 특정 카테고리만
+
+받은 뒤 Read 도구로 눈으로 확인하고, 주제에 안 맞는 파일은 지운다.
+지우면 index.json 도 같이 정리해야 하므로 --prune 으로 정리한다.
+
+소스는 Wikimedia Commons 직접 경로만 쓴다:
+  - Openverse는 rawpixel 등이 축소본(1024px)만 줘서 카드(1080px)에 못 쓴다
+  - korea.kr(정책브리핑)은 720px 상한 + 항목별 공공누리 부착 여부 확인 필요라 제외
+"""
+
+import argparse
+import json
+import os
+import sys
+from concurrent.futures import ThreadPoolExecutor
+
+from image_sourcing import (prepare_photo, wikimedia_photo_candidates,
+                            photo_candidates, stock_photo_candidates)
+
+DIR = os.path.join("assets", "photos")
+INDEX = os.path.join(DIR, "index.json")
+
+# 카테고리 -> 검색어. 한국 소재를 우선하되, 한국 사진이 부족한 주제는
+# 일반 소재로 보완한다 (Commons는 한국 사진 재고가 서구권보다 적다).
+CATEGORIES = {
+    "신차출시": ["Hyundai Ioniq 5 car", "Kia EV6 car"],
+    "전기차친환경": ["electric car charging station", "electric vehicle battery pack"],
+    "산업수출": ["automobile factory production line", "car carrier ship vehicles"],
+    "리콜안전정책": ["car dashboard warning light", "highway traffic many cars"],
+    "모터스포츠": ["motorsport race car circuit", "formula racing car on track"],
+    "중고차시장": ["used car dealership lot rows", "car sales showroom interior"],
+    "브랜드기업": ["Hyundai Motor headquarters building", "automobile company office tower"],
+    "셀럽차": ["luxury SUV black premium", "premium luxury sedan car"],
+
+    # --- 인기 모델 버킷 ---------------------------------------------------
+    # 자동차 블로그는 '그 차 사진'이 생명. 기사가 특정 모델을 다루면 photo_category에
+    # 아래 모델명을 지정해 실제 그 차 사진을 쓴다(테마 카테고리보다 우선). 모델 쿼리는
+    # Commons 적중률이 높다(단일 차량 피사체). 없으면 테마 카테고리로 폴백.
+    "팰리세이드": ["Hyundai Palisade car"],
+    "싼타페": ["Hyundai Santa Fe car"],
+    "쏘렌토": ["Kia Sorento car"],
+    "스포티지": ["Kia Sportage car"],
+    "셀토스": ["Kia Seltos car"],
+    "카니발": ["Kia Carnival Sedona car"],
+    "그랜저": ["Hyundai Grandeur Azera car"],
+    "코나": ["Hyundai Kona car"],
+    "아이오닉5": ["Hyundai Ioniq 5 grey", "Hyundai Ioniq 5 parked street"],
+    "아이오닉6": ["Hyundai Ioniq 6 car"],
+    "EV6": ["Kia EV6 car"],
+    "EV9": ["Kia EV9 car"],
+    "GV80": ["Genesis GV80 car"],
+    "G80": ["Genesis G80 sedan car"],
+    "테슬라모델Y": ["Tesla Model Y car"],
+    "테슬라모델3": ["Tesla Model 3 car"],
+    "벤츠E클래스": ["Mercedes-Benz E-Class car"],
+    "BMW5시리즈": ["BMW 5 Series car"],
+
+    # --- 실내(인테리어) 버킷 ------------------------------------------------
+    # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.
+    "실내고급": ["Genesis GV80 interior", "Genesis G90 interior dashboard"],
+    "실내운전석": ["Hyundai Ioniq 5 interior", "Kia EV9 interior dashboard"],
+    "실내벤츠": ["Mercedes-Benz interior dashboard", "Mercedes-Benz cockpit steering interior"],
+    "실내BMW": ["BMW interior dashboard cockpit", "BMW curved display interior"],
+    "실내테슬라": ["Tesla Model 3 interior minimalist", "Tesla interior center screen"],
+    "실내수입": ["luxury car interior leather dashboard", "premium car cockpit interior"],
+}
+
+
+def load_index():
+    if os.path.exists(INDEX):
+        with open(INDEX, encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+
+def save_index(idx):
+    with open(INDEX, "w", encoding="utf-8") as f:
+        json.dump(idx, f, ensure_ascii=False, indent=2)
+
+
+def prune(idx):
+    """파일이 지워진 항목을 index에서 정리한다."""
+    gone = [k for k in idx if not k.startswith("_") and
+            not os.path.exists(os.path.join(DIR, k))]
+    for k in gone:
+        idx.pop(k)
+    return gone
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("category", nargs="?", help="특정 카테고리만 (생략 시 전체)")
+    ap.add_argument("--per", type=int, default=2, help="검색어당 채택 수")
+    ap.add_argument("--min-width", type=int, default=1600)
+    ap.add_argument("--sources", default="wiki,openverse,stock",
+                    help="쉼표구분: wiki,openverse,stock — 다양한 소스에서 모은다. "
+                         "stock(Pexels/Unsplash/Pixabay)은 환경변수 API키가 있어야 동작.")
+    ap.add_argument("--workers", type=int, default=8,
+                    help="동시 다운로드/가공 스레드 수 (병목 제거용, 기본 8)")
+    ap.add_argument("--prune", action="store_true", help="index 정리만 하고 종료")
+    ap.add_argument("--register", action="store_true",
+                    help="수동으로 넣은 사진을 index에 등록(카테고리=파일명 '_' 앞부분). "
+                         "속보용 프레스 사진을 직접 넣을 때 사용.")
+    args = ap.parse_args()
+
+    os.makedirs(DIR, exist_ok=True)
+    idx = load_index()
+
+    if args.prune:
+        gone = prune(idx)
+        save_index(idx)
+        print(f"index에서 {len(gone)}건 정리: {gone}")
+        return 0
+
+    if args.register:
+        # 사용자가 assets/photos/ 에 직접 넣은(속보용 프레스 등) 사진을 index에 등록한다.
+        # 카테고리는 파일명의 첫 '_' 앞부분에서 뽑는다. 예: GV90_press_0.jpg -> 카테고리 "GV90".
+        # 정사각 1400px로 맞춰 다른 사진과 규격을 통일한다.
+        added = 0
+        for fn in sorted(os.listdir(DIR)):
+            if fn == "index.json" or not fn.lower().endswith((".jpg", ".png")):
+                continue
+            if fn in idx:
+                continue
+            cat = fn.split("_")[0]
+            path = os.path.join(DIR, fn)
+            try:
+                prepare_photo(path, path, size=1400)
+            except Exception as e:
+                print(f"   가공 실패 {fn}: {str(e)[:40]}")
+            idx[fn] = {
+                "카테고리": cat,
+                "license": "수동추가(사용자 책임)",
+                "credit": "",
+                "attribution_required": False,
+                "처리": "수동 등록 + 정사각 1400px",
+                "검색어": "manual",
+                "검수": "수동추가 — 사용자 확인함",
+            }
+            print(f"   등록  {fn:<26} -> 카테고리 '{cat}'")
+            added += 1
+        save_index(idx)
+        print(f"\n{added}장 등록 완료. (git add -f 로 커밋하세요)")
+        return 0
+
+    targets = ({args.category: CATEGORIES[args.category]}
+               if args.category else CATEGORIES)
+    if args.category and args.category not in CATEGORIES:
+        print("없는 카테고리입니다. 가능한 값:", ", ".join(CATEGORIES))
+        return 1
+
+    src_names = [s.strip() for s in args.sources.split(",") if s.strip()]
+    total_ok = total_skip = 0
+
+    # 병목 제거: (카테고리 × 검색어 × 소스)를 전부 독립 작업으로 만들어
+    # 네트워크 다운로드를 스레드풀로 동시에 돌린다. 예전엔 버킷마다 프로세스를
+    # 새로 띄우고, 소스도 순차, 다운로드마다 1초씩 쉬느라 느렸다.
+    jobs = [(cat, qi, q, sname)
+            for cat, queries in targets.items()
+            for qi, q in enumerate(queries)
+            for sname in src_names]
+
+    def source_one(job):
+        cat, qi, q, sname = job
+        sprefix = f"{cat}_{qi}{sname[0]}"
+        try:
+            if sname == "wiki":
+                rep = wikimedia_photo_candidates(
+                    q, DIR, limit=args.per, min_width=args.min_width, prefix=sprefix)
+            elif sname == "openverse":
+                rep = photo_candidates(
+                    q, DIR, limit=args.per, min_width=args.min_width, prefix=sprefix)
+            elif sname == "stock":
+                rep = stock_photo_candidates(
+                    q, DIR, keep=args.per, min_side=args.min_width, prefix=sprefix)
+            else:
+                print(f"   [{sname}] 알 수 없는 소스 — 건너뜀")
+                rep = []
+        except Exception as e:
+            print(f"   [{sname}/{cat}] 소싱 실패: {str(e)[:60]}")
+            rep = []
+        return cat, q, rep
+
+    # 1단계: 다운로드(네트워크) 병렬
+    downloaded = []   # (cat, q, r)
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        for cat, q, rep in ex.map(source_one, jobs):
+            for r in rep:
+                if "path" in r:
+                    downloaded.append((cat, q, r))
+                elif "skipped" in r:
+                    total_skip += 1
+
+    # 2단계: 카드 규격(정사각 1400px) 가공도 병렬 (CPU/IO)
+    def prep_one(item):
+        _, _, r = item
+        try:
+            prepare_photo(r["path"], r["path"], size=1400)
+        except Exception as e:
+            print(f"   가공 실패 {os.path.basename(r['path'])}: {str(e)[:40]}")
+        return item
+
+    with ThreadPoolExecutor(max_workers=args.workers) as ex:
+        prepared = list(ex.map(prep_one, downloaded))
+
+    # 3단계: 인덱스 기록(직렬 — 공유 dict 안전)
+    for cat, q, r in prepared:
+        fname = os.path.basename(r["path"])
+        idx[fname] = {
+            "카테고리": cat,
+            "license": r["license"],
+            "credit": r["credit"],
+            "attribution_required": True,
+            "원본해상도": f"{r.get('src_w') or r.get('w')}x{r.get('src_h') or r.get('h')}",
+            "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+            "검색어": q,
+            "검수": "미확인 — Read로 눈 확인 필요",
+        }
+        print(f"   OK   {fname:<26} [{r['license']}]")
+        total_ok += 1
+
+    save_index(idx)
+    print(f"\n채택 {total_ok}장 / 폐기 {total_skip}건 -> {DIR}/")
+    print("이제 Read 도구로 각 파일을 열어 주제에 맞는지 확인하세요.")
+    print("안 맞는 건 파일 삭제 후: python build_photo_library.py --prune")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
