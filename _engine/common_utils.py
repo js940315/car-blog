@@ -328,6 +328,24 @@ def _emphasize_tspans(text, accent, base_fill="#ffffff"):
     return "".join(out)
 
 
+def _fit_point_fs(text, usable_w=CARD_W - 196 - 44, base=46, min_fs=27):
+    """정리카드 한 줄이 카드 폭을 넘어 '잘리는' 걸 막는다.
+    글자 폭을 근사(한글/전각≈1.02·ASCII≈0.56·공백≈0.30 × 폰트크기)해서,
+    폭을 넘으면 폰트를 줄여 맞춘다. 별표(*)는 렌더 시 사라지므로 폭 계산에서 뺀다."""
+    raw = str(text).replace("*", "")
+    w = 0.0
+    for ch in raw:
+        if ch == " ":
+            w += base * 0.30
+        elif ord(ch) < 128:
+            w += base * 0.56
+        else:
+            w += base * 1.02
+    if w <= usable_w:
+        return base
+    return max(min_fs, base * usable_w / w)
+
+
 def build_summary_card_svg(eyebrow, title_lines, points, note="", accent=SUMMARY_ACCENT):
     """마무리 정리 카드 — 세로 중앙 정렬 + 핵심어 강조.
 
@@ -355,9 +373,11 @@ def build_summary_card_svg(eyebrow, title_lines, points, note="", accent=SUMMARY
             f'<text x="130" y="{cy + 13:.0f}" font-size="38" font-weight="800" '
             f'fill="{CARD_BG_BOT}" text-anchor="middle">{i + 1}</text>'
         )
-        # 본문: 핵심어만 강조색, 나머지는 흰색. 배지 중앙과 세로 정렬
+        # 본문: 핵심어만 강조색, 나머지는 흰색. 배지 중앙과 세로 정렬.
+        # 긴 줄은 폰트를 줄여 카드 폭에 맞춘다(글자 잘림 방지).
+        fs = _fit_point_fs(text)
         p.append(
-            f'<text x="196" y="{cy + 16:.0f}" font-size="46" font-weight="600" '
+            f'<text x="196" y="{cy + fs * 0.34:.0f}" font-size="{fs:.0f}" font-weight="600" '
             f'letter-spacing="-1">{_emphasize_tspans(text, accent)}</text>'
         )
 
