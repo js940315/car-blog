@@ -1,1 +1,40 @@
-﻿{}
+{
+  "0802": [
+    {
+      "title": "12년 걸린 100만대, 6년 만에 900만대 더 만든 전기차 회사",
+      "category": "전기차·친환경",
+      "issue": "테슬라 누적 전기차 생산 1000만대 돌파",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145294"
+    },
+    {
+      "title": "\"마음에 안 들면 돌려주세요\"..르노코리아가 내건 파격 조건",
+      "category": "브랜드·기업이슈",
+      "issue": "르노코리아 그랑 콜레오스 60일 반납 보장 프로그램 8월 연장",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546326"
+    },
+    {
+      "title": "글로벌 판매 현대차 제친 BYD, 지난달 41만대 더 팔았다",
+      "category": "자동차산업·수출",
+      "issue": "BYD 7월 글로벌 판매 현대차 추월, 체리그룹 기아 추격",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546330"
+    },
+    {
+      "title": "정의선, 튀르키예로 날아가 아이오닉3 생산라인 직접 챙겼다",
+      "category": "자동차산업·수출",
+      "issue": "정의선 회장 튀르키예 공장 방문, 아이오닉3 유럽 생산 점검",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61229"
+    },
+    {
+      "title": "아이오닉9 550만원 내렸다..현대차·제네시스 12개 차종 할인",
+      "category": "신차·출시",
+      "issue": "현대차·제네시스 8월 썸머 페스타 12개 차종 할인 확대",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145301"
+    },
+    {
+      "title": "현대차·기아, 미국서 7월에만 15만대 넘게 팔았다",
+      "category": "자동차산업·수출",
+      "issue": "현대차·기아 미국 7월 판매 역대 최고 실적, 누적 100만대 돌파",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61228"
+    }
+  ]
+}
