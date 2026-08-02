@@ -62,6 +62,7 @@ CATEGORIES = {
     "테슬라모델3": ["Tesla Model 3 car"],
     "벤츠E클래스": ["Mercedes-Benz E-Class car"],
     "BMW5시리즈": ["BMW 5 Series car"],
+    "BYD차": ["BYD Seal car", "BYD Atto 3 electric car"],
 
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.
