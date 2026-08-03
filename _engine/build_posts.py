@@ -18,7 +18,7 @@ import os
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from common_utils import (build_bar_card_svg, build_number_card_svg,
                           build_page_html, build_photo_card_svg,
@@ -416,7 +416,9 @@ def main():
     src = sys.argv[1] if len(sys.argv) > 1 else "articles.json"
     # 날짜 인자가 없으면 KST(UTC+9) 오늘 날짜로 찍는다. 클라우드는 UTC라 그냥
     # now()를 쓰면 새벽(예: 04:30 KST=전날 19:30 UTC) 실행이 '전날' 폴더로 들어간다.
-    date_tag = sys.argv[2] if len(sys.argv) > 2 else (datetime.utcnow() + timedelta(hours=9)).strftime("%m%d")
+    # (타임존 인식 방식 — utcnow()는 3.12+에서 deprecated)
+    KST = timezone(timedelta(hours=9))
+    date_tag = sys.argv[2] if len(sys.argv) > 2 else datetime.now(KST).strftime("%m%d")
 
     with open(src, encoding="utf-8") as f:
         articles = json.load(f)
@@ -424,17 +426,28 @@ def main():
         articles = [articles]
 
     report = []
+    ok = 0
     for i, article in enumerate(articles, start=1):
         out_dir = os.path.join("output", date_tag, str(i))
-        body_len, n_img, problems = build_one(article, out_dir)
-        report.append({
-            "no": i, "title": article["title"], "dir": out_dir,
-            "chars": body_len, "images": n_img, "problems": problems,
-        })
+        # 기사 하나가 터져도 나머지는 계속 만든다 — 무인 루틴에서 배치 전체가
+        # 죽고 리포트도 안 남는 사고를 막는다(빈 배열·없는 사진·키 누락 등).
+        try:
+            body_len, n_img, problems = build_one(article, out_dir)
+            report.append({
+                "no": i, "title": article.get("title", ""), "dir": out_dir,
+                "chars": body_len, "images": n_img, "problems": problems,
+            })
+            ok += 1
+        except Exception as e:
+            report.append({
+                "no": i, "title": article.get("title", "(제목 없음)"), "dir": out_dir,
+                "error": f"{type(e).__name__}: {str(e)[:200]}",
+            })
+            print(f"  [건너뜀] {i}번 실패: {type(e).__name__}: {str(e)[:120]}")
 
     with open("build_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
-    print(f"{len(articles)}건 생성 완료 -> output/{date_tag}/  (상세: build_report.json)")
+    print(f"{ok}/{len(articles)}건 생성 -> output/{date_tag}/  (상세: build_report.json)")
 
 
 if __name__ == "__main__":

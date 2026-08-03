@@ -76,15 +76,26 @@ CATEGORIES = {
 
 
 def load_index():
+    # 손상(빈/NUL) JSON을 만나도 크래시 대신 {}로 복구(불안정 환경·블루스크린 대비)
     if os.path.exists(INDEX):
-        with open(INDEX, encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(INDEX, encoding="utf-8") as f:
+                return json.load(f)
+        except (ValueError, OSError):
+            print("  [경고] index.json 손상 — 빈 인덱스로 복구")
+            return {}
     return {}
 
 
 def save_index(idx):
-    with open(INDEX, "w", encoding="utf-8") as f:
+    # 원자적 저장: 임시파일에 다 쓴 뒤 os.replace로 교체 → 쓰는 중 크래시해도 원본 안 깨짐
+    os.makedirs(os.path.dirname(INDEX) or ".", exist_ok=True)
+    tmp = INDEX + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         json.dump(idx, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, INDEX)
 
 
 def prune(idx):
@@ -131,7 +142,7 @@ def main():
                 continue
             if fn in idx:
                 continue
-            cat = fn.split("_")[0]
+            cat = os.path.splitext(fn)[0].split("_")[0]  # 확장자 먼저 떼고(GV90.jpg→GV90)
             path = os.path.join(DIR, fn)
             try:
                 prepare_photo(path, path, size=1400)

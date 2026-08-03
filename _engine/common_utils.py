@@ -277,6 +277,9 @@ def build_rank_bar_card_svg(eyebrow, title_lines, items, note="", accent=CARD_AC
     head, y = _card_head(eyebrow, title_lines, accent)
     p.append(head)
 
+    if not items:              # 빈 items 방어(빈 배열이면 제목만 있는 카드로)
+        p.append("</svg>")
+        return "".join(p)
     y += 40
     max_val = max(abs(v) for _, v, _ in items) or 1
     bar_x, bar_max_w = 88, 700
@@ -328,19 +331,22 @@ def _emphasize_tspans(text, accent, base_fill="#ffffff"):
     return "".join(out)
 
 
-def _fit_point_fs(text, usable_w=CARD_W - 196 - 44, base=46, min_fs=27):
+def _fit_point_fs(text, usable_w=CARD_W - 196 - 44, base=46, min_fs=26):
     """정리카드 한 줄이 카드 폭을 넘어 '잘리는' 걸 막는다.
     글자 폭을 근사(한글/전각≈1.02·ASCII≈0.56·공백≈0.30 × 폰트크기)해서,
-    폭을 넘으면 폰트를 줄여 맞춘다. 별표(*)는 렌더 시 사라지므로 폭 계산에서 뺀다."""
-    raw = str(text).replace("*", "")
+    폭을 넘으면 폰트를 줄여 맞춘다. *별표* 구간은 렌더 시 굵게(800) 나오므로
+    폭 계산에서 1.1배로 잡아 굵은 줄이 여전히 잘리는 걸 막는다."""
     w = 0.0
-    for ch in raw:
-        if ch == " ":
-            w += base * 0.30
-        elif ord(ch) < 128:
-            w += base * 0.56
-        else:
-            w += base * 1.02
+    for i, seg in enumerate(re.split(r"\*(.+?)\*", str(text))):
+        bold = (i % 2 == 1)          # 홀수 인덱스 = *강조* 구간(굵음)
+        scale = 1.10 if bold else 1.0
+        for ch in seg:
+            if ch == " ":
+                w += base * 0.30 * scale
+            elif ord(ch) < 128:
+                w += base * 0.56 * scale
+            else:
+                w += base * 1.02 * scale
     if w <= usable_w:
         return base
     return max(min_fs, base * usable_w / w)
@@ -424,6 +430,8 @@ def _candle_path(seed_points, x0, y0, w, h, down=True):
     실제 시세를 쓰는 게 아니라 '분위기'를 그리는 것이므로,
     down이면 우하향, 아니면 우상향으로 끝점을 몰아준다."""
     n = len(seed_points)
+    if n < 2:                  # 빈/1개 series 방어(0으로 나누기·빈 min/max 방지) → 평평한 선
+        return [(x0, y0 + h / 2), (x0 + w, y0 + h / 2)]
     lo, hi = min(seed_points), max(seed_points)
     rng = (hi - lo) or 1
     step = w / (n - 1)
@@ -561,6 +569,8 @@ def build_thumbnail_svg(photo_path, line1, line2, brand="", tagline="",
     """
     import base64
     import mimetypes
+    if not photo_path or not os.path.exists(photo_path):
+        raise ValueError(f"사진 파일 없음: {photo_path}")  # 스테일 index 방어(호출부에서 기사단위로 잡힘)
     mime = mimetypes.guess_type(photo_path)[0] or "image/jpeg"
     with open(photo_path, "rb") as f:
         uri = f"data:{mime};base64," + base64.b64encode(f.read()).decode()
@@ -646,6 +656,8 @@ def build_photo_card_svg(photo_path, eyebrow, headline_lines, credit="",
     """
     import base64
     import mimetypes
+    if not photo_path or not os.path.exists(photo_path):
+        raise ValueError(f"사진 파일 없음: {photo_path}")  # 스테일 index 방어(호출부에서 기사단위로 잡힘)
     mime = mimetypes.guess_type(photo_path)[0] or "image/jpeg"
     with open(photo_path, "rb") as f:
         uri = f"data:{mime};base64," + base64.b64encode(f.read()).decode()
@@ -712,6 +724,9 @@ def build_bar_card_svg(eyebrow, title_lines, categories, values, displays=None,
     head, y = _card_head(eyebrow, title_lines, accent)
     p.append(head)
 
+    if not values or not categories:   # 빈 배열 방어(0으로 나누기·max 빈리스트 방지)
+        p.append("</svg>")
+        return "".join(p)
     displays = displays or [f"{v:,.0f}" for v in values]
     top, bottom = y + 70, CARD_H - 190
     plot_h = bottom - top
