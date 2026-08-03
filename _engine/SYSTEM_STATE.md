@@ -33,6 +33,14 @@ economy-blog(경제비버) 엔진을 100% 재사용해 자동차 주제로 복�
   ※ 속보용 수동 프레스 사진 투입: **_engine/MANUAL_PHOTOS.md** (방법A=`--register`로 풀 추가, 방법B=`photo`필드 핀).
   ※ 교훈: '브랜드+모델' 쿼리가 적중률 최고. '모터쇼/exhibition/car interior(일반)'는 부스모델·문서·올드카를 물어옴.
   ※ 한계: 현대적 실내는 무료 라이선스가 희소(제조사 저작권) → 제네시스·현대·기아 급만 확보. 실내는 브랜드 맞춰 사용.
+  ※ **소싱 품질 3대 장치**(2026-08-03 도입):
+     1) **버킷별 소스 라우팅**(SOURCE_ROUTING) — 스톡은 'interior' 같은 한정어를 무시하고 일반 고급차
+        외관을 주므로 **실내 버킷은 wiki/openverse만** 쓴다(실측: 실내 6장 중 3장이 외관이었음).
+        국산·중국 모델도 스톡에 실차가 없어 wiki 우선.
+     2) **중복 자동 차단** — 소싱 시 해시 비교로 이미 있는 사진은 저장하지 않는다.
+        (스톡 사진 1장이 그랜저·본사사옥·브랜드기업·스타리아·아반떼 5개 버킷에 퍼져 있었음)
+     3) **감사/정리 명령** — `--audit`(중복·빈약버킷·미소싱 리포트), `--dedup`(중복 자동 정리,
+        구체적 버킷 우선 유지). 무인 루틴엔 사람 눈이 없으므로 주기적으로 돌린다.
   ※ **소싱은 멀티소스**: `build_photo_library.py --sources wiki,openverse,stock`.
      - wiki=Commons, openverse=Flickr CC 등 집계, stock=Pexels/Unsplash/Pixabay(재게시 허용 라이선스).
      - stock은 환경변수 PEXELS_API_KEY/UNSPLASH_ACCESS_KEY/PIXABAY_API_KEY 필요(현재 3개 다 설정됨).

@@ -99,6 +99,48 @@ CATEGORIES = {
 }
 
 
+# ── 버킷별 소스 라우팅 (실측으로 확인된 소스별 강·약점) ──────────────────
+# 스톡(Pexels/Unsplash)은 'interior' 같은 한정어를 무시하고 일반 고급차 외관을 준다
+# → 실내 버킷이 외관으로 오염됐다(실측). 반대로 중국·한국 신차는 스톡에 거의 없고
+#   Commons(wiki)에 실차가 많다. 그래서 버킷 성격별로 쓸 소스를 제한한다.
+SOURCE_ROUTING = [
+    (("실내",), ["wiki", "openverse"]),          # 실내: 한정어를 지키는 wiki만
+    (("노조시위", "발표행사", "공장생산"), ["wiki", "stock"]),
+    (("BYD차", "아이오닉", "EV3", "EV6", "EV9", "GV", "G80", "G90",
+      "타스만", "셀토스", "쏘렌토", "스포티지", "카니발", "팰리세이드",
+      "싼타페", "투싼", "코나", "그랜저", "쏘나타", "아반떼", "스타리아"),
+     ["wiki", "openverse"]),                     # 국산·중국 모델: 실차는 wiki가 정확
+]
+
+
+def sources_for(bucket, default):
+    """그 버킷에 허용된 소스 목록(라우팅 규칙 우선, 없으면 사용자가 준 기본값)."""
+    for keys, allowed in SOURCE_ROUTING:
+        if any(bucket.startswith(k) or k in bucket for k in keys):
+            return [s for s in default if s in allowed] or allowed
+    return default
+
+
+def _file_hash(path):
+    import hashlib
+    with open(path, "rb") as f:
+        return hashlib.md5(f.read()).hexdigest()
+
+
+def existing_hashes():
+    """라이브러리에 이미 있는 사진들의 해시 — 같은 사진이 여러 버킷에 박히는 걸 막는다."""
+    out = {}
+    if not os.path.isdir(DIR):
+        return out
+    for fn in os.listdir(DIR):
+        if fn.lower().endswith((".jpg", ".png")):
+            try:
+                out[_file_hash(os.path.join(DIR, fn))] = fn
+            except OSError:
+                pass
+    return out
+
+
 def load_index():
     # 손상(빈/NUL) JSON을 만나도 크래시 대신 {}로 복구(불안정 환경·블루스크린 대비)
     if os.path.exists(INDEX):
@@ -142,6 +184,10 @@ def main():
     ap.add_argument("--workers", type=int, default=8,
                     help="동시 다운로드/가공 스레드 수 (병목 제거용, 기본 8)")
     ap.add_argument("--prune", action="store_true", help="index 정리만 하고 종료")
+    ap.add_argument("--dedup", action="store_true",
+                    help="완전 중복 사진 자동 정리(구체적 버킷 우선 유지)")
+    ap.add_argument("--audit", action="store_true",
+                    help="라이브러리 품질 감사(중복·빈 버킷·흑백 의심)만 하고 종료")
     ap.add_argument("--register", action="store_true",
                     help="수동으로 넣은 사진을 index에 등록(카테고리=파일명 '_' 앞부분). "
                          "속보용 프레스 사진을 직접 넣을 때 사용.")
@@ -154,6 +200,65 @@ def main():
         gone = prune(idx)
         save_index(idx)
         print(f"index에서 {len(gone)}건 정리: {gone}")
+        return 0
+
+    if args.audit:
+        # 무인 루틴은 사람 눈이 없다 — 라이브러리가 오염되면 그대로 발행된다.
+        # 중복/빈약한 버킷을 기계적으로 잡아 검수 대상을 좁혀준다.
+        import collections
+        files = [f for f in os.listdir(DIR) if f.lower().endswith((".jpg", ".png"))]
+        by_hash = collections.defaultdict(list)
+        by_bucket = collections.Counter()
+        for f in files:
+            by_bucket[f.split("_")[0]] += 1
+            try:
+                by_hash[_file_hash(os.path.join(DIR, f))].append(f)
+            except OSError:
+                pass
+        dups = {h: v for h, v in by_hash.items() if len(v) > 1}
+        thin = [(b, c) for b, c in sorted(by_bucket.items()) if c <= 2]
+        print(f"사진 {len(files)}장 / 버킷 {len(by_bucket)}개")
+        print(f"\n[중복] {len(dups)}건 (같은 사진이 여러 버킷에 존재 → 반복 노출·버킷 오염)")
+        for v in list(dups.values())[:15]:
+            print("   " + " = ".join(v))
+        print(f"\n[빈약한 버킷] {len(thin)}개 (2장 이하 — 반복 위험)")
+        for b, c in thin[:20]:
+            print(f"   {b:<14} {c}장")
+        missing = [c for c in CATEGORIES if not by_bucket.get(c)]
+        print(f"\n[미소싱 카테고리] {len(missing)}개: {', '.join(missing) if missing else '없음'}")
+        print("\n※ 중복은 `--dedup`으로 자동 정리, 빈약한 버킷은 `--per` 올려 재소싱 권장.")
+        return 0
+
+    if args.dedup:
+        # 완전 동일 파일을 정리한다. '더 구체적인 버킷'(모델명/인물)을 남기고
+        # 테마 버킷 쪽 사본을 지운다 — 실내 버킷에 외관이 남는 오염도 이때 줄어든다.
+        import collections
+        THEME = {"신차출시", "전기차친환경", "산업수출", "리콜안전정책", "모터스포츠",
+                 "중고차시장", "브랜드기업", "셀럽차", "공장생산", "본사사옥", "발표행사", "노조시위"}
+        files = [f for f in os.listdir(DIR) if f.lower().endswith((".jpg", ".png"))]
+        by_hash = collections.defaultdict(list)
+        for f in files:
+            try:
+                by_hash[_file_hash(os.path.join(DIR, f))].append(f)
+            except OSError:
+                pass
+        idx = load_index()
+        removed = 0
+        for h, group in by_hash.items():
+            if len(group) < 2:
+                continue
+            # 구체적 버킷(테마가 아닌 것) 우선 유지, 그 안에서는 이름 짧은 것
+            group.sort(key=lambda f: (f.split("_")[0] in THEME, len(f)))
+            for f in group[1:]:
+                p = os.path.join(DIR, f)
+                try:
+                    os.remove(p)
+                    idx.pop(f, None)
+                    removed += 1
+                except OSError:
+                    pass
+        save_index(idx)
+        print(f"중복 {removed}장 정리 완료 (남은 사진 {len(files) - removed}장)")
         return 0
 
     if args.register:
@@ -199,10 +304,11 @@ def main():
     # 병목 제거: (카테고리 × 검색어 × 소스)를 전부 독립 작업으로 만들어
     # 네트워크 다운로드를 스레드풀로 동시에 돌린다. 예전엔 버킷마다 프로세스를
     # 새로 띄우고, 소스도 순차, 다운로드마다 1초씩 쉬느라 느렸다.
+    # 버킷 성격에 맞는 소스만 쓴다(실내에 스톡을 쓰면 외관이 섞이는 문제 방지)
     jobs = [(cat, qi, q, sname)
             for cat, queries in targets.items()
             for qi, q in enumerate(queries)
-            for sname in src_names]
+            for sname in sources_for(cat, src_names)]
 
     def source_one(job):
         cat, qi, q, sname = job
@@ -227,13 +333,26 @@ def main():
 
     # 1단계: 다운로드(네트워크) 병렬
     downloaded = []   # (cat, q, r)
+    seen_hashes = existing_hashes()      # 같은 사진이 여러 버킷에 중복 저장되는 것 차단
+    dup_n = 0
     with ThreadPoolExecutor(max_workers=args.workers) as ex:
         for cat, q, rep in ex.map(source_one, jobs):
             for r in rep:
                 if "path" in r:
+                    try:
+                        h = _file_hash(r["path"])
+                    except OSError:
+                        continue
+                    if h in seen_hashes:      # 이미 라이브러리에 있는 사진 → 버린다
+                        os.remove(r["path"])
+                        dup_n += 1
+                        continue
+                    seen_hashes[h] = os.path.basename(r["path"])
                     downloaded.append((cat, q, r))
                 elif "skipped" in r:
                     total_skip += 1
+    if dup_n:
+        print(f"   중복 {dup_n}장 자동 제외(이미 라이브러리에 있는 사진)")
 
     # 2단계: 카드 규격(정사각 1400px) 가공도 병렬 (CPU/IO)
     def prep_one(item):
