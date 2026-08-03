@@ -83,7 +83,7 @@ def _face_cascade():
 
 def score_frame(path):
     """프레임 1장 평가. 반환 dict(penalty 낮을수록 좋음)."""
-    img = cv2.imread(path)
+    img = _imread(path)
     if img is None:
         return {"penalty": 999, "reason": "읽기 실패"}
     h, w = img.shape[:2]
@@ -174,12 +174,31 @@ def score_frame(path):
     }
 
 
+def _imread(path):
+    """한글 경로에서도 읽는다(OpenCV는 non-ASCII 경로를 못 연다)."""
+    try:
+        buf = np.frombuffer(open(path, "rb").read(), np.uint8)
+        return cv2.imdecode(buf, cv2.IMREAD_COLOR)
+    except OSError:
+        return None
+
+
+def _imwrite(path, img, quality=92):
+    """한글 경로에서도 저장한다."""
+    ok, enc = cv2.imencode(".jpg", img, [int(cv2.IMWRITE_JPEG_QUALITY), quality])
+    if not ok:
+        return False
+    with open(path, "wb") as f:
+        f.write(enc.tobytes())
+    return True
+
+
 def crop_clean_square(src, dst, size=1400, avoid_bottom=0.14, avoid_top=0.06):
     """자막(하단)·로고(상단)를 최대한 잘라내고 정사각으로 만든다.
 
     16:9 프레임에서 하단 자막 띠와 상단 로고 띠를 제외한 영역 중
     가장 큰 정사각형을 중앙에서 잘라 확대한다."""
-    img = cv2.imread(src)
+    img = _imread(src)
     if img is None:
         return False
     h, w = img.shape[:2]
@@ -191,4 +210,4 @@ def crop_clean_square(src, dst, size=1400, avoid_bottom=0.14, avoid_top=0.06):
     x0 = (w - side) // 2
     sq = img[y0:y0 + side, x0:x0 + side]
     sq = cv2.resize(sq, (size, size), interpolation=cv2.INTER_LANCZOS4)
-    return bool(cv2.imwrite(dst, sq, [int(cv2.IMWRITE_JPEG_QUALITY), 92]))
+    return _imwrite(dst, sq)

@@ -25,6 +25,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import urllib.parse
 
 DIR = os.path.join("assets", "photos")
 INDEX = os.path.join(DIR, "index.json")
@@ -44,19 +45,100 @@ def _run(cmd, timeout=600):
                           encoding="utf-8", errors="replace", timeout=timeout)
 
 
-# 공식·제조사 채널일수록 자막·토크 없이 깨끗한 B롤이 많다 → 우선 선택
+# ── 검증된 공식 채널 화이트리스트 (2026-08-03 yt-dlp로 구독자수 실측) ──────
+# 키워드 검색만 쓰면 토크·화면녹화·ASMR 영상이 걸린다(실측 실패). 제조사 공식 채널은
+# 자막·진행자 없는 깨끗한 B롤(주행·스튜디오·디테일)이 대부분이라 프레임 품질이 압도적이다.
+# 사용: 브랜드가 특정되면 그 채널 안에서 검색 → 없으면 일반 검색으로 폴백.
+OFFICIAL_CHANNELS = {
+    "현대": ["HyundaiWorldwide", "hyundai"],      # 912K / 383K(USA)
+    "제네시스": ["GenesisWorldwide"],              # 1.28M
+    "기아": ["Kia"],                              # 161K(America)
+    "테슬라": ["tesla"],                           # 2.95M
+    "벤츠": ["mercedesbenz"],                      # 2.41M
+    "BMW": ["BMW"],                                # 2.04M
+    "아우디": ["Audi"],                            # 355K
+    "폭스바겐": ["volkswagen"],                    # 335K
+    "포르쉐": ["Porsche"],                         # 1.61M
+    "볼보": ["volvocars"],                         # 329K
+    "렉서스": ["Lexus"],                           # 278K
+    "토요타": ["ToyotaUSA"],                       # 964K
+    "BYD": ["BYDGlobal"],                          # 34.4K
+}
+# 브랜드 특정이 안 될 때 쓸 한국 자동차 전문 채널(실차 위주, 검증됨)
+KR_AUTO_CHANNELS = ["motorgraph", "AutoTribune"]   # 371K / 102K
+
+# 모델명 → 브랜드 (공식 채널 선택용)
+MODEL_BRAND = {
+    "아이오닉": "현대", "팰리세이드": "현대", "싼타페": "현대", "투싼": "현대",
+    "코나": "현대", "그랜저": "현대", "쏘나타": "현대", "아반떼": "현대", "스타리아": "현대",
+    "쏘렌토": "기아", "스포티지": "기아", "셀토스": "기아", "카니발": "기아",
+    "EV6": "기아", "EV9": "기아", "EV3": "기아", "타스만": "기아",
+    "GV": "제네시스", "G80": "제네시스", "G90": "제네시스", "제네시스": "제네시스",
+    "테슬라": "테슬라", "모델Y": "테슬라", "모델3": "테슬라",
+    "벤츠": "벤츠", "BMW": "BMW", "아우디": "아우디", "폭스바겐": "폭스바겐",
+    "포르쉐": "포르쉐", "볼보": "볼보", "렉서스": "렉서스", "토요타": "토요타", "BYD": "BYD",
+}
+
 OFFICIAL_HINTS = ["공식", "official", "genesis", "hyundai", "kia", "motor", "모터스",
                   "현대자동차", "기아", "제네시스", "bmw", "mercedes", "audi", "volkswagen"]
+
+
+def brand_of(text):
+    """검색어/모델명에서 브랜드를 추정한다(긴 키부터)."""
+    for k in sorted(MODEL_BRAND, key=len, reverse=True):
+        if k.lower() in text.lower():
+            return MODEL_BRAND[k]
+    return None
+
+
+def channel_search(handle, query, limit=4):
+    """특정 채널 안에서 검색한다(공식 채널의 깨끗한 B롤을 직접 노린다)."""
+    url = f"https://www.youtube.com/@{handle}/search?query={urllib.parse.quote(query)}"
+    r = _run(["yt-dlp", url, "--skip-download", "--no-warnings", "--playlist-end", str(limit),
+              "--print", "%(id)s\t%(duration)s\t%(channel)s\t%(title).70s"], timeout=180)
+    out = []
+    for line in (r.stdout or "").strip().splitlines():
+        p = line.split("\t")
+        if len(p) < 4:
+            continue
+        try:
+            dur = int(float(p[1]))
+        except ValueError:
+            dur = 0
+        if dur < 15 or dur > 1800:
+            continue
+        out.append({"id": p[0], "duration": dur, "channel": p[2], "title": p[3],
+                    "score": -10})       # 공식 채널은 최우선
+    return out
 # 화면녹화·잡담 위주라 프레임 품질이 나쁜 유형
 BAD_TITLE_HINTS = ["리뷰", "vlog", "브이로그", "썰", "라이브", "live", "정리", "뉴스"]
 
 
-def search_videos(query, limit=6):
-    """검색 결과를 '깨끗한 영상일 가능성' 순으로 정렬해 여러 개 돌려준다.
+def search_videos(query, limit=6, prefer_official=True):
+    """후보 영상을 '깨끗할 가능성' 순으로 돌려준다.
+
+    ① 브랜드가 특정되면 그 브랜드 **공식 채널 안에서** 먼저 찾는다(B롤 = 자막·진행자 없음)
+    ② 부족하면 한국 자동차 전문 채널
+    ③ 그래도 부족하면 일반 유튜브 검색
     (403·DRM으로 막히는 영상이 있어 후보를 여러 개 들고 있어야 한다)"""
+    cands = []
+    if prefer_official:
+        br = brand_of(query)
+        handles = OFFICIAL_CHANNELS.get(br, []) if br else []
+        for h in handles:
+            cands += channel_search(h, query)
+            if len(cands) >= limit:
+                break
+        if len(cands) < 2:
+            for h in KR_AUTO_CHANNELS:
+                cands += [dict(c, score=-4) for c in channel_search(h, query, limit=3)]
+                if len(cands) >= limit:
+                    break
+    if cands:
+        print(f"  공식/전문 채널 후보 {len(cands)}건")
+
     r = _run(["yt-dlp", f"ytsearch{limit}:{query}", "--skip-download", "--no-warnings",
               "--print", "%(id)s\t%(duration)s\t%(channel)s\t%(title).70s"])
-    cands = []
     for line in (r.stdout or "").strip().splitlines():
         parts = line.split("\t")
         if len(parts) < 4:
@@ -154,7 +236,13 @@ def grab_frames(vid, seconds, name, keep=6, height=1080, fan=(0, 2, 4, 6)):
                 cands.append((sc["penalty"], raw, sc))
 
         cands.sort(key=lambda x: x[0])
-        good = [c for c in cands if c[0] <= 12]     # 임계 초과(자막·UI·블러)는 아예 버린다
+        # 임계: 자막·UI·차없음 같은 '치명적' 항목은 개별 감점이 크므로(각 25~60)
+        # 30 이하면 '차가 찍힌 깨끗한 프레임'으로 본다. 너무 낮게 잡으면 전량 탈락한다(실측).
+        good = [c for c in cands if c[0] <= 30]
+        if cands:
+            top = cands[0][2]
+            print(f"   최고점 프레임: penalty={cands[0][0]} "
+                  f"(자막{top.get('sub')} UI{top.get('ui')} 차{top.get('car')} 선명{top.get('sharp')})")
         print(f"   후보 {len(cands)}장 채점 → 합격 {len(good)}장, 상위 {min(keep,len(good))}장 채택")
         for rank, (pen, raw, sc) in enumerate(good[:keep]):
             out = os.path.join(DIR, f"{name}_yt{rank}.jpg")
