@@ -101,6 +101,20 @@ def pick_photo(category, date_tag, seq, exclude=None):
     if not pool:
         return None
 
+    # ★ 본문 사진 품질 게이트: 차가 보여야 하는 버킷(모델·전기차·중고차 등)에서는
+    #   차량 검출에 걸린 사진을 우선 쓴다. 태깅이 없거나 전부 미검출이면 그대로 간다.
+    #   (검출기는 운반선·충전소 같은 정당한 컷을 놓치기도 해서 '차단'이 아니라 '우선'이다)
+    try:
+        from photo_match import car_required
+        if car_required(category):
+            idx_meta = _load_json_safe(INDEX_PATH, {})
+            preferred = [p for p in pool
+                         if (idx_meta.get(p) or {}).get("차검출") is not False]
+            if preferred:
+                pool = preferred
+    except Exception:
+        pass
+
     usage = _load_json_safe(USAGE_PATH, {})
     recent = set(usage.get(category, [])[-RECENT_WINDOW:])
     candidates = [p for p in pool if p not in recent] or pool

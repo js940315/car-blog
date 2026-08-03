@@ -184,6 +184,8 @@ def main():
     ap.add_argument("--workers", type=int, default=8,
                     help="동시 다운로드/가공 스레드 수 (병목 제거용, 기본 8)")
     ap.add_argument("--prune", action="store_true", help="index 정리만 하고 종료")
+    ap.add_argument("--tagcars", action="store_true",
+                    help="차량 검출을 돌려 index에 '차검출' 태그 심기(본문 사진 품질 게이트용)")
     ap.add_argument("--dedup", action="store_true",
                     help="완전 중복 사진 자동 정리(구체적 버킷 우선 유지)")
     ap.add_argument("--audit", action="store_true",
@@ -200,6 +202,35 @@ def main():
         gone = prune(idx)
         save_index(idx)
         print(f"index에서 {len(gone)}건 정리: {gone}")
+        return 0
+
+    if args.tagcars:
+        # 라이브러리 전체에 차량 검출을 돌려 index.json 에 '차검출' 태그를 심는다.
+        # pick_photo 가 이 태그를 보고 '차가 보이는 사진'을 우선 고른다(본문 품질 게이트).
+        # 검출은 느리므로(장당 수십 ms) 소싱 후 한 번만 돌리면 된다.
+        from frame_quality import car_presence, _imread
+        from photo_match import car_required
+        idx = load_index()
+        files = [f for f in os.listdir(DIR) if f.lower().endswith((".jpg", ".png"))]
+        n_car = n_no = 0
+        for f in files:
+            b = f.split("_")[0]
+            if not car_required(b):
+                continue                      # 인물·실내·건물 버킷은 검사 제외
+            img = _imread(os.path.join(DIR, f))
+            if img is None:
+                continue
+            conf, area = car_presence(img)
+            has = bool(conf >= 0.45)
+            meta = idx.get(f) or {"카테고리": b}
+            meta["차검출"] = has
+            meta["차신뢰도"] = round(float(conf), 2)
+            idx[f] = meta
+            n_car += has
+            n_no += (not has)
+        save_index(idx)
+        print(f"차 검출 태깅 완료: 검출 {n_car}장 / 미검출 {n_no}장")
+        print("→ pick_photo 가 '차 보이는 사진'을 우선 선택합니다(본문 품질 게이트).")
         return 0
 
     if args.audit:
