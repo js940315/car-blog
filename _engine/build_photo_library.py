@@ -63,6 +63,30 @@ CATEGORIES = {
     "벤츠E클래스": ["Mercedes-Benz E-Class car"],
     "BMW5시리즈": ["BMW 5 Series car"],
     "BYD차": ["BYD Seal car", "BYD Atto 3 electric car"],
+    # --- 신차·주요 모델 보강 (제목-사진 불일치 방지) ---
+    "아이오닉9": ["Hyundai Ioniq 9 car"],
+    "EV3": ["Kia EV3 car"],
+    "GV70": ["Genesis GV70 car"],
+    "G90": ["Genesis G90 car"],
+    "쏘나타": ["Hyundai Sonata car"],
+    "투싼": ["Hyundai Tucson car"],
+    "아반떼": ["Hyundai Elantra Avante car"],
+    "타스만": ["Kia Tasman pickup truck"],
+    "스타리아": ["Hyundai Staria van"],
+    # --- 브랜드 외관(수입) ---
+    "아우디차": ["Audi A6 car", "Audi Q7 SUV car"],
+    "벤츠차": ["Mercedes-Benz S-Class car", "Mercedes-Benz GLE SUV"],
+    "BMW차": ["BMW X5 car", "BMW 3 Series car"],
+    "폭스바겐차": ["Volkswagen Golf car", "Volkswagen Tiguan SUV"],
+    "볼보차": ["Volvo XC60 car", "Volvo XC90 SUV"],
+    "포르쉐차": ["Porsche 911 car", "Porsche Cayenne SUV"],
+    "렉서스차": ["Lexus ES car", "Lexus RX SUV"],
+    "토요타차": ["Toyota Camry car", "Toyota RAV4 SUV"],
+    # --- 산업·현장(인물 대체용) ---
+    "공장생산": ["car factory assembly line", "automobile production plant workers"],
+    "본사사옥": ["Hyundai Motor headquarters building", "automotive company headquarters"],
+    "발표행사": ["auto show press conference stage", "car unveiling event presentation"],
+    "노조시위": ["labor union rally workers", "trade union demonstration"],
 
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.
