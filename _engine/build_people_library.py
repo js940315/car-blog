@@ -120,7 +120,8 @@ def main():
     ap.add_argument("--add", help="새 인물 Commons 검색어 (--name 과 함께)")
     ap.add_argument("--name", help="새 인물 버킷명(한글)")
     ap.add_argument("--per", type=int, default=3)
-    ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--workers", type=int, default=2,
+                    help="동시 다운로드 수. 기본 2 — Commons 429 방지 + 메모리 스파이크 억제")
     args = ap.parse_args()
 
     os.makedirs(DIR, exist_ok=True)

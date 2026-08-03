@@ -181,8 +181,10 @@ def main():
     ap.add_argument("--sources", default="wiki,openverse,stock",
                     help="쉼표구분: wiki,openverse,stock — 다양한 소스에서 모은다. "
                          "stock(Pexels/Unsplash/Pixabay)은 환경변수 API키가 있어야 동작.")
-    ap.add_argument("--workers", type=int, default=8,
-                    help="동시 다운로드/가공 스레드 수 (병목 제거용, 기본 8)")
+    ap.add_argument("--workers", type=int, default=3,
+                    help="동시 다운로드/가공 스레드 수. 기본 3 — 이 PC는 MEMORY_MANAGEMENT "
+                         "블루스크린 이력이 있어 순간 메모리 스파이크를 낮게 유지한다. "
+                         "안정적인 클라우드/다른 PC에서는 8까지 올려도 된다.")
     ap.add_argument("--prune", action="store_true", help="index 정리만 하고 종료")
     ap.add_argument("--tagcars", action="store_true",
                     help="차량 검출을 돌려 index에 '차검출' 태그 심기(본문 사진 품질 게이트용)")

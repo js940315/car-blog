@@ -421,8 +421,9 @@ def build_one(article, out_dir):
     # ※ 동시 실행 브라우저 수 = 순간 메모리 사용량. 헤드리스 크로미움은 장당
     #   수백 MB를 쓰므로 8개를 한꺼번에 띄우면 순간 2~3GB가 튄다. 여유 RAM이
     #   적은(또는 RAM/디스크가 불안정한) 로컬에서 이 스파이크가 커널 크래시
-    #   (MEMORY_MANAGEMENT 블루스크린)의 방아쇠가 될 수 있어, 기본을 낮게(3) 잡고
-    #   환경변수 RENDER_CONCURRENCY로 조절한다. 안정적인 클라우드 러너는 8로 올려도 됨.
+    #   (MEMORY_MANAGEMENT 블루스크린)의 방아쇠가 될 수 있다. 이 PC에서 실제로 블루스크린이
+    #   재발해(2026-08-03) 기본을 1로 낮췄다. 환경변수 RENDER_CONCURRENCY로 조절하며,
+    #   안정적인 클라우드 러너에서는 RENDER_CONCURRENCY=4~8 로 올려 쓴다.
     tmp_paths = []
     for idx, spec in enumerate(specs, start=1):
         svg = render_image(spec, date_tag=date_tag, seq=seq, used_in_post=used_in_post)
@@ -434,7 +435,7 @@ def build_one(article, out_dir):
 
     if tmp_paths:
         try:
-            workers = int(os.getenv("RENDER_CONCURRENCY", "3"))
+            workers = int(os.getenv("RENDER_CONCURRENCY", "1"))
         except ValueError:
             workers = 3
         workers = max(1, min(workers, len(tmp_paths)))
