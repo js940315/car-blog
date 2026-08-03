@@ -26,6 +26,7 @@ from common_utils import (build_bar_card_svg, build_number_card_svg,
                           build_stock_thumbnail_svg, build_thumbnail_svg,
                           convert_svg_to_png)
 from photo_library import pick_photo, record_usage, variation_seed
+from photo_match import resolve_category, available_buckets
 
 
 def _asset(kind, name):
@@ -46,6 +47,8 @@ def resolve_photo(spec, date_tag, seq, used_in_post):
     if not category:
         return None, None
     chosen = pick_photo(category, date_tag, seq, exclude=used_in_post)
+    if not chosen:      # 없는 버킷(오타·미보유)이면 상위에서 교정된 값이 오도록 None 반환
+        return None, category
     return chosen, category
 
 
@@ -323,6 +326,27 @@ def build_one(article, out_dir):
     os.makedirs(out_dir, exist_ok=True)
     image_map = {}
     specs = article.get("images", [])
+
+    # ★ 썸네일-제목 일치 강제 (홈판 성공률의 핵심).
+    #   에이전트가 photo_category를 기억으로 고르다 GV90 기사에 아이오닉5를 붙이는
+    #   사고가 있었다. 제목에서 실제 소재를 읽어 보유 버킷으로 교정한다.
+    #   1번(썸네일)은 제목 매칭이 이기고, 2번 이후는 '없는 버킷'일 때만 구제한다.
+    title_txt = str(article.get("title", ""))
+    body_txt = " ".join(str(p) for p in article.get("body_paragraphs", [])[:6])
+    for i, sp in enumerate(specs):
+        if sp.get("photo") or not isinstance(sp, dict):
+            continue                      # 파일 직접 지정은 사용자 의도 존중
+        given = sp.get("photo_category")
+        if i == 0 and sp.get("type") in THUMBNAIL_TYPES:
+            fixed, why = resolve_category(title_txt, given, body_txt)
+            if fixed and fixed != given:
+                print(f"  [썸네일 교정] '{given}' -> '{fixed}' ({why})")
+                sp["photo_category"] = fixed
+        elif given and not available_buckets().get(given):
+            fixed, why = resolve_category(title_txt, None, body_txt)
+            if fixed:
+                print(f"  [사진 교정] 없는 버킷 '{given}' -> '{fixed}' ({why})")
+                sp["photo_category"] = fixed
 
     # out_dir은 항상 ".../{date_tag}/{seq}" 형태(samples든 실제 발행이든)라
     # 여기서 순환picks 시드로 쓸 (date_tag, seq)를 그대로 뽑아낸다.

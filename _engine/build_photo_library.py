@@ -86,7 +86,7 @@ CATEGORIES = {
     "공장생산": ["car factory assembly line", "automobile production plant workers"],
     "본사사옥": ["Hyundai Motor headquarters building", "automotive company headquarters"],
     "발표행사": ["auto show press conference stage", "car unveiling event presentation"],
-    "노조시위": ["labor union rally workers", "trade union demonstration"],
+    "노조시위": ["IG Metall strike autoworkers", "car factory workers strike protest"],
 
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.
