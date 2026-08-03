@@ -18,7 +18,7 @@ import os
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
+from datetime import datetime, timedelta
 
 from common_utils import (build_bar_card_svg, build_number_card_svg,
                           build_page_html, build_photo_card_svg,
@@ -414,7 +414,9 @@ def build_one(article, out_dir):
 
 def main():
     src = sys.argv[1] if len(sys.argv) > 1 else "articles.json"
-    date_tag = sys.argv[2] if len(sys.argv) > 2 else datetime.now().strftime("%m%d")
+    # 날짜 인자가 없으면 KST(UTC+9) 오늘 날짜로 찍는다. 클라우드는 UTC라 그냥
+    # now()를 쓰면 새벽(예: 04:30 KST=전날 19:30 UTC) 실행이 '전날' 폴더로 들어간다.
+    date_tag = sys.argv[2] if len(sys.argv) > 2 else (datetime.utcnow() + timedelta(hours=9)).strftime("%m%d")
 
     with open(src, encoding="utf-8") as f:
         articles = json.load(f)
