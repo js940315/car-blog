@@ -72,5 +72,49 @@
       "issue": "아우디 A8 생산 네카줄름 공장 폐쇄 위기, 6000명 시위",
       "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61216"
     }
+  ],
+  "0804": [
+    {
+      "title": "기아 PV5 5종에서 10종으로, 진짜 노림수는 판매가 아니었다",
+      "category": "신차·출시",
+      "issue": "기아 PV5 신규 라인업 5종 + 2027년형 EV6 동시 출시, PBV 생애주기 전략",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61240"
+    },
+    {
+      "title": "29만 대 vs 27만 대, 하이브리드가 휘발유차를 처음 눌렀다",
+      "category": "전기차·친환경",
+      "issue": "국토부 상반기 자동차 등록통계, 하이브리드가 휘발유차 첫 추월",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61252"
+    },
+    {
+      "title": "내수 2.8%↓인데 전체는 3.5%↑…국산차 5개사의 반전",
+      "category": "자동차산업·수출",
+      "issue": "국산차 5개사 7월 판매실적, 내수 부진 속 수출 증가로 반등",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61235"
+    },
+    {
+      "title": "\"운전대도 페달도 없다\"…미국이 로보택시에 도로를 내줬다",
+      "category": "리콜·안전·정책",
+      "issue": "아마존 죽스 로보택시 NHTSA 임시 예외 승인, 완전자율주행 상업운행 첫 사례",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61233"
+    },
+    {
+      "title": "토요타가 1~3위 싹쓸이…현대차는 이번에도 무관에 그쳤다",
+      "category": "모터스포츠·이슈",
+      "issue": "WRC 섹토 랠리 핀란드, 토요타 포디엄 스윕과 현대차 무관",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61234"
+    },
+    {
+      "title": "테슬라 모델Y 중고가 4300만원…반값 이벤트가 알려준 시세",
+      "category": "중고차·시장동향",
+      "issue": "케이카 '반갑다 반값차' 프로모션, 중고 테슬라 모델Y 정가 4300만원 공개",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145317"
+    },
+    {
+      "title": "\"20년 전 쌍용차 악몽\"…KGM, 다시 중국 자본과 손잡았다",
+      "category": "브랜드·기업이슈",
+      "issue": "KGM-체리자동차 7500만달러 전략적 투자 계약, 상하이자동차 트라우마 재조명",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61245"
+    }
   ]
 }
