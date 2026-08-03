@@ -1381,9 +1381,7 @@
     "원본해상도": "3887x2915",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 6 car",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "EV6_0s_unsplash_1.jpg": {
     "카테고리": "EV6",
@@ -1513,9 +1511,7 @@
     "원본해상도": "6960x4640",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "BMW5시리즈_0s_pexels_0.jpg": {
     "카테고리": "BMW5시리즈",
@@ -3938,5 +3934,172 @@
     "검수": "수동추가 — 사용자 확인함",
     "차검출": true,
     "차신뢰도": 1.0
+  },
+  "손흥민_2.jpg": {
+    "카테고리": "손흥민",
+    "license": "CC0",
+    "credit": "File:Son Heung-min Tottenham Mural.jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Son Heung-min",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "머스크_2.jpg": {
+    "카테고리": "머스크",
+    "license": "CC BY 2.0",
+    "credit": "File:Elon Musk (12270805983).jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Elon Musk",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "머스크_3.jpg": {
+    "카테고리": "머스크",
+    "license": "CC BY 2.0",
+    "credit": "File:Elon Musk (12271217906).jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Elon Musk",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "카니발_0w_0.jpg": {
+    "카테고리": "카니발",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : 2018 Kia Carnival (YP MY19) S van (2018-10-0 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3998x2201",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Kia Carnival Sedona car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "카니발_0w_1.jpg": {
+    "카테고리": "카니발",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : KIA CARNIVAL (VQ) China (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "6775x4470",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Kia Carnival Sedona car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "카니발_0w_2.jpg": {
+    "카테고리": "카니발",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : KIA CARNIVAL (YP) China / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "7485x4468",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Kia Carnival Sedona car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "카니발_0w_3.jpg": {
+    "카테고리": "카니발",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Kia Carnival KV-II facelift Sanming 01 2022- / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4032x3024",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Kia Carnival Sedona car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉6_0w_0.jpg": {
+    "카테고리": "아이오닉6",
+    "license": "CC0",
+    "credit": "사진 : 2023 Hyundai Ioniq 6 77kWh First Edition AWD / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4160x2340",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 6 car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉6_0w_2.jpg": {
+    "카테고리": "아이오닉6",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Ioniq 5 N Line Auto Zuerich 2024 DSC / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4744x2464",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 6 car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉6_0w_3.jpg": {
+    "카테고리": "아이오닉6",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Ioniq 6 Auto Zuerich 2023 1X7A0904 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "6110x2857",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 6 car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0w_0.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "CC0",
+    "credit": "사진 : Mercedes-Benz E-Class (V214) 001 / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4032x3024",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0w_1.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "CC0",
+    "credit": "사진 : Mercedes-Benz E-Class (V214) 002 / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4032x3024",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0w_2.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Mercedes-Benz SL-Class (R129) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5712x4284",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0w_3.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Münster, Beresa, Mercedes-Benz C-Klasse Cabr / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4413x5516",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0s_unsplash_1.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "Unsplash License",
+    "credit": "Benjamin Zhao / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1601",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0s_pexels_2.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "Pexels License",
+    "credit": "Gobee Sakthi / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6240x4160",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "벤츠E클래스_0s_pexels_3.jpg": {
+    "카테고리": "벤츠E클래스",
+    "license": "Pexels License",
+    "credit": "amine photographe / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요"
   }
 }

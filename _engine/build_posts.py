@@ -293,6 +293,63 @@ REAL_PHOTO_IMAGE_TYPES = {"photo_card"}   # '실물 사진'으로 인정하는 �
 THUMBNAIL_TYPES = {"thumbnail", "stock_thumbnail"}
 
 
+# 캡션이 특정 소재를 말하는데 사진 버킷이 다르면 '생산 라인' 캡션에 배 사진이 붙는다.
+# 캡션은 어떤 사진이 뽑힐지 모른 채 먼저 쓰이므로(순환 선택) 여기서 기계적으로 잡아준다.
+CAPTION_EXPECT = [
+    (re.compile(r"실내|인테리어|대시|시트|운전석|스티어링"), ("실내",)),
+    (re.compile(r"충전|배터리"), ("전기차친환경", "실내", "EV", "아이오닉", "테슬라")),
+    (re.compile(r"생산|공장|라인|가동"), ("공장생산",)),
+    (re.compile(r"선적|수출|운반선|항만"), ("산업수출",)),
+    (re.compile(r"시위|파업|노조|집회"), ("노조시위",)),
+    (re.compile(r"사옥|본사"), ("본사사옥", "브랜드기업")),
+]
+
+
+def check_thin_buckets(specs, min_n=3):
+    """사진이 너무 적은 버킷을 쓰면 반복 노출 위험 → 리포트에 남긴다(무인 루틴용 QC)."""
+    problems = []
+    try:
+        from photo_match import available_buckets
+        have = available_buckets()
+    except Exception:
+        return problems
+    seen = set()
+    for sp in specs:
+        if not isinstance(sp, dict) or sp.get("photo"):
+            continue
+        cat = sp.get("photo_category")
+        if not cat or cat in seen:
+            continue
+        seen.add(cat)
+        n = have.get(cat, 0)
+        if 0 < n < min_n:
+            problems.append(f"버킷 '{cat}' 사진 {n}장뿐 — 반복 노출 위험(보강 권장)")
+        elif n == 0:
+            problems.append(f"버킷 '{cat}' 사진 없음 — 폴백 처리됨")
+    return problems
+
+
+def check_caption_photo(specs):
+    """캡션이 말하는 소재와 실제 사진 버킷이 어긋나면 경고를 남긴다."""
+    problems = []
+    for i, sp in enumerate(specs, start=1):
+        if not isinstance(sp, dict) or sp.get("photo"):
+            continue
+        cat = sp.get("photo_category") or ""
+        if not cat:
+            continue
+        cap = " ".join([str(sp.get("eyebrow", ""))] +
+                       [str(x) for x in sp.get("headline_lines", [])] +
+                       [str(sp.get("line1", "")), str(sp.get("line2", ""))])
+        for pat, oks in CAPTION_EXPECT:
+            if pat.search(cap) and not any(cat.startswith(o) or o in cat for o in oks):
+                problems.append(
+                    f"{i}번 캡션('{cap.strip()[:24]}')이 소재를 특정했는데 사진 버킷은 "
+                    f"'{cat}' — 캡션을 소재 무관 표현으로 바꾸거나 버킷을 맞출 것")
+                break
+    return problems
+
+
 def validate_image_structure(specs):
     """images 배열이 '썸네일1 + 실물1 + 카드N' 5장 스펙(v2/v3)을 지키는지 확인한다.
 
@@ -432,6 +489,8 @@ def build_one(article, out_dir):
 
     problems = validate(lines)
     problems += validate_image_structure(specs)
+    problems += check_caption_photo(specs)
+    problems += check_thin_buckets(specs)
 
     # 파일명 앞 '0번'은 정렬용 — 사진(1~4번)보다 위에 오게 해서 작업 순서(본문 먼저)와 일치
     with open(os.path.join(out_dir, "0번 본문.txt"), "w", encoding="utf-8") as f:
