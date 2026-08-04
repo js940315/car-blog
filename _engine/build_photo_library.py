@@ -87,6 +87,15 @@ CATEGORIES = {
     "본사사옥": ["Hyundai Motor headquarters building", "automotive company headquarters"],
     "발표행사": ["auto show press conference stage", "car unveiling event presentation"],
     "노조시위": ["IG Metall strike autoworkers", "car factory workers strike protest"],
+    # --- 맥락 이미지(차가 아닌 소재를 말할 때) ---------------------------------
+    # "카카오톡 공유로 응모" 같은 문장에 차 사진을 붙이면 센스가 없다. 소재 자체를 보여준다.
+    "SNS공유": ["smartphone messenger app screen", "person using smartphone social media"],
+    "온라인구매": ["online shopping laptop screen", "person browsing website laptop"],
+    "계약서류": ["signing contract documents pen", "car dealership paperwork signing"],
+    "국기중국": ["flag of China", "Chinese flag waving"],
+    "국기미국": ["flag of the United States", "American flag waving"],
+    "국기유럽": ["flag of the European Union", "German flag waving"],
+    "돈가격": ["Korean won banknotes money", "calculator money finance desk"],
 
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.

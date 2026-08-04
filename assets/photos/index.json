@@ -1381,7 +1381,9 @@
     "원본해상도": "3887x2915",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 6 car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "EV6_0s_unsplash_1.jpg": {
     "카테고리": "EV6",
@@ -1511,7 +1513,9 @@
     "원본해상도": "6960x4640",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "BMW5시리즈_0s_pexels_0.jpg": {
     "카테고리": "BMW5시리즈",
@@ -3970,7 +3974,9 @@
     "원본해상도": "3998x2201",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Kia Carnival Sedona car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "카니발_0w_1.jpg": {
     "카테고리": "카니발",
@@ -3980,7 +3986,9 @@
     "원본해상도": "6775x4470",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Kia Carnival Sedona car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "카니발_0w_2.jpg": {
     "카테고리": "카니발",
@@ -3990,7 +3998,9 @@
     "원본해상도": "7485x4468",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Kia Carnival Sedona car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "카니발_0w_3.jpg": {
     "카테고리": "카니발",
@@ -4000,7 +4010,9 @@
     "원본해상도": "4032x3024",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Kia Carnival Sedona car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "아이오닉6_0w_0.jpg": {
     "카테고리": "아이오닉6",
@@ -4010,7 +4022,9 @@
     "원본해상도": "4160x2340",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 6 car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "아이오닉6_0w_2.jpg": {
     "카테고리": "아이오닉6",
@@ -4020,7 +4034,9 @@
     "원본해상도": "4744x2464",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 6 car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "아이오닉6_0w_3.jpg": {
     "카테고리": "아이오닉6",
@@ -4030,7 +4046,9 @@
     "원본해상도": "6110x2857",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 6 car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "벤츠E클래스_0w_0.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4040,7 +4058,9 @@
     "원본해상도": "4032x3024",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "벤츠E클래스_0w_1.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4050,7 +4070,9 @@
     "원본해상도": "4032x3024",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "벤츠E클래스_0w_2.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4060,7 +4082,9 @@
     "원본해상도": "5712x4284",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "벤츠E클래스_0w_3.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4070,7 +4094,9 @@
     "원본해상도": "4413x5516",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
   },
   "벤츠E클래스_0s_unsplash_1.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4080,7 +4106,9 @@
     "원본해상도": "2400x1601",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": false,
+    "차신뢰도": 0.0
   },
   "벤츠E클래스_0s_pexels_2.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4090,7 +4118,9 @@
     "원본해상도": "6240x4160",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
-    "검수": "미확인 — Read로 눈 확인 필요"
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 0.95
   },
   "벤츠E클래스_0s_pexels_3.jpg": {
     "카테고리": "벤츠E클래스",
@@ -4100,6 +4130,468 @@
     "원본해상도": "6000x4000",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz E-Class car",
+    "검수": "미확인 — Read로 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0
+  },
+  "SNS공유_0w_0.jpg": {
+    "카테고리": "SNS공유",
+    "license": "CC BY 2.0",
+    "credit": "사진 : Telegram app icon on smartphone screen (pers / CC BY 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "2000x1336",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "smartphone messenger app screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_0s_pexels_0.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Pexels License",
+    "credit": "Geri Tech / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6016x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "smartphone messenger app screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_0s_unsplash_1.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Unsplash License",
+    "credit": "Yohan Marion / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1799",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "smartphone messenger app screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_0s_pexels_2.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Pexels License",
+    "credit": "Geri Tech / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6016x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "smartphone messenger app screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_1s_pexels_0.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Pexels License",
+    "credit": "Darlene Alderson / Pexels",
+    "attribution_required": true,
+    "원본해상도": "8256x5504",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person using smartphone social media",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_1s_unsplash_1.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Unsplash License",
+    "credit": "Nathan Dumlao / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1601",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person using smartphone social media",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "SNS공유_1s_pexels_2.jpg": {
+    "카테고리": "SNS공유",
+    "license": "Pexels License",
+    "credit": "Los Muertos Crew / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7952x5304",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person using smartphone social media",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_0s_pexels_0.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Pexels License",
+    "credit": "Julio Lopez / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6893x4595",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "online shopping laptop screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_0s_unsplash_1.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Unsplash License",
+    "credit": "Microsoft Edge / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1601",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "online shopping laptop screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_0s_pexels_2.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Pexels License",
+    "credit": "Ivan S / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6720x4480",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "online shopping laptop screen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_1s_pexels_0.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Pexels License",
+    "credit": "Firmbee.com / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6210x4140",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person browsing website laptop",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_1s_unsplash_1.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Unsplash License",
+    "credit": "Justin Morgan / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1601",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person browsing website laptop",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "온라인구매_1s_pexels_2.jpg": {
+    "카테고리": "온라인구매",
+    "license": "Pexels License",
+    "credit": "Pavel Danilyuk / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6016x4016",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "person browsing website laptop",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_0w_0.jpg": {
+    "카테고리": "계약서류",
+    "license": "CC BY 2.0",
+    "credit": "사진 : Legal Contract & Signature - Warm Tones / CC BY 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "6000x4500",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "signing contract documents pen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_0s_pexels_0.jpg": {
+    "카테고리": "계약서류",
+    "license": "Pexels License",
+    "credit": "https://kaboompics.com/ / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6720x4480",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "signing contract documents pen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_0s_unsplash_1.jpg": {
+    "카테고리": "계약서류",
+    "license": "Unsplash License",
+    "credit": "Scott Graham / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1602",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "signing contract documents pen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_0s_pexels_2.jpg": {
+    "카테고리": "계약서류",
+    "license": "Pexels License",
+    "credit": "Tima Miroshnichenko / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "signing contract documents pen",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_1s_pexels_0.jpg": {
+    "카테고리": "계약서류",
+    "license": "Pexels License",
+    "credit": "Gustavo Fring / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "car dealership paperwork signing",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "계약서류_1s_pexels_1.jpg": {
+    "카테고리": "계약서류",
+    "license": "Pexels License",
+    "credit": "AI25.Studio  Studio / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "car dealership paperwork signing",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기중국_0s_pexels_0.jpg": {
+    "카테고리": "국기중국",
+    "license": "Pexels License",
+    "credit": "https://kaboompics.com/ / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6720x4480",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of China",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기중국_0s_unsplash_1.jpg": {
+    "카테고리": "국기중국",
+    "license": "Unsplash License",
+    "credit": "Cheung Yin / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1800",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of China",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기중국_0s_pexels_2.jpg": {
+    "카테고리": "국기중국",
+    "license": "Pexels License",
+    "credit": "Oleg Prachuk / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6240x4160",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of China",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기중국_1s_unsplash_1.jpg": {
+    "카테고리": "국기중국",
+    "license": "Unsplash License",
+    "credit": "visuals / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1600",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Chinese flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기중국_1s_pexels_2.jpg": {
+    "카테고리": "국기중국",
+    "license": "Pexels License",
+    "credit": "J.D. Books / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6048x4024",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Chinese flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_0w_0.jpg": {
+    "카테고리": "국기미국",
+    "license": "Public domain",
+    "credit": "사진 : California State Capitol (top), NW view up / Public domain / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5483x3427",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the United States",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_0o_0.png": {
+    "카테고리": "국기미국",
+    "license": "cc0",
+    "credit": "사진 : Acts of Union 1800 / US government / CC0 / wikimedia",
+    "attribution_required": true,
+    "원본해상도": "1920x1011",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the United States",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_0s_pexels_0.jpg": {
+    "카테고리": "국기미국",
+    "license": "Pexels License",
+    "credit": "Connor Scott McManus / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7728x5152",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the United States",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_0s_unsplash_1.jpg": {
+    "카테고리": "국기미국",
+    "license": "Unsplash License",
+    "credit": "Tim Mossholder / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1600",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the United States",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_0s_pexels_2.jpg": {
+    "카테고리": "국기미국",
+    "license": "Pexels License",
+    "credit": "David Dibert / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7579x5053",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the United States",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_1w_0.jpg": {
+    "카테고리": "국기미국",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : American Flag Waving on a Flag Pole / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4272x2848",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "American flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_1o_0.jpg": {
+    "카테고리": "국기미국",
+    "license": "by-sa",
+    "credit": "사진 : Noah Wulf / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "원본해상도": "4272x2848",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "American flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_1s_pexels_0.jpg": {
+    "카테고리": "국기미국",
+    "license": "Pexels License",
+    "credit": "Connor Scott McManus / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7728x5152",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "American flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기미국_1s_pexels_2.jpg": {
+    "카테고리": "국기미국",
+    "license": "Pexels License",
+    "credit": "Connor Scott McManus / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7728x5152",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "American flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_0w_0.jpg": {
+    "카테고리": "국기유럽",
+    "license": "CC BY 4.0",
+    "credit": "사진 : Flag of Hungary and flag of the European Uni / CC BY 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "1920x1080",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the European Union",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_0w_1.jpg": {
+    "카테고리": "국기유럽",
+    "license": "CC BY-SA 3.0 de",
+    "credit": "사진 : Regierungsviertel, Berlin-Mitte, 170325, ako / CC BY-SA 3.0 de / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the European Union",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_0s_pexels_0.jpg": {
+    "카테고리": "국기유럽",
+    "license": "Pexels License",
+    "credit": "Christian Wasserfallen / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6240x4160",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the European Union",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_0s_unsplash_1.jpg": {
+    "카테고리": "국기유럽",
+    "license": "Unsplash License",
+    "credit": "Collab Media / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1600",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the European Union",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_0s_pexels_2.jpg": {
+    "카테고리": "국기유럽",
+    "license": "Pexels License",
+    "credit": "Christian Wasserfallen / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6240x4160",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "flag of the European Union",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_1s_pexels_0.jpg": {
+    "카테고리": "국기유럽",
+    "license": "Pexels License",
+    "credit": "Engin Akyurt / Pexels",
+    "attribution_required": true,
+    "원본해상도": "8944x6708",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "German flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "국기유럽_1s_pexels_2.jpg": {
+    "카테고리": "국기유럽",
+    "license": "Pexels License",
+    "credit": "Hamdi Kılınç / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6016x4016",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "German flag waving",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_0s_pexels_0.jpg": {
+    "카테고리": "돈가격",
+    "license": "Pexels License",
+    "credit": "Sóc Năng Động / Pexels",
+    "attribution_required": true,
+    "원본해상도": "7360x4912",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Korean won banknotes money",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_0s_unsplash_1.jpg": {
+    "카테고리": "돈가격",
+    "license": "Unsplash License",
+    "credit": "Vardan Papikyan / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1800",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Korean won banknotes money",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_0s_pexels_2.jpg": {
+    "카테고리": "돈가격",
+    "license": "Pexels License",
+    "credit": "cottonbro studio / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6262x5010",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Korean won banknotes money",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_1s_pexels_0.jpg": {
+    "카테고리": "돈가격",
+    "license": "Pexels License",
+    "credit": "https://kaboompics.com/ / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6720x4480",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "calculator money finance desk",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_1s_unsplash_1.jpg": {
+    "카테고리": "돈가격",
+    "license": "Unsplash License",
+    "credit": "Towfiqu barbhuiya / Unsplash",
+    "attribution_required": true,
+    "원본해상도": "2400x1600",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "calculator money finance desk",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "돈가격_1s_pexels_2.jpg": {
+    "카테고리": "돈가격",
+    "license": "Pexels License",
+    "credit": "https://kaboompics.com/ / Pexels",
+    "attribution_required": true,
+    "원본해상도": "6720x4480",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "calculator money finance desk",
     "검수": "미확인 — Read로 눈 확인 필요"
   }
 }
