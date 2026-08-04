@@ -75,34 +75,34 @@
   ],
   "0804": [
     {
-      "title": "기아 PV5 5종에서 10종으로, 진짜 노림수는 판매가 아니었다",
-      "category": "신차·출시",
-      "issue": "기아 PV5 신규 라인업 5종 + 2027년형 EV6 동시 출시, PBV 생애주기 전략",
-      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61240"
-    },
-    {
-      "title": "29만 대 vs 27만 대, 하이브리드가 휘발유차를 처음 눌렀다",
-      "category": "전기차·친환경",
-      "issue": "국토부 상반기 자동차 등록통계, 하이브리드가 휘발유차 첫 추월",
-      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61252"
-    },
-    {
-      "title": "내수 2.8%↓인데 전체는 3.5%↑…국산차 5개사의 반전",
+      "title": "7만대 격차가 2만대로.. 기아가 현대를 코앞까지 쫓아왔다",
       "category": "자동차산업·수출",
-      "issue": "국산차 5개사 7월 판매실적, 내수 부진 속 수출 증가로 반등",
-      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61235"
+      "issue": "현대차·기아 7월 국내 판매 격차 2만대로 축소, 신차 전략 대비",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546393"
     },
     {
-      "title": "\"운전대도 페달도 없다\"…미국이 로보택시에 도로를 내줬다",
-      "category": "리콜·안전·정책",
-      "issue": "아마존 죽스 로보택시 NHTSA 임시 예외 승인, 완전자율주행 상업운행 첫 사례",
-      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61233"
+      "title": "제네시스 전기차 사면 대한항공 1만 마일.. 계산해보니 놀랍다",
+      "category": "브랜드·기업이슈",
+      "issue": "제네시스 전기차 구매시 대한항공 마일리지 1만 마일 연말까지 지급",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546386"
     },
     {
-      "title": "토요타가 1~3위 싹쓸이…현대차는 이번에도 무관에 그쳤다",
-      "category": "모터스포츠·이슈",
-      "issue": "WRC 섹토 랠리 핀란드, 토요타 포디엄 스윕과 현대차 무관",
-      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61234"
+      "title": "현대차 9조원 투자에 정부가 움직였다.. 관세 장벽부터 걷었다",
+      "category": "자동차산업·수출",
+      "issue": "현대차그룹 새만금 9조원 투자 가속, 정부 관세 대응 병행",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546395"
+    },
+    {
+      "title": "손흥민이 탄다고 알려진 그 SUV.. 이유가 있었다",
+      "category": "셀럽·연예인차",
+      "issue": "에버그린 - 스타들이 즐겨 찾는 대형 프리미엄 SUV급(GV80 등)",
+      "source_url": ""
+    },
+    {
+      "title": "BYD코리아 전시장 35곳 돌파.. 조용히 안방을 파고들었다",
+      "category": "브랜드·기업이슈",
+      "issue": "BYD코리아 국내 35번째 전시장(동대문) 오픈",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44246"
     },
     {
       "title": "테슬라 모델Y 중고가 4300만원…반값 이벤트가 알려준 시세",
@@ -115,6 +115,68 @@
       "category": "브랜드·기업이슈",
       "issue": "KGM-체리자동차 7500만달러 전략적 투자 계약, 상하이자동차 트라우마 재조명",
       "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61245"
+    }
+  ],
+  "0805": [
+    {
+      "title": "아우디 첫 대형 SUV, 벤츠 GLS도 못 단 문을 달았다",
+      "category": "신차·출시",
+      "issue": "아우디 브랜드 최초 풀사이즈 SUV 'Q9' 공개, 오토매틱 도어·커브드 OLED",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44233"
+    },
+    {
+      "title": "신차 10대 중 6대는 친환경차.. 독일차는 과반 깨졌다",
+      "category": "전기차·친환경",
+      "issue": "상반기 신차등록 친환경차 57.8%, 중국산 수입차 41.2%로 독일 브랜드 과반 붕괴",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145377"
+    },
+    {
+      "title": "EX40보다 크고 더 싸다.. 볼보가 새 전기차를 준비했다",
+      "category": "전기차·친환경",
+      "issue": "볼보 EX50 2027년 가을 출시 예고, EX40보다 크고 저렴한 가격대",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61263"
+    },
+    {
+      "title": "내수 766대인데 수출 4만대 넘었다.. 트랙스의 반전",
+      "category": "자동차산업·수출",
+      "issue": "한국GM 7월 판매 4만2119대(+30.6%), 트랙스·트레일블레이저 수출 견인",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145355"
+    },
+    {
+      "title": "너무 싸서 이상했던 중국차, 비밀은 부품에 있었다",
+      "category": "자동차산업·수출",
+      "issue": "중국 완성차 부품 공용화 전략과 가격 경쟁력, 일본·유럽 대응",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61264"
+    },
+    {
+      "title": "9월 10일부터 교통사고 치료, 8주 넘기면 심사받는다",
+      "category": "리콜·안전·정책",
+      "issue": "경상환자(상해등급 12~14급) 8주 초과 치료시 전문의료인 검토 제도 시행",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546397"
+    },
+    {
+      "title": "폭우에 진흙탕 된 핀란드, 한국타이어가 버텨냈다",
+      "category": "모터스포츠·이슈",
+      "issue": "WRC 핀란드 랠리 폭우 속 한국타이어 다이나프로 R213, 토요타 파야리 2연승",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145361"
+    },
+    {
+      "title": "휴가 끝나면 매물 쏟아진다.. 8월에 중고차 사는 법",
+      "category": "중고차·시장동향",
+      "issue": "에버그린 - 8월 중고차 매물 증가기 침수차 확인·감가상각 가이드",
+      "source_url": ""
+    },
+    {
+      "title": "21만원 내면 벤츠가 내 차 출생증명서를 준다",
+      "category": "브랜드·기업이슈",
+      "issue": "벤츠 클래식 스토어 1986~2010년산 대상 출생증명서 발급 서비스(130유로)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61253"
+    },
+    {
+      "title": "\"포르쉐가 오는데 너무 멋있었다\".. 유재석이 고른 차",
+      "category": "셀럽·연예인차",
+      "issue": "유재석 유튜브 <뜬뜬> 발언 기반, 그랜저→체어맨W→프라다→포르쉐 파나메라 차량 이력",
+      "source_url": ""
     }
   ]
 }
