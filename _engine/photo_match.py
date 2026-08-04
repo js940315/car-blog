@@ -145,7 +145,9 @@ def resolve_category(title, given=None, body=""):
     #    특정 모델명이 제목에 없을 때만 적용해 모델 기사를 가로채지 않는다.
     has_model = any(a in title for a in MODEL_ALIASES) or any(a in title for a in MODEL_FALLBACK)
     if not has_model:
-        for pat, b in ((r"수출|선적|운반선|물량|해외\s*판매|미국\s*판매|유럽\s*판매|만대", "산업수출"),
+        # '만대'만 보고 산업수출로 보내면 내수 판매 기사까지 운반선 사진이 붙는다(실측).
+        # 수출·선적 맥락이 분명할 때만 잡는다.
+        for pat, b in ((r"수출|선적|운반선|해외\s*판매|미국\s*판매|유럽\s*판매|글로벌\s*판매", "산업수출"),
                        (r"파업|노조|시위|집회|농성", "노조시위")):
             if re.search(pat, title) and available_buckets().get(b):
                 return b, f"제목 사건 우선 '{b}'"
@@ -178,12 +180,13 @@ def resolve_category(title, given=None, body=""):
         if re.search(pat, title) and available_buckets().get(b):
             return b, f"제목 상황 매칭 '{b}'"
 
-    # 5) 브랜드 — 제목에 브랜드가 있으면 그 브랜드 사진이 테마 사진보다 낫다
-    for alias in sorted(BRAND_ALIASES, key=len, reverse=True):
-        if alias in title:
-            b = _first_existing(BRAND_ALIASES[alias])
-            if b:
-                return b, f"제목 브랜드 '{alias}' → '{b}'"
+    # 5) 브랜드 — 제목에 여러 브랜드가 나오면 **먼저 나온 쪽이 주인공**이다.
+    #    ("기아가 현대를 코앞까지" → 주어는 기아인데 사전순으로 현대를 잡으면 엉뚱해진다)
+    hits = [(title.index(a), a) for a in BRAND_ALIASES if a in title]
+    for _, alias in sorted(hits):
+        b = _first_existing(BRAND_ALIASES[alias])
+        if b:
+            return b, f"제목 브랜드 '{alias}' → '{b}'"
 
     # 5.5) 맥락 소재(카카오톡·홈페이지·국기 등) — 브랜드·모델이 없을 때만 적용
     for pat, b in CONTEXT_RULES:
