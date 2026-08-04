@@ -25,6 +25,7 @@ PHOTO_DIR = os.path.join("assets", "photos")
 INDEX_PATH = os.path.join(PHOTO_DIR, "index.json")
 USAGE_PATH = os.path.join("state", "photo_usage.json")
 
+MIN_BRIGHTNESS = 70   # 평균 밝기(0~255). 이보다 어두우면 스크림 얹었을 때 차가 안 보인다
 RECENT_WINDOW = 3     # 카테고리 안에서 최근 이만큼은 재사용을 피한다
 HISTORY_MAX = 40       # usage 로그가 무한히 커지지 않게 카테고리당 이만큼만 보관
 
@@ -105,13 +106,18 @@ def pick_photo(category, date_tag, seq, exclude=None):
     #   차량 검출에 걸린 사진을 우선 쓴다. 태깅이 없거나 전부 미검출이면 그대로 간다.
     #   (검출기는 운반선·충전소 같은 정당한 컷을 놓치기도 해서 '차단'이 아니라 '우선'이다)
     try:
+        idx_meta = _load_json_safe(INDEX_PATH, {})
         from photo_match import car_required
         if car_required(category):
-            idx_meta = _load_json_safe(INDEX_PATH, {})
             preferred = [p for p in pool
                          if (idx_meta.get(p) or {}).get("차검출") is not False]
             if preferred:
                 pool = preferred
+        # 밝기 게이트 — 카드에 스크림을 깔고 흰 글씨를 얹으므로 어두운 원본은 차가 안 보인다.
+        # 밝은 후보가 있으면 그쪽을 쓴다(전부 어두우면 어쩔 수 없이 그대로).
+        bright = [p for p in pool if (idx_meta.get(p) or {}).get("밝기", 999) >= MIN_BRIGHTNESS]
+        if bright:
+            pool = bright
     except Exception:
         pass
 

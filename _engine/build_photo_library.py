@@ -226,16 +226,19 @@ def main():
         n_car = n_no = 0
         for f in files:
             b = f.split("_")[0]
-            if not car_required(b):
-                continue                      # 인물·실내·건물 버킷은 검사 제외
             img = _imread(os.path.join(DIR, f))
             if img is None:
                 continue
-            conf, area = car_presence(img)
-            has = bool(conf >= 0.45)
             meta = idx.get(f) or {"카테고리": b}
-            meta["차검출"] = has
-            meta["차신뢰도"] = round(float(conf), 2)
+            if car_required(b):               # 인물·실내·건물 버킷은 차량검출 생략
+                conf, area = car_presence(img)
+                meta["차검출"] = bool(conf >= 0.45)
+                meta["차신뢰도"] = round(float(conf), 2)
+                meta["차면적"] = round(float(area), 3)
+            has = meta.get("차검출", True)
+            # 밝기 — 사진 위에 스크림(어둡게)을 깔고 흰 글씨를 얹으므로, 원본이 어두우면
+            # 차가 아예 안 보인다(실측: 검은 세단·어두운 공장 컷). 뽑을 때 밝은 걸 우선한다.
+            meta["밝기"] = int(img.mean())
             idx[f] = meta
             n_car += has
             n_no += (not has)

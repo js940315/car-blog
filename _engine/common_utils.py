@@ -673,10 +673,12 @@ def build_photo_card_svg(photo_path, eyebrow, headline_lines, credit="",
         '<defs>'
         # 아래 60%를 덮는 스크림 — 사진이 밝든 어둡든 카피 가독성을 보장한다
         '<linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">'
+        # 2026-08-04 완화: 어두운 사진에서 차가 아예 안 보이던 문제(실측). 글자 영역인
+        # 하단만 확실히 덮고 중상단은 최대한 원본이 보이게 낮췄다.
         '<stop offset="0%" stop-color="#050d1a" stop-opacity="0"/>'
-        '<stop offset="42%" stop-color="#050d1a" stop-opacity="0.34"/>'
-        '<stop offset="72%" stop-color="#050d1a" stop-opacity="0.82"/>'
-        '<stop offset="100%" stop-color="#050d1a" stop-opacity="0.96"/></linearGradient>'
+        '<stop offset="52%" stop-color="#050d1a" stop-opacity="0.18"/>'
+        '<stop offset="78%" stop-color="#050d1a" stop-opacity="0.66"/>'
+        '<stop offset="100%" stop-color="#050d1a" stop-opacity="0.90"/></linearGradient>'
         # 상단도 살짝 눌러서 eyebrow가 뜨게
         '<linearGradient id="topfade" x1="0" y1="0" x2="0" y2="1">'
         '<stop offset="0%" stop-color="#050d1a" stop-opacity="0.55"/>'

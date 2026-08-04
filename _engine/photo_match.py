@@ -100,6 +100,40 @@ NO_CAR_OK = {"정의선", "머스크", "손흥민", "블루메", "왕촨푸", "�
              "SNS공유", "온라인구매", "계약서류", "국기중국", "국기미국", "국기유럽", "돈가격"}
 
 
+# 버킷 → 브랜드 (한 포스트 안에서 타 브랜드 차가 섞이는 걸 막는 데 쓴다)
+BUCKET_BRAND = {
+    "팰리세이드": "현대", "싼타페": "현대", "투싼": "현대", "코나": "현대", "그랜저": "현대",
+    "쏘나타": "현대", "아반떼": "현대", "스타리아": "현대",
+    "아이오닉5": "현대", "아이오닉6": "현대", "아이오닉9": "현대", "실내운전석": "현대",
+    "쏘렌토": "기아", "스포티지": "기아", "셀토스": "기아", "카니발": "기아",
+    "EV3": "기아", "EV6": "기아", "EV9": "기아", "타스만": "기아",
+    "GV80": "제네시스", "GV70": "제네시스", "G80": "제네시스", "G90": "제네시스",
+    "실내고급": "제네시스",
+    "테슬라모델Y": "테슬라", "테슬라모델3": "테슬라", "실내테슬라": "테슬라",
+    "벤츠차": "벤츠", "벤츠E클래스": "벤츠", "실내벤츠": "벤츠",
+    "BMW차": "BMW", "BMW5시리즈": "BMW", "실내BMW": "BMW",
+    "아우디차": "아우디", "폭스바겐차": "폭스바겐", "볼보차": "볼보",
+    "포르쉐차": "포르쉐", "렉서스차": "렉서스", "토요타차": "토요타", "BYD차": "BYD",
+}
+
+
+def brand_of_bucket(bucket):
+    return BUCKET_BRAND.get(bucket or "")
+
+
+def same_brand_bucket(brand, exclude=()):
+    """그 브랜드의 사진 버킷 중 보유한 것 하나(외관 우선, 실내는 뒤로)."""
+    if not brand:
+        return None
+    have = available_buckets()
+    cands = [b for b, br in BUCKET_BRAND.items()
+             if br == brand and b not in exclude and have.get(b)]
+    if not cands:
+        return None
+    cands.sort(key=lambda b: (b.startswith("실내"), -have.get(b, 0)))
+    return cands[0]
+
+
 def car_required(bucket):
     """그 버킷 사진에 차가 보여야 하는가(실내·인물·건물 버킷은 예외)."""
     if not bucket:

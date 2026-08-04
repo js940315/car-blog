@@ -26,7 +26,8 @@ from common_utils import (build_bar_card_svg, build_number_card_svg,
                           build_stock_thumbnail_svg, build_thumbnail_svg,
                           convert_svg_to_png)
 from photo_library import pick_photo, record_usage, variation_seed
-from photo_match import resolve_category, available_buckets
+from photo_match import (resolve_category, available_buckets,
+                         brand_of_bucket, same_brand_bucket)
 
 
 def _asset(kind, name):
@@ -434,6 +435,26 @@ def build_one(article, out_dir):
             if fixed:
                 print(f"  [사진 교정] 없는 버킷 '{given}' -> '{fixed}' ({why})")
                 sp["photo_category"] = fixed
+
+    # ★ 포스트 내 브랜드 일관성 — 현대차 기사에 제네시스·테슬라 차가 섞이면 신뢰가 깨진다.
+    #   썸네일이 특정 브랜드면, 본문 사진 중 '다른 브랜드 차' 버킷을 같은 브랜드로 바꾼다.
+    #   (테마·맥락 버킷은 브랜드가 없으므로 그대로 둔다)
+    if specs:
+        main_brand = brand_of_bucket((specs[0] or {}).get("photo_category"))
+        if main_brand:
+            used = {(specs[0] or {}).get("photo_category")}
+            for sp in specs[1:]:
+                if not isinstance(sp, dict) or sp.get("photo"):
+                    continue
+                cat = sp.get("photo_category")
+                b = brand_of_bucket(cat)
+                if b and b != main_brand:
+                    alt = same_brand_bucket(main_brand, exclude=used)
+                    if alt:
+                        print(f"  [브랜드 통일] '{cat}'({b}) -> '{alt}'({main_brand})")
+                        sp["photo_category"] = alt
+                        cat = alt
+                used.add(cat)
 
     # out_dir은 항상 ".../{date_tag}/{seq}" 형태(samples든 실제 발행이든)라
     # 여기서 순환picks 시드로 쓸 (date_tag, seq)를 그대로 뽑아낸다.
