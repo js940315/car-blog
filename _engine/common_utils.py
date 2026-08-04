@@ -197,7 +197,7 @@ def logo_tag(logo_path, x, y, box_w, box_h, plate=True):
 
 
 def fit_copy_font_size(line1, line2, size=1080, max_fs=92, min_fs=42,
-                       left_margin=62, right_margin=48):
+                       left_margin=62, right_margin=62):
     """썸네일 2줄 카피가 캔버스 폭을 넘기지 않는 최대 폰트 크기를 계산한다.
 
     이전엔 '11자 이하면 92, 아니면 80' 이분법이라 승인된 장문 카피(12자+)가
@@ -218,7 +218,11 @@ def fit_copy_font_size(line1, line2, size=1080, max_fs=92, min_fs=42,
                 w += fs * 0.34      # 공백·기호
         return w
 
-    longest = max((line1 or "", line2 or ""), key=len)
+    # ★ '글자 수'가 아니라 '실제 추정 폭'으로 긴 줄을 고른다.
+    #   한글은 전각(0.98), 라틴·숫자는 0.58이라 글자 수가 많아도 더 좁을 수 있다.
+    #   예: "BYD, 현대 넘어섰다"(15자, 8.6fs) < "'중국차'라고 웃었는데"(12자, 11.8fs)
+    #   len 기준으로 고르면 좁은 줄에 맞춰 폰트를 정해 넓은 줄이 오른쪽으로 삐져나갔다.
+    longest = max((line1 or "", line2 or ""), key=lambda t: est_width(t, 100))
     fs = max_fs
     while fs > min_fs and est_width(longest, fs) > max_width:
         fs -= 2

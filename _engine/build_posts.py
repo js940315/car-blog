@@ -372,6 +372,36 @@ def validate_image_structure(specs):
     return problems
 
 
+def _trim_black_border(im, thresh=26):
+    """헤드리스 브라우저가 남기는 검은 레터박스를 잘라낸다.
+
+    실측(2026-08-04): 1080 캔버스에 '아래 86 / 왼쪽 43 / 오른쪽 6' 처럼 **비대칭**으로
+    검은 띠가 생겼다. 루트 <svg>가 뷰포트에 딱 안 맞아 letterbox 되면서 생기는 현상인데,
+    좌우가 비대칭이라 카드 글자가 오른쪽으로 밀려 보이는 원인이기도 했다.
+    브라우저 동작에 기대지 말고 여기서 확실히 잘라 full-bleed 를 보장한다."""
+    try:
+        import numpy as np
+        a = np.asarray(im)
+        dark = a.sum(axis=2) < thresh
+        rows = np.where(~dark.all(axis=1))[0]
+        cols = np.where(~dark.all(axis=0))[0]
+        if len(rows) == 0 or len(cols) == 0:
+            return im
+        top, bot = int(rows[0]), int(rows[-1]) + 1
+        left, right = int(cols[0]), int(cols[-1]) + 1
+        # 잘라낼 게 거의 없으면 그대로 (오검출 방지)
+        if (top or left or bot < im.size[1] or right < im.size[0]):
+            im = im.crop((left, top, right, bot))
+        # 정사각이 아니면 중앙 정사각으로 맞춘다
+        w, h = im.size
+        if w != h:
+            s = min(w, h)
+            im = im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+        return im
+    except Exception:
+        return im
+
+
 def build_one(article, out_dir):
     """붙여넣기 폴더에는 사람이 실제로 쓰는 것만 남긴다.
 
@@ -452,8 +482,8 @@ def build_one(article, out_dir):
             # 2160px 원본을 1080px JPG로 — 네이버엔 충분하고 용량은 1/20.
             # 저장소·다운로드가 가벼워져 매일 복붙 가성비가 올라간다.
             im = Image.open(tmp_png).convert("RGB")
-            if im.size[0] > 1080:
-                im = im.resize((1080, 1080), Image.LANCZOS)
+            im = _trim_black_border(im)   # 헤드리스 렌더의 검은 여백 제거(좌우 비대칭 → 글자 치우침 원인)
+            im = im.resize((1080, 1080), Image.LANCZOS)
             im.save(img_path, "JPEG", quality=92, subsampling=1)
             image_map[str(idx)] = img_name
         else:
