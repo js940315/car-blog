@@ -379,27 +379,27 @@ def _trim_black_border(im, thresh=26):
     실측(2026-08-04): 1080 캔버스에 '아래 86 / 왼쪽 43 / 오른쪽 6' 처럼 **비대칭**으로
     검은 띠가 생겼다. 루트 <svg>가 뷰포트에 딱 안 맞아 letterbox 되면서 생기는 현상인데,
     좌우가 비대칭이라 카드 글자가 오른쪽으로 밀려 보이는 원인이기도 했다.
-    브라우저 동작에 기대지 말고 여기서 확실히 잘라 full-bleed 를 보장한다."""
+    브라우저 동작에 기대지 말고 여기서 확실히 잘라 full-bleed 를 보장한다.
+
+    ※ 2026-08-07: 예전엔 numpy로 구현했는데, numpy가 없는 실행환경에서 예외가 조용히
+      삼켜져 '코드는 있는데 여백이 그대로'인 사고가 반복됐다. 이제 PIL만으로 구현하고,
+      실패하면 반드시 경고를 찍어 조용히 넘어가지 않게 한다."""
     try:
-        import numpy as np
-        a = np.asarray(im)
-        dark = a.sum(axis=2) < thresh
-        rows = np.where(~dark.all(axis=1))[0]
-        cols = np.where(~dark.all(axis=0))[0]
-        if len(rows) == 0 or len(cols) == 0:
-            return im
-        top, bot = int(rows[0]), int(rows[-1]) + 1
-        left, right = int(cols[0]), int(cols[-1]) + 1
-        # 잘라낼 게 거의 없으면 그대로 (오검출 방지)
-        if (top or left or bot < im.size[1] or right < im.size[0]):
-            im = im.crop((left, top, right, bot))
-        # 정사각이 아니면 중앙 정사각으로 맞춘다
+        from PIL import Image as _Im, ImageChops
+        black = _Im.new("RGB", im.size, (0, 0, 0))
+        diff = ImageChops.difference(im, black).convert("L")
+        mask = diff.point(lambda p: 255 if p > thresh else 0)
+        bbox = mask.getbbox()            # 검지 않은 영역의 경계 상자
+        if bbox and bbox != (0, 0, im.size[0], im.size[1]):
+            im = im.crop(bbox)
+        # 정사각이 아니면 중앙 정사각으로 맞춘다(네이버 카드 규격)
         w, h = im.size
         if w != h:
             s = min(w, h)
             im = im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
         return im
-    except Exception:
+    except Exception as e:
+        print(f"  [경고] 검은여백 제거 실패(그대로 저장): {type(e).__name__}: {str(e)[:60]}")
         return im
 
 
