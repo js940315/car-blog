@@ -36,8 +36,13 @@ CATEGORIES = {
     "산업수출": ["automobile factory production line", "car carrier ship vehicles"],
     "리콜안전정책": ["car dashboard warning light", "highway traffic many cars"],
     "모터스포츠": ["motorsport race car circuit", "formula racing car on track"],
-    "중고차시장": ["used car dealership lot rows", "car sales showroom interior"],
-    "브랜드기업": ["Hyundai Motor headquarters building", "automobile company office tower"],
+    # ※ 이 두 버킷은 '추상 개념'이라 검색어에 car/vehicle 을 박지 않으면 스톡이
+    #   빈 사무빌딩·일반 주차장을 준다(실측 2026-08-08: 두바이 빌딩·스위스 로슈타워·
+    #   미국 닷지 왜건이 들어와 있었다). 반드시 차가 프레임 안에 있는 쿼리만 쓴다.
+    "중고차시장": ["used car dealership cars for sale", "car dealership lot many cars",
+               "car auction vehicles rows"],
+    "브랜드기업": ["car dealership showroom cars", "Hyundai Motor Studio showroom",
+               "Kia showroom store cars"],
     "셀럽차": ["luxury SUV black premium", "premium luxury sedan car"],
 
     # --- 인기 모델 버킷 ---------------------------------------------------
@@ -131,6 +136,9 @@ CATEGORIES = {
 #   Commons(wiki)에 실차가 많다. 그래서 버킷 성격별로 쓸 소스를 제한한다.
 SOURCE_ROUTING = [
     (("실내",), ["wiki", "openverse"]),          # 실내: 한정어를 지키는 wiki만
+    # 중고차시장·브랜드기업: 스톡은 'used/dealership' 한정어를 무시하고 **신차 야적장**을
+    # 준다(실측 2026-08-08: 닛산·미쓰비시 신차 재고 컷이 반복 유입). 실내 버킷과 같은 증상.
+    (("중고차시장", "브랜드기업"), ["wiki", "openverse"]),
     (("노조시위", "발표행사", "공장생산"), ["wiki", "stock"]),
     (("BYD차", "아이오닉", "EV3", "EV6", "EV9", "GV", "G80", "G90",
       "타스만", "셀토스", "쏘렌토", "스포티지", "카니발", "팰리세이드",

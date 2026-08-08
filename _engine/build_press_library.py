@@ -65,6 +65,17 @@ def genesis_urls(items):
     """items = [(자산ID, 파일명), ...] → 최대 해상도 URL"""
     return [f"{GEN_CDN}/{i}/{n}.png" for i, n in items]
 
+
+# 테슬라: tesla.com 본문은 403(봇 차단)이지만 **이미지 CDN 은 열려 있다**(실측 2026-08-08).
+# 그래서 모델 페이지를 훑는 대신 자산명을 직접 지정한다. 새 자산은 이름 규칙
+#   {Model-Y|Model-3}-{Main|Interior|Exterior|Performance|Safety}-Hero-Desktop-{Global|LHD}[-v2]
+# 을 찔러서 200 이 오는 것만 채택하면 된다.
+TSL_CDN = "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto"
+
+
+def tesla_urls(names):
+    return [f"{TSL_CDN}/{n}.jpg" for n in names]
+
 PRESS = {
     # ── 기아: /content/dam/kwp/kr/ko/vehicles/{모델}/{연식}/content/*_pc.jpg (1920px)
     #    현대와 달리 360 뷰가 아니라 '연출 컷'이라 각도 대신 장면(측면·야간·그릴 등)으로 고른다.
@@ -77,6 +88,52 @@ PRESS = {
         ("50534b313031303030303030303030303131363031", "genesis-gv80-2027-black-interior-detail-main-large"),
         ("50534b313031303030303030303030303131363033", "genesis-gv80-2027-black-interior-detail-ccp-large"),
         ("50534b313031303030303030303030303133353937", "models/gv80/2027/exterior-color/genesis-gv80-uyuni-white-uyh-large"),
+    ]),
+    # 2026-08-08 2차 확장 — G80·G90·GV70. GV80과 같은 dams CDN 이고, 자산ID는
+    # 모델 페이지(https://www.genesis.com/kr/ko/models/{g80|g90|gv70}) innerHTML 에서
+    #   /hmg-presigned-url\/([0-9a-f]{20,})\/([\w\-\/]+)\.png/
+    # 로 뽑았다. 그릴·휠·머플러 같은 **클로즈업은 제외**한다(썸네일에서 무슨 차인지 안 보인다).
+    "G80": genesis_urls([
+        ("50534b313031303030303030303030303133383537", "models/g80/2027/key-visual/genesis-g80-2027-key-visual-large"),
+        ("50534b313031303030303030303030303039323031", "genesis-g80-2027-exterior-main-large"),
+        ("50534b313031303030303030303030303039313334", "genesis-g80-2027-black-exterior-detail-front-large"),
+        ("50534b313031303030303030303030303039313336", "genesis-g80-2027-black-exterior-detail-rear-large"),
+        ("50534b313031303030303030303030303133343536", "models/g80/2027/exterior-color/standard/genesis-g80-standard-uyuni-white-uyh-large"),
+        ("50534b313031303030303030303030303039313531", "genesis-g80-2027-black-interior-detail-design-large"),
+        ("50534b313031303030303030303030303039313538", "genesis-g80-2027-black-interior-detail-ccpsbw-large"),
+    ]),
+    "G90": genesis_urls([
+        ("50534b313031303030303030303030303133383630", "models/g90/2027/key-visual/genesis-g90-2027-key-visual-large"),
+        ("50534b313031303030303030303030303131333334", "genesis-g90-2027-exterior-main-large"),
+        ("50534b313031303030303030303030303131333337", "genesis-g90-2027-black-exterior-detail-front-large"),
+        ("50534b313031303030303030303030303131333339", "genesis-g90-2027-black-exterior-detail-side-large"),
+        ("50534b313031303030303030303030303131333431", "genesis-g90-2027-black-exterior-detail-rear-large"),
+        ("50534b313031303030303030303030303133353635", "models/g90/2027/exterior-color/standard/genesis-g90-uyuni-white-uyh-large"),
+        ("50534b313031303030303030303030303131333637", "genesis-g90-2027-interior-main-large"),
+        ("50534b313031303030303030303030303131333639", "genesis-g90-2027-interior-main2-large"),
+    ]),
+    "GV70": genesis_urls([
+        ("50534b313031303030303030303030303134363939", "models/gv70/2027/key-visual/genesis-gv70-key-visual-large"),
+        ("50534b313031303030303030303030303134373031", "models/gv70/2027/exterior/genesis-gv70-exterior-large"),
+        ("50534b313031303030303030303030303134373035", "models/gv70/2027/exterior/genesis-gv70-exterior-detail-sideprofile-large"),
+        ("50534b313031303030303030303030303134373130", "models/gv70/2027/exterior/genesis-gv70-exterior-detail-rear-large"),
+        ("50534b313031303030303030303030303133363934", "models/gv70/2027/exterior-color/standard/genesis-gv70-standard-uyuni-white-uyh-large"),
+        ("50534b313031303030303030303030303134393130", "models/gv70/2027/graphite/genesis-gv70-graphite-main-large"),
+        ("50534b313031303030303030303030303134373139", "models/gv70/2027/interior/genesis-gv70-interior-main1-large"),
+        ("50534b313031303030303030303030303134373234", "models/gv70/2027/interior/genesis-gv70-interior-main2-large"),
+    ]),
+    "테슬라모델Y": tesla_urls([
+        "Model-Y-Main-Hero-Desktop-Global",
+        "Model-Y-Main-Hero-Desktop-Global-v2",
+        "Model-Y-Interior-Hero-Desktop-LHD",
+    ]),
+    "테슬라모델3": tesla_urls([
+        "Model-3-Main-Hero-Desktop-LHD",
+        "Model-3-Main-Hero-Desktop-LHD-v2",
+        "Model-3-Exterior-Hero-Desktop-LHD",
+        "Model-3-Performance-Hero-Desktop-LHD",
+        # Model-3-Safety-Hero 는 제외 — 실차가 아니라 **차체 골격 투시도**다(실측 폐기).
+        "Model-3-Interior-Hero-Desktop-LHD",
     ]),
     "EV6": [
         f"{KIA}/ev6/pe/content/ev6_pe_exterior_front_style_pc.jpg",
@@ -282,6 +339,7 @@ def fetch(url, dst, referer=None):
     if referer is None:
         referer = ("https://www.kia.com/" if "kia.com" in url
                    else "https://www.genesis.com/" if "genesis.com" in url
+                   else "https://www.tesla.com/" if "tesla.com" in url
                    else "https://www.hyundai.com/")
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": referer})
     data = urllib.request.urlopen(req, timeout=30).read()

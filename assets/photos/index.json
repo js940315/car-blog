@@ -55,31 +55,6 @@
     "밝기": 95,
     "차면적": 0.467
   },
-  "중고차시장_0_0.jpg": {
-    "카테고리": "중고차시장",
-    "license": "CC BY 2.0",
-    "credit": "사진 : 2005 Dodge Magnum RT (19026310711) / CC BY 2.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4592x3056",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "used car dealership lot rows",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "밝기": 72,
-    "차면적": 0.69
-  },
-  "브랜드기업_1_0.jpg": {
-    "카테고리": "브랜드기업",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Münster, LVM, Bürogebäude -- 2013 -- 5149-51 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4111x2741",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "automobile company office tower",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 100
-  },
   "셀럽차_0_0.jpg": {
     "카테고리": "셀럽차",
     "license": "CC BY-SA 4.0",
@@ -1321,56 +1296,6 @@
     "차신뢰도": 0.98,
     "밝기": 87,
     "차면적": 0.306
-  },
-  "중고차시장_0s_pexels_0.jpg": {
-    "카테고리": "중고차시장",
-    "license": "Pexels License",
-    "credit": "Luke Miller / Pexels",
-    "attribution_required": true,
-    "원본해상도": "8064x4536",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "used car dealership lot rows",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "밝기": 60,
-    "차면적": 0.0
-  },
-  "중고차시장_0s_unsplash_1.jpg": {
-    "카테고리": "중고차시장",
-    "license": "Unsplash License",
-    "credit": "Iain / Unsplash",
-    "attribution_required": true,
-    "원본해상도": "2400x1800",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "used car dealership lot rows",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "밝기": 49,
-    "차면적": 0.0
-  },
-  "브랜드기업_1s_pexels_0.jpg": {
-    "카테고리": "브랜드기업",
-    "license": "Pexels License",
-    "credit": "pierre matile / Pexels",
-    "attribution_required": true,
-    "원본해상도": "9528x6328",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "automobile company office tower",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 105
-  },
-  "브랜드기업_1s_pexels_1.jpg": {
-    "카테고리": "브랜드기업",
-    "license": "Pexels License",
-    "credit": "Diego F. Parra / Pexels",
-    "attribution_required": true,
-    "원본해상도": "7360x4912",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "automobile company office tower",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 61
   },
   "싼타페_0w_0.jpg": {
     "카테고리": "싼타페",
@@ -6599,22 +6524,12 @@
   },
   "팰리세이드실사_0w_0.jpg": {
     "카테고리": "팰리세이드실사",
-    "license": "CC BY 4.0",
-    "credit": "사진 : 2026 Hyundai Palisade Front Right Quater NYC / CC BY 4.0 / Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : 2025 Hyundai Palisade Calligraphy Hybrid Fro / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
-    "원본해상도": "3993x2695",
+    "원본해상도": "5603x2639",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Palisade 2026",
-    "검수": "미확인 — Read로 눈 확인 필요"
-  },
-  "그랜저실사_1w_1.jpg": {
-    "카테고리": "그랜저실사",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Grandeur IG PE Midnight Black (47) / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "3981x2986",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Grandeur 2024",
     "검수": "미확인 — Read로 눈 확인 필요"
   },
   "투싼실사_0w_0.jpg": {
@@ -6704,7 +6619,7 @@
   "아이오닉5실사_0w_0.jpg": {
     "카테고리": "아이오닉5실사",
     "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (1) / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
     "원본해상도": "4000x3000",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
@@ -6783,10 +6698,10 @@
   },
   "아이오닉5실사_0w_1.jpg": {
     "카테고리": "아이오닉5실사",
-    "license": "CC0",
-    "credit": "사진 : Hyundai Ioniq 5 / CC0 / Wikimedia Commons",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (2) / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
-    "원본해상도": "5870x2840",
+    "원본해상도": "4000x3000",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 5 electric SUV",
     "검수": "미확인 — Read로 눈 확인 필요"
@@ -6794,9 +6709,9 @@
   "아이오닉5실사_0w_2.jpg": {
     "카테고리": "아이오닉5실사",
     "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Ioniq 5 1X7A0847 / CC BY-SA 4.0 / Wikimedia Commons",
+    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (3) / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
-    "원본해상도": "5481x3288",
+    "원본해상도": "4000x3000",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 5 electric SUV",
     "검수": "미확인 — Read로 눈 확인 필요"
@@ -6844,9 +6759,9 @@
   "팰리세이드실사_2w_1.jpg": {
     "카테고리": "팰리세이드실사",
     "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (10) / CC BY-SA 4.0 / Wikimedia Commons",
+    "credit": "사진 : Hyundai Palisade 2.5T Prestige LX3 Abyss Bla / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
-    "원본해상도": "3981x2986",
+    "원본해상도": "3859x2894",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Palisade LX3 SUV",
     "검수": "미확인 — Read로 눈 확인 필요"
@@ -6854,11 +6769,379 @@
   "팰리세이드실사_2w_2.jpg": {
     "카테고리": "팰리세이드실사",
     "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (1) / CC BY-SA 4.0 / Wikimedia Commons",
     "attribution_required": true,
     "원본해상도": "3954x2966",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Palisade LX3 SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "G80_press0.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133383537/models/g80/2027/key-visual/genesis-g80-2027-key-visual-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press1.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039323031/genesis-g80-2027-exterior-main-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press2.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313334/genesis-g80-2027-black-exterior-detail-front-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press3.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313336/genesis-g80-2027-black-exterior-detail-rear-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press4.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133343536/models/g80/2027/exterior-color/standard/genesis-g80-standard-uyuni-white-uyh-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press5.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313531/genesis-g80-2027-black-interior-detail-design-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G80_press6.png": {
+    "카테고리": "G80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313538/genesis-g80-2027-black-interior-detail-ccpsbw-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press0.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133383630/models/g90/2027/key-visual/genesis-g90-2027-key-visual-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press1.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333334/genesis-g90-2027-exterior-main-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press2.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333337/genesis-g90-2027-black-exterior-detail-front-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press3.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333339/genesis-g90-2027-black-exterior-detail-side-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press4.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333431/genesis-g90-2027-black-exterior-detail-rear-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press5.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133353635/models/g90/2027/exterior-color/standard/genesis-g90-uyuni-white-uyh-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press6.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333637/genesis-g90-2027-interior-main-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "G90_press7.png": {
+    "카테고리": "G90",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333639/genesis-g90-2027-interior-main2-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press0.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134363939/models/gv70/2027/key-visual/genesis-gv70-key-visual-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press1.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373031/models/gv70/2027/exterior/genesis-gv70-exterior-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press2.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373035/models/gv70/2027/exterior/genesis-gv70-exterior-detail-sideprofile-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press3.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373130/models/gv70/2027/exterior/genesis-gv70-exterior-detail-rear-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press4.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133363934/models/gv70/2027/exterior-color/standard/genesis-gv70-standard-uyuni-white-uyh-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press5.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134393130/models/gv70/2027/graphite/genesis-gv70-graphite-main-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press6.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373139/models/gv70/2027/interior/genesis-gv70-interior-main1-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "GV70_press7.png": {
+    "카테고리": "GV70",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373234/models/gv70/2027/interior/genesis-gv70-interior-main2-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델Y_press0.jpg": {
+    "카테고리": "테슬라모델Y",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Main-Hero-Desktop-Global.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델Y_press1.jpg": {
+    "카테고리": "테슬라모델Y",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Main-Hero-Desktop-Global-v2.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델Y_press2.jpg": {
+    "카테고리": "테슬라모델Y",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Interior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press0.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press1.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD-v2.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press2.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Exterior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press3.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Performance-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press4.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press5.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "중고차시장_0w_0.jpg": {
+    "카테고리": "중고차시장",
+    "license": "CC BY-SA 2.0",
+    "credit": "사진 : Cars for sale, Milton Road - geograph.org.uk / CC BY-SA 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4000x3000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "used car dealership cars for sale",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "브랜드기업_0w_0.jpg": {
+    "카테고리": "브랜드기업",
+    "license": "CC BY-SA 2.0",
+    "credit": "사진 : Car showroom, Lee Way, Newport - geograph.or / CC BY-SA 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5048x3366",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "car dealership showroom cars",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "팰리세이드실사_2w_3.jpg": {
+    "카테고리": "팰리세이드실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (10) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3981x2986",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Palisade LX3 SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "팰리세이드실사_2w_4.jpg": {
+    "카테고리": "팰리세이드실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (4) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3927x2945",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Palisade LX3 SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "그랜저실사_0w_0.jpg": {
+    "카테고리": "그랜저실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Grandeur GN7 Yugi Bronze Metallic (2 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3963x2972",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Grandeur GN7",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "그랜저실사_2w_0.jpg": {
+    "카테고리": "그랜저실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Grandeur GN7 Curated Silver Metallic / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3991x2993",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Grandeur GN7 2023",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉5실사_0w_3.jpg": {
+    "카테고리": "아이오닉5실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (4) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4000x3000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 5 electric SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉5실사_0w_4.jpg": {
+    "카테고리": "아이오닉5실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai IONIQ 5 NE Lucid Blue Pearl (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3845x2884",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 5 electric SUV",
     "검수": "미확인 — Read로 눈 확인 필요"
   }
 }

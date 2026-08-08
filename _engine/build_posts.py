@@ -27,7 +27,8 @@ from common_utils import (build_bar_card_svg, build_number_card_svg,
                           convert_svg_to_png)
 from photo_library import pick_photo, record_usage, variation_seed
 from photo_match import (resolve_category, available_buckets,
-                         brand_of_bucket, same_brand_bucket, real_alt)
+                         brand_of_bucket, same_brand_bucket, real_alt,
+                         weak_theme)
 
 
 def _asset(kind, name):
@@ -353,12 +354,19 @@ def check_caption_photo(specs):
     return problems
 
 
-def validate_image_structure(specs):
-    """images 배열이 '썸네일1 + 실물1 + 카드N' 5장 스펙(v2/v3)을 지키는지 확인한다.
+IMAGE_SET_SIZE = 8        # 2026-08-08 개편: 썸네일1 + 실물사진7
+MIN_INTERIOR = 2          # 그 중 실내(인테리어) 최소 2장
+DATA_CARD_TYPES = {"bar_card", "number_card", "rank_card", "stock_card"}
 
-    사람이 기사 JSON을 쓸 때 실물 슬롯을 깜빡하고 데이터 카드로 채워도
-    (썸네일1+카드4) 겉보기엔 5장이라 build 단계에서 조용히 넘어가곤 했다.
-    여기서 강제로 잡아내 build_report.json의 problems에 남긴다."""
+
+def validate_image_structure(specs):
+    """images 배열이 **8장 세트**(썸네일1 + 실물사진7, 실내 2장 이상)를 지키는지 본다.
+
+    이 함수는 예전에 '5장 스펙'만 검사했다. 2026-08-08에 8장으로 규격을 바꿨는데
+    검증을 같이 안 고쳐서, 옛 6장 기사가 problems=[] 로 통과해 그대로 발행됐다
+    (0808 4~10번). 규격을 바꿀 때 검증도 같이 바꾸지 않으면 조용히 새는 자리다.
+
+    ※ specs 는 카테고리 해석·브랜드 통일이 **끝난 뒤** 들어와야 실내 장수가 맞다."""
     problems = []
     if not specs:
         return problems
@@ -366,12 +374,26 @@ def validate_image_structure(specs):
         problems.append(
             f"1번 이미지가 대표 썸네일이 아님(thumbnail/stock_thumbnail만 허용): "
             f"{specs[0].get('type')}")
-    if len(specs) == 5:
-        slot2 = specs[1].get("type")
-        if slot2 not in REAL_PHOTO_IMAGE_TYPES:
-            problems.append(
-                f"5장 구성(썸네일1+실물1+카드3)인데 2번(실물) 슬롯이 photo_card가 "
-                f"아니라 '{slot2}'임 — 실물 사진을 넣거나 4장 구성으로 바꿀 것")
+    if len(specs) != IMAGE_SET_SIZE:
+        problems.append(
+            f"이미지 {len(specs)}장 — 규격은 {IMAGE_SET_SIZE}장(썸네일1+실물사진7)이다. "
+            f"벤치마크 상위 블로그는 10~16장을 쓴다(체류시간 직결)")
+
+    body = specs[1:]
+    n_data = sum(1 for s in body if s.get("type") in DATA_CARD_TYPES)
+    if n_data > 1:
+        problems.append(
+            f"데이터카드 {n_data}장 — 자동차 글은 사진이 주력이라 최대 1장만 허용")
+    n_summary = sum(1 for s in body if s.get("type") == "summary_card")
+    if n_summary > 1:
+        problems.append(f"정리카드 {n_summary}장 — 마지막 1장만 허용")
+
+    n_interior = sum(1 for s in specs
+                     if str(s.get("photo_category") or "").startswith("실내"))
+    if n_interior < MIN_INTERIOR:
+        problems.append(
+            f"실내 사진 {n_interior}장 — 최소 {MIN_INTERIOR}장이어야 한다"
+            f"(독자는 외관만큼 실내를 궁금해한다)")
     return problems
 
 
@@ -458,6 +480,14 @@ def build_one(article, out_dir):
                                             interior=is_interior)
                     if alt and alt != cat:
                         print(f"  [브랜드 통일] '{cat}'({b}) -> '{alt}'({main_brand})")
+                        sp["photo_category"] = alt
+                        cat = alt
+                # 사진이 모자란 추상 테마('중고차시장'·'브랜드기업')는 차 사진으로 바꾼다.
+                # 안 그러면 자동차 글에 빈 사무빌딩·옛날 신문 스캔이 나간다(실측).
+                elif weak_theme(cat):
+                    alt = same_brand_bucket(main_brand, exclude=used)
+                    if alt:
+                        print(f"  [빈약테마 대체] '{cat}' -> '{alt}'({main_brand})")
                         sp["photo_category"] = alt
                         cat = alt
                 used.add(cat)
@@ -671,6 +701,23 @@ def main():
     with open("build_report.json", "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
     print(f"{ok}/{len(articles)}건 생성 -> output/{date_tag}/  (상세: build_report.json)")
+
+    # ★ 규격 위반을 마지막에 크게 찍는다. 무인 루틴은 사람 눈이 없어서, build_report.json
+    #   안에만 남기면 아무도 안 본다(실제로 8장 규격 위반이 그렇게 통과했다).
+    #   여기 뜬 기사는 ROUTINE_AUTO 지시대로 **재작성**하고 다시 빌드해야 한다.
+    flagged = [r for r in report if r.get("problems") or r.get("error")]
+    if flagged:
+        print("\n" + "!" * 60)
+        print(f"규격 위반/실패 {len(flagged)}건 — 발행 전 반드시 재작성할 것")
+        for r in flagged:
+            print(f"  [{r['no']}] {str(r.get('title'))[:38]}")
+            if r.get("error"):
+                print(f"      실패: {r['error']}")
+            for p in r.get("problems", []):
+                print(f"      - {p}")
+        print("!" * 60)
+    else:
+        print("규격 위반 없음 — 전 기사 통과")
 
 
 if __name__ == "__main__":
