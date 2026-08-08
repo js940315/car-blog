@@ -78,6 +78,20 @@ PRESS = {
         ("50534b313031303030303030303030303131363033", "genesis-gv80-2027-black-interior-detail-ccp-large"),
         ("50534b313031303030303030303030303133353937", "models/gv80/2027/exterior-color/genesis-gv80-uyuni-white-uyh-large"),
     ]),
+    "EV6": [
+        f"{KIA}/ev6/pe/content/ev6_pe_exterior_front_style_pc.jpg",
+        f"{KIA}/ev6/pe/content/ev6_pe_exterior_modern_contrast_side_veiw_pc.jpg",
+        f"{KIA}/ev6/pe/content/ev6_pe_exterior_modern_contrast_rear_veiw_pc.jpg",
+        f"{KIA}/ev6/pe/content/ev6_pe_gtl_exterior_pc.jpg",
+        f"{KIA}/ev6/27my/content/ev6_pe_interior_pc.jpg",
+        f"{KIA}/ev6/27my/content/ev6_pe_gtl_interior_pc.jpg",
+    ],
+    "EV9": [
+        f"{KIA}/ev9/24my/content/ev9_exterior_flagship_pc.jpg",
+        f"{KIA}/ev9/24my/content/ev9_exterior_side_profile_pc.jpg",
+        f"{KIA}/ev9/26my/content/ev9_interior_front.jpg",
+        f"{KIA}/ev9/26my/content/ev9_interior_side.jpg",
+    ],
     # 디테일 컷(그릴·휠·엠블럼 클로즈업)은 제외 — 썸네일에서 무슨 차인지 안 보인다.
     "카니발": [
         f"{KIA}/carnival/26my/content/carnival_exterior_line-up_pc.jpg",
@@ -107,6 +121,8 @@ PRESS = {
     # 실측 코드(2026-08-08, 모델 페이지 innerHTML 에서 추출)
     # ※ 아이오닉5는 외관(NE10)과 실내(NE09) 플랫폼 코드가 다르다.
     "아이오닉5": exterior_urls("NE10", "C5G", mid="") + interior_urls("NE09", ["IP0", "IP1", "IP2"]),
+    "아이오닉9": exterior_urls("ME02", "A2B") + interior_urls("ME02", ["IA6", "IA5", "IA4"]),
+    "아반떼": exterior_urls("FN01", "SAW", mid="") + interior_urls("FN01", ["IQ3", "IQ2", "IH5"]),
     "투싼": exterior_urls("NX17", "TW3", mid="") + interior_urls("NX17", ["IK0", "IJ8", "IJ9"]),
     "코나": exterior_urls("SX19", "RRR", mid="") + interior_urls("SX19", ["I54", "IC2", "IC1"]),
     "그랜저": exterior_urls("GN11", "WBP", mid="") + interior_urls("GN11", ["IN6", "IN5", "IN4"]),
