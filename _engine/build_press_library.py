@@ -138,6 +138,58 @@ PRESS = {
 }
 
 
+def fit_square_pad(path, size=1400):
+    """차가 잘리지 않게 **전체를 담고** 남는 공간만 배경색으로 채워 정사각으로 만든다.
+
+    기존엔 prepare_photo() 가 중앙을 잘라 정사각으로 만들었는데, 자동차 프레스 컷은
+    가로로 길어서(16:9) 앞뒤 범퍼가 날아갔다(실측 2026-08-08). 프레스 사진은 배경이
+    단색·그라데이션이라, 가장자리 색을 뽑아 채우면 이어 붙인 티가 거의 안 난다."""
+    from PIL import Image, ImageFilter
+    im = Image.open(path).convert("RGB")
+    w, h = im.size
+    if w == h:
+        return im.resize((size, size), Image.LANCZOS).save(path, "JPEG", quality=94)
+    # 4:3 정도까지는 살짝 잘라서 채운다 — 완전히 다 담으려다 보면 16:9 사진이
+    # 정사각 안에서 너무 작아져 위아래가 휑해진다(실측 2026-08-08).
+    # 차의 앞뒤가 날아가지 않는 선(가로 최대 33% 크롭)까지만 crop 하고 나머지는 패딩.
+    MAX_CROP = 1.34          # 허용 가로세로비. 이보다 길면 여기까지만 좌우를 잘라낸다
+    if w / h > MAX_CROP:
+        keep = int(h * MAX_CROP)
+        left = (w - keep) // 2
+        im = im.crop((left, 0, left + keep, h))
+        w, h = im.size
+    elif h / w > MAX_CROP:
+        keep = int(w * MAX_CROP)
+        top = (h - keep) // 2
+        im = im.crop((0, top, w, top + keep))
+        w, h = im.size
+
+    # 남은 여백은 가장자리를 늘려 흐린 배경으로 채운다(단색보다 이질감이 적다)
+    scale = size / max(w, h)
+    nw, nh = max(1, int(w * scale)), max(1, int(h * scale))
+    small = im.resize((nw, nh), Image.LANCZOS)
+    canvas = Image.new("RGB", (size, size))
+    ox, oy = (size - nw) // 2, (size - nh) // 2
+    if nh < size:      # 위·아래 여백
+        band = max(1, nh // 14)
+        top = small.crop((0, 0, nw, band)).resize((size, max(1, oy)), Image.LANCZOS)
+        bot_h = size - oy - nh
+        bot = small.crop((0, nh - band, nw, nh)).resize((size, max(1, bot_h)), Image.LANCZOS)
+        canvas.paste(top.filter(ImageFilter.GaussianBlur(18)), (0, 0))
+        canvas.paste(bot.filter(ImageFilter.GaussianBlur(18)), (0, oy + nh))
+    if nw < size:      # 좌·우 여백
+        band = max(1, nw // 14)
+        left = small.crop((0, 0, band, nh)).resize((max(1, ox), size), Image.LANCZOS)
+        right_w = size - ox - nw
+        right = small.crop((nw - band, 0, nw, nh)).resize((max(1, right_w), size), Image.LANCZOS)
+        canvas.paste(left.filter(ImageFilter.GaussianBlur(18)), (0, 0))
+        canvas.paste(right.filter(ImageFilter.GaussianBlur(18)), (ox + nw, 0))
+    canvas.paste(small, (ox, oy))
+    im = small
+    canvas.save(path, "JPEG", quality=94, subsampling=1)
+    return canvas
+
+
 def fetch(url, dst, referer=None):
     # 브랜드별로 Referer 를 맞춰야 CDN 이 막지 않는다
     if referer is None:
@@ -177,7 +229,6 @@ def main():
         except ValueError:
             idx = {}
 
-    from image_sourcing import prepare_photo
     total = 0
     for model, urls in targets.items():
         print(f"\n=== {model}")
@@ -188,7 +239,7 @@ def main():
             try:
                 time.sleep(0.6)
                 n = fetch(u, path)
-                prepare_photo(path, path, size=1400)
+                fit_square_pad(path, size=1400)   # 잘라내지 않고 전체를 담는다
                 idx[name] = {
                     "카테고리": model,
                     "license": "제조사 공식 이미지(사용자 책임)",

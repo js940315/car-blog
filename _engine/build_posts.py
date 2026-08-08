@@ -506,11 +506,34 @@ def build_one(article, out_dir):
     for idx, src in direct_photos.items():
         img_name = f"{idx}번 사진.jpg"
         try:
+            # ★ 잘라내지 않는다 — 가로로 긴 차 사진을 중앙 크롭하면 앞뒤 범퍼가 날아간다
+            #   (실측 2026-08-08). 전체를 담고 남는 공간만 가장자리 배경색으로 채운다.
             im = Image.open(src).convert("RGB")
             w, h = im.size
-            s = min(w, h)
-            im = im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
-            im = im.resize((1080, 1080), Image.LANCZOS)
+            # 4:3(1.34) 까지는 살짝 잘라 채운다 — 다 담으려다 차가 작아지고 여백만 커진다.
+            MAX_CROP = 1.34
+            if w / h > MAX_CROP:
+                keep = int(h * MAX_CROP); left = (w - keep) // 2
+                im = im.crop((left, 0, left + keep, h)); w, h = im.size
+            elif h / w > MAX_CROP:
+                keep = int(w * MAX_CROP); top = (h - keep) // 2
+                im = im.crop((0, top, w, top + keep)); w, h = im.size
+            if w == h:
+                im = im.resize((1080, 1080), Image.LANCZOS)
+            else:
+                if w > h:
+                    a = im.crop((0, 0, w, max(1, h // 12))).resize((1, 1), Image.LANCZOS)
+                    b = im.crop((0, h - max(1, h // 12), w, h)).resize((1, 1), Image.LANCZOS)
+                else:
+                    a = im.crop((0, 0, max(1, w // 12), h)).resize((1, 1), Image.LANCZOS)
+                    b = im.crop((w - max(1, w // 12), 0, w, h)).resize((1, 1), Image.LANCZOS)
+                bg = tuple((x + y) // 2 for x, y in zip(a.getpixel((0, 0)), b.getpixel((0, 0))))
+                sc = 1080 / max(w, h)
+                nw, nh = max(1, int(w * sc)), max(1, int(h * sc))
+                canvas = Image.new("RGB", (1080, 1080), bg)
+                canvas.paste(im.resize((nw, nh), Image.LANCZOS),
+                             ((1080 - nw) // 2, (1080 - nh) // 2))
+                im = canvas
             im.save(os.path.join(out_dir, img_name), "JPEG", quality=94, subsampling=1)
             image_map[str(idx)] = img_name
         except Exception as e:
