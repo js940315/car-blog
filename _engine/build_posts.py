@@ -480,10 +480,14 @@ def build_one(article, out_dir):
     # ★ 2026-08-08 개편: 홈판 상위 블로그(아워오토·곰도라 실측)는 썸네일에 글자를 얹지 않고
     #   '고화질 실물 사진' 자체로 승부한다. 그래서 1번 썸네일은 SVG 렌더를 아예 거치지 않고
     #   원본 사진을 그대로 정사각 리사이즈해 쓴다 — 글자·스크림이 없고 재인코딩 손실도 없다.
+    #   2026-08-08 2차: 본문 사진(photo_card)도 카드뉴스(텍스트 오버레이+스크림)를 버린다.
+    #   벤치마크 블로그는 본문도 전부 '순수 실물 사진'이다. 그래서 thumbnail 뿐 아니라
+    #   photo_card 도 원본 사진을 그대로 쓴다(PHOTO_ONLY). 글자를 얹는 카드는 정리카드만 남긴다.
+    PHOTO_ONLY = {"thumbnail", "photo_card"}
     direct_photos = {}     # idx -> 원본 사진 경로
     tmp_paths = []
     for idx, spec in enumerate(specs, start=1):
-        if idx == 1 and spec.get("type") == "thumbnail":
+        if spec.get("type") in PHOTO_ONLY:
             fname, category = resolve_photo(spec, date_tag, seq, used_in_post)
             if fname:
                 used_in_post.add(fname)
@@ -498,7 +502,7 @@ def build_one(article, out_dir):
             f.write(svg)
         tmp_paths.append((idx, tmp_svg, tmp_png))
 
-    # 썸네일: 원본 사진을 중앙 정사각 크롭 → 1080 저장(글자 없음)
+    # 썸네일·본문 사진: 원본을 중앙 정사각 크롭 → 1080 저장(글자·스크림 없음)
     for idx, src in direct_photos.items():
         img_name = f"{idx}번 사진.jpg"
         try:
