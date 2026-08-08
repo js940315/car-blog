@@ -113,6 +113,12 @@ def pick_photo(category, date_tag, seq, exclude=None):
                          if (idx_meta.get(p) or {}).get("차검출") is not False]
             if preferred:
                 pool = preferred
+        # ★ 프레스 사진 최우선 — 제조사 공식 스튜디오 컷(*_press*)은 워터마크·번호판·
+        #   딜러광고가 없어 홈판에서 "우와" 가 나온다. 있으면 무조건 그쪽부터 쓴다.
+        #   (2026-08-08 실측: 프레스 74장을 넣었는데 전시장 스냅이 썸네일로 나가던 문제)
+        press = [p for p in pool if "_press" in p]
+        if press:
+            pool = press
         # 밝기 게이트 — 카드에 스크림을 깔고 흰 글씨를 얹으므로 어두운 원본은 차가 안 보인다.
         # 밝은 후보가 있으면 그쪽을 쓴다(전부 어두우면 어쩔 수 없이 그대로).
         bright = [p for p in pool if (idx_meta.get(p) or {}).get("밝기", 999) >= MIN_BRIGHTNESS]
