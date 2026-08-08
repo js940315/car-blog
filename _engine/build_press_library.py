@@ -60,6 +60,23 @@ KIA = "https://www.kia.com/content/dam/kwp/kr/ko/vehicles"
 PRESS = {
     # ── 기아: /content/dam/kwp/kr/ko/vehicles/{모델}/{연식}/content/*_pc.jpg (1920px)
     #    현대와 달리 360 뷰가 아니라 '연출 컷'이라 각도 대신 장면(측면·야간·그릴 등)으로 고른다.
+    # 디테일 컷(그릴·휠·엠블럼 클로즈업)은 제외 — 썸네일에서 무슨 차인지 안 보인다.
+    "카니발": [
+        f"{KIA}/carnival/26my/content/carnival_exterior_line-up_pc.jpg",
+        f"{KIA}/carnival/24pe/content/carnival_exterior_front_view_pc.jpg",
+        f"{KIA}/carnival/24pe/content/carnival_exterior_rear_view_pc.jpg",
+        f"{KIA}/carnival/26my/content/carnival_xline_pc.jpg",
+        f"{KIA}/carnival/26my/content/carnival_hi-roof_pc.jpg",
+        f"{KIA}/carnival/26my/content/carnival_hi-roof_interior_pc.jpg",
+    ],
+    "스포티지": [
+        f"{KIA}/sportage/pe/content/sportage_exterior_lineup_pc.jpg",
+        f"{KIA}/sportage/pe/content/sportage_exterior_cover_pc.jpg",
+        f"{KIA}/sportage/pe/content/sportage_x-line_pc.jpg",
+        f"{KIA}/sportage/pe/content/sportage_x-line_black_interior_pc.jpg",
+        f"{KIA}/sportage/pe/content/sportage_interior_maindash_pc.jpg",
+        f"{KIA}/sportage/pe/content/sportage_interior_ambient_pc.jpg",
+    ],
     "쏘렌토": [
         f"{KIA}/sorento/26my/content/sorento_exterior_line_up_pc.jpg",
         f"{KIA}/sorento/24pe/content/sorento_exterior_side_pc.jpg",
