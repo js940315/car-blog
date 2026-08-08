@@ -6141,5 +6141,83 @@
     "차신뢰도": 0.0,
     "차면적": 0.0,
     "밝기": 75
+  },
+  "GV80_press0.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353930/genesis-gv80-2027-key-visual-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0,
+    "차면적": 0.333,
+    "밝기": 47
+  },
+  "GV80_press1.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131363039/genesis-gv80-2027-exterior-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0,
+    "차면적": 0.487,
+    "밝기": 58
+  },
+  "GV80_press2.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353935/genesis-gv80-2027-black-exterior-detail-sideprofile-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0,
+    "차면적": 0.334,
+    "밝기": 59
+  },
+  "GV80_press3.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353937/genesis-gv80-2027-black-exterior-detail-rear-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0,
+    "차면적": 0.427,
+    "밝기": 61
+  },
+  "GV80_press4.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131363031/genesis-gv80-2027-black-interior-detail-main-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": false,
+    "차신뢰도": 0.0,
+    "차면적": 0.0,
+    "밝기": 59
+  },
+  "GV80_press6.png": {
+    "카테고리": "GV80",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133353937/models/gv80/2027/exterior-color/genesis-gv80-uyuni-white-uyh-large.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요",
+    "차검출": true,
+    "차신뢰도": 1.0,
+    "차면적": 0.585,
+    "밝기": 144
   }
 }

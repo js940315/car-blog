@@ -57,9 +57,27 @@ def interior_urls(platform, codes):
 #   색상코드도 모델마다 달라 001~036 중 005 로 존재 여부를 찔러 확인한다.
 KIA = "https://www.kia.com/content/dam/kwp/kr/ko/vehicles"
 
+# 제네시스는 Cloudflare 이미지 리사이저를 쓴다 — URL의 width 를 올리면 원본(최대 1920)까지 받힌다.
+GEN_CDN = "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url"
+
+
+def genesis_urls(items):
+    """items = [(자산ID, 파일명), ...] → 최대 해상도 URL"""
+    return [f"{GEN_CDN}/{i}/{n}.png" for i, n in items]
+
 PRESS = {
     # ── 기아: /content/dam/kwp/kr/ko/vehicles/{모델}/{연식}/content/*_pc.jpg (1920px)
     #    현대와 달리 360 뷰가 아니라 '연출 컷'이라 각도 대신 장면(측면·야간·그릴 등)으로 고른다.
+    # ── 제네시스: GV80 2027 프레스 컷(전신 위주, 그릴·휠 클로즈업 제외)
+    "GV80": genesis_urls([
+        ("50534b313031303030303030303030303131353930", "genesis-gv80-2027-key-visual-large"),
+        ("50534b313031303030303030303030303131363039", "genesis-gv80-2027-exterior-large"),
+        ("50534b313031303030303030303030303131353935", "genesis-gv80-2027-black-exterior-detail-sideprofile-large"),
+        ("50534b313031303030303030303030303131353937", "genesis-gv80-2027-black-exterior-detail-rear-large"),
+        ("50534b313031303030303030303030303131363031", "genesis-gv80-2027-black-interior-detail-main-large"),
+        ("50534b313031303030303030303030303131363033", "genesis-gv80-2027-black-interior-detail-ccp-large"),
+        ("50534b313031303030303030303030303133353937", "models/gv80/2027/exterior-color/genesis-gv80-uyuni-white-uyh-large"),
+    ]),
     # 디테일 컷(그릴·휠·엠블럼 클로즈업)은 제외 — 썸네일에서 무슨 차인지 안 보인다.
     "카니발": [
         f"{KIA}/carnival/26my/content/carnival_exterior_line-up_pc.jpg",
