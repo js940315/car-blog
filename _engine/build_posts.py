@@ -130,7 +130,7 @@ SPACER = "⠀" * 3   # 점자 빈칸 — 네이버 붙여넣기에서 살아남�
 # ※ 문장 중간에는 절대 줄바꿈(\n)을 넣지 않는다 — 네이버가 화면 폭에 맞춰
 #   알아서 감싸기 때문에, 우리가 하드 줄바꿈을 박으면 어색한 데서 끊긴다.
 MAX_PARA_CHARS = 110
-EDITOR_HEADING = "📝 한눈에 보는 자동차 노트"
+EDITOR_HEADING = "한눈에 보는 자동차 노트"   # 이모지 제거(순수 텍스트 소제목 방침)
 DIVIDER = "━" * 19   # 소제목 밑 구분선. 모바일에서 딱 한 줄로 꽉 차는 길이
 
 # 소제목·특수 이모지 문단은 flow_group으로 이어붙이지 않고 '독립 문단'으로 둔다.
@@ -201,11 +201,13 @@ def to_blocks(value):
             flush()
             sep()
         elif item.startswith(HEADING_PREFIXES):
-            # 소제목 → 밑에 구분선을 자동으로 깔아 시각적으로 확실히 구획
+            # 소제목 → 순수 텍스트 한 줄로 둔다.
+            # 2026-08-08: 홈판 상위 블로그(아워오토·곰도라 실측)는 소제목에 이모지도
+            # 구분선도 쓰지 않는다("가격은 이렇게 나옵니다." 처럼 담백한 한 줄).
+            # 이모지+구분선은 '기계로 찍어낸 티'가 나서 걷어냈다.
             flush()
             sep()
-            out.append(item)
-            out.append(DIVIDER)
+            out.append(item.lstrip("📌📝 ").strip())
             out.append(SPACER)
         elif item.startswith(CALLOUT_PREFIXES) or MARKER_RE.match(item):
             # 콜아웃(💡👉💬)·이미지 마커 → 이어붙이지 않고 독립 문단으로 띄운다
@@ -475,14 +477,40 @@ def build_one(article, out_dir):
     #   (MEMORY_MANAGEMENT 블루스크린)의 방아쇠가 될 수 있다. 이 PC에서 실제로 블루스크린이
     #   재발해(2026-08-03) 기본을 1로 낮췄다. 환경변수 RENDER_CONCURRENCY로 조절하며,
     #   안정적인 클라우드 러너에서는 RENDER_CONCURRENCY=4~8 로 올려 쓴다.
+    # ★ 2026-08-08 개편: 홈판 상위 블로그(아워오토·곰도라 실측)는 썸네일에 글자를 얹지 않고
+    #   '고화질 실물 사진' 자체로 승부한다. 그래서 1번 썸네일은 SVG 렌더를 아예 거치지 않고
+    #   원본 사진을 그대로 정사각 리사이즈해 쓴다 — 글자·스크림이 없고 재인코딩 손실도 없다.
+    direct_photos = {}     # idx -> 원본 사진 경로
     tmp_paths = []
     for idx, spec in enumerate(specs, start=1):
+        if idx == 1 and spec.get("type") == "thumbnail":
+            fname, category = resolve_photo(spec, date_tag, seq, used_in_post)
+            if fname:
+                used_in_post.add(fname)
+                if category:
+                    record_usage(category, fname, date_tag, seq)
+                direct_photos[idx] = _asset("photos", fname)
+                continue
         svg = render_image(spec, date_tag=date_tag, seq=seq, used_in_post=used_in_post)
         tmp_svg = os.path.join(out_dir, f"_tmp{idx}.svg")
         tmp_png = os.path.join(out_dir, f"_tmp{idx}.png")
         with open(tmp_svg, "w", encoding="utf-8") as f:
             f.write(svg)
         tmp_paths.append((idx, tmp_svg, tmp_png))
+
+    # 썸네일: 원본 사진을 중앙 정사각 크롭 → 1080 저장(글자 없음)
+    for idx, src in direct_photos.items():
+        img_name = f"{idx}번 사진.jpg"
+        try:
+            im = Image.open(src).convert("RGB")
+            w, h = im.size
+            s = min(w, h)
+            im = im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+            im = im.resize((1080, 1080), Image.LANCZOS)
+            im.save(os.path.join(out_dir, img_name), "JPEG", quality=94, subsampling=1)
+            image_map[str(idx)] = img_name
+        except Exception as e:
+            print(f"  [경고] 썸네일 사진 처리 실패: {type(e).__name__}: {str(e)[:60]}")
 
     if tmp_paths:
         try:
