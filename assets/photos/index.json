@@ -7010,60 +7010,6 @@
     "검색어": "press",
     "검수": "미확인 — 눈 확인 필요"
   },
-  "테슬라모델3_press0.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
-  "테슬라모델3_press1.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD-v2.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
-  "테슬라모델3_press2.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Exterior-Hero-Desktop-LHD.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
-  "테슬라모델3_press3.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Performance-Hero-Desktop-LHD.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
-  "테슬라모델3_press4.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
-  "테슬라모델3_press5.jpg": {
-    "카테고리": "테슬라모델3",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요"
-  },
   "중고차시장_0w_0.jpg": {
     "카테고리": "중고차시장",
     "license": "CC BY-SA 2.0",
@@ -7143,5 +7089,248 @@
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Ioniq 5 electric SUV",
     "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "쏘나타_press0.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/001.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press1.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/005.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press2.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/010.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press3.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/018.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press4.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/025.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press6.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK7/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press7.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK8/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press0.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/001.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press1.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/005.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press2.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/010.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press3.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/018.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press4.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/025.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press5.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL2/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press6.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL3/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "스타리아_press7.png": {
+    "카테고리": "스타리아",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL4/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "쏘나타_press5.png": {
+    "카테고리": "쏘나타",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK6/img-interior.png",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "BMW5시리즈_press0.jpg": {
+    "카테고리": "BMW5시리즈",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_stage_ext-loop-alternative_dsk_sl_de?wid=1920&fmt=jpg&qlt=90",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "BMW5시리즈_press1.jpg": {
+    "카테고리": "BMW5시리즈",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_driving-dynamics_dsk_fb_en?wid=1920&fmt=jpg&qlt=90",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "BMW5시리즈_press2.jpg": {
+    "카테고리": "BMW5시리즈",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_ext-design-highlights_3_skyroof_dsk_fb_de?wid=1920&fmt=jpg&qlt=90",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "BMW5시리즈_press3.jpg": {
+    "카테고리": "BMW5시리즈",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_int-design-video-loop_dsk_fb-1_en?wid=1920&fmt=jpg&qlt=90",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "포르쉐차_press0.jpg": {
+    "카테고리": "포르쉐차",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://a.storyblok.com/f/322327/1720x1210/6c774c8370/cayenne-front.png/m/1600x1126/smart/",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "포르쉐차_press1.jpg": {
+    "카테고리": "포르쉐차",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://a.storyblok.com/f/322327/2616x1473/c4982ccdc4/051-mosaic-editorial-desktop-i2.jpg/m/1800x1013/smart/",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press0.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press1.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD-v2.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press2.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Exterior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press3.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Performance-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
+  },
+  "테슬라모델3_press4.jpg": {
+    "카테고리": "테슬라모델3",
+    "license": "제조사 공식 이미지(사용자 책임)",
+    "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
+    "attribution_required": false,
+    "처리": "프레스 원본 → 정사각 1400px",
+    "검색어": "press",
+    "검수": "미확인 — 눈 확인 필요"
   }
 }

@@ -76,6 +76,32 @@ TSL_CDN = "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_
 def tesla_urls(names):
     return [f"{TSL_CDN}/{n}.jpg" for n in names]
 
+
+# ── 수입 브랜드 (2026-08-08 3차) ─────────────────────────────────────────────
+# 브랜드마다 CDN 이 달라서 한 방식으로 못 묶는다. 각 브랜드 한국 사이트 모델 페이지를
+# 브라우저로 열고 img currentSrc 의 호스트를 보면 어느 CDN 인지 바로 나온다(실측):
+#   벤츠  = media.oneweb.mercedes-benz.com/images/static/...  (해시 URL, 서명 없음 → 안 만료)
+#           ※ 같은 페이지의 iris.png?q=COSY...&cp=... 는 **서명된 동적 렌더**라 쓰지 않는다.
+#   BMW   = bmw.scene7.com/is/image/BMW/{자산명}  (Adobe Scene7 → wid/fmt 로 해상도 지정)
+#           ※ prod.cosy.bmw.cloud 는 서명 URL이라 제외.
+#   볼보  = volvocars.com/images/cs/v3/assets/...  (정적)
+#   포르쉐 = a.storyblok.com / images.porsche.com  (경로의 /m/{w}x{h}/ 로 크기 지정,
+#            filters:format(avif) 를 떼면 원래 png/jpg 로 받힌다)
+#   아우디 = audi.co.kr 이 에러 페이지를 반환해 확보 실패(미해결).
+MB = "https://media.oneweb.mercedes-benz.com/images/static/v1/24603"
+
+
+def benz_urls(paths):
+    return [f"{MB}/{p}?im=Resize,width=1920" for p in paths]
+
+
+def bmw_urls(names):
+    return [f"https://bmw.scene7.com/is/image/BMW/{n}?wid=1920&fmt=jpg&qlt=90" for n in names]
+
+
+def storyblok(url_no_filter, size="1600x0"):
+    return f"{url_no_filter}/m/{size}/smart/"
+
 PRESS = {
     # ── 기아: /content/dam/kwp/kr/ko/vehicles/{모델}/{연식}/content/*_pc.jpg (1920px)
     #    현대와 달리 360 뷰가 아니라 '연출 컷'이라 각도 대신 장면(측면·야간·그릴 등)으로 고른다.
@@ -135,6 +161,28 @@ PRESS = {
         # Model-3-Safety-Hero 는 제외 — 실차가 아니라 **차체 골격 투시도**다(실측 폐기).
         "Model-3-Interior-Hero-Desktop-LHD",
     ]),
+    # 벤츠는 미해결 — 페이지 innerHTML 의 /images/static/ 해시 URL 8건을 받아 보니
+    # **전부 차가 없는 배경 그라데이션**이었다(회색·갈색·빨강 면). 실차 컷은 서명된
+    # iris.png?q=COSY... 쪽에만 있는 것으로 보인다. 재시도할 때는 DevTools Network 에서
+    # 실제 히어로 이미지 요청을 확인할 것. 벤츠 버킷은 당분간 wiki/stock 으로 간다.
+    "BMW5시리즈": bmw_urls([
+        "g60_ice_stage_ext-loop-alternative_dsk_sl_de",     # 외관 정측면
+        "g60_ice_driving-dynamics_dsk_fb_en",               # 주행컷
+        "g60_ice_ext-design-highlights_3_skyroof_dsk_fb_de",  # 지붕 부감
+        "g60_ice_int-design-video-loop_dsk_fb-1_en",        # 실내 콕핏
+        # int-design-highlights 1(인터랙션바)·2(사운드)는 스크린·스피커 클로즈업이라 제외.
+    ]),
+    # 볼보는 미해결 — innerHTML 에서 뽑은 정적 URL 이 서버에선 403/404 다.
+    # (헤더를 브라우저와 똑같이 맞추면 403 -> 404 로만 바뀐다. 페이지가 쓰는 실제 URL 에
+    #  쿼리나 리라이트가 더 붙는 것으로 보인다. 재시도할 때는 DevTools Network 로
+    #  실제 요청 URL 을 그대로 복사해 올 것.) 볼보차 버킷은 당분간 wiki/stock 으로 간다.
+    "포르쉐차": [
+        storyblok("https://a.storyblok.com/f/322327/1720x1210/6c774c8370/cayenne-front.png", "1600x1126"),
+        # cayenne-side(9600x3040)는 /m/ 크기를 어떻게 줘도 404 — 원본 비율 밖 요청은 거부된다.
+        storyblok("https://a.storyblok.com/f/322327/2616x1473/c4982ccdc4/051-mosaic-editorial-desktop-i2.jpg", "1800x1013"),
+        # ※ images.porsche.com 의 model-*-side-shot 은 5000x1795 **초광각**이라 정사각으로
+        #   만들면 앞뒤가 다 날아가고 도어만 남는다(실측). 가로세로비 3:1 이 넘는 소스는 쓰지 말 것.
+    ],
     "EV6": [
         f"{KIA}/ev6/pe/content/ev6_pe_exterior_front_style_pc.jpg",
         f"{KIA}/ev6/pe/content/ev6_pe_exterior_modern_contrast_side_veiw_pc.jpg",
@@ -184,6 +232,9 @@ PRESS = {
     "코나": exterior_urls("SX19", "RRR", mid="") + interior_urls("SX19", ["I54", "IC2", "IC1"]),
     "그랜저": exterior_urls("GN11", "WBP", mid="") + interior_urls("GN11", ["IN6", "IN5", "IN4"]),
     "싼타페": exterior_urls("MX07", "A2B") + interior_urls("MX07", ["II9", "IJ1", "IH0"]),
+    # 2026-08-08 3차 추가. 스타리아만 exterior 중간 경로가 'TM/' 이다(모델마다 다르다).
+    "쏘나타": exterior_urls("DN23", "T4M", mid="") + interior_urls("DN23", ["IK6", "IK7", "IK8"]),
+    "스타리아": exterior_urls("US30", "YAC", mid="TM/") + interior_urls("US30", ["IL2", "IL3", "IL4"]),
     "팰리세이드": exterior_urls("FX01", "R8N") + [
         "https://www.hyundai.com/contents/vr360/FX01/interior/I93/img-interior.png",
         "https://www.hyundai.com/contents/vr360/FX01/interior/I96/img-interior.png",
@@ -340,6 +391,11 @@ def fetch(url, dst, referer=None):
         referer = ("https://www.kia.com/" if "kia.com" in url
                    else "https://www.genesis.com/" if "genesis.com" in url
                    else "https://www.tesla.com/" if "tesla.com" in url
+                   else "https://www.mercedes-benz.co.kr/" if "mercedes-benz.com" in url
+                   else "https://www.bmw.co.kr/" if "scene7.com" in url
+                   else "https://www.volvocars.com/" if "volvocars.com" in url
+                   else "https://www.porsche.com/" if ("porsche.com" in url
+                                                       or "storyblok.com" in url)
                    else "https://www.hyundai.com/")
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": referer})
     data = urllib.request.urlopen(req, timeout=30).read()
@@ -377,6 +433,16 @@ def main():
     total = 0
     for model, urls in targets.items():
         print(f"\n=== {model}")
+        # PRESS 목록에서 URL을 빼면 이전 실행이 만든 뒷번호 파일이 그대로 남아,
+        # 새 번호와 **같은 사진이 두 장**이 된다(실측: 테슬라모델3 press4 == press5).
+        # 어차피 전 URL을 다시 받으므로 그 모델 파일은 먼저 싹 지우고 시작한다.
+        for fn in os.listdir(DIR):
+            if fn.startswith(f"{model}_press"):
+                try:
+                    os.remove(os.path.join(DIR, fn))
+                    idx.pop(fn, None)
+                except OSError as e:
+                    print(f"   [경고] 이전 파일 삭제 실패 {fn}: {e}")
         for i, u in enumerate(urls):
             ext = ".png" if u.lower().endswith(".png") else ".jpg"
             name = f"{model}_press{i}{ext}"
