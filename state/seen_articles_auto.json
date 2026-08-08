@@ -364,5 +364,67 @@
       "issue": "배우 김무열, 포르쉐 딜러 SSCL '프렌즈' 앰배서더 선정(카이엔 일렉트릭, 셀럽 에버그린)",
       "source_url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03145526645517472"
     }
+  ],
+  "0809": [
+    {
+      "title": "아반떼 최상위 트림, 쏘나타보다 150만원 비싸졌습니다",
+      "category": "신차·출시",
+      "issue": "아반떼·쏘나타 트림 가격 역전(인스퍼레이션 하이브리드 3699만원 vs 쏘나타 가솔린 3549만원)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61287"
+    },
+    {
+      "title": "투싼 가솔린 2805만원, 하이브리드는 손익분기점부터 따져야 합니다",
+      "category": "신차·출시",
+      "issue": "투싼 가솔린·하이브리드 가격 비교 에버그린(2805만~3925만원)",
+      "source_url": ""
+    },
+    {
+      "title": "볼보 EX90, 정지 가속 4.2초에 에어서스펜션까지 붙였습니다",
+      "category": "전기차·친환경",
+      "issue": "볼보 EX90 퍼포먼스 시승기 종합(정지가속 4.2초, 듀얼체임버 에어서스펜션)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145433"
+    },
+    {
+      "title": "아이오닉5 프레스티지 5915만원, EV6와 여기서 갈립니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉5·EV6 가격 비교 에버그린(4740만~5915만원 vs 4360만~5660만원)",
+      "source_url": ""
+    },
+    {
+      "title": "30년 만에 처음, 현대차·기아가 3D프린터 전용동을 지었습니다",
+      "category": "자동차산업·수출",
+      "issue": "현대차·기아 남양연구소 적층제조솔루션센터(AMSC) 신설",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546444"
+    },
+    {
+      "title": "기아 EV2가 살렸다는 배우, 그런데 이 차는 한국에 없습니다",
+      "category": "리콜·안전·정책",
+      "issue": "기아 EV2 미니 드라이버 프랑스 교차로 사고, 센터 에어백(국내 미출시)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145486"
+    },
+    {
+      "title": "스타리아 하이브리드 3876만원, 카니발 대신 이걸 고르는 이유",
+      "category": "중고차·시장동향",
+      "issue": "스타리아 하이브리드·카니발 비교 에버그린(투어러 3876만원, 245마력)",
+      "source_url": ""
+    },
+    {
+      "title": "모델3는 2천만원대인데 모델Y는 4천만원대, 감가 속도가 다릅니다",
+      "category": "중고차·시장동향",
+      "issue": "테슬라 모델3·모델Y 중고 시세 비교(신차 300만원 차이, 중고 격차 확대)",
+      "source_url": ""
+    },
+    {
+      "title": "포르쉐 718은 전기로 확정, 카이엔은 1억3310만원 그대로입니다",
+      "category": "브랜드·기업이슈",
+      "issue": "포르쉐 718 전동화 확정, 카이엔 가솔린 1억3310만원 그대로",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61281"
+    },
+    {
+      "title": "신혜선도 이국주도.. 톱스타들이 오히려 작은 차를 타는 이유",
+      "category": "셀럽·연예인차",
+      "issue": "셀럽·연예인차 에버그린 - 신혜선(프라이드)·이국주(캐스퍼)·경수진(레이)·은혁 소형차 선택",
+      "source_url": ""
+    }
   ]
 }

@@ -257,12 +257,20 @@ def resolve_category(title, given=None, body=""):
             if re.search(pat, title) and available_buckets().get(b):
                 return b, f"제목 사건 우선 '{b}'"
 
-    # 1) 제목의 모델명 — 긴 별칭부터
-    for alias in sorted(MODEL_ALIASES, key=len, reverse=True):
-        if alias in text:
-            b = MODEL_ALIASES[alias]
-            if available_buckets().get(b):
-                return b, f"제목 모델 '{alias}'"
+    # 1) 제목의 모델명 — **제목에 먼저 나오는 모델이 주인공**이다.
+    #    (실측 2026-08-09: "아반떼 최상위 트림, 쏘나타보다 비싸졌습니다"에서 길이만으로
+    #     정렬하면 동률("아반떼"·"쏘나타" 모두 3자)일 때 사전 등록 순서가 이겨 쏘나타가
+    #     뽑혔다 — 제목 맨 앞 소재가 밀려나는 사고. 브랜드 규칙(5번)처럼 제목 내 등장
+    #     위치를 1순위로, 길이는 동일 위치에서만 동점 처리(tie-break)한다.)
+    hits = []
+    for alias, b in MODEL_ALIASES.items():
+        if alias in text and available_buckets().get(b):
+            pos = title.find(alias)
+            hits.append((pos if pos >= 0 else len(title) + 1, -len(alias), alias, b))
+    if hits:
+        hits.sort()
+        _, _, alias, b = hits[0]
+        return b, f"제목 모델 '{alias}'"
 
     # 2) 미보유 모델 → 같은 브랜드 대체
     for alias in sorted(MODEL_FALLBACK, key=len, reverse=True):

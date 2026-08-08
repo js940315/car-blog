@@ -2,6 +2,7 @@
 """차트 SVG 생성 + PNG 변환 유틸리티. 로컬(Windows)과 클라우드(Linux) 양쪽에서 동작하도록
 브라우저 바이너리를 여러 방식으로 찾는다."""
 
+import glob
 import os
 import re
 import shutil
@@ -28,6 +29,16 @@ def find_browser():
         found = shutil.which(name)
         if found:
             return found
+    # ★ 클라우드 세션 실측(2026-08-09): PATH에는 없지만 Playwright용 크로미움이
+    #   PLAYWRIGHT_BROWSERS_PATH(보통 /opt/pw-browsers)에 미리 깔려 있다.
+    #   shutil.which만으로는 못 찾아 8번(정리카드) SVG->PNG가 조용히 다 건너뛰어졌다
+    #   (validate는 통과라 문제로 안 잡히고, 실제 파일만 누락되는 조용한 실패였다).
+    pw_dir = os.environ.get("PLAYWRIGHT_BROWSERS_PATH") or "/opt/pw-browsers"
+    for pattern in ("chromium-*/chrome-linux/chrome",
+                    "chromium_headless_shell-*/chrome-linux/headless_shell"):
+        for found in sorted(glob.glob(os.path.join(pw_dir, pattern))):
+            if os.path.exists(found):
+                return found
     return None
 
 
