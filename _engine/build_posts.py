@@ -397,30 +397,64 @@ def validate_image_structure(specs):
     return problems
 
 
-def _trim_black_border(im, thresh=26):
-    """헤드리스 브라우저가 남기는 검은 레터박스를 잘라낸다.
+def _trim_black_border(im, thresh=10, max_frac=0.12):
+    """헤드리스 브라우저가 남기는 **순수 검은 레터박스**만 잘라낸다.
 
-    실측(2026-08-04): 1080 캔버스에 '아래 86 / 왼쪽 43 / 오른쪽 6' 처럼 **비대칭**으로
-    검은 띠가 생겼다. 루트 <svg>가 뷰포트에 딱 안 맞아 letterbox 되면서 생기는 현상인데,
-    좌우가 비대칭이라 카드 글자가 오른쪽으로 밀려 보이는 원인이기도 했다.
-    브라우저 동작에 기대지 말고 여기서 확실히 잘라 full-bleed 를 보장한다.
+    실측(2026-08-04): 1080 캔버스에 '아래 86 / 왼쪽 43 / 오른쪽 6' 처럼 비대칭으로
+    검은 띠가 생겼다. 루트 <svg>가 뷰포트에 딱 안 맞아 letterbox 되면서 생기는 현상이다.
 
-    ※ 2026-08-07: 예전엔 numpy로 구현했는데, numpy가 없는 실행환경에서 예외가 조용히
-      삼켜져 '코드는 있는데 여백이 그대로'인 사고가 반복됐다. 이제 PIL만으로 구현하고,
-      실패하면 반드시 경고를 찍어 조용히 넘어가지 않게 한다."""
+    ※ 2026-08-09 중대 수정 — 이 함수가 **카드 자기 배경을 잘라먹고 있었다**.
+      예전 구현은 RGB 차이를 `.convert("L")`(휘도)로 바꿔 임계 26으로 판정했는데,
+      카드 배경 CARD_BG_BOT `#0a1428` 의 휘도는 **19**라 임계 아래로 떨어진다.
+      그래서 2160 카드의 아래 400px 이 '검정'으로 잡혀 잘리고, 남은 2160x1760 이
+      정사각이 아니니 좌우를 200px 씩 더 центр크롭 → **번호 배지가 반토막 나고
+      제목·항목 글자가 양쪽에서 잘렸다**(정리카드 전량 해당).
+
+    그래서 세 가지를 바꿨다:
+      1) 휘도가 아니라 **채널 최댓값**으로 판정한다(#0a1428 은 40 → 안전).
+         임계도 10으로 낮춘다. 진짜 레터박스는 0 이다.
+      2) 가장자리에서부터 **완전히 검은 줄**만 벗겨낸다(bbox 한 방 크롭 금지).
+      3) 한 변에서 max_frac 넘게 벗겨야 하면 **비정상으로 보고 트림을 포기**한다.
+         조용히 반토막 내느니 여백을 남기는 게 낫다(경고를 찍는다).
+    정사각이 아니게 되면 잘라내지 않고 **가장자리 색으로 채워** 정사각을 만든다 —
+    내용은 절대 잃지 않는다."""
     try:
-        from PIL import Image as _Im, ImageChops
-        black = _Im.new("RGB", im.size, (0, 0, 0))
-        diff = ImageChops.difference(im, black).convert("L")
-        mask = diff.point(lambda p: 255 if p > thresh else 0)
-        bbox = mask.getbbox()            # 검지 않은 영역의 경계 상자
-        if bbox and bbox != (0, 0, im.size[0], im.size[1]):
-            im = im.crop(bbox)
-        # 정사각이 아니면 중앙 정사각으로 맞춘다(네이버 카드 규격)
+        from PIL import Image as _Im
+        w, h = im.size
+        rows = im.resize((1, h), _Im.BOX)      # 행별 평균색
+        cols = im.resize((w, 1), _Im.BOX)      # 열별 평균색
+
+        def _blank(px):                        # 사실상 순수 검정(레터박스)인가
+            return max(px[:3]) <= thresh
+
+        top = 0
+        while top < h and _blank(rows.getpixel((0, top))):
+            top += 1
+        bot = h
+        while bot > top and _blank(rows.getpixel((0, bot - 1))):
+            bot -= 1
+        left = 0
+        while left < w and _blank(cols.getpixel((left, 0))):
+            left += 1
+        right = w
+        while right > left and _blank(cols.getpixel((right - 1, 0))):
+            right -= 1
+
+        cap_w, cap_h = w * max_frac, h * max_frac
+        if (left > cap_w or w - right > cap_w or top > cap_h or h - bot > cap_h):
+            print(f"  [경고] 검은여백이 비정상적으로 큼(L{left} R{w-right} T{top} B{h-bot})"
+                  f" — 내용을 자를 위험이 있어 트림을 건너뜁니다")
+        elif (left, top, right, bot) != (0, 0, w, h):
+            im = im.crop((left, top, right, bot))
+
+        # 정사각이 아니면 **자르지 말고** 가장자리 색으로 채운다(내용 보존)
         w, h = im.size
         if w != h:
-            s = min(w, h)
-            im = im.crop(((w - s) // 2, (h - s) // 2, (w - s) // 2 + s, (h - s) // 2 + s))
+            s = max(w, h)
+            bg = im.resize((1, 1), _Im.BOX).getpixel((0, 0))
+            canvas = _Im.new("RGB", (s, s), bg)
+            canvas.paste(im, ((s - w) // 2, (s - h) // 2))
+            im = canvas
         return im
     except Exception as e:
         print(f"  [경고] 검은여백 제거 실패(그대로 저장): {type(e).__name__}: {str(e)[:60]}")
