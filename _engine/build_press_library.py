@@ -326,7 +326,10 @@ def main():
             try:
                 time.sleep(0.6)
                 n = fetch(u, path)
-                smart_square(path, size=1400)   # 배경 걷어내고 차를 꽉 차게(안 잘림)
+                # 2026-08-08 방향 전환: 누끼(배경 제거)를 하지 않는다.
+                # 벤치마크 블로거들은 공장·모터쇼·야외 같은 '배경 있는 실사'를 쓴다.
+                # 흰 배경 누끼는 밋밋하고, 합성 렌더는 잔재(떠 있는 루프레일 등)가 남았다.
+                fit_square_pad(path, size=1400)
                 idx[name] = {
                     "카테고리": model,
                     "license": "제조사 공식 이미지(사용자 책임)",

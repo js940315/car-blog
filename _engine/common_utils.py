@@ -370,9 +370,11 @@ def build_summary_card_svg(eyebrow, title_lines, points, note="", accent=SUMMARY
     p.append(f'<rect x="88" y="{y - 2}" width="120" height="6" rx="3" fill="{accent}"/>')
 
     # 남은 세로 공간에 항목을 균등 슬롯으로 나누고, 각 항목을 슬롯의 세로 중앙에 앉힌다
+    # 2026-08-08: 마지막 항목이 아래 모서리에 붙어 '뚝 잘린' 느낌이 나서 하단 여백을 키우고
+    # 목록 전체를 살짝 위로 올려 위아래 균형을 맞췄다.
     n = max(1, len(points))
-    top = y + 82
-    bot = CARD_H - 96
+    top = y + 64
+    bot = CARD_H - 150
     row = (bot - top) / n
     for i, point in enumerate(points):
         text = point[0] if isinstance(point, list) else point
