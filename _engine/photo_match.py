@@ -17,6 +17,7 @@
   5) 브랜드만 알면 그 브랜드 대표 버킷 → 그래도 없으면 테마
 """
 
+import json
 import os
 import re
 
@@ -121,6 +122,39 @@ MIN_REAL_PHOTOS = 2      # 1장짜리 버킷은 매번 같은 사진이 나가 �
 # 기사 주인공 브랜드의 '차 사진'으로 대체한다(자동차 블로그의 중심은 차다).
 WEAK_THEME = {"중고차시장", "브랜드기업"}
 MIN_THEME_PHOTOS = 3
+
+# 제목 주인공이 사람인 기사(셀럽·오너·CEO)는 **그 사람 사진**이 나가야 한다.
+# 차 사진만 쓰면 "손흥민이 타는 차"인데 차만 나와서 제목-썸네일이 어긋난다.
+# 인물 버킷 판별은 index.json 을 보고 데이터로 한다 — 새 인물을
+# build_people_library 로 추가하면 코드를 안 고쳐도 자동 인식된다.
+#   · build_people_library 가 심는 '얼굴' 키가 있거나
+#   · 파일명이 '{이름}_0.jpg' 이고 '검색어'가 인물 소싱 표식인 경우
+def person_buckets():
+    """현재 보유한 인물 버킷 -> 장수.
+
+    판별 근거는 index.json 의 `처리` 값("인물 사진 · 정사각 1400px") —
+    build_people_library 가 심는 표식이라 기존 인물(머스크·손흥민…)과
+    앞으로 추가할 연예인이 똑같이 잡힌다."""
+    out = {}
+    try:
+        with open(os.path.join(PHOTO_DIR, "index.json"), encoding="utf-8") as f:
+            idx = json.load(f)
+    except (OSError, ValueError):
+        return out
+    have = available_buckets()
+    for fn, meta in idx.items():
+        if fn.startswith("_") or not isinstance(meta, dict):
+            continue
+        if "인물 사진" not in str(meta.get("처리", "")):
+            continue
+        b = meta.get("카테고리") or fn.split("_")[0]
+        if have.get(b):                     # 파일이 실제로 남아 있는 것만
+            out[b] = out.get(b, 0) + 1
+    return out
+
+
+def is_person_bucket(bucket):
+    return bool(bucket) and bucket in person_buckets()
 
 
 def weak_theme(bucket):

@@ -77,6 +77,48 @@ def score(title, query):
     return s
 
 
+MIN_FACE_AREA = 0.06     # 얼굴이 화면의 6% 미만이면 '누가 누군지' 안 보인다
+
+# 한 번 실행에서 429 백오프로 쓸 수 있는 총 대기 시간(초). 이걸 안 두면 후보마다
+# 수십 초씩 쉬다가 실행이 통째로 죽는다(실측 2026-08-09: 10분 타임아웃).
+_BUDGET = {"slept": 0.0, "max": 120.0}
+
+
+def face_ok(path):
+    """인물 사진에 **얼굴이 크게** 잡혀 있는가.
+
+    2026-08-09 실측: Commons 검색은 이름이 제목에 있어도 엉뚱한 컷을 준다.
+    경수진 검색 결과 1위가 **얼굴이 아예 없는 모델 3명의 다리 사진**이었고,
+    신혜선 2번째는 얼굴이 3%인 단체 컷이었다. 썸네일에 쓰면 '이 사람 누구지'가 된다.
+    사람 눈 대신 얼굴 검출로 기계적으로 거른다.
+
+    반환: (통과여부, 사유). 검출기를 못 쓰면 **통과시키되 경고**한다
+    (조용히 실패해 규칙이 무력화되는 걸 막는다 — 이 저장소의 반복 사고 유형)."""
+    try:
+        import cv2
+        from frame_quality import _imread          # 한글 경로 대응 imread
+        img = _imread(path)
+        if img is None:
+            return True, "이미지 열기 실패 — 검사 못 함(통과)"
+        cascade = cv2.CascadeClassifier(
+            os.path.join(cv2.data.haarcascades, "haarcascade_frontalface_default.xml"))
+        if cascade.empty():
+            return True, "얼굴 검출기 없음 — 검사 못 함(통과)"
+        h, w = img.shape[:2]
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        faces = cascade.detectMultiScale(gray, 1.1, 5,
+                                         minSize=(int(w * 0.10), int(w * 0.10)))
+        if len(faces) == 0:
+            return False, "얼굴 없음"
+        big = max(fw * fh for _, _, fw, fh in faces) / float(w * h)
+        if big < MIN_FACE_AREA:
+            return False, f"얼굴이 너무 작음({big:.1%}) — 단체·원거리 컷"
+        return True, f"얼굴 {big:.0%}"
+    except Exception as e:
+        print(f"   [경고] 얼굴 검사 실패(통과 처리): {type(e).__name__}: {str(e)[:50]}")
+        return True, "검사 실패"
+
+
 def source_one(name, query, per=3, min_width=700):
     cands = wikimedia_portrait_candidates(query, limit=10, min_width=min_width)
     ranked = sorted(cands, key=lambda c: -score(c.get("title"), query))
@@ -94,21 +136,40 @@ def source_one(name, query, per=3, min_width=700):
         try:
             # Commons는 연속 요청에 429를 잘 던진다 — 간격을 두고, 429면 늘려가며 재시도
             data, last_err = None, None
-            for attempt in range(4):
+            for attempt in range(3):
                 u = urls[min(attempt, len(urls) - 1)]   # 1회 실패 후엔 원본 URL로
                 try:
-                    time.sleep(1.5 + attempt * 2.5)
+                    # 429가 나오면 짧은 백오프로는 안 풀린다(실측 2026-08-09:
+                    # 1.5/4/6.5/9초로는 연속 5건이 전부 429였다). 429면 더 쉰다.
+                    # 단 **전체 대기 예산**을 두지 않으면 후보마다 1분씩 쉬다가
+                    # 10분을 넘겨 통째로 죽는다(실측). 예산을 넘기면 즉시 포기한다.
+                    wait = 1.5 + attempt * 2.5
+                    if last_err is not None and "429" in str(last_err):
+                        wait = 25
+                    if _BUDGET["slept"] + wait > _BUDGET["max"]:
+                        raise RuntimeError(
+                            "Commons 요청 한도(429)에 걸렸고 대기 예산을 다 썼습니다 — "
+                            "몇 분 뒤 다시 실행하세요")
+                    _BUDGET["slept"] += wait
+                    time.sleep(wait)
                     data = fetch_image(u)
                     break
                 except Exception as e:
                     last_err = e
+                    if "대기 예산" in str(e):
+                        break
             if data is None:
                 raise last_err
             with open(path, "wb") as f:
                 f.write(data)
             prepare_photo(path, path, size=1400)
+            ok, why = face_ok(path)
+            if not ok:
+                os.remove(path)                    # 얼굴 게이트 탈락 — 남기지 않는다
+                print(f"   버림 {c['title'][:36]}: {why}")
+                continue
             got.append({"file": os.path.basename(path), "title": c["title"],
-                        "license": c["license"]})
+                        "license": c["license"], "얼굴": why})
         except Exception as e:
             print(f"   실패 {c['title'][:40]}: {str(e)[:40]}")
     return name, query, got

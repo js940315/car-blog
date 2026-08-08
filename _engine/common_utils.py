@@ -265,13 +265,22 @@ def _card_open(accent):
 
 
 def _card_head(eyebrow, title_lines, accent):
-    """상단 라벨 + 제목. 모든 카드가 같은 위치·크기를 쓴다."""
+    """상단 라벨 + 제목. 모든 카드가 같은 위치·크기를 쓴다.
+
+    ※ 2026-08-09: 제목에는 자동 축소가 없어서 긴 제목이 카드 오른쪽으로 **넘쳐 잘렸다**
+      (실측: '보이지 않는 투자, 신차 속도로 연결' 의 끝 글자가 날아갔다).
+      항목(_fit_point_fs)에만 있던 축소를 제목·라벨에도 똑같이 적용한다."""
+    eb_fs = _fit_point_fs(eyebrow, usable_w=CARD_W - 122 - 88, base=38, min_fs=26)
     p = [f'<rect x="88" y="96" width="8" height="72" rx="4" fill="{accent}"/>',
-         f'<text x="122" y="146" font-size="38" fill="#a9b6cc">{escape_html(eyebrow)}</text>']
+         f'<text x="122" y="146" font-size="{eb_fs:.0f}" fill="#a9b6cc">'
+         f'{escape_html(eyebrow)}</text>']
     y = 268
     for line in title_lines:
+        # 제목은 굵어서(800) 실제 폭이 더 나온다 — _fit_point_fs 의 굵기 보정을 쓰려고
+        # 통째로 *별표*로 감싸 계산만 하고, 출력은 기존과 똑같이 한다.
+        fs = _fit_point_fs(f"*{line}*", usable_w=CARD_W - 88 - 88, base=64, min_fs=40)
         p.append(
-            f'<text x="88" y="{y}" font-size="64" font-weight="800" fill="#ffffff" '
+            f'<text x="88" y="{y}" font-size="{fs:.0f}" font-weight="800" fill="#ffffff" '
             f'letter-spacing="-1">{escape_html(line)}</text>'
         )
         y += 84

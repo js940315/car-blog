@@ -28,7 +28,7 @@ from common_utils import (build_bar_card_svg, build_number_card_svg,
 from photo_library import pick_photo, record_usage, variation_seed
 from photo_match import (resolve_category, available_buckets,
                          brand_of_bucket, same_brand_bucket, real_alt,
-                         weak_theme)
+                         weak_theme, is_person_bucket)
 
 
 def _asset(kind, name):
@@ -397,6 +397,30 @@ def validate_image_structure(specs):
     return problems
 
 
+def validate_celebrity_photo(article, specs):
+    """셀럽·연예인 기사는 **그 사람 사진**이 반드시 들어가야 한다(2026-08-09 사용자 지시).
+
+    "신혜선이 타는 프라이드" 같은 제목인데 차 사진만 나가면 제목의 주인공이 화면에
+    없다. 인물 사진은 `build_people_library.py --add "<영문명>" --name <한글명>` 으로
+    먼저 소싱해야 하고, 그래야 photo_category 에 그 이름을 쓸 수 있다.
+    1번 썸네일이 인물이면 가장 좋고, 최소한 본문 어딘가엔 들어가야 한다."""
+    problems = []
+    if article.get("category") != "셀럽·연예인차":
+        return problems
+    used = [s.get("photo_category") for s in specs if isinstance(s, dict)]
+    if not any(is_person_bucket(c) for c in used):
+        problems.append(
+            "셀럽 기사인데 인물 사진이 한 장도 없다 — "
+            "`python _engine/build_people_library.py --add \"<영문명>\" --name <한글명>` 으로 "
+            "먼저 소싱하고 photo_category 에 그 이름을 넣을 것"
+            "(못 구하면 그 인물 기사를 쓰지 말고 사진이 있는 인물로 바꾼다)")
+    elif not is_person_bucket(used[0] if used else None):
+        problems.append(
+            f"셀럽 기사인데 1번 썸네일이 인물이 아니다(현재 '{used[0] if used else None}') — "
+            "제목의 주인공이 첫 화면에 나와야 클릭이 난다")
+    return problems
+
+
 def _trim_black_border(im, thresh=10, max_frac=0.12):
     """헤드리스 브라우저가 남기는 **순수 검은 레터박스**만 잘라낸다.
 
@@ -687,6 +711,7 @@ def build_one(article, out_dir):
 
     problems = validate(lines)
     problems += validate_image_structure(specs)
+    problems += validate_celebrity_photo(article, specs)
     problems += check_caption_photo(specs)
     problems += check_thin_buckets(specs)
 
