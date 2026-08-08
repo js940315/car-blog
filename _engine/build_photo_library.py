@@ -102,6 +102,18 @@ CATEGORIES = {
     "국기유럽": ["flag of the European Union", "German flag waving"],
     "돈가격": ["Korean won banknotes money", "calculator money finance desk"],
 
+    # --- 셀럽·연예인차에 실제로 등장하는 경차·소형차 (2026-08-09) --------------
+    # 실측: 0809 셀럽 기사가 프라이드·캐스퍼·레이를 다뤘는데 버킷이 하나도 없어
+    # '셀럽차' 일반 사진으로 때웠다. 연예인이 타는 차는 대형 세단보다 이쪽이 많다.
+    "캐스퍼": ["Hyundai Casper 2022", "Hyundai Casper Electric"],
+    "레이": ["Kia Ray 2023", "Kia Ray EV"],
+    "모닝": ["Kia Morning Picanto 2024", "Kia Picanto facelift"],
+    "프라이드": ["Kia Pride Rio 2011", "Kia Rio sedan 2012"],
+    "니로": ["Kia Niro 2023", "Kia Niro EV SG2"],
+    # 셀럽이 자주 타는 수입 SUV
+    "레인지로버": ["Range Rover 2023", "Land Rover Range Rover Sport"],
+    "에스컬레이드": ["Cadillac Escalade 2023", "Cadillac Escalade ESV"],
+
     # --- 현대 모델 '실사' 보강 (2026-08-08) ---------------------------------
     # 현대닷컴에는 흰 배경 vr360 렌더뿐이라 사진이 밋밋했다. 벤치마크 블로거처럼
     # 모터쇼·야외 실사를 섞어야 "우와"가 나온다. Commons 모터쇼 컷으로 채운다.
@@ -142,7 +154,8 @@ SOURCE_ROUTING = [
     (("노조시위", "발표행사", "공장생산"), ["wiki", "stock"]),
     (("BYD차", "아이오닉", "EV3", "EV6", "EV9", "GV", "G80", "G90",
       "타스만", "셀토스", "쏘렌토", "스포티지", "카니발", "팰리세이드",
-      "싼타페", "투싼", "코나", "그랜저", "쏘나타", "아반떼", "스타리아"),
+      "싼타페", "투싼", "코나", "그랜저", "쏘나타", "아반떼", "스타리아",
+      "캐스퍼", "레이", "모닝", "프라이드", "니로"),
      ["wiki", "openverse"]),                     # 국산·중국 모델: 실차는 wiki가 정확
 ]
 

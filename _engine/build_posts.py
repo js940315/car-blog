@@ -326,7 +326,11 @@ def check_thin_buckets(specs, min_n=3):
             continue
         seen.add(cat)
         n = have.get(cat, 0)
-        if 0 < n < min_n:
+        # 인물 버킷은 기준을 낮춘다 — Commons 에 그 사람 사진이 원래 2~3장뿐인 게 정상이라
+        # 일반 기준을 적용하면 셀럽 기사마다 경고가 떠서 배너가 무뎌진다(2026-08-09).
+        # 한 기사에 썸네일+본문 1장이면 되므로 2장이면 충분하다.
+        limit = 2 if is_person_bucket(cat) else min_n
+        if 0 < n < limit:
             problems.append(f"버킷 '{cat}' 사진 {n}장뿐 — 반복 노출 위험(보강 권장)")
         elif n == 0:
             problems.append(f"버킷 '{cat}' 사진 없음 — 폴백 처리됨")

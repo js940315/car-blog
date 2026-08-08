@@ -20,6 +20,7 @@ import io
 import json
 import os
 import re
+import time
 import urllib.parse
 import urllib.request
 
@@ -147,9 +148,22 @@ def wikimedia_portrait_candidates(query, limit=6, min_width=900, thumb_width=200
         "iiurlwidth": thumb_width,
     }
     url = api + "?" + urllib.parse.urlencode(params)
-    try:
-        data = json.loads(_get(url, timeout).decode())
-    except Exception:
+    # ※ 2026-08-09: 예전엔 예외를 통째로 삼키고 []를 돌려줬다. 그래서 **API가 잠깐 죽은 것**과
+    #   **정말 결과가 없는 것**이 구분되지 않았다(실측: 현빈·김종국은 후보가 8건씩 있는데도
+    #   0건으로 보고돼 '사진 없는 인물'로 오판됐다). 재시도하고, 끝내 실패하면 경고를 찍는다.
+    data = None
+    last = None
+    for attempt in range(3):
+        try:
+            if attempt:
+                time.sleep(3 * attempt)
+            data = json.loads(_get(url, timeout).decode())
+            break
+        except Exception as e:
+            last = e
+    if data is None:
+        print(f"  [경고] Commons 검색 실패('{query}'): {type(last).__name__}: {str(last)[:60]}"
+              f" — '결과 없음'이 아니라 '조회 실패'입니다. 잠시 후 재시도하세요.")
         return []
     out = []
     pages = data.get("query", {}).get("pages", {})

@@ -18,6 +18,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -36,6 +37,10 @@ PEOPLE = {
     "토요다아키오": "Akio Toyoda",
     "올리버칩세": "Oliver Zipse BMW",
     "왕촨푸": "Wang Chuanfu BYD",
+    # 셀럽·연예인차용 (2026-08-09~). 이 목록은 '이미 확보해 둔' 인물이라 전체 재소싱 때
+    # 같이 갱신된다. 새 인물은 --probe 로 확인 후 --add 로 받고, 여기 한 줄 추가해 두면 좋다.
+    "신혜선": "Shin Hye-sun",
+    "현빈": "Hyun Bin",
 }
 
 BAD_WORDS = ["air show", "squadron", "aircraft", "navy"]  # 명백히 무관한 컷만 배제
@@ -62,13 +67,66 @@ def save_index(idx):
     os.replace(tmp, INDEX)
 
 
+# 검색어에 붙이는 '힌트' 단어 — 이름이 아니므로 이름 매칭에서 제외한다.
+# (안 빼면 "IU singer" 의 'singer' 만 맞아도 아무 가수 사진이 통과한다)
+HINT_WORDS = {"singer", "actor", "actress", "rapper", "idol", "group", "band",
+              "korean", "south", "kpop", "k-pop", "comedian", "model",
+              "hyundai", "kia", "genesis", "porsche", "bmw", "byd", "toyota",
+              "tesla", "motor", "ceo", "chairman"}
+
+
+def _norm(s):
+    return re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def name_tokens(query):
+    """검색어에서 '이름' 토큰만 뽑는다."""
+    return [w for w in re.split(r"\s+", (query or "").lower()) if w and w not in HINT_WORDS]
+
+
+def name_match(title, query):
+    """제목이 **그 사람**을 가리키는가.
+
+    2026-08-09 실측으로 드러난 두 가지 오탐을 막는다:
+      1) 부분 매칭 — 'Kyung Soo-jin' 을 찾는데 'Park Soo-Kyung'(다른 사람)이 'kyung'
+         하나로 통과했다. → 이름 토큰을 **전부** 만족해야 한다.
+      2) 보너스 단독 통과 — 이름이 하나도 안 맞는데 제목에 'portrait/cropped' 가 있다는
+         이유로 점수 2를 받아 통과했다(마동석 검색에 엉뚱한 배우 단체컷).
+         → 이름 매칭이 0이면 보너스와 무관하게 탈락시킨다.
+    ★ 부분문자열 매칭은 쓰지 않는다. 제목을 **토큰으로 쪼개** 비교한다 —
+      'Don Lee' 를 찾는데 'Lee Dong-wook'(다른 사람)이 'don' ⊂ 'dongwook' 으로
+      통과하던 오탐이 있었다(실측 2026-08-09). 이름은 토큰 경계에서 맞아야 한다.
+      단 'Hye-sun' 처럼 붙여 쓰는 표기를 살리려고 **인접 토큰 결합**도 후보로 본다
+      ('Shin Hye-sun' 의 'hyesun' ← 제목의 'Hye' + 'sun').
+      'EUNHYUK180628' 처럼 이름 뒤에 숫자가 붙는 Commons 파일명도 인정한다."""
+    toks = [_norm(t) for t in name_tokens(query)]
+    toks = [t for t in toks if t]
+    if not toks:
+        return False
+    parts = [p for p in re.split(r"[^a-z0-9]+", (title or "").lower()) if p]
+    cands = set(parts)
+    for i in range(len(parts) - 1):                  # 인접 2·3개 결합
+        cands.add(parts[i] + parts[i + 1])
+        if i + 2 < len(parts):
+            cands.add(parts[i] + parts[i + 1] + parts[i + 2])
+    for tok in toks:
+        if tok in cands:
+            continue
+        # 'eunhyuk180628' 처럼 이름 뒤에 숫자만 붙은 경우도 같은 사람으로 본다
+        if any(p.startswith(tok) and p[len(tok):].isdigit() for p in parts):
+            continue
+        return False
+    return True
+
+
 def score(title, query):
-    """그 인물이 실제 주인공일 가능성 점수. 정치인·행사 배경 컷을 걸러낸다."""
+    """그 인물이 실제 주인공일 가능성 점수. 정치인·행사 배경 컷을 걸러낸다.
+
+    이름이 안 맞으면 **무조건 0 이하** — 보너스로 되살아나지 못하게 한다."""
+    if not name_match(title, query):
+        return 0
     t = (title or "").lower()
-    s = 0
-    for w in [w for w in query.lower().split() if len(w) > 2]:
-        if w in t:
-            s += 2
+    s = 2
     for b in BAD_WORDS:
         if b in t:
             s -= 3
@@ -119,8 +177,31 @@ def face_ok(path):
         return True, "검사 실패"
 
 
+def probe(query, min_width=700):
+    """다운로드 없이 '이 인물 사진을 구할 수 있는가'만 확인한다.
+
+    루틴이 셀럽 기사를 **쓰기 전에** 먼저 이걸로 확인하라고 만든 모드다.
+    사진이 없으면 그 인물로 기사를 시작하지 말고 다른 인물로 바꾸면 된다
+    (다 써놓고 사진이 없어 배너에 걸리는 낭비를 막는다).
+    검색어는 `|` 로 여러 표기를 넘길 수 있다 — 로마자 표기가 갈리는 이름이 많다
+    (실측: 'Ma Dong-seok' 로는 0건인데 Commons 는 다른 표기를 쓰는 경우가 있다)."""
+    rows = []
+    for q in [x.strip() for x in str(query).split("|") if x.strip()]:
+        cands = wikimedia_portrait_candidates(q, limit=10, min_width=min_width)
+        ok = [c for c in cands if score(c.get("title"), q) > 0]
+        rows.append((q, len(cands), ok))
+    return rows
+
+
 def source_one(name, query, per=3, min_width=700):
-    cands = wikimedia_portrait_candidates(query, limit=10, min_width=min_width)
+    # 검색어는 '|' 로 여러 표기를 받는다. 앞에서부터 시도해 처음 걸리는 표기를 쓴다.
+    queries = [x.strip() for x in str(query).split("|") if x.strip()] or [query]
+    cands, query = [], queries[0]
+    for q in queries:
+        found = wikimedia_portrait_candidates(q, limit=10, min_width=min_width)
+        if any(score(c.get("title"), q) > 0 for c in found):
+            cands, query = found, q
+            break
     ranked = sorted(cands, key=lambda c: -score(c.get("title"), query))
     got = []
     for c in ranked:
@@ -181,9 +262,26 @@ def main():
     ap.add_argument("--add", help="새 인물 Commons 검색어 (--name 과 함께)")
     ap.add_argument("--name", help="새 인물 버킷명(한글)")
     ap.add_argument("--per", type=int, default=3)
+    ap.add_argument("--probe", metavar="검색어",
+                    help="다운로드 없이 '사진을 구할 수 있는지'만 확인. "
+                         "셀럽 기사를 쓰기 전에 먼저 돌려볼 것. "
+                         "'|' 로 여러 표기를 넘길 수 있다: --probe \"Ma Dong-seok|Don Lee actor\"")
     ap.add_argument("--workers", type=int, default=2,
                     help="동시 다운로드 수. 기본 2 — Commons 429 방지 + 메모리 스파이크 억제")
     args = ap.parse_args()
+
+    if args.probe:
+        rows = probe(args.probe)
+        best = 0
+        for q, n_all, ok in rows:
+            print(f"  '{q}' — 검색 {n_all}건 / 이름 일치 {len(ok)}건")
+            for c in ok[:4]:
+                print(f"      {c['title'][:58]}  [{c['license']}] {c['width']}px")
+            best = max(best, len(ok))
+        print("\n" + ("사용 가능 — --add 로 받으세요." if best else
+                     "사용 불가 — 이 인물은 기사에서 빼고 다른 인물로 바꾸세요."
+                     " (표기를 바꿔 재시도해볼 수 있습니다)"))
+        return 0 if best else 2
 
     os.makedirs(DIR, exist_ok=True)
     idx = load_index()
