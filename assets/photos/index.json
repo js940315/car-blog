@@ -6441,19 +6441,6 @@
     "차면적": 0.565,
     "밝기": 84
   },
-  "EV6_press1.jpg": {
-    "카테고리": "EV6",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_exterior_modern_contrast_side_veiw_pc.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.46,
-    "차면적": 0.991,
-    "밝기": 66
-  },
   "EV6_press2.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
@@ -6466,19 +6453,6 @@
     "차신뢰도": 1.0,
     "차면적": 0.889,
     "밝기": 73
-  },
-  "EV6_press3.jpg": {
-    "카테고리": "EV6",
-    "license": "제조사 공식 이미지(사용자 책임)",
-    "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_gtl_exterior_pc.jpg",
-    "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
-    "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.94,
-    "차면적": 0.954,
-    "밝기": 44
   },
   "EV6_press4.jpg": {
     "카테고리": "EV6",
