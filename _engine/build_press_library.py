@@ -39,8 +39,11 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
 EXTERIOR_ANGLES = ["001", "005", "010", "018", "025"]
 
 
-def exterior_urls(platform, color, angles=None):
-    base = f"https://www.hyundai.com/contents/vr360/{platform}/exterior/C/{color}"
+def exterior_urls(platform, color, angles=None, mid="C/"):
+    """외관 360 URL. 경로가 모델마다 다르다(실측):
+       팰리세이드/싼타페 → /exterior/C/{색상}/001.png
+       그랜저            → /exterior/{색상}/001.png   (mid="")"""
+    base = f"https://www.hyundai.com/contents/vr360/{platform}/exterior/{mid}{color}"
     return [f"{base}/{a}.png" for a in (angles or EXTERIOR_ANGLES)]
 
 
@@ -53,6 +56,7 @@ def interior_urls(platform, codes):
 #   innerHTML 에서 /contents/vr360/([A-Z0-9]+)/ 를 뽑아 확인해야 한다(실측).
 #   색상코드도 모델마다 달라 001~036 중 005 로 존재 여부를 찔러 확인한다.
 PRESS = {
+    "그랜저": exterior_urls("GN11", "WBP", mid="") + interior_urls("GN11", ["IN6", "IN5", "IN4"]),
     "싼타페": exterior_urls("MX07", "A2B") + interior_urls("MX07", ["II9", "IJ1", "IH0"]),
     "팰리세이드": exterior_urls("FX01", "R8N") + [
         "https://www.hyundai.com/contents/vr360/FX01/interior/I93/img-interior.png",
