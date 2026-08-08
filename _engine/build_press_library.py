@@ -55,7 +55,20 @@ def interior_urls(platform, codes):
 # ※ 플랫폼 코드(FX01, MX07…)는 추측이 안 된다. 모델 페이지를 브라우저로 열고
 #   innerHTML 에서 /contents/vr360/([A-Z0-9]+)/ 를 뽑아 확인해야 한다(실측).
 #   색상코드도 모델마다 달라 001~036 중 005 로 존재 여부를 찔러 확인한다.
+KIA = "https://www.kia.com/content/dam/kwp/kr/ko/vehicles"
+
 PRESS = {
+    # ── 기아: /content/dam/kwp/kr/ko/vehicles/{모델}/{연식}/content/*_pc.jpg (1920px)
+    #    현대와 달리 360 뷰가 아니라 '연출 컷'이라 각도 대신 장면(측면·야간·그릴 등)으로 고른다.
+    "쏘렌토": [
+        f"{KIA}/sorento/26my/content/sorento_exterior_line_up_pc.jpg",
+        f"{KIA}/sorento/24pe/content/sorento_exterior_side_pc.jpg",
+        f"{KIA}/sorento/24pe/content/sorento_exterior_night_view_main_pc.jpg",
+        f"{KIA}/sorento/24pe/content/sorento_exterior_rear_pc.jpg",
+        f"{KIA}/sorento/26my/content/sorento_xline_main_pc.jpg",
+        f"{KIA}/sorento/26my/content/sorento_interior_brown_front.jpg",
+        f"{KIA}/sorento/26my/content/sorento_interior_gray_front.jpg",
+    ],
     # 실측 코드(2026-08-08, 모델 페이지 innerHTML 에서 추출)
     # ※ 아이오닉5는 외관(NE10)과 실내(NE09) 플랫폼 코드가 다르다.
     "아이오닉5": exterior_urls("NE10", "C5G", mid="") + interior_urls("NE09", ["IP0", "IP1", "IP2"]),
@@ -74,7 +87,12 @@ PRESS = {
 }
 
 
-def fetch(url, dst, referer="https://www.hyundai.com/"):
+def fetch(url, dst, referer=None):
+    # 브랜드별로 Referer 를 맞춰야 CDN 이 막지 않는다
+    if referer is None:
+        referer = ("https://www.kia.com/" if "kia.com" in url
+                   else "https://www.genesis.com/" if "genesis.com" in url
+                   else "https://www.hyundai.com/")
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Referer": referer})
     data = urllib.request.urlopen(req, timeout=30).read()
     with open(dst, "wb") as f:
