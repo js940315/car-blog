@@ -138,6 +138,93 @@ PRESS = {
 }
 
 
+def _load_on_white(path):
+    """투명 PNG는 **흰 배경에 합성**해서 연다.
+
+    현대·기아 프레스 PNG는 배경이 투명이다. 그냥 convert("RGB") 하면 투명부가 **검게**
+    변해 위아래 검은 띠가 생겼다(실측 2026-08-08). 흰 배경에 얹으면 스튜디오 컷처럼
+    깔끔해지고, 피사체 경계 검출도 정확해진다."""
+    from PIL import Image
+    raw = Image.open(path)
+    if raw.mode in ("RGBA", "LA") or (raw.mode == "P" and "transparency" in raw.info):
+        rgba = raw.convert("RGBA")
+        canvas = Image.new("RGB", rgba.size, (255, 255, 255))
+        canvas.paste(rgba, mask=rgba.split()[3])
+        return canvas
+    return raw.convert("RGB")
+
+
+def _uniform_bg(im, tol=14):
+    """네 모서리 색이 비슷하면 '단색 배경 스튜디오 컷'으로 보고 그 색을 돌려준다."""
+    w, h = im.size
+    k = max(2, min(w, h) // 60)
+    pts = [im.crop((0, 0, k, k)), im.crop((w - k, 0, w, k)),
+           im.crop((0, h - k, k, h)), im.crop((w - k, h - k, w, h))]
+    cols = [p.resize((1, 1)).getpixel((0, 0)) for p in pts]
+    for c in cols[1:]:
+        if max(abs(a - b) for a, b in zip(c, cols[0])) > tol:
+            return None
+    return cols[0]
+
+
+def smart_square(path, size=1400, fill=0.92):
+    """차를 잘리지 않게, 그러면서 프레임을 꽉 채워 정사각으로 만든다.
+
+    프레스 컷은 배경이 단색(흰/검)이라 '차의 실제 경계'를 찾을 수 있다.
+    배경을 걷어내고 차만 남긴 뒤, 같은 배경색 정사각 캔버스에 여백을 고르게 두고
+    크게 배치한다 → 누끼를 딴 것처럼 깔끔하고, 앞뒤가 잘리지 않는다.
+    (2026-08-08: 중앙크롭은 앞뒤가 잘리고, 전체담기는 여백만 커지던 문제 해결)"""
+    from PIL import Image
+    im = _load_on_white(path)
+    W, H = im.size
+    box = _subject_bbox(im)
+    if box:
+        x0, y0, x1, y1 = box
+        bw, bh = x1 - x0, y1 - y0
+        # 차가 프레임의 fill 을 차지하도록 정사각 창을 잡고, 원본 배경을 그대로 담는다
+        side = min(max(W, H), int(max(bw, bh) / fill))
+        cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
+        sx = max(0, min(W - min(side, W), cx - side // 2))
+        sy = max(0, min(H - min(side, H), cy - side // 2))
+        crop = im.crop((sx, sy, min(W, sx + side), min(H, sy + side)))
+        cw, ch = crop.size
+        if cw != ch:            # 원본이 모자라면 그만큼만 가장자리로 채운다
+            s = max(cw, ch)
+            canvas = Image.new("RGB", (s, s))
+            canvas.paste(crop.resize((s, s), Image.LANCZOS))   # 배경 확대로 메움
+            canvas.paste(crop, ((s - cw) // 2, (s - ch) // 2))
+            crop = canvas
+        crop = crop.resize((size, size), Image.LANCZOS)
+        crop.save(path, "JPEG", quality=94, subsampling=1)
+        return crop
+    return fit_square_pad(path, size)
+
+
+def _subject_bbox(im, thresh=20):
+    """배경이 단색이든 가로 그라데이션이든 '차'의 경계를 찾는다.
+    각 행의 좌우 끝을 그 행의 배경색으로 보고, 그와 다른 픽셀만 피사체로 친다."""
+    from PIL import Image
+    small = im.resize((min(400, im.width), min(400, im.height)), Image.BILINEAR)
+    px = small.load()
+    w, h = small.size
+    edge = max(2, w // 25)
+    xs, ys = [], []
+    for y in range(h):
+        lo = [px[i, y] for i in range(edge)]
+        hi = [px[w - 1 - i, y] for i in range(edge)]
+        ref = tuple(sum(c[i] for c in lo + hi) // len(lo + hi) for i in range(3))
+        for x in range(w):
+            p = px[x, y]
+            if max(abs(p[i] - ref[i]) for i in range(3)) > thresh:
+                xs.append(x)
+                ys.append(y)
+    if len(xs) < 50:
+        return None
+    sx, sy = im.width / w, im.height / h
+    return (int(min(xs) * sx), int(min(ys) * sy),
+            int((max(xs) + 1) * sx), int((max(ys) + 1) * sy))
+
+
 def fit_square_pad(path, size=1400):
     """차가 잘리지 않게 **전체를 담고** 남는 공간만 배경색으로 채워 정사각으로 만든다.
 
@@ -145,7 +232,7 @@ def fit_square_pad(path, size=1400):
     가로로 길어서(16:9) 앞뒤 범퍼가 날아갔다(실측 2026-08-08). 프레스 사진은 배경이
     단색·그라데이션이라, 가장자리 색을 뽑아 채우면 이어 붙인 티가 거의 안 난다."""
     from PIL import Image, ImageFilter
-    im = Image.open(path).convert("RGB")
+    im = _load_on_white(path)
     w, h = im.size
     if w == h:
         return im.resize((size, size), Image.LANCZOS).save(path, "JPEG", quality=94)
@@ -239,7 +326,7 @@ def main():
             try:
                 time.sleep(0.6)
                 n = fetch(u, path)
-                fit_square_pad(path, size=1400)   # 잘라내지 않고 전체를 담는다
+                smart_square(path, size=1400)   # 배경 걷어내고 차를 꽉 차게(안 잘림)
                 idx[name] = {
                     "카테고리": model,
                     "license": "제조사 공식 이미지(사용자 책임)",
