@@ -97,6 +97,15 @@ CATEGORIES = {
     "국기유럽": ["flag of the European Union", "German flag waving"],
     "돈가격": ["Korean won banknotes money", "calculator money finance desk"],
 
+    # --- 현대 모델 '실사' 보강 (2026-08-08) ---------------------------------
+    # 현대닷컴에는 흰 배경 vr360 렌더뿐이라 사진이 밋밋했다. 벤치마크 블로거처럼
+    # 모터쇼·야외 실사를 섞어야 "우와"가 나온다. Commons 모터쇼 컷으로 채운다.
+    "팰리세이드실사": ["Hyundai Palisade 2026", "Hyundai Palisade auto show"],
+    "그랜저실사": ["Hyundai Grandeur GN7", "Hyundai Grandeur 2024"],
+    "투싼실사": ["Hyundai Tucson 2025 auto show", "Hyundai Tucson NX4 facelift"],
+    "싼타페실사": ["Hyundai Santa Fe MX5 auto show", "Hyundai Santa Fe 2024"],
+    "아이오닉5실사": ["Hyundai Ioniq 5 2025 auto show", "Hyundai Ioniq 5 facelift"],
+
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.
     "실내고급": ["Genesis GV80 interior", "Genesis G90 interior dashboard"],

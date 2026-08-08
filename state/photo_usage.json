@@ -34,8 +34,6 @@
     "신차출시_0s_unsplash_3.jpg"
   ],
   "전기차친환경": [
-    "전기차친환경_1s_pexels_0.jpg",
-    "전기차친환경_0_1.jpg",
     "전기차친환경_0s_unsplash_1.jpg",
     "전기차친환경_0s_pexels_0.jpg",
     "전기차친환경_1s_pexels_0.jpg",
@@ -73,7 +71,9 @@
     "전기차친환경_0_1.jpg",
     "전기차친환경_1s_pexels_0.jpg",
     "전기차친환경_0_1.jpg",
-    "전기차친환경_0_1.jpg"
+    "전기차친환경_0_1.jpg",
+    "전기차친환경_0_1.jpg",
+    "전기차친환경_1s_pexels_0.jpg"
   ],
   "리콜안전정책": [
     "리콜안전정책_0s_pexels_0.jpg",
@@ -156,11 +156,17 @@
     "팰리세이드_press2.png",
     "팰리세이드_press1.png",
     "팰리세이드_press0.png",
+    "팰리세이드_press4.png",
+    "팰리세이드_press2.png",
+    "팰리세이드_press1.png",
+    "팰리세이드_press0.png",
+    "팰리세이드_press4.png",
+    "팰리세이드_press2.png",
+    "팰리세이드_press1.png",
+    "팰리세이드_press0.png",
     "팰리세이드_press4.png"
   ],
   "브랜드기업": [
-    "브랜드기업_0_0.jpg",
-    "브랜드기업_0s_pexels_0.jpg",
     "브랜드기업_1s_pexels_0.jpg",
     "브랜드기업_1_0.jpg",
     "브랜드기업_0s_pexels_1.jpg",
@@ -198,6 +204,8 @@
     "브랜드기업_1s_pexels_0.jpg",
     "브랜드기업_1s_pexels_0.jpg",
     "브랜드기업_1_0.jpg",
+    "브랜드기업_1s_pexels_0.jpg",
+    "브랜드기업_1s_pexels_0.jpg",
     "브랜드기업_1s_pexels_0.jpg"
   ],
   "싼타페": [
@@ -221,7 +229,10 @@
     "싼타페_press4.png",
     "싼타페_press3.png",
     "싼타페_press2.png",
-    "싼타페_press1.png"
+    "싼타페_press1.png",
+    "싼타페_press4.png",
+    "싼타페_press3.png",
+    "싼타페_press2.png"
   ],
   "GV80": [
     "GV80_0_2.jpg",
@@ -300,8 +311,6 @@
   ],
   "실내운전석": [
     "실내운전석_1w_1.jpg",
-    "실내운전석_1_0.jpg",
-    "실내운전석_1w_1.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_1_0.jpg",
@@ -338,15 +347,11 @@
     "실내운전석_1w_1.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_1w_1.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1w_1.jpg",
     "실내운전석_1w_1.jpg"
   ],
   "테슬라모델Y": [
-    "테슬라모델Y_0_2.jpg",
-    "테슬라모델Y_0_3.jpg",
-    "테슬라모델Y_0_0.jpg",
-    "테슬라모델Y_0_1.jpg",
-    "테슬라모델Y_0_2.jpg",
-    "테슬라모델Y_0_3.jpg",
     "테슬라모델Y_0_0.jpg",
     "테슬라모델Y_0_1.jpg",
     "테슬라모델Y_0_2.jpg",
@@ -380,7 +385,13 @@
     "테슬라모델Y_0_0.jpg",
     "테슬라모델Y_0_1.jpg",
     "테슬라모델Y_0_2.jpg",
-    "테슬라모델Y_0_3.jpg"
+    "테슬라모델Y_0_3.jpg",
+    "테슬라모델Y_0_0.jpg",
+    "테슬라모델Y_0_1.jpg",
+    "테슬라모델Y_0_2.jpg",
+    "테슬라모델Y_0_3.jpg",
+    "테슬라모델Y_0_0.jpg",
+    "테슬라모델Y_0_1.jpg"
   ],
   "실내테슬라": [
     "실내테슬라_1s_pexels_2.jpg",
@@ -393,6 +404,8 @@
     "실내테슬라_1w_0.jpg",
     "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_0s_unsplash_1.jpg",
+    "실내테슬라_1s_pexels_2.jpg",
+    "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_1s_pexels_2.jpg",
@@ -436,6 +449,10 @@
     "아이오닉5_press0.png",
     "아이오닉5_press2.png",
     "아이오닉5_press4.png",
+    "아이오닉5_press3.png",
+    "아이오닉5_press0.png",
+    "아이오닉5_press1.png",
+    "아이오닉5_press2.png",
     "아이오닉5_press3.png"
   ],
   "테슬라모델3": [
@@ -445,6 +462,8 @@
     "테슬라모델3_0_0.jpg",
     "테슬라모델3_0_1.jpg",
     "테슬라모델3_0_1.jpg",
+    "테슬라모델3_0_1.jpg",
+    "테슬라모델3_0_0.jpg",
     "테슬라모델3_0_1.jpg"
   ],
   "실내수입": [
@@ -607,10 +626,6 @@
     "G80_0_1.jpg"
   ],
   "중고차시장": [
-    "중고차시장_0_0.jpg",
-    "중고차시장_0s_unsplash_1.jpg",
-    "중고차시장_0_0.jpg",
-    "중고차시장_0s_pexels_0.jpg",
     "중고차시장_0s_unsplash_1.jpg",
     "중고차시장_0_0.jpg",
     "중고차시장_0s_pexels_0.jpg",
@@ -639,6 +654,10 @@
     "중고차시장_0_0.jpg",
     "중고차시장_0s_pexels_0.jpg",
     "중고차시장_0s_unsplash_1.jpg",
+    "중고차시장_0_0.jpg",
+    "중고차시장_0_0.jpg",
+    "중고차시장_0_0.jpg",
+    "중고차시장_0_0.jpg",
     "중고차시장_0_0.jpg",
     "중고차시장_0_0.jpg",
     "중고차시장_0_0.jpg",
@@ -756,7 +775,9 @@
     "그랜저_press0.png",
     "그랜저_press3.png",
     "그랜저_press1.png",
-    "그랜저_press2.png"
+    "그랜저_press2.png",
+    "그랜저_press0.png",
+    "그랜저_press3.png"
   ],
   "GV70": [
     "GV70_0s_pexels_1.jpg",
@@ -809,7 +830,9 @@
     "돈가격_0s_pexels_2.jpg",
     "돈가격_0s_unsplash_1.jpg",
     "돈가격_1s_pexels_2.jpg",
-    "돈가격_1s_pexels_0.jpg"
+    "돈가격_1s_pexels_0.jpg",
+    "돈가격_0s_pexels_2.jpg",
+    "돈가격_0s_unsplash_1.jpg"
   ],
   "공장생산": [
     "공장생산_0s_pexels_2.jpg",
@@ -1145,9 +1168,14 @@
     "투싼_press0.png",
     "투싼_press4.png",
     "투싼_press7.png",
-    "투싼_press1.png"
+    "투싼_press1.png",
+    "투싼_press0.png",
+    "투싼_press2.png"
   ],
   "온라인구매": [
     "온라인구매_1s_unsplash_1.jpg"
+  ],
+  "싼타페실사": [
+    "싼타페실사_1w_0.jpg"
   ]
 }

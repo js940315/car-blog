@@ -100,6 +100,20 @@ NO_CAR_OK = {"정의선", "머스크", "손흥민", "블루메", "왕촨푸", "�
              "SNS공유", "온라인구매", "계약서류", "국기중국", "국기미국", "국기유럽", "돈가격"}
 
 
+# 모델별 '실사' 버킷 — 현대는 공식 사이트에 흰 배경 렌더뿐이라 밋밋하다.
+# 모터쇼·야외 실사를 섞어야 벤치마크 블로거처럼 보인다(2026-08-08).
+REAL_ALT = {
+    "팰리세이드": "팰리세이드실사", "그랜저": "그랜저실사",
+    "투싼": "투싼실사", "싼타페": "싼타페실사",
+}
+
+
+def real_alt(bucket):
+    """그 모델의 실사 버킷(존재하고 사진이 있을 때만)."""
+    alt = REAL_ALT.get(bucket or "")
+    return alt if alt and available_buckets().get(alt) else None
+
+
 # 버킷 → 브랜드 (한 포스트 안에서 타 브랜드 차가 섞이는 걸 막는 데 쓴다)
 BUCKET_BRAND = {
     "팰리세이드": "현대", "싼타페": "현대", "투싼": "현대", "코나": "현대", "그랜저": "현대",
@@ -118,7 +132,13 @@ BUCKET_BRAND = {
 
 
 def brand_of_bucket(bucket):
-    return BUCKET_BRAND.get(bucket or "")
+    b = BUCKET_BRAND.get(bucket or "")
+    if b:
+        return b
+    for m, a in REAL_ALT.items():      # '팰리세이드실사' 도 원 모델 브랜드로 인식
+        if bucket == a:
+            return BUCKET_BRAND.get(m)
+    return None
 
 
 def same_brand_bucket(brand, exclude=()):

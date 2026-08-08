@@ -27,7 +27,7 @@ from common_utils import (build_bar_card_svg, build_number_card_svg,
                           convert_svg_to_png)
 from photo_library import pick_photo, record_usage, variation_seed
 from photo_match import (resolve_category, available_buckets,
-                         brand_of_bucket, same_brand_bucket)
+                         brand_of_bucket, same_brand_bucket, real_alt)
 
 
 def _asset(kind, name):
@@ -457,6 +457,21 @@ def build_one(article, out_dir):
                         sp["photo_category"] = alt
                         cat = alt
                 used.add(cat)
+
+    # ★ 실사 섞기 — 흰 배경 렌더만 8장 이어지면 카탈로그처럼 밋밋하다(벤치마크는 실사 위주).
+    #   같은 모델의 '실사'(모터쇼·야외) 버킷이 있으면 본문 일부를 그쪽으로 돌려 리듬을 준다.
+    #   ※ 반드시 브랜드 통일 **뒤에** 실행한다 — 앞서 하면 통일 로직이 원래 모델로 되돌린다.
+    if len(specs) >= 4:
+        swapped = 0
+        for i, sp in enumerate(specs[1:], start=1):
+            if swapped >= 2 or not isinstance(sp, dict) or sp.get("photo"):
+                continue
+            if i % 2 == 0:
+                alt = real_alt(sp.get("photo_category"))
+                if alt:
+                    print(f"  [실사 교체] '{sp['photo_category']}' -> '{alt}'")
+                    sp["photo_category"] = alt
+                    swapped += 1
 
     # out_dir은 항상 ".../{date_tag}/{seq}" 형태(samples든 실제 발행이든)라
     # 여기서 순환picks 시드로 쓸 (date_tag, seq)를 그대로 뽑아낸다.
