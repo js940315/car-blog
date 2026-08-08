@@ -100,11 +100,19 @@ CATEGORIES = {
     # --- 현대 모델 '실사' 보강 (2026-08-08) ---------------------------------
     # 현대닷컴에는 흰 배경 vr360 렌더뿐이라 사진이 밋밋했다. 벤치마크 블로거처럼
     # 모터쇼·야외 실사를 섞어야 "우와"가 나온다. Commons 모터쇼 컷으로 채운다.
-    "팰리세이드실사": ["Hyundai Palisade 2026", "Hyundai Palisade auto show"],
-    "그랜저실사": ["Hyundai Grandeur GN7", "Hyundai Grandeur 2024"],
+    "팰리세이드실사": ["Hyundai Palisade 2026", "Hyundai Palisade auto show",
+                   "Hyundai Palisade LX3 SUV"],
+    # ※ "Grandeur hybrid sedan"은 구형 TG(2005~)를 물어온다. 세대코드 GN7을 반드시 붙일 것.
+    "그랜저실사": ["Hyundai Grandeur GN7", "Hyundai Grandeur 2024",
+                "Hyundai Grandeur GN7 2023"],
     "투싼실사": ["Hyundai Tucson 2025 auto show", "Hyundai Tucson NX4 facelift"],
     "싼타페실사": ["Hyundai Santa Fe MX5 auto show", "Hyundai Santa Fe 2024"],
-    "아이오닉5실사": ["Hyundai Ioniq 5 2025 auto show", "Hyundai Ioniq 5 facelift"],
+    # ※ 검색어 주의(2026-08-08 실측): "Ioniq 5 facelift"는 구형 아이오닉 해치백을,
+    #    "Ioniq 5 2025 auto show"는 N 퍼포먼스 경주차를 물어온다. 모델명을 그대로 박을 것.
+    "아이오닉5실사": ["Hyundai Ioniq 5 electric SUV", "Hyundai Ioniq 5 Elektroauto"],
+    "코나실사": ["Hyundai Kona SX2 auto show", "Hyundai Kona Electric 2024"],
+    "아반떼실사": ["Hyundai Elantra 2024", "Hyundai Elantra N Line sedan"],
+    "아이오닉9실사": ["Hyundai Ioniq 9 auto show", "Hyundai Ioniq 9 2025"],
 
     # --- 실내(인테리어) 버킷 ------------------------------------------------
     # 자동차 글은 외관만큼 실내도 궁금해한다. 5장 세트에 실내 최소 1장 넣는다.

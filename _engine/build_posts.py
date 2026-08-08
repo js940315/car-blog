@@ -451,8 +451,12 @@ def build_one(article, out_dir):
                 cat = sp.get("photo_category")
                 b = brand_of_bucket(cat)
                 if b and b != main_brand:
-                    alt = same_brand_bucket(main_brand, exclude=used)
-                    if alt:
+                    # 실내 슬롯은 반드시 실내로 바꾼다. 외관으로 갈아치우면
+                    # '실내 최소 2장' 규격이 조용히 깨진다(2026-08-08 실측: 실내 0장 발생).
+                    is_interior = bool(cat) and cat.startswith("실내")
+                    alt = same_brand_bucket(main_brand, exclude=used,
+                                            interior=is_interior)
+                    if alt and alt != cat:
                         print(f"  [브랜드 통일] '{cat}'({b}) -> '{alt}'({main_brand})")
                         sp["photo_category"] = alt
                         cat = alt
@@ -461,17 +465,25 @@ def build_one(article, out_dir):
     # ★ 실사 섞기 — 흰 배경 렌더만 8장 이어지면 카탈로그처럼 밋밋하다(벤치마크는 실사 위주).
     #   같은 모델의 '실사'(모터쇼·야외) 버킷이 있으면 본문 일부를 그쪽으로 돌려 리듬을 준다.
     #   ※ 반드시 브랜드 통일 **뒤에** 실행한다 — 앞서 하면 통일 로직이 원래 모델로 되돌린다.
+    #   슬롯 번호가 아니라 '실사가 가능한 후보' 중에서 하나 걸러 하나를 고른다.
+    #   (짝수 슬롯만 보면 모델 사진이 홀수 자리에만 놓인 기사에서 한 번도 안 걸린다)
     if len(specs) >= 4:
-        swapped = 0
-        for i, sp in enumerate(specs[1:], start=1):
-            if swapped >= 2 or not isinstance(sp, dict) or sp.get("photo"):
+        cands = [sp for sp in specs[1:]
+                 if isinstance(sp, dict) and not sp.get("photo")
+                 and real_alt(sp.get("photo_category"))]
+        # 선두 본문 사진은 프레스로 남긴다(품질이 가장 좋다). 그 뒤에서 최대 2장,
+        # 같은 모델을 두 번 바꾸지 않는다 — 안 그러면 그 모델 프레스가 통째로 사라진다.
+        done = set()
+        for sp in cands[1:]:
+            if len(done) >= 2:
+                break
+            cat = sp["photo_category"]
+            if cat in done:
                 continue
-            if i % 2 == 0:
-                alt = real_alt(sp.get("photo_category"))
-                if alt:
-                    print(f"  [실사 교체] '{sp['photo_category']}' -> '{alt}'")
-                    sp["photo_category"] = alt
-                    swapped += 1
+            alt = real_alt(cat)
+            print(f"  [실사 교체] '{cat}' -> '{alt}'")
+            sp["photo_category"] = alt
+            done.add(cat)
 
     # out_dir은 항상 ".../{date_tag}/{seq}" 형태(samples든 실제 발행이든)라
     # 여기서 순환picks 시드로 쓸 (date_tag, seq)를 그대로 뽑아낸다.

@@ -6605,39 +6605,7 @@
     "원본해상도": "3993x2695",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Palisade 2026",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.873,
-    "밝기": 56
-  },
-  "팰리세이드실사_0w_1.jpg": {
-    "카테고리": "팰리세이드실사",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2026 Hyundai Palisade XRT / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4032x3024",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Palisade 2026",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.759,
-    "밝기": 58
-  },
-  "그랜저실사_1w_0.jpg": {
-    "카테고리": "그랜저실사",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Grandeur HG PE Phantom Black (1) / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "3915x2936",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Grandeur 2024",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.99,
-    "차면적": 0.391,
-    "밝기": 55
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "그랜저실사_1w_1.jpg": {
     "카테고리": "그랜저실사",
@@ -6647,11 +6615,7 @@
     "원본해상도": "3981x2986",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Hyundai Grandeur 2024",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.87,
-    "차면적": 0.348,
-    "밝기": 53
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "투싼실사_0w_0.jpg": {
     "카테고리": "투싼실사",
@@ -6736,5 +6700,165 @@
     "차신뢰도": 1.0,
     "차면적": 0.763,
     "밝기": 56
+  },
+  "아이오닉5실사_0w_0.jpg": {
+    "카테고리": "아이오닉5실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai IONIQ 5 NE IONIQ5 N NE N (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4000x3000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 5 electric SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "코나실사_0w_0.jpg": {
+    "카테고리": "코나실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Kona Electric (SX2) Auto Zuerich 202 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5110x2668",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Kona SX2 auto show",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "코나실사_0w_1.jpg": {
+    "카테고리": "코나실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Kona Electric (SX2) Auto Zuerich 202 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4297x2754",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Kona SX2 auto show",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "코나실사_0w_2.jpg": {
+    "카테고리": "코나실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Kona Hybrid (SX2) Auto Zuerich 2023  / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4669x2631",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Kona SX2 auto show",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉9실사_0w_0.jpg": {
+    "카테고리": "아이오닉9실사",
+    "license": "CC BY 4.0",
+    "credit": "사진 : 2025 Hyundai Ioniq 9 (Front) at the 2025 NYC / CC BY 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4272x2848",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 9 auto show",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉9실사_0w_1.jpg": {
+    "카테고리": "아이오닉9실사",
+    "license": "CC0",
+    "credit": "사진 : Hyundai Ioniq 9 Calligraphy Design (2026) (5 / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "6000x4000",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 9 auto show",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉9실사_1w_0.jpg": {
+    "카테고리": "아이오닉9실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Ioniq 9 Auto Zuerich 2025 DSC 2978 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5258x3052",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 9 2025",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉9실사_1w_1.jpg": {
+    "카테고리": "아이오닉9실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Ioniq 9 Automesse Ludwigsburg 2025 D / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5007x3235",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 9 2025",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉5실사_0w_1.jpg": {
+    "카테고리": "아이오닉5실사",
+    "license": "CC0",
+    "credit": "사진 : Hyundai Ioniq 5 / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5870x2840",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 5 electric SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아이오닉5실사_0w_2.jpg": {
+    "카테고리": "아이오닉5실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Ioniq 5 1X7A0847 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5481x3288",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Ioniq 5 electric SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아반떼실사_0w_0.jpg": {
+    "카테고리": "아반떼실사",
+    "license": "CC0",
+    "credit": "사진 : 24 Hyundai Elantra N / CC0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4128x3096",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Elantra 2024",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아반떼실사_1w_0.jpg": {
+    "카테고리": "아반떼실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Elantra CN7 PE 1.6T N Line Ultimate  / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4644x3096",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Elantra N Line sedan",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아반떼실사_1w_1.jpg": {
+    "카테고리": "아반떼실사",
+    "license": "CC BY 2.0",
+    "credit": "사진 : Hyundai Elantra N-Line (2024) (53625785663) / CC BY 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4638x3546",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Elantra N Line sedan",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "아반떼실사_1w_2.jpg": {
+    "카테고리": "아반떼실사",
+    "license": "CC BY 2.0",
+    "credit": "사진 : Hyundai Elantra N-Line (2024) (53626028380) / CC BY 2.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "4896x3672",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Elantra N Line sedan",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "팰리세이드실사_2w_1.jpg": {
+    "카테고리": "팰리세이드실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (10) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3981x2986",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Palisade LX3 SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "팰리세이드실사_2w_2.jpg": {
+    "카테고리": "팰리세이드실사",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Hyundai Palisade LX3 P2 Test Vehicle (2) / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "3954x2966",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Hyundai Palisade LX3 SUV",
+    "검수": "미확인 — Read로 눈 확인 필요"
   }
 }

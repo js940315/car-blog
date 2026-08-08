@@ -105,13 +105,24 @@ NO_CAR_OK = {"정의선", "머스크", "손흥민", "블루메", "왕촨푸", "�
 REAL_ALT = {
     "팰리세이드": "팰리세이드실사", "그랜저": "그랜저실사",
     "투싼": "투싼실사", "싼타페": "싼타페실사",
+    # 2026-08-08 2차 — 프레스 보유 현대 8모델을 전부 덮었다.
+    "코나": "코나실사", "아반떼": "아반떼실사",
+    "아이오닉5": "아이오닉5실사", "아이오닉9": "아이오닉9실사",
 }
 
 
+MIN_REAL_PHOTOS = 2      # 1장짜리 버킷은 매번 같은 사진이 나가 반복 노출이 된다
+
+
 def real_alt(bucket):
-    """그 모델의 실사 버킷(존재하고 사진이 있을 때만)."""
+    """그 모델의 실사 버킷(사진이 MIN_REAL_PHOTOS 장 이상 있을 때만).
+
+    장수 게이트를 두는 이유: 실사는 Commons 의존이라 모델별로 수확량이 들쭉날쭉하다.
+    구형 세대 컷을 걷어내고 나면 1장만 남는 버킷이 생기는데(2026-08-08 그랜저 GN7),
+    그걸 그대로 쓰면 같은 사진이 매번 나간다. 사진이 늘면 자동으로 다시 켜진다.
+    """
     alt = REAL_ALT.get(bucket or "")
-    return alt if alt and available_buckets().get(alt) else None
+    return alt if alt and available_buckets().get(alt, 0) >= MIN_REAL_PHOTOS else None
 
 
 # 버킷 → 브랜드 (한 포스트 안에서 타 브랜드 차가 섞이는 걸 막는 데 쓴다)
@@ -141,8 +152,33 @@ def brand_of_bucket(bucket):
     return None
 
 
-def same_brand_bucket(brand, exclude=()):
-    """그 브랜드의 사진 버킷 중 보유한 것 하나(외관 우선, 실내는 뒤로)."""
+# 브랜드 → 그 브랜드에 맞는 실내 버킷 (ROUTINE_AUTO '실내 버킷' 규칙을 코드로 옮긴 것).
+# 브랜드 통일이 실내 슬롯을 외관으로 갈아치우면 '실내 최소 2장' 규격이 조용히 깨진다.
+# 실내는 실내로만 바꾼다.
+BRAND_INTERIOR = {
+    "현대": "실내운전석", "기아": "실내운전석", "제네시스": "실내고급",
+    "테슬라": "실내테슬라", "벤츠": "실내벤츠", "BMW": "실내BMW",
+}
+INTERIOR_FALLBACK = "실내수입"      # 그 외 수입·프리미엄
+
+
+def interior_bucket(brand):
+    """그 브랜드 기사에 써도 되는 실내 버킷(보유한 것만)."""
+    have = available_buckets()
+    for cand in (BRAND_INTERIOR.get(brand or ""), INTERIOR_FALLBACK):
+        if cand and have.get(cand):
+            return cand
+    return None
+
+
+def same_brand_bucket(brand, exclude=(), interior=False):
+    """그 브랜드의 사진 버킷 중 보유한 것 하나.
+
+    interior=True 면 실내 버킷만 돌려준다 — 실내 슬롯을 외관으로 바꾸지 않기 위해서다.
+    기본(외관 모드)에서는 외관을 우선하고 실내를 뒤로 민다.
+    """
+    if interior:
+        return interior_bucket(brand)
     if not brand:
         return None
     have = available_buckets()
