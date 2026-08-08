@@ -56,6 +56,11 @@ def interior_urls(platform, codes):
 #   innerHTML 에서 /contents/vr360/([A-Z0-9]+)/ 를 뽑아 확인해야 한다(실측).
 #   색상코드도 모델마다 달라 001~036 중 005 로 존재 여부를 찔러 확인한다.
 PRESS = {
+    # 실측 코드(2026-08-08, 모델 페이지 innerHTML 에서 추출)
+    # ※ 아이오닉5는 외관(NE10)과 실내(NE09) 플랫폼 코드가 다르다.
+    "아이오닉5": exterior_urls("NE10", "C5G", mid="") + interior_urls("NE09", ["IP0", "IP1", "IP2"]),
+    "투싼": exterior_urls("NX17", "TW3", mid="") + interior_urls("NX17", ["IK0", "IJ8", "IJ9"]),
+    "코나": exterior_urls("SX19", "RRR", mid="") + interior_urls("SX19", ["I54", "IC2", "IC1"]),
     "그랜저": exterior_urls("GN11", "WBP", mid="") + interior_urls("GN11", ["IN6", "IN5", "IN4"]),
     "싼타페": exterior_urls("MX07", "A2B") + interior_urls("MX07", ["II9", "IJ1", "IH0"]),
     "팰리세이드": exterior_urls("FX01", "R8N") + [
