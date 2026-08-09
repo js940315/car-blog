@@ -106,9 +106,9 @@ CATEGORIES = {
     # 실측: 0809 셀럽 기사가 프라이드·캐스퍼·레이를 다뤘는데 버킷이 하나도 없어
     # '셀럽차' 일반 사진으로 때웠다. 연예인이 타는 차는 대형 세단보다 이쪽이 많다.
     "캐스퍼": ["Hyundai Casper 2022", "Hyundai Casper Electric"],
-    "레이": ["Kia Ray 2023", "Kia Ray EV"],
-    "모닝": ["Kia Morning Picanto 2024", "Kia Picanto facelift"],
-    "프라이드": ["Kia Pride Rio 2011", "Kia Rio sedan 2012"],
+    "레이": ["Kia Ray 2023", "Kia Ray EV", "Kia Ray car Korea"],
+    "모닝": ["Kia Morning Picanto 2024", "Kia Picanto facelift", "Kia Picanto JA 2023"],
+    "프라이드": ["Kia Pride Rio 2011", "Kia Rio sedan 2012", "Kia Rio UB hatchback"],
     "니로": ["Kia Niro 2023", "Kia Niro EV SG2"],
     # 셀럽이 자주 타는 수입 SUV
     "레인지로버": ["Range Rover 2023", "Land Rover Range Rover Sport"],

@@ -142,6 +142,70 @@ MIN_FACE_AREA = 0.06     # 얼굴이 화면의 6% 미만이면 '누가 누군지
 _BUDGET = {"slept": 0.0, "max": 120.0}
 
 
+def _largest_face(path):
+    """(이미지, 가장 큰 얼굴 박스, 얼굴면적비) — 못 찾으면 (이미지, None, 0)."""
+    import cv2
+    from frame_quality import _imread
+    img = _imread(path)
+    if img is None:
+        return None, None, 0.0
+    cascade = cv2.CascadeClassifier(
+        os.path.join(cv2.data.haarcascades, "haarcascade_frontalface_default.xml"))
+    if cascade.empty():
+        return img, None, 0.0
+    h, w = img.shape[:2]
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = cascade.detectMultiScale(gray, 1.1, 5,
+                                     minSize=(max(24, int(w * 0.03)),) * 2)
+    if len(faces) == 0:
+        return img, None, 0.0
+    box = max(faces, key=lambda f: f[2] * f[3])
+    return img, box, (box[2] * box[3]) / float(w * h)
+
+
+def crop_to_face(path, size=1400, target=0.20, min_src=900):
+    """얼굴을 중심에 두고 정사각으로 잘라 '인물 사진'으로 만든다.
+
+    ※ 2026-08-09 자기점검에서 나온 개선 — 처음엔 얼굴이 6% 미만이면 그냥 버렸는데,
+      그러면 **CEO 사진이 거의 다 죽는다**. 연예인은 레드카펫 클로즈업이라 얼굴이 20%씩
+      나오지만, 정의선·블루메·왕촨푸 같은 기업인은 Commons 에 행사장 **원거리 컷**밖에
+      없어 2~5% 다(실측). 원본이 5000px 급이면 얼굴 중심으로 잘라 쓰면 되는 사진이다.
+      그래서 '버리기' 대신 '얼굴 기준 크롭'을 먼저 시도한다.
+
+    반환: (성공여부, 사유)"""
+    try:
+        from PIL import Image
+        img, box, area = _largest_face(path)
+        if img is None:
+            return False, "이미지 열기 실패"
+        if box is None:
+            return False, "얼굴 없음"
+        H, W = img.shape[:2]
+        fx, fy, fw, fh = [int(v) for v in box]
+        # 얼굴이 프레임의 target 비율을 차지하도록 정사각 창을 잡는다
+        side = int(max(fw, fh) / (target ** 0.5))
+        side = max(side, int(max(fw, fh) * 1.6))       # 너무 타이트한 크롭 방지
+        side = min(side, min(W, H))                    # 원본 밖으로 나가지 않게
+        cx, cy = fx + fw // 2, fy + fh // 2
+        # 얼굴을 프레임 '살짝 위쪽'에 둔다 = 창을 아래로 내려 어깨·상체를 더 담는다.
+        # (반대로 하면 머리 위 여백만 커진다 — 실측으로 부호를 잡았다)
+        cy = min(cy + int(side * 0.10), H)
+        x0 = max(0, min(W - side, cx - side // 2))
+        y0 = max(0, min(H - side, cy - side // 2))
+        if side < min_src:
+            return False, f"원본이 작아 크롭 불가(창 {side}px)"
+        im = Image.open(path).convert("RGB").crop((x0, y0, x0 + side, y0 + side))
+        im = im.resize((size, size), Image.LANCZOS)
+        im.save(path, "JPEG", quality=93, subsampling=1)
+        new_area = (fw * fh) / float(side * side)
+        if new_area < MIN_FACE_AREA:
+            return False, f"크롭해도 얼굴이 작음({new_area:.1%})"
+        return True, f"얼굴 {new_area:.0%}(크롭)"
+    except Exception as e:
+        print(f"   [경고] 얼굴 크롭 실패: {type(e).__name__}: {str(e)[:50]}")
+        return False, "크롭 실패"
+
+
 def face_ok(path):
     """인물 사진에 **얼굴이 크게** 잡혀 있는가.
 
@@ -175,6 +239,80 @@ def face_ok(path):
     except Exception as e:
         print(f"   [경고] 얼굴 검사 실패(통과 처리): {type(e).__name__}: {str(e)[:50]}")
         return True, "검사 실패"
+
+
+def audit(fix=False):
+    """**이미 갖고 있는** 인물 사진에 얼굴 게이트를 소급 적용한다.
+
+    얼굴 게이트는 신규 소싱에만 걸리므로, 게이트를 만들기 전에 쌓인 재고는
+    그대로 남는다(실측 2026-08-09: 기존 13장 중 6장이 기준 미달이었고,
+    왕촨푸는 얼굴이 아예 없는 사진이 그 버킷의 유일한 사진이었다).
+    규칙을 바꾸면 재고도 같이 점검해야 한다."""
+    idx = load_index()
+    rows = []
+    for fn in sorted(os.listdir(DIR)):
+        if not fn.lower().endswith((".jpg", ".png")):
+            continue
+        meta = idx.get(fn) or {}
+        bucket = fn.split("_")[0]
+        is_person = "인물 사진" in str(meta.get("처리", "")) or bucket in PEOPLE
+        if not is_person:
+            continue
+        if fn not in idx:
+            # index 에 없는 인물 파일(수동 투입·git 복원 등)도 검사 대상에 넣고 등록해 준다.
+            # 안 그러면 파일은 있는데 person_buckets() 가 못 봐서 '사진 없는 인물'이 된다.
+            idx[fn] = {"카테고리": bucket, "license": "확인 필요",
+                       "처리": "인물 사진 · 정사각 1400px", "검수": "미확인"}
+            print(f"   [등록] index 에 없던 인물 파일 추가: {fn}")
+        ok, why = face_ok(os.path.join(DIR, fn))
+        rows.append((fn, ok, why))
+    bad = [r for r in rows if not r[1]]
+    for fn, ok, why in rows:
+        print(f"  {'통과' if ok else '탈락'} {fn:18s} {why}")
+    print(f"\n인물 사진 {len(rows)}장 / 기준 미달 {len(bad)}장")
+    if not bad:
+        return 0
+    if not fix:
+        print("→ 고치려면 --audit --fix 로 다시 실행하세요"
+              "(먼저 얼굴 크롭으로 살려보고, 안 되는 것만 지웁니다).")
+        return len(bad)
+
+    # ★ 삭제 전에 **얼굴 크롭으로 살려본다**. 바로 지우면 그 인물의 유일한 사진이
+    #   날아가 기사를 아예 못 쓴다(실측 2026-08-09: 정의선이 0장이 됐다).
+    #   원거리 컷이라도 원본이 크면 크롭해서 쓸 수 있다.
+    remain = []
+    for fn, _, why in bad:
+        path = os.path.join(DIR, fn)
+        ok2, why2 = crop_to_face(path)
+        if ok2:
+            meta = idx.get(fn) or {}
+            meta["얼굴"] = why2
+            idx[fn] = meta
+            print(f"   살림 {fn:18s} {why} -> {why2}")
+        else:
+            remain.append((fn, why2))
+
+    # 크롭으로도 안 되는 것만 지운다. 단 그 버킷의 **마지막 한 장**이면 지우지 않고
+    # 경고만 한다 — 없는 것보다는 약한 사진이라도 있는 게 낫고, 지울지는 사람이 정한다.
+    left = {}
+    for fn, _, _ in rows:
+        b = fn.split("_")[0]
+        left[b] = left.get(b, 0) + 1
+    for fn, why2 in remain:
+        b = fn.split("_")[0]
+        if left.get(b, 0) <= 1:
+            print(f"   [경고] {fn} 은 '{b}' 의 마지막 사진이라 남깁니다({why2}). "
+                  f"--add 로 더 받거나, 이 인물은 기사에서 빼세요.")
+            continue
+        try:
+            os.remove(path if False else os.path.join(DIR, fn))
+            idx.pop(fn, None)
+            left[b] -= 1
+            print(f"   삭제 {fn:18s} {why2}")
+        except OSError as e:
+            print(f"   [경고] 삭제 실패 {fn}: {e}")
+    save_index(idx)
+    return len(remain)
 
 
 def probe(query, min_width=700):
@@ -243,8 +381,12 @@ def source_one(name, query, per=3, min_width=700):
                 raise last_err
             with open(path, "wb") as f:
                 f.write(data)
-            prepare_photo(path, path, size=1400)
-            ok, why = face_ok(path)
+            # 얼굴 중심 크롭을 **먼저** 시도한다(원거리 컷도 살리기 위해).
+            # 실패하면(얼굴 없음·원본이 작음) 그때 일반 정사각 처리 후 게이트를 건다.
+            ok, why = crop_to_face(path)
+            if not ok:
+                prepare_photo(path, path, size=1400)
+                ok, why = face_ok(path)
             if not ok:
                 os.remove(path)                    # 얼굴 게이트 탈락 — 남기지 않는다
                 print(f"   버림 {c['title'][:36]}: {why}")
@@ -266,9 +408,16 @@ def main():
                     help="다운로드 없이 '사진을 구할 수 있는지'만 확인. "
                          "셀럽 기사를 쓰기 전에 먼저 돌려볼 것. "
                          "'|' 로 여러 표기를 넘길 수 있다: --probe \"Ma Dong-seok|Don Lee actor\"")
+    ap.add_argument("--audit", action="store_true",
+                    help="보유 인물 사진에 얼굴 게이트를 소급 적용해 점검(다운로드 없음)")
+    ap.add_argument("--fix", action="store_true",
+                    help="--audit 과 함께: 기준 미달 사진을 삭제한다")
     ap.add_argument("--workers", type=int, default=2,
                     help="동시 다운로드 수. 기본 2 — Commons 429 방지 + 메모리 스파이크 억제")
     args = ap.parse_args()
+
+    if args.audit:
+        return 0 if audit(fix=args.fix) == 0 else 2
 
     if args.probe:
         rows = probe(args.probe)
