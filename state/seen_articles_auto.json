@@ -426,5 +426,67 @@
       "issue": "셀럽·연예인차 에버그린 - 신혜선(프라이드)·이국주(캐스퍼)·경수진(레이)·은혁 소형차 선택",
       "source_url": ""
     }
+  ],
+  "0810": [
+    {
+      "title": "2,398만원 아반떼, 계약 첫날 1만1094대.. 7세대 기록 깼습니다",
+      "category": "신차·출시",
+      "issue": "8세대 아반떼 계약 첫날 1만1094대, 7세대 기록(1만58대) 경신, 트림·하이브리드 비중",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61284"
+    },
+    {
+      "title": "7348만원 EV9, GV80이랑 값이 겹칩니다.. 뭘 사야 할까요",
+      "category": "신차·출시",
+      "issue": "EV9 vs GV80 가격대 겹침 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉5 롱레인지, 코나 일렉트릭보다 딱 300만원 더 비쌌습니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉5 vs 코나 일렉트릭 가격·체급 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "BYD가 전고체 배터리 특허 6건 더 공개했습니다.. 2027년 시험생산",
+      "category": "전기차·친환경",
+      "issue": "BYD 전고체 배터리 특허 6건 공개, 2027년 시험생산·2030년 이후 양산",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61303"
+    },
+    {
+      "title": "쏘렌토 하이브리드, 3년 타도 신차값의 70% 받습니다",
+      "category": "중고차·시장동향",
+      "issue": "쏘렌토 하이브리드 감가율 vs 싼타페 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "카니발 하이브리드 4,091만원부터, 중고는 벌써 2,956만원까지 올랐습니다",
+      "category": "중고차·시장동향",
+      "issue": "카니발 하이브리드 신차·중고 가격 흐름(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "G90, GV80보다 4천만원 더 비싼데.. 안전사양 차이는 이만큼입니다",
+      "category": "리콜·안전·정책",
+      "issue": "G90 vs GV80 가격·안전사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "현대차·기아 7.6%, 중국 3사가 상반기 톱10에 나란히 들었습니다",
+      "category": "자동차산업·수출",
+      "issue": "상반기 글로벌 완성차 점유율 톱10, BYD·지리·체리 진입, 현대차기아 3위",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546505"
+    },
+    {
+      "title": "현대차·기아, 레드닷 17관왕.. 최우수상만 2개였습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "현대차·기아 2026 레드닷 디자인 어워드 17관왕(최우수2·본상15)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61298"
+    },
+    {
+      "title": "벤츠 AMG 앰버서더 손흥민, 정작 차고엔 벤츠가 없었습니다",
+      "category": "셀럽·연예인차",
+      "issue": "손흥민 벤츠 AMG 브랜드 앰버서더 vs 개인 소장 슈퍼카 컬렉션(페라리·벤틀리·아우디 등)",
+      "source_url": ""
+    }
   ]
 }

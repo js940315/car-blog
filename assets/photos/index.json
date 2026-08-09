@@ -7652,5 +7652,23 @@
     "license": "확인 필요",
     "처리": "인물 사진 · 정사각 1400px",
     "검수": "미확인"
+  },
+  "손흥민_1.jpg": {
+    "카테고리": "손흥민",
+    "license": "CC BY-SA 4.0",
+    "credit": "File:BFA 2023 -2 Heung-Min Son.jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Son Heung-min",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "손흥민_2.jpg": {
+    "카테고리": "손흥민",
+    "license": "CC BY 2.0",
+    "credit": "File:Heung-min Son 2017.jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Son Heung-min",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
   }
 }
