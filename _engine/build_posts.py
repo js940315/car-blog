@@ -337,6 +337,44 @@ def check_thin_buckets(specs, min_n=3):
     return problems
 
 
+def check_rendered_duplicates(out_dir, max_dist=16):
+    """**최종 결과물**끼리 비교해 같은 글에 비슷한 사진이 두 번 들어갔는지 본다.
+
+    pick_photo 가 이미 막지만, 그건 '고를 때' 얘기다. 여기서는 실제로 저장된 JPG 를
+    직접 비교한다 — 독자가 보는 것과 같은 대상을 검사해야 놓치지 않는다
+    (2026-08-10 실측: 0809/1 의 3번·7번이 쏘나타 실내 컷 2장으로 사실상 같은 사진이었다).
+    거리 실측값: 같은 장면 2~11 / 정상적인 다른 각도 26~30."""
+    problems = []
+    try:
+        from PIL import Image
+        files = sorted([f for f in os.listdir(out_dir) if f.endswith(".jpg")],
+                       key=lambda x: int(x.split("번")[0]) if x.split("번")[0].isdigit() else 99)
+        hashes = {}
+        for f in files:
+            s = 12
+            im = Image.open(os.path.join(out_dir, f)).convert("L").resize((s + 1, s),
+                                                                         Image.BILINEAR)
+            px, h, bit = im.tobytes(), 0, 0
+            for y in range(s):
+                row = y * (s + 1)
+                for x in range(s):
+                    if px[row + x] > px[row + x + 1]:
+                        h |= 1 << bit
+                    bit += 1
+            hashes[f] = h
+        for i, a in enumerate(files):
+            for b in files[i + 1:]:
+                dist = bin(hashes[a] ^ hashes[b]).count("1")
+                if dist <= max_dist:
+                    problems.append(
+                        f"{a} 와 {b} 가 사실상 같은 사진이다(거리 {dist}) — "
+                        f"그 버킷에 다른 장면이 부족하다. 버킷을 보강하거나 "
+                        f"한쪽 슬롯의 photo_category 를 바꿀 것")
+    except Exception as e:
+        print(f"  [경고] 중복 사진 검사 실패: {type(e).__name__}: {str(e)[:60]}")
+    return problems
+
+
 def check_caption_photo(specs):
     """캡션이 말하는 소재와 실제 사진 버킷이 어긋나면 경고를 남긴다."""
     problems = []
@@ -718,6 +756,7 @@ def build_one(article, out_dir):
     problems += validate_celebrity_photo(article, specs)
     problems += check_caption_photo(specs)
     problems += check_thin_buckets(specs)
+    problems += check_rendered_duplicates(out_dir)
 
     # 파일명 앞 '0번'은 정렬용 — 사진(1~4번)보다 위에 오게 해서 작업 순서(본문 먼저)와 일치
     with open(os.path.join(out_dir, "0번 본문.txt"), "w", encoding="utf-8") as f:

@@ -233,6 +233,10 @@ def main():
                          "블루스크린 이력이 있어 순간 메모리 스파이크를 낮게 유지한다. "
                          "안정적인 클라우드/다른 PC에서는 8까지 올려도 된다.")
     ap.add_argument("--prune", action="store_true", help="index 정리만 하고 종료")
+    ap.add_argument("--phash", action="store_true",
+                    help="사진마다 지각적 해시(dHash)를 index에 심는다. "
+                         "한 글 안에서 '같은 장면 다른 파일'이 두 번 나가는 걸 막는 데 쓴다. "
+                         "소싱 후 한 번 돌리면 된다(없어도 동작하지만 매번 다시 계산한다).")
     ap.add_argument("--tagcars", action="store_true",
                     help="차량 검출을 돌려 index에 '차검출' 태그 심기(본문 사진 품질 게이트용)")
     ap.add_argument("--dedup", action="store_true",
@@ -246,6 +250,25 @@ def main():
 
     os.makedirs(DIR, exist_ok=True)
     idx = load_index()
+
+    if args.phash:
+        from photo_library import photo_hash
+        idx = load_index()
+        n = 0
+        for fn in sorted(os.listdir(DIR)):
+            if not fn.lower().endswith((".jpg", ".png")):
+                continue
+            h = photo_hash(fn, {})          # index 값을 무시하고 새로 계산
+            if h is None:
+                continue
+            meta = idx.get(fn) or {"카테고리": fn.split("_")[0]}
+            meta["dhash"] = h
+            idx[fn] = meta
+            n += 1
+        save_index(idx)
+        print(f"지각해시 {n}장 기록 완료 -> {INDEX}")
+        print("→ 이제 한 글 안에서 '같은 장면 다른 파일'이 중복 선택되지 않습니다.")
+        return 0
 
     if args.prune:
         gone = prune(idx)

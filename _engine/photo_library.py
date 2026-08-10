@@ -29,6 +29,16 @@ MIN_BRIGHTNESS = 70   # 평균 밝기(0~255). 이보다 어두우면 스크림 �
 RECENT_WINDOW = 3     # 카테고리 안에서 최근 이만큼은 재사용을 피한다
 HISTORY_MAX = 40       # usage 로그가 무한히 커지지 않게 카테고리당 이만큼만 보관
 
+# ── 한 글 안에서 '사실상 같은 사진'이 두 번 나가는 걸 막는 장치 ──────────────
+# 예전엔 exclude 를 **파일명**으로만 걸렀다. 그런데 진짜 문제는 파일명이 다른
+# **같은 장면**이었다(실측 2026-08-10: 0809/1 의 3번·7번이 쏘나타_press5·press6 —
+# 같은 실내를 트림만 바꿔 찍은 컷이라 독자 눈엔 완전히 같은 사진이다).
+# 그래서 지각적 해시(dHash 12x12)로 '비슷한 후보'까지 제외한다.
+#   실측 거리: 같은 장면 2~11 / 정상적인 다른 각도 26~30 → 16을 경계로 잡는다.
+DUP_MAX_DIST = 16
+_HASH_SIZE = 12
+_hash_cache = {}
+
 ALIGNS = ["xMinYMin", "xMidYMin", "xMaxYMin",
           "xMinYMid", "xMidYMid", "xMaxYMid",
           "xMinYMax", "xMidYMax", "xMaxYMax"]
@@ -89,6 +99,41 @@ def category_pool(category):
     return sorted(pool)
 
 
+def photo_hash(filename, idx_meta=None):
+    """사진의 지각적 해시(dHash). index.json 에 있으면 그걸 쓰고, 없으면 계산한다.
+
+    계산 결과는 프로세스 안에서만 캐시한다 — build_posts 는 이미지를 스레드로
+    렌더하므로 여기서 index.json 에 쓰면 동시 쓰기로 파일이 깨진다.
+    미리 채워두려면 `python _engine/build_photo_library.py --phash` 를 돌린다."""
+    if filename in _hash_cache:
+        return _hash_cache[filename]
+    meta = (idx_meta or {}).get(filename) or {}
+    val = meta.get("dhash")
+    if val is None:
+        try:
+            from PIL import Image
+            s = _HASH_SIZE
+            im = Image.open(os.path.join(PHOTO_DIR, filename)).convert("L")
+            im = im.resize((s + 1, s), Image.BILINEAR)
+            px = im.tobytes()
+            val, bit = 0, 0
+            for y in range(s):
+                row = y * (s + 1)
+                for x in range(s):
+                    if px[row + x] > px[row + x + 1]:
+                        val |= 1 << bit
+                    bit += 1
+        except Exception as e:
+            print(f"  [경고] 지각해시 계산 실패({filename}): {type(e).__name__}: {str(e)[:40]}")
+            val = None
+    _hash_cache[filename] = val
+    return val
+
+
+def _hamming(a, b):
+    return bin(a ^ b).count("1") if (a is not None and b is not None) else 999
+
+
 def pick_photo(category, date_tag, seq, exclude=None):
     """카테고리 풀에서 (날짜, 순번) 기반으로 결정론적으로 하나를 고른다.
 
@@ -97,8 +142,23 @@ def pick_photo(category, date_tag, seq, exclude=None):
     반환값이 None이면 그 카테고리에 사진이 아직 없다는 뜻 — 호출부가
     카드로 대체하거나 다른 카테고리로 폴백해야 한다."""
     pool = category_pool(category)
+    idx_meta = _load_json_safe(INDEX_PATH, {})
     if exclude:
         pool = [p for p in pool if p not in exclude]
+        # ★ 파일명이 달라도 **같은 장면**이면 제외한다(위 DUP_MAX_DIST 주석 참조).
+        #   전부 걸러지면 어쩔 수 없이 원래 풀을 쓰되 경고를 남긴다 — 조용히
+        #   중복을 내보내지 않기 위해서다.
+        ex_hashes = [h for h in (photo_hash(e, idx_meta) for e in exclude)
+                     if h is not None]
+        if ex_hashes and pool:
+            far = [p for p in pool
+                   if min((_hamming(photo_hash(p, idx_meta), h) for h in ex_hashes),
+                          default=999) > DUP_MAX_DIST]
+            if far:
+                pool = far
+            else:
+                print(f"  [경고] '{category}' 버킷에 앞서 쓴 사진과 다른 장면이 없습니다 "
+                      f"— 같은 글에 비슷한 사진이 또 나갑니다(버킷 보강 필요)")
     if not pool:
         return None
 
@@ -106,7 +166,6 @@ def pick_photo(category, date_tag, seq, exclude=None):
     #   차량 검출에 걸린 사진을 우선 쓴다. 태깅이 없거나 전부 미검출이면 그대로 간다.
     #   (검출기는 운반선·충전소 같은 정당한 컷을 놓치기도 해서 '차단'이 아니라 '우선'이다)
     try:
-        idx_meta = _load_json_safe(INDEX_PATH, {})
         from photo_match import car_required
         if car_required(category):
             preferred = [p for p in pool

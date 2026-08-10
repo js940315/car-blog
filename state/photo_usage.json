@@ -42,9 +42,6 @@
     "신차출시_1w_0.jpg"
   ],
   "전기차친환경": [
-    "전기차친환경_0_1.jpg",
-    "전기차친환경_0_1.jpg",
-    "전기차친환경_0_1.jpg",
     "전기차친환경_1s_pexels_0.jpg",
     "전기차친환경_1s_pexels_0.jpg",
     "전기차친환경_0_1.jpg",
@@ -81,7 +78,10 @@
     "전기차친환경_0s_unsplash_1.jpg",
     "전기차친환경_1s_pexels_0.jpg",
     "전기차친환경_0_1.jpg",
-    "전기차친환경_0s_unsplash_1.jpg"
+    "전기차친환경_0s_unsplash_1.jpg",
+    "전기차친환경_0_1.jpg",
+    "전기차친환경_1s_pexels_0.jpg",
+    "전기차친환경_0_1.jpg"
   ],
   "리콜안전정책": [
     "리콜안전정책_1_0.jpg",
@@ -168,12 +168,6 @@
     "셀럽차_0_1.jpg"
   ],
   "팰리세이드": [
-    "팰리세이드_press4.png",
-    "팰리세이드_press2.png",
-    "팰리세이드_press1.png",
-    "팰리세이드_press0.png",
-    "팰리세이드_press4.png",
-    "팰리세이드_press2.png",
     "팰리세이드_press1.png",
     "팰리세이드_press0.png",
     "팰리세이드_press4.png",
@@ -207,7 +201,13 @@
     "팰리세이드_press3.png",
     "팰리세이드_press2.png",
     "팰리세이드_press1.png",
-    "팰리세이드_press0.png"
+    "팰리세이드_press0.png",
+    "팰리세이드_press3.png",
+    "팰리세이드_press2.png",
+    "팰리세이드_press1.png",
+    "팰리세이드_press0.png",
+    "팰리세이드_press3.png",
+    "팰리세이드_press2.png"
   ],
   "브랜드기업": [
     "브랜드기업_1_0.jpg",
@@ -286,7 +286,10 @@
     "싼타페_press2.png",
     "싼타페_press1.png",
     "싼타페_press4.png",
-    "싼타페_press3.png"
+    "싼타페_press3.png",
+    "싼타페_press2.png",
+    "싼타페_press1.png",
+    "싼타페_press4.png"
   ],
   "GV80": [
     "GV80_0_2.jpg",
@@ -371,18 +374,6 @@
   ],
   "실내운전석": [
     "실내운전석_1w_1.jpg",
-    "실내운전석_1s_pexels_0.jpg",
-    "실내운전석_1w_1.jpg",
-    "실내운전석_1_1.jpg",
-    "실내운전석_1w_1.jpg",
-    "실내운전석_0_1.jpg",
-    "실내운전석_1w_1.jpg",
-    "실내운전석_1_1.jpg",
-    "실내운전석_1w_1.jpg",
-    "실내운전석_1s_unsplash_1.jpg",
-    "실내운전석_1w_1.jpg",
-    "실내운전석_0s_unsplash_1.jpg",
-    "실내운전석_1w_1.jpg",
     "실내운전석_1_1.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_1s_pexels_0.jpg",
@@ -406,6 +397,18 @@
     "실내운전석_1s_unsplash_1.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_0s_unsplash_1.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1_1.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1s_pexels_0.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1_1.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1s_pexels_0.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1_1.jpg",
+    "실내운전석_1w_1.jpg",
+    "실내운전석_1s_pexels_0.jpg",
     "실내운전석_1w_1.jpg",
     "실내운전석_1_1.jpg",
     "실내운전석_1w_1.jpg",
@@ -416,8 +419,6 @@
     "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press2.jpg",
-    "테슬라모델Y_press0.jpg",
-    "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press2.jpg",
     "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press0.jpg",
@@ -442,25 +443,21 @@
     "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press2.jpg",
+    "테슬라모델Y_press0.jpg",
+    "테슬라모델Y_press1.jpg",
+    "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press2.jpg",
+    "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press2.jpg",
     "테슬라모델Y_press0.jpg",
     "테슬라모델Y_press1.jpg",
     "테슬라모델Y_press0.jpg",
-    "테슬라모델Y_press2.jpg",
-    "테슬라모델Y_press0.jpg",
-    "테슬라모델Y_press1.jpg"
+    "테슬라모델Y_press2.jpg"
   ],
   "실내테슬라": [
     "실내테슬라_1s_pexels_2.jpg",
-    "실내테슬라_1s_pexels_2.jpg",
-    "실내테슬라_1s_pexels_2.jpg",
-    "실내테슬라_0s_unsplash_1.jpg",
-    "실내테슬라_1s_pexels_2.jpg",
-    "실내테슬라_1w_0.jpg",
-    "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_0s_unsplash_1.jpg",
     "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_1s_pexels_0.jpg",
@@ -493,12 +490,15 @@
     "실내테슬라_1s_pexels_2.jpg",
     "실내테슬라_1w_0.jpg",
     "실내테슬라_1s_pexels_2.jpg",
-    "실내테슬라_1s_pexels_0.jpg"
+    "실내테슬라_1s_pexels_0.jpg",
+    "실내테슬라_1s_pexels_2.jpg",
+    "실내테슬라_1w_0.jpg",
+    "실내테슬라_1s_pexels_2.jpg",
+    "실내테슬라_1s_pexels_0.jpg",
+    "실내테슬라_1s_pexels_2.jpg",
+    "실내테슬라_1w_0.jpg"
   ],
   "아이오닉5": [
-    "아이오닉5_press5.png",
-    "아이오닉5_press3.png",
-    "아이오닉5_press4.png",
     "아이오닉5_press6.png",
     "아이오닉5_press2.png",
     "아이오닉5_press5.png",
@@ -535,12 +535,12 @@
     "아이오닉5_press5.png",
     "아이오닉5_press4.png",
     "아이오닉5_press3.png",
-    "아이오닉5_press2.png"
+    "아이오닉5_press2.png",
+    "아이오닉5_press0.png",
+    "아이오닉5_press1.png",
+    "아이오닉5_press3.png"
   ],
   "테슬라모델3": [
-    "테슬라모델3_press3.jpg",
-    "테슬라모델3_press0.jpg",
-    "테슬라모델3_press1.jpg",
     "테슬라모델3_press2.jpg",
     "테슬라모델3_press3.jpg",
     "테슬라모델3_press0.jpg",
@@ -577,7 +577,10 @@
     "테슬라모델3_press4.jpg",
     "테슬라모델3_press3.jpg",
     "테슬라모델3_press1.jpg",
-    "테슬라모델3_press2.jpg"
+    "테슬라모델3_press2.jpg",
+    "테슬라모델3_press4.jpg",
+    "테슬라모델3_press3.jpg",
+    "테슬라모델3_press1.jpg"
   ],
   "실내수입": [
     "실내수입_1s_unsplash_1.jpg",
@@ -890,9 +893,6 @@
     "셀토스_0_1.jpg"
   ],
   "그랜저": [
-    "그랜저_0o_0.jpg",
-    "그랜저_0_2.jpg",
-    "그랜저_0s_unsplash_0.jpg",
     "그랜저_0s_pexels_1.jpg",
     "그랜저_0o_0.jpg",
     "그랜저_0_2.jpg",
@@ -929,7 +929,10 @@
     "그랜저_press0.png",
     "그랜저_press3.png",
     "그랜저_press1.png",
-    "그랜저_press2.png"
+    "그랜저_press2.png",
+    "그랜저_press0.png",
+    "그랜저_press3.png",
+    "그랜저_press1.png"
   ],
   "GV70": [
     "GV70_0s_pexels_1.jpg",
@@ -968,10 +971,6 @@
   ],
   "돈가격": [
     "돈가격_1s_unsplash_1.jpg",
-    "돈가격_0s_pexels_0.jpg",
-    "돈가격_1s_pexels_2.jpg",
-    "돈가격_1s_pexels_0.jpg",
-    "돈가격_1s_unsplash_1.jpg",
     "돈가격_0s_unsplash_1.jpg",
     "돈가격_1s_pexels_2.jpg",
     "돈가격_1s_pexels_0.jpg",
@@ -1004,7 +1003,13 @@
     "돈가격_1s_pexels_2.jpg",
     "돈가격_1s_pexels_0.jpg",
     "돈가격_0s_pexels_2.jpg",
-    "돈가격_0s_unsplash_1.jpg"
+    "돈가격_0s_unsplash_1.jpg",
+    "돈가격_1s_pexels_2.jpg",
+    "돈가격_1s_pexels_0.jpg",
+    "돈가격_0s_pexels_2.jpg",
+    "돈가격_0s_unsplash_1.jpg",
+    "돈가격_1s_pexels_2.jpg",
+    "돈가격_1s_pexels_0.jpg"
   ],
   "공장생산": [
     "공장생산_0s_pexels_0.jpg",
@@ -1558,12 +1563,12 @@
     "싼타페실사_0w_1.jpg",
     "싼타페실사_1w_0.jpg",
     "싼타페실사_1w_0.jpg",
+    "싼타페실사_1w_0.jpg",
+    "싼타페실사_0w_1.jpg",
+    "싼타페실사_1w_0.jpg",
     "싼타페실사_1w_0.jpg"
   ],
   "아이오닉5실사": [
-    "아이오닉5실사_0w_0.jpg",
-    "아이오닉5실사_0w_3.jpg",
-    "아이오닉5실사_0w_2.jpg",
     "아이오닉5실사_0w_1.jpg",
     "아이오닉5실사_0w_4.jpg",
     "아이오닉5실사_0w_3.jpg",
@@ -1600,7 +1605,10 @@
     "아이오닉5실사_0w_2.jpg",
     "아이오닉5실사_0w_3.jpg",
     "아이오닉5실사_0w_0.jpg",
-    "아이오닉5실사_0w_1.jpg"
+    "아이오닉5실사_0w_1.jpg",
+    "아이오닉5실사_0w_2.jpg",
+    "아이오닉5실사_0w_3.jpg",
+    "아이오닉5실사_0w_0.jpg"
   ],
   "팰리세이드실사": [
     "팰리세이드실사_2w_1.jpg",
@@ -1613,7 +1621,10 @@
     "팰리세이드실사_2w_1.jpg",
     "팰리세이드실사_2w_3.jpg",
     "팰리세이드실사_2w_2.jpg",
-    "팰리세이드실사_0w_0.jpg"
+    "팰리세이드실사_0w_0.jpg",
+    "팰리세이드실사_2w_1.jpg",
+    "팰리세이드실사_2w_3.jpg",
+    "팰리세이드실사_2w_2.jpg"
   ],
   "투싼실사": [
     "투싼실사_1w_0.jpg",
@@ -1650,7 +1661,10 @@
     "투싼실사_1w_0.jpg",
     "투싼실사_1w_0.jpg",
     "투싼실사_1w_0.jpg",
-    "투싼실사_0w_0.jpg"
+    "투싼실사_0w_0.jpg",
+    "투싼실사_1w_0.jpg",
+    "투싼실사_1w_0.jpg",
+    "투싼실사_1w_0.jpg"
   ],
   "쏘나타": [
     "쏘나타_press5.png",
