@@ -277,6 +277,32 @@ def _first_existing(names):
     return None
 
 
+_HANGUL_RE = re.compile(r"[가-힣]")
+
+
+def _bounded_in(alias, text):
+    """`alias in text` 대신 쓰는 매칭 — 순수 한글 별칭이 다른 단어 속에 파묻힌
+    경우(예: '레이'가 '내레이션' 안에)를 오탐으로 치지 않는다.
+
+    실측(2026-08-12): 셀럽 기사 본문의 '내레이션'이라는 단어에 '레이'(기아 경차)가
+    부분일치해 MODEL_FALLBACK이 엉뚱하게 '카니발'로 썸네일을 덮어썼다. 그 결과
+    셀럽 기사인데 썸네일이 인물이 아니게 되는 사고로 이어졌다.
+
+    한쪽이라도 한글 음절이 아니면(공백·문장부호·라틴문자·문자열 경계) 정상 매칭으로
+    본다. 양쪽 다 한글 음절이면(=다른 한글 단어 속에 완전히 파묻힌 경우) 버린다.
+    "EV6가"처럼 별칭 뒤에 조사가 바로 붙는 흔한 한국어 표기는 한쪽(별칭 시작부)이
+    비한글이라 정상적으로 통과한다."""
+    idx = text.find(alias)
+    if idx < 0:
+        return False
+    end = idx + len(alias)
+    left = text[idx - 1] if idx > 0 else ""
+    right = text[end] if end < len(text) else ""
+    if _HANGUL_RE.match(left) and _HANGUL_RE.match(right):
+        return False
+    return True
+
+
 def resolve_category(title, given=None, body=""):
     """제목(+본문)을 보고 최적 버킷을 정한다. 반환: (버킷명 or None, 사유)"""
     text = f"{title} {body}"
@@ -284,7 +310,8 @@ def resolve_category(title, given=None, body=""):
     # 0) 제목이 '사건'이면 모델보다 사건 사진이 맞다.
     #    (예: "현대차·기아 미국서 15만대" → 특정 차 사진보다 자동차 운반선이 정확)
     #    특정 모델명이 제목에 없을 때만 적용해 모델 기사를 가로채지 않는다.
-    has_model = any(a in title for a in MODEL_ALIASES) or any(a in title for a in MODEL_FALLBACK)
+    has_model = (any(_bounded_in(a, title) for a in MODEL_ALIASES)
+                 or any(_bounded_in(a, title) for a in MODEL_FALLBACK))
     if not has_model:
         # '만대'만 보고 산업수출로 보내면 내수 판매 기사까지 운반선 사진이 붙는다(실측).
         # 수출·선적 맥락이 분명할 때만 잡는다.
@@ -300,7 +327,7 @@ def resolve_category(title, given=None, body=""):
     #     위치를 1순위로, 길이는 동일 위치에서만 동점 처리(tie-break)한다.)
     hits = []
     for alias, b in MODEL_ALIASES.items():
-        if alias in text and available_buckets().get(b):
+        if _bounded_in(alias, text) and available_buckets().get(b):
             pos = title.find(alias)
             hits.append((pos if pos >= 0 else len(title) + 1, -len(alias), alias, b))
     if hits:
@@ -310,14 +337,14 @@ def resolve_category(title, given=None, body=""):
 
     # 2) 미보유 모델 → 같은 브랜드 대체
     for alias in sorted(MODEL_FALLBACK, key=len, reverse=True):
-        if alias in text:
+        if _bounded_in(alias, text):
             b = _first_existing(MODEL_FALLBACK[alias])
             if b:
                 return b, f"'{alias}' 미보유 → 같은 브랜드 '{b}' 대체"
 
     # 3) 인물
     for alias in sorted(PEOPLE_ALIASES, key=len, reverse=True):
-        if alias in text:
+        if _bounded_in(alias, text):
             b = PEOPLE_ALIASES[alias]
             if available_buckets().get(b):
                 return b, f"제목 인물 '{alias}'"
@@ -331,7 +358,7 @@ def resolve_category(title, given=None, body=""):
 
     # 5) 브랜드 — 제목에 여러 브랜드가 나오면 **먼저 나온 쪽이 주인공**이다.
     #    ("기아가 현대를 코앞까지" → 주어는 기아인데 사전순으로 현대를 잡으면 엉뚱해진다)
-    hits = [(title.index(a), a) for a in BRAND_ALIASES if a in title]
+    hits = [(title.index(a), a) for a in BRAND_ALIASES if _bounded_in(a, title)]
     for _, alias in sorted(hits):
         b = _first_existing(BRAND_ALIASES[alias])
         if b:
