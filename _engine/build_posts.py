@@ -449,7 +449,21 @@ def validate_celebrity_photo(article, specs):
     problems = []
     if article.get("category") != "셀럽·연예인차":
         return problems
-    used = [s.get("photo_category") for s in specs if isinstance(s, dict)]
+
+    def _bucket_of(sp):
+        """photo_category가 없으면 photo(파일명 직접 지정)에서 버킷명을
+        역산한다. 버킷명은 파일명 맨 앞 '_' 앞부분(예: 김혜수_0.jpg -> 김혜수).
+        2026-08-14 수정: 이 역산이 없어서 인물 사진을 `photo`로 직접
+        지정한 셀럽 기사가 '인물 사진이 한 장도 없다'로 항상 오탐났었다."""
+        cat = sp.get("photo_category")
+        if cat:
+            return cat
+        fn = sp.get("photo")
+        if fn:
+            return os.path.splitext(fn)[0].rsplit("_", 1)[0]
+        return None
+
+    used = [_bucket_of(s) for s in specs if isinstance(s, dict)]
     if not any(is_person_bucket(c) for c in used):
         problems.append(
             "셀럽 기사인데 인물 사진이 한 장도 없다 — "
