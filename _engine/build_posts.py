@@ -673,7 +673,7 @@ def build_one(article, out_dir):
             f.write(svg)
         tmp_paths.append((idx, tmp_svg, tmp_png))
 
-    # 썸네일·본문 사진: 원본을 중앙 정사각 크롭 → 1080 저장(글자·스크림 없음)
+    # 썸네일·본문 사진: 원본을 자르지 않고 정사각으로 맞춰 1080 저장(글자·스크림 없음)
     for idx, src in direct_photos.items():
         img_name = f"{idx}번 사진.jpg"
         try:
@@ -681,14 +681,10 @@ def build_one(article, out_dir):
             #   (실측 2026-08-08). 전체를 담고 남는 공간만 가장자리 배경색으로 채운다.
             im = Image.open(src).convert("RGB")
             w, h = im.size
-            # 4:3(1.34) 까지는 살짝 잘라 채운다 — 다 담으려다 차가 작아지고 여백만 커진다.
-            MAX_CROP = 1.34
-            if w / h > MAX_CROP:
-                keep = int(h * MAX_CROP); left = (w - keep) // 2
-                im = im.crop((left, 0, left + keep, h)); w, h = im.size
-            elif h / w > MAX_CROP:
-                keep = int(w * MAX_CROP); top = (h - keep) // 2
-                im = im.crop((0, top, w, top + keep)); w, h = im.size
+            # ★ 2026-08-14: 여기 있던 '4:3(1.34)까지는 잘라 채운다'를 걷어냈다.
+            #   라이브러리 사진은 이미 정사각이라 평소엔 안 걸리지만, 수동 투입처럼
+            #   비정사각이 들어오면 소싱 단계와 똑같이 차 앞뒤를 잘라먹는다.
+            #   (사용자 신고 — 0813/9 그랜저 측면·후측면 컷이 범퍼째 날아갔다)
             if w == h:
                 im = im.resize((1080, 1080), Image.LANCZOS)
             else:

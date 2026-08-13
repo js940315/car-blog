@@ -380,7 +380,7 @@ def main():
             cat = os.path.splitext(fn)[0].split("_")[0]  # 확장자 먼저 떼고(GV90.jpg→GV90)
             path = os.path.join(DIR, fn)
             try:
-                prepare_photo(path, path, size=1400)
+                prepare_photo(path, path, size=1400, fit="pad")   # 차가 잘리지 않게
             except Exception as e:
                 print(f"   가공 실패 {fn}: {str(e)[:40]}")
             idx[fn] = {
@@ -464,7 +464,9 @@ def main():
     def prep_one(item):
         _, _, r = item
         try:
-            prepare_photo(r["path"], r["path"], size=1400)
+            # fit="pad": 중앙크롭 금지. 자동차는 가로로 길어서 정사각으로 자르면
+            # 앞뒤 범퍼가 날아간다(실측 2026-08-14 — 그랜저 측면컷이 도어만 남았다).
+            prepare_photo(r["path"], r["path"], size=1400, fit="pad")
         except Exception as e:
             print(f"   가공 실패 {os.path.basename(r['path'])}: {str(e)[:40]}")
         return item

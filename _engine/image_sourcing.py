@@ -821,17 +821,52 @@ def portrait_candidates(query, out_dir, limit=6, min_width=1200, prefix="portrai
 
 # ---------- 8) 후처리: 매일 다른 사진이 와도 같은 톤으로 보이게 ----------
 
+def pad_to_square(im, blur=18):
+    """비정사각 이미지를 **한 픽셀도 잘라내지 않고** 정사각으로 만든다.
+
+    빈 자리는 맞닿은 가장자리 띠를 늘려 흐리게 채운다 — 단색으로 메우는 것보다
+    이음매가 덜 보인다. 자동차 사진처럼 '피사체가 가로로 긴' 소재에서 중앙크롭은
+    앞뒤 범퍼를 날려버리므로(실측 2026-08-14, 사용자 신고) 그 대안으로 쓴다."""
+    from PIL import ImageFilter
+    w, h = im.size
+    if w == h:
+        return im
+    s = max(w, h)
+    canvas = Image.new("RGB", (s, s))
+    ox, oy = (s - w) // 2, (s - h) // 2
+    if h < s:                   # 위·아래 여백
+        band = max(1, h // 14)
+        top_h, bot_h = max(1, oy), max(1, s - oy - h)
+        top = im.crop((0, 0, w, band)).resize((s, top_h), Image.LANCZOS)
+        bot = im.crop((0, h - band, w, h)).resize((s, bot_h), Image.LANCZOS)
+        canvas.paste(top.filter(ImageFilter.GaussianBlur(blur)), (0, 0))
+        canvas.paste(bot.filter(ImageFilter.GaussianBlur(blur)), (0, oy + h))
+    if w < s:                   # 좌·우 여백
+        band = max(1, w // 14)
+        left_w, right_w = max(1, ox), max(1, s - ox - w)
+        left = im.crop((0, 0, band, h)).resize((left_w, s), Image.LANCZOS)
+        right = im.crop((w - band, 0, w, h)).resize((right_w, s), Image.LANCZOS)
+        canvas.paste(left.filter(ImageFilter.GaussianBlur(blur)), (0, 0))
+        canvas.paste(right.filter(ImageFilter.GaussianBlur(blur)), (ox + w, 0))
+    canvas.paste(im, (ox, oy))
+    return canvas
+
+
 def prepare_photo(src_path, dst_path, size=1080, focus="center",
-                  grade=True, vignette=True):
-    """사진을 카드 규격에 맞게 정사각으로 자르고, 시리즈 톤으로 보정한다.
+                  grade=True, vignette=True, fit="crop"):
+    """사진을 카드 규격에 맞게 정사각으로 만들고, 시리즈 톤으로 보정한다.
 
     스톡 사진을 그대로 쓰면 매일 색감이 제각각이라 블로그가 '긁어온 티'가 난다.
     아래 3가지를 걸면 어떤 사진이 와도 같은 매체가 만든 것처럼 보인다:
-      1) 정사각 크롭 (비율 왜곡 없이 꽉 채움)
+      1) 정사각 맞춤 (비율 왜곡 없음)
       2) 컬러 그레이딩 — 채도를 살짝 낮추고 그림자에 청색을 더해 카드 남색과 붙인다
       3) 비네트 — 가장자리를 눌러 가운데 피사체로 시선을 모으고 카피 가독성을 높인다
 
     focus: 'center' | 'top' | 'bottom'  (인물은 대개 'top'이 얼굴을 살린다)
+    fit:
+      'crop' — 중앙(또는 focus) 정사각 크롭. **인물 전용**: 얼굴은 잘라 담는 게 맞다.
+      'pad'  — 전체를 담고 남는 자리만 가장자리로 채운다. **자동차 전용**:
+               차는 가로로 길어서 크롭하면 앞뒤가 날아간다(실측 2026-08-14).
     """
     if Image is None:
         raise RuntimeError("Pillow가 필요합니다")
@@ -840,20 +875,23 @@ def prepare_photo(src_path, dst_path, size=1080, focus="center",
     im = Image.open(src_path).convert("RGB")
     w, h = im.size
 
-    # 1) 정사각 크롭
-    side = min(w, h)
-    if w >= h:
-        left = (w - side) // 2
-        top = 0
+    # 1) 정사각 맞춤
+    if fit == "pad":
+        im = pad_to_square(im)
     else:
-        left = 0
-        if focus == "top":
+        side = min(w, h)
+        if w >= h:
+            left = (w - side) // 2
             top = 0
-        elif focus == "bottom":
-            top = h - side
         else:
-            top = (h - side) // 2
-    im = im.crop((left, top, left + side, top + side))
+            left = 0
+            if focus == "top":
+                top = 0
+            elif focus == "bottom":
+                top = h - side
+            else:
+                top = (h - side) // 2
+        im = im.crop((left, top, left + side, top + side))
     im = im.resize((size, size), Image.LANCZOS)
 
     if grade:

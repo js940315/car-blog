@@ -275,12 +275,42 @@ def _uniform_bg(im, tol=14):
     return cols[0]
 
 
+def _pad_to_square(im, blur=18):
+    """비정사각 이미지를 **한 픽셀도 잘라내지 않고** 정사각으로 만든다.
+
+    빈 자리는 맞닿은 가장자리 띠를 늘려 흐리게 채운다 — 단색으로 메우는 것보다
+    이음매가 덜 보인다. 프레스 컷은 그 띠가 대개 흰 배경이라 티가 거의 안 난다."""
+    from PIL import Image, ImageFilter
+    w, h = im.size
+    if w == h:
+        return im
+    s = max(w, h)
+    canvas = Image.new("RGB", (s, s))
+    ox, oy = (s - w) // 2, (s - h) // 2
+    if h < s:                   # 위·아래 여백
+        band = max(1, h // 14)
+        top_h, bot_h = max(1, oy), max(1, s - oy - h)
+        top = im.crop((0, 0, w, band)).resize((s, top_h), Image.LANCZOS)
+        bot = im.crop((0, h - band, w, h)).resize((s, bot_h), Image.LANCZOS)
+        canvas.paste(top.filter(ImageFilter.GaussianBlur(blur)), (0, 0))
+        canvas.paste(bot.filter(ImageFilter.GaussianBlur(blur)), (0, oy + h))
+    if w < s:                   # 좌·우 여백
+        band = max(1, w // 14)
+        left_w, right_w = max(1, ox), max(1, s - ox - w)
+        left = im.crop((0, 0, band, h)).resize((left_w, s), Image.LANCZOS)
+        right = im.crop((w - band, 0, w, h)).resize((right_w, s), Image.LANCZOS)
+        canvas.paste(left.filter(ImageFilter.GaussianBlur(blur)), (0, 0))
+        canvas.paste(right.filter(ImageFilter.GaussianBlur(blur)), (ox + w, 0))
+    canvas.paste(im, (ox, oy))
+    return canvas
+
+
 def smart_square(path, size=1400, fill=0.92):
     """차를 잘리지 않게, 그러면서 프레임을 꽉 채워 정사각으로 만든다.
 
     프레스 컷은 배경이 단색(흰/검)이라 '차의 실제 경계'를 찾을 수 있다.
-    배경을 걷어내고 차만 남긴 뒤, 같은 배경색 정사각 캔버스에 여백을 고르게 두고
-    크게 배치한다 → 누끼를 딴 것처럼 깔끔하고, 앞뒤가 잘리지 않는다.
+    그 경계를 통째로 담는 정사각 창을 잡아 여백을 고르게 두고 크게 배치한다
+    → 앞뒤 범퍼가 잘리지 않으면서도 차가 프레임을 꽉 채운다.
     (2026-08-08: 중앙크롭은 앞뒤가 잘리고, 전체담기는 여백만 커지던 문제 해결)"""
     from PIL import Image
     im = _load_on_white(path)
@@ -289,23 +319,33 @@ def smart_square(path, size=1400, fill=0.92):
     if box:
         x0, y0, x1, y1 = box
         bw, bh = x1 - x0, y1 - y0
-        # 차가 프레임의 fill 을 차지하도록 정사각 창을 잡고, 원본 배경을 그대로 담는다
+        # 차가 프레임의 fill 을 차지하도록 정사각 창을 잡고, 원본 배경을 그대로 담는다.
+        # ★ 창은 어떤 경우에도 피사체보다 작아지면 안 된다 — 작아지는 순간 차가 잘린다.
         side = min(max(W, H), int(max(bw, bh) / fill))
+        side = max(side, bw, bh)
         cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
         sx = max(0, min(W - min(side, W), cx - side // 2))
         sy = max(0, min(H - min(side, H), cy - side // 2))
         crop = im.crop((sx, sy, min(W, sx + side), min(H, sy + side)))
-        cw, ch = crop.size
-        if cw != ch:            # 원본이 모자라면 그만큼만 가장자리로 채운다
-            s = max(cw, ch)
-            canvas = Image.new("RGB", (s, s))
-            canvas.paste(crop.resize((s, s), Image.LANCZOS))   # 배경 확대로 메움
-            canvas.paste(crop, ((s - cw) // 2, (s - ch) // 2))
-            crop = canvas
+        # 원본이 모자라 창이 정사각이 안 되면, 자르는 게 아니라 가장자리로 채운다
+        crop = _pad_to_square(crop)
         crop = crop.resize((size, size), Image.LANCZOS)
         crop.save(path, "JPEG", quality=94, subsampling=1)
         return crop
     return fit_square_pad(path, size)
+
+
+def subject_cut_off(im, margin_ratio=200):
+    """정사각 결과물에서 피사체가 프레임 가장자리에 닿는지 = 잘렸는지 본다.
+
+    실내 컷은 원래 화면을 꽉 채우므로 항상 True 가 나온다 — 외관 컷에만 쓸 것."""
+    box = _subject_bbox(im)
+    if not box:
+        return False
+    w, h = im.size
+    x0, y0, x1, y1 = box
+    m = max(2, min(w, h) // margin_ratio)
+    return x0 <= m or y0 <= m or x1 >= w - m or y1 >= h - m
 
 
 def _subject_bbox(im, thresh=20):
@@ -453,13 +493,21 @@ def main():
                 # 2026-08-08 방향 전환: 누끼(배경 제거)를 하지 않는다.
                 # 벤치마크 블로거들은 공장·모터쇼·야외 같은 '배경 있는 실사'를 쓴다.
                 # 흰 배경 누끼는 밋밋하고, 합성 렌더는 잔재(떠 있는 루프레일 등)가 남았다.
-                fit_square_pad(path, size=1400)
+                #
+                # ★ 2026-08-14: 여기서 fit_square_pad 를 부르고 있었다 — 그 함수는 가로세로비
+                #   1.34 까지 좌우를 잘라낸다. 현대 vr360 원본은 940x515(1.82)라 매번 최대치로
+                #   잘렸고, 측면·후측면 컷은 앞뒤 범퍼가 통째로 날아갔다(사용자 신고, 0813/9
+                #   그랜저). 차 경계를 찾아 절대 자르지 않는 smart_square 가 이미 있었는데
+                #   호출부에 연결이 안 된 죽은 코드였다.
+                out = smart_square(path, size=1400)
+                if "interior" not in u.lower() and subject_cut_off(out):
+                    print(f"   [경고] {name}: 차가 프레임 가장자리에 닿는다(잘렸을 수 있음)")
                 idx[name] = {
                     "카테고리": model,
                     "license": "제조사 공식 이미지(사용자 책임)",
                     "credit": u,
                     "attribution_required": False,
-                    "처리": "프레스 원본 → 정사각 1400px",
+                    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
                     "검색어": "press",
                     "검수": "미확인 — 눈 확인 필요",
                 }

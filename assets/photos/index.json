@@ -5517,1442 +5517,927 @@
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/exterior/C/R8N/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.426,
-    "밝기": 192,
-    "dhash": 4870088089376175392825299687178240
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press1.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/exterior/C/R8N/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.448,
-    "밝기": 182,
-    "dhash": 2272040069572256952319399660879872
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press2.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/exterior/C/R8N/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.44,
-    "밝기": 190,
-    "dhash": 346787139206443539309106116427776
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press3.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/exterior/C/R8N/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.457,
-    "밝기": 180,
-    "dhash": 78026224503523288602663623396950016
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press4.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/exterior/C/R8N/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.255,
-    "밝기": 210,
-    "dhash": 20127681008103587512710805114060800
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press5.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/interior/I93/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 62,
-    "dhash": 13260637833098960182961564244064359562621187
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press6.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/interior/I96/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 107,
-    "dhash": 13260722903688156421714627501929351556108609
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press7.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/interior/I94/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 66,
-    "dhash": 13260638497710422222646639038221287532267840
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press8.png": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FX01/interior/I85/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.94,
-    "차면적": 0.917,
-    "밝기": 57,
-    "dhash": 2110265814151416967744309423083468031787328
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press9.jpg": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/static/images/model/palisade/25fc/palisade_hyundai_ai_assistant_main.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 58,
-    "dhash": 1220210713317546864146134682295601127750143
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드_press10.jpg": {
     "카테고리": "팰리세이드",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/static/images/model/palisade/25fc/palisade_hyundai_ai_assistant_spot.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 57,
-    "dhash": 1220210713317514675436680124075453202823679
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press0.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/exterior/C/A2B/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.404,
-    "밝기": 195,
-    "dhash": 4870235868364260812858044293578752
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press1.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/exterior/C/A2B/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.445,
-    "밝기": 183,
-    "dhash": 973807756141620210065645166919680
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press2.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/exterior/C/A2B/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.438,
-    "밝기": 182,
-    "dhash": 76304066230600121882824992096256
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press3.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/exterior/C/A2B/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.41,
-    "밝기": 185,
-    "dhash": 62368340740398842377526434678702080
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press4.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/exterior/C/A2B/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.242,
-    "밝기": 212,
-    "dhash": 19476029351174034500464035804217344
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press5.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/interior/II9/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 78,
-    "dhash": 21641797660104980711244684616729343408214432
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press6.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/interior/IJ1/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 114,
-    "dhash": 21641797660110784436504676779420983164928416
+    "검수": "미확인 — 눈 확인 필요"
   },
   "싼타페_press7.png": {
     "카테고리": "싼타페",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/MX07/interior/IH0/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 82,
-    "dhash": 21641797660104980711244684616729343374660000
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press0.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/exterior/WBP/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.326,
-    "밝기": 209,
-    "dhash": 2139683234207672503621889556480
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press1.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/exterior/WBP/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.366,
-    "밝기": 197,
-    "dhash": 56186481537061560056756320600064
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press2.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/exterior/WBP/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.364,
-    "밝기": 196,
-    "dhash": 60933957206936088378432997556224
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press3.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/exterior/WBP/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.358,
-    "밝기": 197,
-    "dhash": 60801642064999757639994012860416
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press4.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/exterior/WBP/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.187,
-    "밝기": 222,
-    "dhash": 4757017451469803225389385908224
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press5.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/interior/IN6/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 74,
-    "dhash": 10488702802277535486749393153396509455993028
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press6.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/interior/IN5/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 63,
-    "dhash": 10488704131505530642421295404669150467770564
+    "검수": "미확인 — 눈 확인 필요"
   },
   "그랜저_press7.png": {
     "카테고리": "그랜저",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/GN11/interior/IN4/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 71,
-    "dhash": 10488702137582407955878805383676202777888964
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press0.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE10/exterior/C5G/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.435,
-    "밝기": 201,
-    "dhash": 2272690063899113518915588114612224
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press1.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE10/exterior/C5G/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.456,
-    "밝기": 196,
-    "dhash": 1054951533598205317572181253685248
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press2.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE10/exterior/C5G/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.467,
-    "밝기": 196,
-    "dhash": 142095109772523572219182309179392
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press3.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE10/exterior/C5G/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.446,
-    "밝기": 194,
-    "dhash": 72793553078606981620258160959815680
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press4.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE10/exterior/C5G/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.273,
-    "밝기": 209,
-    "dhash": 20125145686653236175716229954142208
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press5.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE09/interior/IP0/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.77,
-    "차면적": 0.857,
-    "밝기": 82,
-    "dhash": 21620014272019428976825375056954765533458417
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press6.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE09/interior/IP1/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.92,
-    "차면적": 0.829,
-    "밝기": 119,
-    "dhash": 21620015622016612311954133767117928260382705
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉5_press7.png": {
     "카테고리": "아이오닉5",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NE09/interior/IP2/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.99,
-    "차면적": 0.852,
-    "밝기": 117,
-    "dhash": 21620015622016612316789816220931767998033905
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press0.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/exterior/TW3/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.414,
-    "밝기": 203,
-    "dhash": 10067617665138846255393039143927808
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press1.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/exterior/TW3/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.446,
-    "밝기": 200,
-    "dhash": 2285211594769816073445214900977664
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press2.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/exterior/TW3/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.453,
-    "밝기": 199,
-    "dhash": 10105331513187261473230237835722752
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press3.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/exterior/TW3/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.457,
-    "밝기": 200,
-    "dhash": 82886535179783008813487494426263552
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press4.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/exterior/TW3/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.94,
-    "차면적": 0.268,
-    "밝기": 215,
-    "dhash": 20449663621190656631981387322228736
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press5.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/interior/IK0/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 118,
-    "dhash": 9824309416461227019059561776298102440230503
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press6.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/interior/IJ8/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 120,
-    "dhash": 9824309416461227019059561776298102440230499
+    "검수": "미확인 — 눈 확인 필요"
   },
   "투싼_press7.png": {
     "카테고리": "투싼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/NX17/interior/IJ9/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.72,
-    "차면적": 0.84,
-    "밝기": 85,
-    "dhash": 9824309084154187839762696529293105923767907
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press0.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/exterior/RRR/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.429,
-    "밝기": 199,
-    "dhash": 4868820214091883432610111818825728
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press1.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/exterior/RRR/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.439,
-    "밝기": 194,
-    "dhash": 1004225857030549095441247376506880
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press2.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/exterior/RRR/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.434,
-    "밝기": 194,
-    "dhash": 171424657879562288429360517887295488
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press3.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/exterior/RRR/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.413,
-    "밝기": 199,
-    "dhash": 78015923870631622331401154844426240
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press4.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/exterior/RRR/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.25,
-    "밝기": 218,
-    "dhash": 20134652911525761307377020560211968
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press5.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/interior/I54/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 79,
-    "dhash": 15369713073550784371289182669309946157437337
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press6.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/interior/IC2/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 93,
-    "dhash": 21641792343725499453434901996544864795333017
+    "검수": "미확인 — 눈 확인 필요"
   },
   "코나_press7.png": {
     "카테고리": "코나",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/SX19/interior/IC1/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 101,
-    "dhash": 21641797660313597864825103195977694594568457
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press0.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/26my/content/sorento_exterior_line_up_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.39,
-    "차면적": 0.284,
-    "밝기": 125,
-    "dhash": 38129982713646512308717036780831404728322
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press1.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/24pe/content/sorento_exterior_side_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.544,
-    "밝기": 110,
-    "dhash": 21778012332063230983854710202246976630682111
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press2.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/24pe/content/sorento_exterior_night_view_main_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.87,
-    "차면적": 0.302,
-    "밝기": 81,
-    "dhash": 740465141115509101941081670777190379773061
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press3.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/24pe/content/sorento_exterior_rear_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.267,
-    "밝기": 96,
-    "dhash": 20639751198619646791827605284957852436511291
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press4.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/26my/content/sorento_xline_main_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.235,
-    "밝기": 129,
-    "dhash": 694173535972555864552104440609669144968137
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press5.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/26my/content/sorento_interior_brown_front.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.76,
-    "차면적": 0.868,
-    "밝기": 121,
-    "dhash": 20601640763195889361410301134078395283409920
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘렌토_press6.jpg": {
     "카테고리": "쏘렌토",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sorento/26my/content/sorento_interior_gray_front.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.52,
-    "차면적": 0.892,
-    "밝기": 126,
-    "dhash": 20035272649347192676903656902691575948119040
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press0.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/26my/content/carnival_exterior_line-up_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.11,
-    "밝기": 134,
-    "dhash": 9274299424503418843376015336700016294362399
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press1.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/24pe/content/carnival_exterior_front_view_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.492,
-    "밝기": 129,
-    "dhash": 12373985620941181857370382031809158181799928
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press2.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/24pe/content/carnival_exterior_rear_view_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.323,
-    "밝기": 148,
-    "dhash": 348534214318911839700727990517674286781184
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press3.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/26my/content/carnival_xline_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.142,
-    "밝기": 133,
-    "dhash": 22300745190732149484992147413395091731517312
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press5.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/26my/content/carnival_hi-roof_interior_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 108,
-    "dhash": 19953595574725011238752683454773548001110618
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press0.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_exterior_lineup_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.93,
-    "차면적": 0.096,
-    "밝기": 186,
-    "dhash": 21521967744070561087391644382754927192017889
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press1.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_exterior_cover_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.581,
-    "밝기": 135,
-    "dhash": 16740533987665889813064262986601566711546104
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press2.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_x-line_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.271,
-    "밝기": 103,
-    "dhash": 305648662154992390649112359006338269753803
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press4.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_interior_maindash_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.98,
-    "차면적": 0.82,
-    "밝기": 109,
-    "dhash": 1350570823158627764693995683807711272640001
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press5.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_interior_ambient_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 85,
-    "dhash": 626282427052942257160924905796297576738253
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press0.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353930/genesis-gv80-2027-key-visual-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.17,
-    "밝기": 41,
-    "dhash": 19776935111921550276449500133767733821516906
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press1.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131363039/genesis-gv80-2027-exterior-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.284,
-    "밝기": 61,
-    "dhash": 5402281526554435178783863637678286450558348
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press2.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353935/genesis-gv80-2027-black-exterior-detail-sideprofile-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.193,
-    "밝기": 95,
-    "dhash": 21952294883654709793167944615194634617873406
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press3.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131353937/genesis-gv80-2027-black-exterior-detail-rear-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.248,
-    "밝기": 101,
-    "dhash": 8713323659067161975410144072881593908982079
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press4.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131363031/genesis-gv80-2027-black-interior-detail-main-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.86,
-    "차면적": 0.842,
-    "밝기": 71,
-    "dhash": 17600979051314986013652608792264349331948080
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press6.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133353937/models/gv80/2027/exterior-color/genesis-gv80-uyuni-white-uyh-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.438,
-    "밝기": 213,
-    "dhash": 4868977007052393140218969838321664
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press0.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/exterior/C/A2B/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.364,
-    "밝기": 200,
-    "dhash": 4910483620065517851904007007633408
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press1.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/exterior/C/A2B/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.401,
-    "밝기": 185,
-    "dhash": 1029742568922998103378440038121472
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press2.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/exterior/C/A2B/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.415,
-    "밝기": 183,
-    "dhash": 385489695227618406106921850372096
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press3.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/exterior/C/A2B/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.403,
-    "밝기": 184,
-    "dhash": 165966607879738387871369324845334528
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press4.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/exterior/C/A2B/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.235,
-    "밝기": 215,
-    "dhash": 19475867451592132592059522750611456
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press5.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/interior/IA6/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.98,
-    "차면적": 0.915,
-    "밝기": 114,
-    "dhash": 18036646627072292866384054449538634747031579
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press6.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/interior/IA5/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.98,
-    "차면적": 0.91,
-    "밝기": 114,
-    "dhash": 18036646627072292866384054449820092543873051
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아이오닉9_press7.png": {
     "카테고리": "아이오닉9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/ME02/interior/IA4/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.96,
-    "차면적": 0.905,
-    "밝기": 113,
-    "dhash": 18036646627072292866384054454077556185445403
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press0.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/exterior/SAW/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.304,
-    "밝기": 221,
-    "dhash": 8765424375388564632115855335882752
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press1.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/exterior/SAW/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.364,
-    "밝기": 214,
-    "dhash": 4265444251324397292648987711504384
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press2.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/exterior/SAW/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.374,
-    "밝기": 214,
-    "dhash": 1045925083698538763714851688677376
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press3.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/exterior/SAW/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.382,
-    "밝기": 213,
-    "dhash": 498233365077025035632455739527659520
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press4.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/exterior/SAW/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.241,
-    "밝기": 227,
-    "dhash": 20127603306700659225847370734370816
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press5.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/interior/IQ3/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 93,
-    "dhash": 21625545210458571375980370035370521486498833
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press6.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/interior/IQ2/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 72,
-    "dhash": 21625460138649896565067484919314479321291801
+    "검수": "미확인 — 눈 확인 필요"
   },
   "아반떼_press7.png": {
     "카테고리": "아반떼",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/FN01/interior/IH5/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 64,
-    "dhash": 21625460117880709401566987162158319874190347
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press0.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_exterior_front_style_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.421,
-    "밝기": 114,
-    "dhash": 21646732460791085008988069023481491909246975
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press2.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_exterior_modern_contrast_rear_veiw_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.636,
-    "밝기": 94,
-    "dhash": 59910640929369203403468540094032981790208
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press4.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/27my/content/ev6_pe_interior_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.948,
-    "밝기": 89,
-    "dhash": 17023719045325050941219692061704111311274044
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press5.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/27my/content/ev6_pe_gtl_interior_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.96,
-    "차면적": 0.831,
-    "밝기": 68,
-    "dhash": 4378462013701107096135026070275576605638655
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV9_press0.jpg": {
     "카테고리": "EV9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev9/24my/content/ev9_exterior_flagship_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.488,
-    "밝기": 102,
-    "dhash": 2783509013484472180667512547269896365826150
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV9_press1.jpg": {
     "카테고리": "EV9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev9/24my/content/ev9_exterior_side_profile_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "차면적": 0.473,
-    "밝기": 118,
-    "dhash": 174352199877261428483615765758175405387770
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV9_press2.jpg": {
     "카테고리": "EV9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev9/26my/content/ev9_interior_front.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.96,
-    "차면적": 0.944,
-    "밝기": 133,
-    "dhash": 13657866572137679307350771147449185513573376
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV9_press3.jpg": {
     "카테고리": "EV9",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev9/26my/content/ev9_interior_side.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 103,
-    "dhash": 4530987467833494526193229365441151701432563
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV80_press5.png": {
     "카테고리": "GV80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131363033/genesis-gv80-2027-black-interior-detail-ccp-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.73,
-    "차면적": 0.939,
-    "밝기": 45,
-    "dhash": 20999357177122274787679565863025700224878638
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press1.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_exterior_modern_contrast_side_veiw_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.98,
-    "차면적": 0.886,
-    "밝기": 75,
-    "dhash": 1388563467790471499527406723252426324316032
+    "검수": "미확인 — 눈 확인 필요"
   },
   "EV6_press3.jpg": {
     "카테고리": "EV6",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/ev6/pe/content/ev6_pe_gtl_exterior_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.77,
-    "차면적": 0.833,
-    "밝기": 52,
-    "dhash": 4917515383774317771321919256389843569521587
+    "검수": "미확인 — 눈 확인 필요"
   },
   "카니발_press4.jpg": {
     "카테고리": "카니발",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/carnival/26my/content/carnival_hi-roof_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.96,
-    "차면적": 0.865,
-    "밝기": 86,
-    "dhash": 19533573021168939479513357972941420766187717
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스포티지_press3.jpg": {
     "카테고리": "스포티지",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.kia.com/content/dam/kwp/kr/ko/vehicles/sportage/pe/content/sportage_x-line_black_interior_pc.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "차검출": false,
-    "차신뢰도": 0.0,
-    "차면적": 0.0,
-    "밝기": 65,
-    "dhash": 1677491189257653854125440617202982761278668
+    "검수": "미확인 — 눈 확인 필요"
   },
   "팰리세이드실사_0w_0.jpg": {
     "카테고리": "팰리세이드실사",
@@ -7236,260 +6721,234 @@
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133383537/models/g80/2027/key-visual/genesis-g80-2027-key-visual-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 22300745193337028457242162841208036431741948
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press1.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039323031/genesis-g80-2027-exterior-main-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 21952210982832643159969705515767601033016295
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press2.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313334/genesis-g80-2027-black-exterior-detail-front-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 22268072764378770551755718679033848925286404
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press3.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313336/genesis-g80-2027-black-exterior-detail-rear-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 19517917333675889811326013146308024719133700
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press4.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133343536/models/g80/2027/exterior-color/standard/genesis-g80-standard-uyuni-white-uyh-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 4870266940458871034295620756045824
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press5.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313531/genesis-g80-2027-black-interior-detail-design-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 3370979833053197096576630073016338916515890
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G80_press6.png": {
     "카테고리": "G80",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303039313538/genesis-g80-2027-black-interior-detail-ccpsbw-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 11742512450301074379166173451631136049062076
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press0.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133383630/models/g90/2027/key-visual/genesis-g90-2027-key-visual-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 12547232463166843514254884523627841485565452
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press1.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333334/genesis-g90-2027-exterior-main-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 4182410904132799684878237767038429449161474
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press2.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333337/genesis-g90-2027-black-exterior-detail-front-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 11414453668540924041644643895285702525592354
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press3.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333339/genesis-g90-2027-black-exterior-detail-side-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 87283308831889548566806763493577069953568
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press4.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333431/genesis-g90-2027-black-exterior-detail-rear-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 21649955815719010606747265813014798606718893
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press5.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133353635/models/g90/2027/exterior-color/standard/genesis-g90-uyuni-white-uyh-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 2353822003957660275127715715088384
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press6.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333637/genesis-g90-2027-interior-main-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10880803815652673005710914724198124768352677
+    "검수": "미확인 — 눈 확인 필요"
   },
   "G90_press7.png": {
     "카테고리": "G90",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303131333639/genesis-g90-2027-interior-main2-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 16892997446536504948513241275578713162487768
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press0.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134363939/models/gv70/2027/key-visual/genesis-gv70-key-visual-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 348566188543673781497764222645774174914560
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press1.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373031/models/gv70/2027/exterior/genesis-gv70-exterior-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 16425952045761036145271038939050183045217871
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press2.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373035/models/gv70/2027/exterior/genesis-gv70-exterior-detail-sideprofile-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 22131923263492865037514525132037615999078162
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press3.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373130/models/gv70/2027/exterior/genesis-gv70-exterior-detail-rear-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 17948491263027772455646834104536228589227012
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press4.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303133363934/models/gv70/2027/exterior-color/standard/genesis-gv70-standard-uyuni-white-uyh-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 4870265238404616918998466835775488
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press5.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134393130/models/gv70/2027/graphite/genesis-gv70-graphite-main-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 22300745198530588292670251665388875824557198
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press6.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373139/models/gv70/2027/interior/genesis-gv70-interior-main1-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 12378410601200323371128331609302432147030840
+    "검수": "미확인 — 눈 확인 필요"
   },
   "GV70_press7.png": {
     "카테고리": "GV70",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://dams.hyundai-autoever.com/cdn-cgi/image/width=2400,quality=92,format=jpeg/v1/openapi/hmg-presigned-url/50534b313031303030303030303030303134373234/models/gv70/2027/interior/genesis-gv70-interior-main2-large.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 21827041569258009580932136198094960940147742
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델Y_press0.jpg": {
     "카테고리": "테슬라모델Y",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Main-Hero-Desktop-Global.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 4917601098344569757875480631656371219103744
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델Y_press1.jpg": {
     "카테고리": "테슬라모델Y",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Main-Hero-Desktop-Global-v2.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 17788410957240370567708577693490612574885827
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델Y_press2.jpg": {
     "카테고리": "테슬라모델Y",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-Y-Interior-Hero-Desktop-LHD.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10886248666927885303042381447510193749790312
+    "검수": "미확인 — 눈 확인 필요"
   },
   "중고차시장_0w_0.jpg": {
     "카테고리": "중고차시장",
@@ -7584,270 +7043,243 @@
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 2272819056831860911861408108380160
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press1.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 93743604392359709351631388672
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press2.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 30597123335998378578939792588800
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press3.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 145445110663420403688028039737769984
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press4.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/exterior/T4M/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 19476029351173905332722847642025984
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press6.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK7/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 20942005934437553011568839854671103217049145
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press7.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK8/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 20940644804969864307163745810980461053681209
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press0.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/001.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 4869933000901076162919538398068736
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press1.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/005.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 1029742299909038011136502004711424
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press2.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/010.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 166549259679849151631188483819700224
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press3.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/018.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 165561121860217727162388775671169024
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press4.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/exterior/TM/YAC/025.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 19473335554348994867443709278945280
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press5.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL2/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10472365259796580033631217718565366336862403
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press6.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL3/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10472365259801650326632137246575993421592775
+    "검수": "미확인 — 눈 확인 필요"
   },
   "스타리아_press7.png": {
     "카테고리": "스타리아",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/US30/interior/IL4/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10472365259796579646793843714924282867628227
+    "검수": "미확인 — 눈 확인 필요"
   },
   "쏘나타_press5.png": {
     "카테고리": "쏘나타",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://www.hyundai.com/contents/vr360/DN23/interior/IK6/img-interior.png",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 9791633335172241440800980718346922464058425
+    "검수": "미확인 — 눈 확인 필요"
   },
   "BMW5시리즈_press0.jpg": {
     "카테고리": "BMW5시리즈",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_stage_ext-loop-alternative_dsk_sl_de?wid=1920&fmt=jpg&qlt=90",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10458749773935703041752634029335732454017220
+    "검수": "미확인 — 눈 확인 필요"
   },
   "BMW5시리즈_press1.jpg": {
     "카테고리": "BMW5시리즈",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_driving-dynamics_dsk_fb_en?wid=1920&fmt=jpg&qlt=90",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 19170063681173815054289726013472817089892292
+    "검수": "미확인 — 눈 확인 필요"
   },
   "BMW5시리즈_press2.jpg": {
     "카테고리": "BMW5시리즈",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_ext-design-highlights_3_skyroof_dsk_fb_de?wid=1920&fmt=jpg&qlt=90",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 18156710727852899449444558819445459235246048
+    "검수": "미확인 — 눈 확인 필요"
   },
   "BMW5시리즈_press3.jpg": {
     "카테고리": "BMW5시리즈",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://bmw.scene7.com/is/image/BMW/g60_ice_int-design-video-loop_dsk_fb-1_en?wid=1920&fmt=jpg&qlt=90",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 13802117360628478483491902610455051327766335
+    "검수": "미확인 — 눈 확인 필요"
   },
   "포르쉐차_press0.jpg": {
     "카테고리": "포르쉐차",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://a.storyblok.com/f/322327/1720x1210/6c774c8370/cayenne-front.png/m/1600x1126/smart/",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 343088377285121720539594678868551647092798
+    "검수": "미확인 — 눈 확인 필요"
   },
   "포르쉐차_press1.jpg": {
     "카테고리": "포르쉐차",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://a.storyblok.com/f/322327/2616x1473/c4982ccdc4/051-mosaic-editorial-desktop-i2.jpg/m/1800x1013/smart/",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 18543153227180750955127030906683060406474693
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델3_press0.jpg": {
     "카테고리": "테슬라모델3",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 1437363351738773527603670454906937480839168
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델3_press1.jpg": {
     "카테고리": "테슬라모델3",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Main-Hero-Desktop-LHD-v2.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 1437549443617717630613385565351222123167744
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델3_press2.jpg": {
     "카테고리": "테슬라모델3",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Exterior-Hero-Desktop-LHD.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 2091035310902675712645199819740241139859712
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델3_press3.jpg": {
     "카테고리": "테슬라모델3",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Performance-Hero-Desktop-LHD.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 2157231703638276820757434611506449181900872
+    "검수": "미확인 — 눈 확인 필요"
   },
   "테슬라모델3_press4.jpg": {
     "카테고리": "테슬라모델3",
     "license": "제조사 공식 이미지(사용자 책임)",
     "credit": "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Model-3-Interior-Hero-Desktop-LHD.jpg",
     "attribution_required": false,
-    "처리": "프레스 원본 → 정사각 1400px",
+    "처리": "프레스 원본 → 피사체 기준 정사각 1400px(무크롭)",
     "검색어": "press",
-    "검수": "미확인 — 눈 확인 필요",
-    "dhash": 10487342359614032419894119979954814072065523
+    "검수": "미확인 — 눈 확인 필요"
   },
   "신혜선_0.jpg": {
     "카테고리": "신혜선",
