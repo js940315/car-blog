@@ -1838,18 +1838,6 @@
     "밝기": 25,
     "dhash": 17609543059937025595922498686298519328538724
   },
-  "실내운전석_0s_pexels_0.jpg": {
-    "카테고리": "실내운전석",
-    "license": "Pexels License",
-    "credit": "Hyundai Motor Group / Pexels",
-    "attribution_required": true,
-    "원본해상도": "12690x8941",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Ioniq 5 interior",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 51,
-    "dhash": 19644626119113120599067635390207200671041176
-  },
   "실내운전석_0s_unsplash_1.jpg": {
     "카테고리": "실내운전석",
     "license": "Unsplash License",
@@ -2380,36 +2368,6 @@
     "밝기": 95,
     "차면적": 0.852,
     "dhash": 20928056792760192151708098039519021461079904
-  },
-  "EV3_0s_pexels_0.jpg": {
-    "카테고리": "EV3",
-    "license": "Pexels License",
-    "credit": "Hyundai Motor Group / Pexels",
-    "attribution_required": true,
-    "원본해상도": "8853x5843",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia EV3 car",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 1.0,
-    "밝기": 97,
-    "차면적": 0.189,
-    "dhash": 20302067328823365038373879882767882432286656
-  },
-  "EV3_0s_pexels_1.jpg": {
-    "카테고리": "EV3",
-    "license": "Pexels License",
-    "credit": "Efrem  Efre / Pexels",
-    "attribution_required": true,
-    "원본해상도": "6960x4640",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia EV3 car",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "차검출": true,
-    "차신뢰도": 0.89,
-    "밝기": 64,
-    "차면적": 0.497,
-    "dhash": 21957360289793150976697653503172797724526568
   },
   "EV3_0s_pexels_2.jpg": {
     "카테고리": "EV3",
@@ -7294,308 +7252,30 @@
   "현빈_0.jpg": {
     "카테고리": "현빈",
     "license": "CC BY-SA 4.0",
-    "credit": "File:Hyun Bin at the 2024 Toronto International Film Festival 2 (cropped).jpg",
+    "credit": "File:Hyun Bin at the 2024 Toronto International Film Festival.jpg",
     "attribution_required": true,
     "처리": "인물 사진 · 정사각 1400px",
     "검색어": "Hyun Bin",
-    "검수": "미확인 — 반드시 눈으로 본인인지 확인",
-    "dhash": 19377687258586822650216720014699499979943622
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
   },
   "현빈_1.jpg": {
     "카테고리": "현빈",
     "license": "CC BY-SA 4.0",
-    "credit": "File:Hyun Bin at the 2024 Toronto International Film Festival. 04.jpg",
+    "credit": "File:Hyun Bin at the 2024 Toronto International Film Festival 2.jpg",
     "attribution_required": true,
     "처리": "인물 사진 · 정사각 1400px",
     "검색어": "Hyun Bin",
-    "검수": "미확인 — 반드시 눈으로 본인인지 확인",
-    "dhash": 1454222745794192397069196128130953808486336
-  },
-  "캐스퍼_0w_0.jpg": {
-    "카테고리": "캐스퍼",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 00 HYUNDAI CASPER 0 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "2239x1549",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Casper 2022",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 22258375900297768474806495058750861145411360
-  },
-  "캐스퍼_1w_0.jpg": {
-    "카테고리": "캐스퍼",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Casper and Electric AX1 (2) / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "3927x2945",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Casper Electric",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 17950406506887677478899905833277650940731360
-  },
-  "캐스퍼_1w_1.jpg": {
-    "카테고리": "캐스퍼",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Hyundai Casper and Electric AX1 (3) / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "3853x2889",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Casper Electric",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19348754358452785036073869379373192694865856
-  },
-  "캐스퍼_1w_2.jpg": {
-    "카테고리": "캐스퍼",
-    "license": "CC BY-SA",
-    "credit": "사진 : Hyundai Inster, Auto 2024, Zurich (PANA1030) / CC BY-SA / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "3888x5184",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Hyundai Casper Electric",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 22145389305579375974615790557860818388718095
-  },
-  "레이_1w_0.jpg": {
-    "카테고리": "레이",
-    "license": "CC BY-SA 3.0",
-    "credit": "사진 : Kia Ray EV - Mondial de l'Automobile de Pari / CC BY-SA 3.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4752x3168",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Ray EV",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21761423927794976165582383541529959607357388
-  },
-  "모닝_0w_0.jpg": {
-    "카테고리": "모닝",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Kia Picanto JA - 2020 facelift - in Busan 20 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4000x3000",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Morning Picanto 2024",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21957587677335257258077999758451419347357616
-  },
-  "프라이드_1w_0.jpg": {
-    "카테고리": "프라이드",
-    "license": "Public domain",
-    "credit": "사진 : 2012 Kia Rio (UB MY12) Si sedan (2016-01-04) / Public domain / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4272x2856",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Rio sedan 2012",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 10981072749528228569687646374801479168658860
-  },
-  "프라이드_1w_1.jpg": {
-    "카테고리": "프라이드",
-    "license": "Public domain",
-    "credit": "사진 : 2012 Kia Rio (UB MY12) Si sedan (2016-01-04) / Public domain / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4272x2856",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Rio sedan 2012",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19866119509003182940099461691752849146448592
-  },
-  "니로_0w_0.jpg": {
-    "카테고리": "니로",
-    "license": "CC0",
-    "credit": "사진 : 2023 Denver Auto Show Kia Niro EX Touring en / CC0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4032x3024",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Niro 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21609208218100133456382399491120107009089280
-  },
-  "니로_0w_1.jpg": {
-    "카테고리": "니로",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Kia Niro (SG2) HEV IMG 8251 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4676x2916",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Niro 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 16807376075827299135593305468972078745538208
-  },
-  "니로_0w_2.jpg": {
-    "카테고리": "니로",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Kia Niro EV (SG2) 1X7A7188 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4659x2835",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Niro 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19522745347160337504764718905660993171369650
-  },
-  "니로_1w_1.jpg": {
-    "카테고리": "니로",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Kia Niro EV SG2 EV white (7) / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4032x3024",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Niro EV SG2",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21783432166301423349105874026791579262930816
-  },
-  "레인지로버_0w_0.jpg": {
-    "카테고리": "레인지로버",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2023 Range Rover Evoque (L551) IMG 3586 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4885x3016",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19693171039157564817472959821972186395971472
-  },
-  "레인지로버_0w_1.jpg": {
-    "카테고리": "레인지로버",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2023 Range Rover Evoque (L551) IMG 3588 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4988x3222",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 679287263924769412709435917803423053844168
-  },
-  "레인지로버_0w_2.jpg": {
-    "카테고리": "레인지로버",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Land Rover Range Rover (5th generation) Auto / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "5195x3466",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 17054654464818758115418858859953832108523395
-  },
-  "레인지로버_0s_pexels_0.jpg": {
-    "카테고리": "레인지로버",
-    "license": "Pexels License",
-    "credit": "Martynas Linge / Pexels",
-    "attribution_required": true,
-    "원본해상도": "7646x5100",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21957699361675508725993629857688729079910368
-  },
-  "레인지로버_0s_unsplash_1.jpg": {
-    "카테고리": "레인지로버",
-    "license": "Unsplash License",
-    "credit": "CARTIST SARVAM / Unsplash",
-    "attribution_required": true,
-    "원본해상도": "2400x1649",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21954942390327367519108091934810351238782433
-  },
-  "레인지로버_0s_pexels_2.jpg": {
-    "카테고리": "레인지로버",
-    "license": "Pexels License",
-    "credit": "MHD WAEL ALBONNI / Pexels",
-    "attribution_required": true,
-    "원본해상도": "6240x4160",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Range Rover 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 20950573092655644759699781833100165466038064
-  },
-  "레인지로버_1w_0.jpg": {
-    "카테고리": "레인지로버",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Range Rover Sport SVR, IAA 2017, Frankfurt ( / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "5760x3840",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Land Rover Range Rover Sport",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21608961450075345496411976482823112373503905
-  },
-  "레인지로버_1w_1.jpg": {
-    "카테고리": "레인지로버",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Range Rover Sport Series III IMG 9449 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4603x3064",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Land Rover Range Rover Sport",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 17227172828697988271173022503215042238353280
-  },
-  "레인지로버_1s_unsplash_1.jpg": {
-    "카테고리": "레인지로버",
-    "license": "Unsplash License",
-    "credit": "Luke Stackpoole / Unsplash",
-    "attribution_required": true,
-    "원본해상도": "2400x1600",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Land Rover Range Rover Sport",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 12941035716007738611126184291555023553040320
-  },
-  "레인지로버_1s_pexels_2.jpg": {
-    "카테고리": "레인지로버",
-    "license": "Pexels License",
-    "credit": "Ajay Gill / Pexels",
-    "attribution_required": true,
-    "원본해상도": "6048x4024",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Land Rover Range Rover Sport",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21957720380124891074125107530667761316413314
-  },
-  "에스컬레이드_0w_0.jpg": {
-    "카테고리": "에스컬레이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2005 Cadillac Escalade, front left, 06-04-20 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4148x2432",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Cadillac Escalade 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21607980949344853947110361787040993650675648
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
   },
   "에스컬레이드_0w_1.jpg": {
     "카테고리": "에스컬레이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : CADILLAC ESCALADE China (4) / CC BY-SA 4.0 / Wikimedia Commons",
+    "license": "CC0",
+    "credit": "사진 : 23 Cadillac Escalade-V Base - Scottsdale AZ  / CC0 / Wikimedia Commons",
     "attribution_required": true,
-    "원본해상도": "7096x3648",
+    "원본해상도": "4128x3096",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Cadillac Escalade 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19340246901719710475039509373525394844364482
-  },
-  "에스컬레이드_0w_2.jpg": {
-    "카테고리": "에스컬레이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : CADILLAC ESCALADE HYBRID THIRD GENERATION Ch / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "7603x4308",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Cadillac Escalade 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 5556745405544439776228938565998510571982272
-  },
-  "에스컬레이드_1w_0.jpg": {
-    "카테고리": "에스컬레이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : CADILLAC ESCALADE ESV THIRD GENERATION China / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "7685x3758",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Cadillac Escalade ESV",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 19513681875543401388422040813716352943746790
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "블루메_0.jpg": {
     "카테고리": "블루메",
@@ -7616,83 +7296,6 @@
     "검색어": "Wang Chuanfu BYD",
     "검수": "미확인 — 반드시 눈으로 본인인지 확인",
     "dhash": 21010066083071269690770530529242655491902860
-  },
-  "모닝_1w_1.jpg": {
-    "카테고리": "모닝",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : Pre- and post-facelift Kia Picanto Mk1 front / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4032x3024",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Picanto facelift",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 5492477590573817700416817878767866298108384
-  },
-  "모닝_2w_1.jpg": {
-    "카테고리": "모닝",
-    "license": "CC BY 2.0",
-    "credit": "사진 : Kia Picanto 1.2 (2022) (53471851006) / CC BY 2.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "5125x3246",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Picanto JA 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 21957358459930963694052260123304172713676736
-  },
-  "모닝_2w_2.jpg": {
-    "카테고리": "모닝",
-    "license": "CC BY 2.0",
-    "credit": "사진 : Kia Picanto GT Line (2020) (52920880850) / CC BY 2.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "5320x3668",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Picanto JA 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 10998581340825144995879576761629043117006784
-  },
-  "모닝_2w_3.jpg": {
-    "카테고리": "모닝",
-    "license": "CC BY 2.0",
-    "credit": "사진 : Kia Picanto X-Line (2022) (52711295280) / CC BY 2.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "5349x3683",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Picanto JA 2023",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 22131923898426052902207122556182235778125760
-  },
-  "프라이드_2w_0.jpg": {
-    "카테고리": "프라이드",
-    "license": "CC BY 2.0",
-    "credit": "사진 : 2012 Kia Rio (UB) SLS 3-door hatchback (2389 / CC BY 2.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4752x3168",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Rio UB hatchback",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 605681675190974760061004438896020284739953
-  },
-  "프라이드_2w_1.jpg": {
-    "카테고리": "프라이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2016 Kia Rio (UB) S 5-door hatchback (2018-0 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4320x2232",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Rio UB hatchback",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 22217843102151366361748496632433365961639673
-  },
-  "프라이드_2w_2.jpg": {
-    "카테고리": "프라이드",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2016 Kia Rio (UB) S 5-door hatchback (2018-0 / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4381x2337",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Kia Rio UB hatchback",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "dhash": 20907119393361667743089780945829468628193168
   },
   "정의선_0.jpg": {
     "카테고리": "정의선",
@@ -7737,6 +7340,25 @@
     "attribution_required": true,
     "처리": "인물 사진 · 정사각 1400px",
     "검색어": "Kim Hye-soo",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "에스컬레이드_1w_1.jpg": {
+    "카테고리": "에스컬레이드",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Cadillac Escalade ESV (GMTK2XX) 1X7A1581 / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5133x2804",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Cadillac Escalade ESV",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "현빈_2.jpg": {
+    "카테고리": "현빈",
+    "license": "CC BY-SA 4.0",
+    "credit": "File:Hyun Bin at the 2024 Toronto International Film Festival. 04.jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Hyun Bin",
     "검수": "미확인 — 반드시 눈으로 본인인지 확인"
   }
 }

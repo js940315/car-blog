@@ -674,5 +674,67 @@
       "issue": "손흥민 현대차 월드컵 파트너십 캠페인 Next Starts Now(셀럽 에버그린)",
       "source_url": ""
     }
+  ],
+  "0816": [
+    {
+      "title": "쏘나타 프리미엄 2,826만원, 인스퍼레이션은 3,549만원.. 723만원 이렇게 벌어졌다",
+      "category": "신차·출시",
+      "issue": "쏘나타 디 엣지 트림별 가격·사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "카니발 하이브리드 4,091만원, 가솔린보다 455만원 더 받는 이유 있었다",
+      "category": "신차·출시",
+      "issue": "카니발 하이브리드 vs 가솔린 가격·연비 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "기아 EV3, 미국서 4,450만원부터.. 국내보다 이 정도 차이 났다",
+      "category": "전기차·친환경",
+      "issue": "EV3 미국 가격 공개(3만1,385~4만7,385달러) vs 국내가 비교",
+      "source_url": ""
+    },
+    {
+      "title": "포르쉐 전기차 판매, 2년 반 만에 4분의 1로.. 결국 카이엔만 남는다는 얘기 나온다",
+      "category": "전기차·친환경",
+      "issue": "포르쉐 타이칸 판매급감·영업이익률 급락, 2030 단종설(비르트샤프츠보헤 보도)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546665"
+    },
+    {
+      "title": "GV80 하이브리드, 렉서스 RX 잡으러 미국 갔다.. 출력 16% 토크 26% 올랐다",
+      "category": "자동차산업·수출",
+      "issue": "GV80 하이브리드 미국 시장 반응, 렉서스 RX 비교, 제네시스 상반기 미국판매 역대최대",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145686"
+    },
+    {
+      "title": "BMW 무상점검, 10월 2일까지.. 소모품·공임 20% 할인에 최대 30% 더 빠집니다",
+      "category": "리콜·안전·정책",
+      "issue": "BMW그룹코리아 8/18~10/2 무상점검·정비할인 캠페인",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44315"
+    },
+    {
+      "title": "8월 중고차 비수기인데.. 테슬라·쏘렌토만 나 홀로 시세 올랐다",
+      "category": "중고차·시장동향",
+      "issue": "8월 중고차 시세, 테슬라 모델3·모델Y·쏘렌토HEV만 상승(엔카 데이터)",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44300"
+    },
+    {
+      "title": "벤츠 E클래스 중고값, 한 달 새 4.10% 뚝.. 수입차 평균보다 4배 더 빠졌다",
+      "category": "중고차·시장동향",
+      "issue": "벤츠 E클래스·C클래스 중고시세 급락, 신차판매 부진 연계 분석",
+      "source_url": "https://www.autoherald.co.kr/news/articleView.html?idxno=61319"
+    },
+    {
+      "title": "정의선, 상반기 45억 받았다.. 현대차 22.5억·기아 13.5억·모비스 9억",
+      "category": "브랜드·기업이슈",
+      "issue": "정의선 회장 상반기 보수 공개(반기보고서), 3사 총 45억원",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145694"
+    },
+    {
+      "title": "현빈, 캐딜락 앰버서더로 낙점.. 1억 5,500만원 에스컬레이드가 그 이유였다",
+      "category": "셀럽·연예인차",
+      "issue": "현빈 캐딜락 에스컬레이드 브랜드 앰버서더 발탁(셀럽 에버그린)",
+      "source_url": ""
+    }
   ]
 }
