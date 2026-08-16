@@ -139,6 +139,10 @@ CATEGORIES = {
     "실내BMW": ["BMW interior dashboard cockpit", "BMW curved display interior"],
     "실내테슬라": ["Tesla Model 3 interior minimalist", "Tesla interior center screen"],
     "실내수입": ["luxury car interior leather dashboard", "premium car cockpit interior"],
+    # 2026-08-17: 실내수입 버킷이 재규어·페라리·BMW i8·람보르기니 로고 노출로
+    # 못 쓴다는 게 0815~0816에 실측 확인됨(다음 세션 할 일 -2). 포르쉐는 프레스 모델로
+    # 자주 나오니 전용 무로고 실내 버킷을 따로 둔다.
+    "실내포르쉐": ["Porsche Cayenne interior dashboard", "Porsche interior cockpit steering"],
 }
 
 
