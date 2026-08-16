@@ -24,6 +24,11 @@ import time
 import urllib.parse
 import urllib.request
 
+# 발행 이미지는 1080 정사각이다. 긴 변/짧은 변이 이 값 이하인 후보만 '풀화면'이 된다.
+# build_posts.ASPECT_TOL 과 같은 값을 쓴다 — 한쪽만 바꾸면 소싱은 통과시키고
+# 렌더링은 경고하는 엇갈림이 생긴다.
+ASPECT_TOL = 1.25
+
 UA = {"User-Agent": "Mozilla/5.0 (compatible; savemoney119-cardnews/1.0)"}
 
 # 프리미엄 스톡 API(Pexels 등)는 Cloudflare가 봇 UA(Python-urllib, 커스텀 문자열)를
@@ -230,11 +235,24 @@ def pick_best_image(urls, tmp_dir, min_side=1200, prefix="cand", normalize=True)
     if not downloaded:
         return None, report
 
-    qualified = [r for r in downloaded if r["min_side"] >= min_side]
-    pool = qualified if qualified else downloaded
+    for r in downloaded:
+        r["aspect"] = max(r["w"], r["h"]) / max(1, min(r["w"], r["h"]))
+
+    # 정사각에 가까운 것만 쓴다 (2026-08-16 사용자 확정: "풀화면들 준비해라").
+    # 발행 이미지는 1080 정사각이라 가로로 긴 원본은 잘리거나 위아래 띠가 생긴다.
+    # 8/13 "범퍼가 날아간다" -> 8/14 크롭 제거 -> 8/16 "띠 생긴 건 못 쓴다" 로 왔다.
+    # 렌더링에서 둘 다 만족시킬 수 없으니 **여기서 걸러 애초에 안 뽑는다.**
+    square = [r for r in downloaded if r["aspect"] <= ASPECT_TOL]
+
+    qualified = [r for r in (square or downloaded) if r["min_side"] >= min_side]
+    pool = qualified or square or downloaded
     # 화질(면적) 우선, 동률이면 tier(작을수록 신뢰) 우선
     best = sorted(pool, key=lambda r: (r["w"] * r["h"], -r["tier"]), reverse=True)[0]
     best["meets_min"] = best["min_side"] >= min_side
+    best["full_frame"] = best["aspect"] <= ASPECT_TOL
+    if not best["full_frame"]:
+        print(f"  [경고] 정사각 후보가 없어 {best['w']}x{best['h']}"
+              f"({best['aspect']:.2f}:1) 를 골랐다 — 발행 시 잘린다. 소재를 바꾸는 게 낫다")
     return best, report
 
 

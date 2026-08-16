@@ -144,6 +144,19 @@ MARKER_RE = re.compile(r"^【\s*\d+\s*번\s*(?:이미지|사진)\s*】$")
 SENT_RE = re.compile(r"(?<=[.!?])\s+|(?<=다\.)\s*|(?<=요\.)\s*|(?<=죠\.)\s*")
 
 
+def _hashtag(text):
+    """해시태그 한 개를 '#키워드' 형태로 보장한다.
+
+    2026-08-16 사고: 0816 자동 발행분 10편 전량이 해시태그에 # 없이 나갔다.
+    0815 는 멀쩡했으므로 코드 회귀가 아니라 **그날 원고 생성기가 # 을 빼먹은 것**이다.
+    생성기는 날마다 새로 쓰여서 같은 실수가 반복된다. 출력 지점에서 강제한다.
+    """
+    t = strip_markdown(str(text or "")).strip()
+    t = t.lstrip("#").strip()            # '# 태그' · '##태그' 같은 변형도 정리
+    t = t.replace(" ", "")               # 네이버 해시태그는 공백을 못 받는다
+    return f"#{t}" if t else ""
+
+
 def strip_markdown(text):
     """네이버에 그대로 노출되면 안 되는 마크다운 기호를 제거한다."""
     text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)   # **볼드**
@@ -396,8 +409,19 @@ def check_caption_photo(specs):
     return problems
 
 
-IMAGE_SET_SIZE = 8        # 2026-08-08 개편: 썸네일1 + 실물사진7
+# 2026-08-16 사용자 확정: 8 -> 6. "한 포스팅에 이미지 너무 많다."
+IMAGE_SET_SIZE = 6        # 썸네일1 + 실물사진5
 MIN_INTERIOR = 2          # 그 중 실내(인테리어) 최소 2장
+
+# ── 풀화면 규격 (2026-08-16 사용자 확정) ────────────────────────────────
+# 2026-08-13 "가로로 긴 차 사진을 중앙 크롭하니 앞뒤 범퍼가 날아간다" 지적으로
+# 8/14 에 크롭을 걷어냈다. 그랬더니 이번엔 **위아래에 띠가 생긴 사진**이 나갔고
+# "이런 건 못 쓴다, 풀화면으로 준비해라"는 지적을 받았다.
+#
+# 두 요구는 렌더링에서 동시에 만족시킬 수 없다 — 자르면 범퍼가 날아가고, 안 자르면 띠가 생긴다.
+# **그래서 선택 단계에서 푼다.** 정사각에 가까운 사진만 쓰면 잘라도 차가 안 날아간다.
+# 비율이 벗어난 사진은 띠로 채우지 않고 **후보에서 뺀다.**
+ASPECT_TOL = 1.25         # 긴 변 / 짧은 변 이 이 값 이하일 때만 쓴다 (4:5 ~ 5:4)
 DATA_CARD_TYPES = {"bar_card", "number_card", "rank_card", "stock_card"}
 
 
@@ -673,34 +697,26 @@ def build_one(article, out_dir):
             f.write(svg)
         tmp_paths.append((idx, tmp_svg, tmp_png))
 
-    # 썸네일·본문 사진: 원본을 자르지 않고 정사각으로 맞춰 1080 저장(글자·스크림 없음)
+    # 썸네일·본문 사진: **띠 없이 화면을 꽉 채운다** (2026-08-16 사용자 확정)
+    aspect_problems = []
     for idx, src in direct_photos.items():
         img_name = f"{idx}번 사진.jpg"
         try:
-            # ★ 잘라내지 않는다 — 가로로 긴 차 사진을 중앙 크롭하면 앞뒤 범퍼가 날아간다
-            #   (실측 2026-08-08). 전체를 담고 남는 공간만 가장자리 배경색으로 채운다.
             im = Image.open(src).convert("RGB")
             w, h = im.size
-            # ★ 2026-08-14: 여기 있던 '4:3(1.34)까지는 잘라 채운다'를 걷어냈다.
-            #   라이브러리 사진은 이미 정사각이라 평소엔 안 걸리지만, 수동 투입처럼
-            #   비정사각이 들어오면 소싱 단계와 똑같이 차 앞뒤를 잘라먹는다.
-            #   (사용자 신고 — 0813/9 그랜저 측면·후측면 컷이 범퍼째 날아갔다)
-            if w == h:
-                im = im.resize((1080, 1080), Image.LANCZOS)
-            else:
-                if w > h:
-                    a = im.crop((0, 0, w, max(1, h // 12))).resize((1, 1), Image.LANCZOS)
-                    b = im.crop((0, h - max(1, h // 12), w, h)).resize((1, 1), Image.LANCZOS)
-                else:
-                    a = im.crop((0, 0, max(1, w // 12), h)).resize((1, 1), Image.LANCZOS)
-                    b = im.crop((w - max(1, w // 12), 0, w, h)).resize((1, 1), Image.LANCZOS)
-                bg = tuple((x + y) // 2 for x, y in zip(a.getpixel((0, 0)), b.getpixel((0, 0))))
-                sc = 1080 / max(w, h)
-                nw, nh = max(1, int(w * sc)), max(1, int(h * sc))
-                canvas = Image.new("RGB", (1080, 1080), bg)
-                canvas.paste(im.resize((nw, nh), Image.LANCZOS),
-                             ((1080 - nw) // 2, (1080 - nh) // 2))
-                im = canvas
+            ratio = max(w, h) / max(1, min(w, h))
+            # ASPECT_TOL 안이면 중앙 크롭으로 꽉 채운다. 1.25 이하에서 잘리는 건
+            # 가장자리 12% 뿐이라 차 앞뒤가 날아가지 않는다(8/13 사고는 3:2 원본이었다).
+            # 벗어나면 띠를 채우지 않고 **경고를 남긴다** — 그런 사진은 애초에
+            # 후보로 올리면 안 된다(위 ASPECT_TOL 주석 참조).
+            if ratio > ASPECT_TOL:
+                aspect_problems.append(
+                    f"{img_name}: 비율 {w}x{h}({ratio:.2f}:1) — 풀화면이 안 된다. "
+                    f"{ASPECT_TOL} 이하 사진으로 교체해라(띠를 채우지 않는다)")
+            side = min(w, h)
+            im = im.crop(((w - side) // 2, (h - side) // 2,
+                          (w - side) // 2 + side, (h - side) // 2 + side))
+            im = im.resize((1080, 1080), Image.LANCZOS)
             im.save(os.path.join(out_dir, img_name), "JPEG", quality=94, subsampling=1)
             image_map[str(idx)] = img_name
         except Exception as e:
@@ -759,9 +775,13 @@ def build_one(article, out_dir):
     if article.get("closing_question"):
         lines += [SPACER] + to_blocks(article["closing_question"])
     # 면책/안내문구는 사용자 요청으로 표시하지 않는다 (disclaimer 필드가 있어도 무시).
-    lines += [SPACER] + [strip_markdown(h) for h in article.get("hashtags", [])]
+    # 해시태그는 **여기서 # 을 보장한다.** 원고 생성기는 매일 새로 쓰이므로
+    # "# 붙여라"를 지시서에 적어두는 방식으로는 안 지켜진다 — 2026-08-16 실측으로
+    # 0816 10편 전량이 # 없이 나갔다(0815 는 멀쩡했다). 생성기에 기대지 않는다.
+    lines += [SPACER] + [_hashtag(h) for h in article.get("hashtags", [])]
 
     problems = validate(lines)
+    problems += aspect_problems          # 풀화면이 안 되는 사진 (2026-08-16)
     problems += validate_image_structure(specs)
     problems += validate_celebrity_photo(article, specs)
     problems += check_caption_photo(specs)
