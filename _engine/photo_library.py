@@ -187,7 +187,13 @@ def pick_photo(category, date_tag, seq, exclude=None):
         pass
 
     usage = _load_json_safe(USAGE_PATH, {})
-    recent = set(usage.get(category, [])[-RECENT_WINDOW:])
+    # ★ 2026-08-16: 회피 창을 **풀 크기에 맞춰 늘린다.**
+    #   예전에는 고정 3장이라 5장짜리 버킷이면 다섯 글마다 같은 사진이 돌아왔다.
+    #   실측: 사용 2045회 / 고유 파일 333장 = 평균 6회 재사용, 최다 31회.
+    #   "매일 똑같은 거 돌려쓰는 게 바로 보인다"는 지적의 원인이 이 숫자였다.
+    #   풀을 다 쓸 때까지 재사용하지 않는 라운드로빈이 된다(다 쓰면 자동으로 처음부터).
+    recent_n = max(RECENT_WINDOW, len(pool) - 1)
+    recent = set(usage.get(category, [])[-recent_n:])
     candidates = [p for p in pool if p not in recent] or pool
 
     idx = _seed(category, date_tag, seq) % len(candidates)
