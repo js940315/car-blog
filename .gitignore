@@ -15,3 +15,5 @@ _tmp*_wrap.html
 # 육안 검수 후 최종 확정한 사진만 `git add -f assets/photos/<파일명>`으로 개별 추가할 것.
 assets/photos/*
 !assets/photos/index.json
+
+assets/photos_banded_backup/
