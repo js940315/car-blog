@@ -410,7 +410,17 @@ def check_caption_photo(specs):
 
 
 # 2026-08-16 사용자 확정: 8 -> 6. "한 포스팅에 이미지 너무 많다."
-IMAGE_SET_SIZE = 6        # 썸네일1 + 실물사진5
+# 2026-08-20 사용자 확정(A안): 고정 장수 -> **있는 만큼 쓰기.**
+# 벤치마킹 상위 글은 사진이 12장 이상이고 본문 절반이 사진이다. 자동차 글은
+# 차를 보러 오기 때문이다. 그런데 라이브러리가 차종당 중앙 7장이라 12장 고정은
+# 80% 차종이 막힌다(6장 이상 61% / 8장 39% / 12장 16%).
+# 그래서 범위로 둔다 — 사진 많은 차종은 12장, 적으면 6장까지 허용한다.
+#
+# 8/16 에 8->6 으로 줄였던 건 띠 박힌 사진을 버리느라 쓸 게 부족해서였다.
+# 오늘 그 띠를 잘라내 95장을 되살렸으니(fix_banded.py) 다시 늘릴 근거가 생겼다.
+IMAGE_SET_MIN = 6
+IMAGE_SET_MAX = 12
+IMAGE_SET_SIZE = IMAGE_SET_MIN     # 하위호환용 이름
 MIN_INTERIOR = 2          # 그 중 실내(인테리어) 최소 2장
 
 # ── 풀화면 규격 (2026-08-16 사용자 확정) ────────────────────────────────
@@ -426,7 +436,7 @@ DATA_CARD_TYPES = {"bar_card", "number_card", "rank_card", "stock_card"}
 
 
 def validate_image_structure(specs):
-    """images 배열이 **8장 세트**(썸네일1 + 실물사진7, 실내 2장 이상)를 지키는지 본다.
+    """images 배열이 **6~12장**(썸네일1 + 실물사진, 실내 2장 이상)를 지키는지 본다.
 
     이 함수는 예전에 '5장 스펙'만 검사했다. 2026-08-08에 8장으로 규격을 바꿨는데
     검증을 같이 안 고쳐서, 옛 6장 기사가 problems=[] 로 통과해 그대로 발행됐다
@@ -440,10 +450,10 @@ def validate_image_structure(specs):
         problems.append(
             f"1번 이미지가 대표 썸네일이 아님(thumbnail/stock_thumbnail만 허용): "
             f"{specs[0].get('type')}")
-    if len(specs) != IMAGE_SET_SIZE:
+    if not (IMAGE_SET_MIN <= len(specs) <= IMAGE_SET_MAX):
         problems.append(
-            f"이미지 {len(specs)}장 — 규격은 {IMAGE_SET_SIZE}장(썸네일1+실물사진7)이다. "
-            f"벤치마크 상위 블로그는 10~16장을 쓴다(체류시간 직결)")
+            f"이미지 {len(specs)}장 — 규격은 {IMAGE_SET_MIN}~{IMAGE_SET_MAX}장이다. "
+            f"라이브러리에 있는 만큼 최대로 넣어라(벤치마크 상위 글은 12장 이상).")
 
     body = specs[1:]
     n_data = sum(1 for s in body if s.get("type") in DATA_CARD_TYPES)
