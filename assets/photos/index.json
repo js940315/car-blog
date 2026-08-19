@@ -1876,31 +1876,7 @@
     "밝기": 32,
     "dhash": 15419470260121348490237492258258513865242597
   },
-  "실내벤츠_0w_0.jpg": {
-    "카테고리": "실내벤츠",
-    "license": "CC BY-SA 4.0",
-    "credit": "사진 : 2013 Mercedes-Benz R172 SLK 200 dashboard, M / CC BY-SA 4.0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "8192x4608",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Mercedes-Benz interior dashboard",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 81,
-    "dhash": 19583600967620572057161747049276835262992096
-  },
   "실내벤츠_0w_1.jpg": {
-    "카테고리": "실내벤츠",
-    "license": "CC0",
-    "credit": "사진 : Mercedes-Benz 600 SEC V12 - interior, dashbo / CC0 / Wikimedia Commons",
-    "attribution_required": true,
-    "원본해상도": "4000x6000",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Mercedes-Benz interior dashboard",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 70,
-    "dhash": 4511334363530066000578873337677465497470913
-  },
-  "실내벤츠_0w_2.jpg": {
     "카테고리": "실내벤츠",
     "license": "CC BY 2.0",
     "credit": "사진 : Mercedes-Benz W213 dashboard (Tokyo) / CC BY 2.0 / Wikimedia Commons",
@@ -1908,9 +1884,7 @@
     "원본해상도": "4032x3024",
     "처리": "정사각 1400px + 시리즈 톤 + 비네트",
     "검색어": "Mercedes-Benz interior dashboard",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 59,
-    "dhash": 17826858892181438830206654530096330504900404
+    "검수": "미확인 — Read로 눈 확인 필요"
   },
   "실내벤츠_0s_pexels_0.jpg": {
     "카테고리": "실내벤츠",
@@ -1924,18 +1898,6 @@
     "밝기": 40,
     "dhash": 21259716115056699299409510287039961039933121
   },
-  "실내벤츠_0s_unsplash_1.jpg": {
-    "카테고리": "실내벤츠",
-    "license": "Unsplash License",
-    "credit": "Benjamin Zhao / Unsplash",
-    "attribution_required": true,
-    "원본해상도": "2400x1601",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Mercedes-Benz interior dashboard",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 49,
-    "dhash": 16895738999076768581120847780566124470208960
-  },
   "실내벤츠_0s_pexels_2.jpg": {
     "카테고리": "실내벤츠",
     "license": "Pexels License",
@@ -1947,18 +1909,6 @@
     "검수": "미확인 — Read로 눈 확인 필요",
     "밝기": 78,
     "dhash": 5324633195520832482927075241948014372979143
-  },
-  "실내벤츠_1s_pexels_0.jpg": {
-    "카테고리": "실내벤츠",
-    "license": "Pexels License",
-    "credit": "Dawid Tkocz / Pexels",
-    "attribution_required": true,
-    "원본해상도": "7680x5120",
-    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
-    "검색어": "Mercedes-Benz cockpit steering interior",
-    "검수": "미확인 — Read로 눈 확인 필요",
-    "밝기": 68,
-    "dhash": 21091937159587435428686523895568844980006858
   },
   "실내벤츠_1s_pexels_2.jpg": {
     "카테고리": "실내벤츠",
@@ -7289,5 +7239,44 @@
     "처리": "인물 사진 · 정사각 1400px",
     "검색어": "Lim Ji-yeon",
     "검수": "Read 육안검수 완료 — 레드카펫 인물사진, 본인으로 확인"
+  },
+  "실내벤츠_0w_3.jpg": {
+    "카테고리": "실내벤츠",
+    "license": "CC BY-SA 4.0",
+    "credit": "사진 : Münster, Beresa, Mercedes-Benz C-Klasse Cabr / CC BY-SA 4.0 / Wikimedia Commons",
+    "attribution_required": true,
+    "원본해상도": "5614x4317",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz interior dashboard",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "실내벤츠_0o_0.jpg": {
+    "카테고리": "실내벤츠",
+    "license": "by-sa",
+    "credit": "사진 : deathpallie325 / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "원본해상도": "4080x2296",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz interior dashboard",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "실내벤츠_0o_1.jpg": {
+    "카테고리": "실내벤츠",
+    "license": "by-sa",
+    "credit": "사진 : deathpallie325 / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "원본해상도": "4032x2268",
+    "처리": "정사각 1400px + 시리즈 톤 + 비네트",
+    "검색어": "Mercedes-Benz interior dashboard",
+    "검수": "미확인 — Read로 눈 확인 필요"
+  },
+  "김예지_0.jpg": {
+    "카테고리": "김예지",
+    "license": "CC BY-SA 4.0",
+    "credit": "File:Kim Ye-ji, Shooter of Korea in 2024 (cropped).jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Kim Ye-ji",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
   }
 }

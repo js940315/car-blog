@@ -1,926 +1,988 @@
 {
-    "0802": [
-        {
-            "title": "12년 걸린 100만대, 6년 만에 900만대 더 만든 전기차 회사",
-            "category": "전기차·친환경",
-            "issue": "테슬라 누적 전기차 생산 1000만대 돌파",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145294"
-        },
-        {
-            "title": "\"마음에 안 들면 돌려주세요\"..르노코리아가 내건 파격 조건",
-            "category": "브랜드·기업이슈",
-            "issue": "르노코리아 그랑 콜레오스 60일 반납 보장 프로그램 8월 연장",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546326"
-        },
-        {
-            "title": "글로벌 판매 현대차 제친 BYD, 지난달 41만대 더 팔았다",
-            "category": "자동차산업·수출",
-            "issue": "BYD 7월 글로벌 판매 현대차 추월, 체리그룹 기아 추격",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546330"
-        },
-        {
-            "title": "정의선, 튀르키예로 날아가 아이오닉3 생산라인 직접 챙겼다",
-            "category": "자동차산업·수출",
-            "issue": "정의선 회장 튀르키예 공장 방문, 아이오닉3 유럽 생산 점검",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61229"
-        },
-        {
-            "title": "아이오닉9 550만원 내렸다..현대차·제네시스 12개 차종 할인",
-            "category": "신차·출시",
-            "issue": "현대차·제네시스 8월 썸머 페스타 12개 차종 할인 확대",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145301"
-        },
-        {
-            "title": "현대차·기아, 미국서 7월에만 15만대 넘게 팔았다",
-            "category": "자동차산업·수출",
-            "issue": "현대차·기아 미국 7월 판매 역대 최고 실적, 누적 100만대 돌파",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61228"
-        },
-        {
-            "title": "제네시스 GV90, 벤츠도 없는 문 달았다.. \"롤스로이스급\" 확정",
-            "category": "신차·출시",
-            "issue": "제네시스 GV90 코치도어 확정",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61226"
-        },
-        {
-            "title": "핸들 꺾이는데 경고도 없다.. 테슬라 120만대 결함 조사",
-            "category": "리콜·안전·정책",
-            "issue": "테슬라 모델3·모델Y 120만대 서스펜션 결함 예비조사",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61225"
-        },
-        {
-            "title": "1500달러 보상한다는데 한국은 0원.. 볼보 무슨 일이길래",
-            "category": "리콜·안전·정책",
-            "issue": "볼보 EX90·ES90 아이리스 라이다 철회 및 국가별 보상",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61218"
-        },
-        {
-            "title": "노리스도 러셀도 여길 거쳤다.. 한국인 최초 F1 도전 이규호",
-            "category": "모터스포츠·이슈",
-            "issue": "이규호 한국인 최초 F1 도전, GB3 실버스톤 5라운드",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44241"
-        },
-        {
-            "title": "내연기관 줄어드는데 전기차만 두 배.. 중고차 시장 판도 바뀐다",
-            "category": "중고차·시장동향",
-            "issue": "상반기 중고차 전기차 판매 두 배 증가, 제네시스 G80 1위",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44240"
-        },
-        {
-            "title": "직원 1만5천명 공장 앞에 시위대 6천명.. 아우디 A8 위기",
-            "category": "브랜드·기업이슈",
-            "issue": "아우디 A8 생산 네카줄름 공장 폐쇄 위기, 6000명 시위",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61216"
-        }
-    ],
-    "0804": [
-        {
-            "title": "7만대 격차가 2만대로.. 기아가 현대를 코앞까지 쫓아왔다",
-            "category": "자동차산업·수출",
-            "issue": "현대차·기아 7월 국내 판매 격차 2만대로 축소, 신차 전략 대비",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546393"
-        },
-        {
-            "title": "제네시스 전기차 사면 대한항공 1만 마일.. 계산해보니 놀랍다",
-            "category": "브랜드·기업이슈",
-            "issue": "제네시스 전기차 구매시 대한항공 마일리지 1만 마일 연말까지 지급",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546386"
-        },
-        {
-            "title": "현대차 9조원 투자에 정부가 움직였다.. 관세 장벽부터 걷었다",
-            "category": "자동차산업·수출",
-            "issue": "현대차그룹 새만금 9조원 투자 가속, 정부 관세 대응 병행",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546395"
-        },
-        {
-            "title": "손흥민이 탄다고 알려진 그 SUV.. 이유가 있었다",
-            "category": "셀럽·연예인차",
-            "issue": "에버그린 - 스타들이 즐겨 찾는 대형 프리미엄 SUV급(GV80 등)",
-            "source_url": ""
-        },
-        {
-            "title": "BYD코리아 전시장 35곳 돌파.. 조용히 안방을 파고들었다",
-            "category": "브랜드·기업이슈",
-            "issue": "BYD코리아 국내 35번째 전시장(동대문) 오픈",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44246"
-        },
-        {
-            "title": "테슬라 모델Y 중고가 4300만원…반값 이벤트가 알려준 시세",
-            "category": "중고차·시장동향",
-            "issue": "케이카 '반갑다 반값차' 프로모션, 중고 테슬라 모델Y 정가 4300만원 공개",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145317"
-        },
-        {
-            "title": "\"20년 전 쌍용차 악몽\"…KGM, 다시 중국 자본과 손잡았다",
-            "category": "브랜드·기업이슈",
-            "issue": "KGM-체리자동차 7500만달러 전략적 투자 계약, 상하이자동차 트라우마 재조명",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61245"
-        }
-    ],
-    "0805": [
-        {
-            "title": "아우디 첫 대형 SUV, 벤츠 GLS도 못 단 문을 달았다",
-            "category": "신차·출시",
-            "issue": "아우디 브랜드 최초 풀사이즈 SUV 'Q9' 공개, 오토매틱 도어·커브드 OLED",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44233"
-        },
-        {
-            "title": "신차 10대 중 6대는 친환경차.. 독일차는 과반 깨졌다",
-            "category": "전기차·친환경",
-            "issue": "상반기 신차등록 친환경차 57.8%, 중국산 수입차 41.2%로 독일 브랜드 과반 붕괴",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145377"
-        },
-        {
-            "title": "EX40보다 크고 더 싸다.. 볼보가 새 전기차를 준비했다",
-            "category": "전기차·친환경",
-            "issue": "볼보 EX50 2027년 가을 출시 예고, EX40보다 크고 저렴한 가격대",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61263"
-        },
-        {
-            "title": "내수 766대인데 수출 4만대 넘었다.. 트랙스의 반전",
-            "category": "자동차산업·수출",
-            "issue": "한국GM 7월 판매 4만2119대(+30.6%), 트랙스·트레일블레이저 수출 견인",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145355"
-        },
-        {
-            "title": "너무 싸서 이상했던 중국차, 비밀은 부품에 있었다",
-            "category": "자동차산업·수출",
-            "issue": "중국 완성차 부품 공용화 전략과 가격 경쟁력, 일본·유럽 대응",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61264"
-        },
-        {
-            "title": "9월 10일부터 교통사고 치료, 8주 넘기면 심사받는다",
-            "category": "리콜·안전·정책",
-            "issue": "경상환자(상해등급 12~14급) 8주 초과 치료시 전문의료인 검토 제도 시행",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546397"
-        },
-        {
-            "title": "폭우에 진흙탕 된 핀란드, 한국타이어가 버텨냈다",
-            "category": "모터스포츠·이슈",
-            "issue": "WRC 핀란드 랠리 폭우 속 한국타이어 다이나프로 R213, 토요타 파야리 2연승",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145361"
-        },
-        {
-            "title": "휴가 끝나면 매물 쏟아진다.. 8월에 중고차 사는 법",
-            "category": "중고차·시장동향",
-            "issue": "에버그린 - 8월 중고차 매물 증가기 침수차 확인·감가상각 가이드",
-            "source_url": ""
-        },
-        {
-            "title": "21만원 내면 벤츠가 내 차 출생증명서를 준다",
-            "category": "브랜드·기업이슈",
-            "issue": "벤츠 클래식 스토어 1986~2010년산 대상 출생증명서 발급 서비스(130유로)",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61253"
-        },
-        {
-            "title": "\"포르쉐가 오는데 너무 멋있었다\".. 유재석이 고른 차",
-            "category": "셀럽·연예인차",
-            "issue": "유재석 유튜브 <뜬뜬> 발언 기반, 그랜저→체어맨W→프라다→포르쉐 파나메라 차량 이력",
-            "source_url": ""
-        }
-    ],
-    "0806": [
-        {
-            "title": "336만원 더 비싸졌는데.. 아반떼 8세대, 그래도 계약 몰리는 이유",
-            "category": "신차·출시",
-            "issue": "현대차 8세대 아반떼 사전계약 개시, 가솔린 2398만원부터(기존대비 336만원↑)",
-            "source_url": ""
-        },
-        {
-            "title": "1700km까지 간다는 SUV, 어느 스마트폰 회사가 만들었다",
-            "category": "신차·출시",
-            "issue": "샤오미 첫 EREV SUV 스카이노마드 N70·N90 공개, 최대 1705km 주행",
-            "source_url": ""
-        },
-        {
-            "title": "438km 가는 3열 전기 SUV, 캐딜락이 인증까지 마쳤다",
-            "category": "전기차·친환경",
-            "issue": "캐딜락 비스틱 국내 주행거리 인증 완료(복합 438km)",
-            "source_url": ""
-        },
-        {
-            "title": "국산 세단 다 제쳤다.. 지난달 신차 판매 1위는 테슬라 모델Y였다",
-            "category": "전기차·친환경",
-            "issue": "테슬라 모델Y 7월 수입차 판매 1위(1만237대), 기아 EV3 국산 전기차 1위",
-            "source_url": ""
-        },
-        {
-            "title": "매출은 늘었는데 이익률은 줄었다.. 토요타에 무슨 일이",
-            "category": "자동차산업·수출",
-            "issue": "토요타 2027 회계연도 1분기 매출 10.4%↑ 영업이익률 7.9%로 하락",
-            "source_url": ""
-        },
-        {
-            "title": "작은 차 탄 사람이 더 많이 죽는다.. 미국 사고 데이터가 말해준 사실",
-            "category": "리콜·안전·정책",
-            "issue": "IIHS 운전자 사망률 조사, 소형차 최고 170명/대형트럭 상대사망률 204명",
-            "source_url": ""
-        },
-        {
-            "title": "7분 32초070.. 뉘르부르크링서 새 역사 쓴 전기 세단",
-            "category": "모터스포츠·이슈",
-            "issue": "메르세데스-AMG CLA45 전기 세단 뉘르부르크링 노르트슐라이페 신기록",
-            "source_url": ""
-        },
-        {
-            "title": "\"고객을 잊었다\" 직접 인정한 메르세데스, 버튼을 다시 달았다",
-            "category": "브랜드·기업이슈",
-            "issue": "벤츠 칼레니우스 CEO 터치스크린 중심 설계 반성 발언, 물리버튼 복귀",
-            "source_url": ""
-        },
-        {
-            "title": "새 차 받으려면 28개월 걸린다는 이 경차, 중고가 더 비싸졌다",
-            "category": "중고차·시장동향",
-            "issue": "현대 캐스퍼 출고대란(최대 28개월), 중고 시세 신차 대비 최대 377만원 웃돈",
-            "source_url": ""
-        },
-        {
-            "title": "구자욱과 최나연이 나란히 받았다.. 코오롱모터스가 고른 1억 7천만원대 세단",
-            "category": "셀럽·연예인차",
-            "issue": "코오롱모터스, 구자욱·최나연을 BMW 7시리즈 740i 브랜드 앰버서더로 선정",
-            "source_url": ""
-        }
-    ],
-    "0807": [
-        {
-            "title": "롤스로이스만 달던 문, 제네시스가 이달 그대로 가져온다",
-            "category": "신차·출시",
-            "issue": "제네시스 GV90 이달 공개, 롤스로이스급 코치도어 (카 매거진 인터뷰)",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546439"
-        },
-        {
-            "title": "10년 걸린 프로젝트 첫 결과물, 심사위원 만점에 가까운 점수를 받았다",
-            "category": "신차·출시",
-            "issue": "BMW iX3 한국자동차기자협회 8월의 차 선정 (노이에 클라쎄)",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546457"
-        },
-        {
-            "title": "철에서 나온 부산물로 배터리를 만든다는데, 계산해보니 맞아떨어졌다",
-            "category": "전기차·친환경",
-            "issue": "포스코퓨처엠 LFP 양극재 6년 19만톤 공급, 북미 ESS 공략",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546468"
-        },
-        {
-            "title": "출시 1년도 안 된 국산 전기밴이 유럽 12개국을 이미 접수했다",
-            "category": "전기차·친환경",
-            "issue": "기아 PV5 유럽 소형 전기밴 시장 점유율 37% 1위",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61277"
-        },
-        {
-            "title": "중국차 그룹 하나가 한 달 만에 25만대를 팔았다.. 성장률이 더 놀랍다",
-            "category": "자동차산업·수출",
-            "issue": "지리자동차그룹 7월 25만대 판매, 지커 111% 급증",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546461"
-        },
-        {
-            "title": "그랜저·카니발 등 51만대, 정부가 하루 만에 리콜 명단을 발표했다",
-            "category": "리콜·안전·정책",
-            "issue": "그랜저·카니발 등 13개 차종 51만2393대 리콜 (국토교통부)",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546441"
-        },
-        {
-            "title": "세 경기 모두 그리드보다 순위를 끌어올렸다.. 이규호가 만든 흐름",
-            "category": "모터스포츠·이슈",
-            "issue": "이규호 GB3 실버스톤 5라운드 세 경기 순위 상승",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44272"
-        },
-        {
-            "title": "리콜 통보 받은 차, 중고로 팔 때 진짜 손해일까요",
-            "category": "중고차·시장동향",
-            "issue": "리콜 통보 차량 중고 시세 영향 (에버그린, 그랜저·카니발 리콜 연계)",
-            "source_url": ""
-        },
-        {
-            "title": "16년째 이어온 파트너십, 이번엔 BMW 플래그십 전기 세단 차례였다",
-            "category": "브랜드·기업이슈",
-            "issue": "한국타이어 아이온, BMW 7시리즈 전기 모델 신차용 공급 16년 파트너십",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546453"
-        },
-        {
-            "title": "골프 진행자를 벤츠 앰버서더로 뽑은 이유, 취향이 아니라 계산이었다",
-            "category": "셀럽·연예인차",
-            "issue": "한성자동차 진달래 아나운서 벤츠 브랜드 앰버서더 선정 (셀럽 에버그린)",
-            "source_url": "https://www.etnews.com/20260623000105"
-        }
-    ],
-    "0808": [
-        {
-            "title": "번호판이 범퍼로 내려갔다.. 다음 투싼은 이렇게 바뀐다",
-            "category": "신차·출시",
-            "issue": "차세대 투싼 추정 연구용 모형, 현대차 UX스튜디오 상하이서 포착 (디자인 유출)",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61293"
-        },
-        {
-            "title": "단 89대, BMW가 이 여름 마지막으로 풀었다",
-            "category": "신차·출시",
-            "issue": "BMW코리아 8월 온라인 한정판 3종(7시리즈 네로루쏘·X7·M340i투어링) 89대",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44283"
-        },
-        {
-            "title": "완전히 접힌다더니.. 포르쉐가 결국 전기로 만들기로 했다",
-            "category": "전기차·친환경",
-            "issue": "포르쉐 CEO 라이터스, 박스터·카이맨(718) 전동화 프로젝트 예정대로 확정",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61281"
-        },
-        {
-            "title": "7000만원대 전기 SUV, 루시드가 1년 더 미뤘다",
-            "category": "전기차·친환경",
-            "issue": "루시드 중형 전기 SUV '코스모스' 출시 2026→2027년 연기",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145420"
-        },
-        {
-            "title": "20년 손잡은 파트너는 남기고, 쉐보레 간판만 내리기로 했다",
-            "category": "자동차산업·수출",
-            "issue": "GM, 쉐보레 브랜드 현지(중국) 판매 전격 중단·SAIC 합작 생산은 20년 연장",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546484"
-        },
-        {
-            "title": "닫아놓은 검은색 차, 4시간 뒤 대시보드는 85도였다",
-            "category": "리콜·안전·정책",
-            "issue": "한국도로교통공단 폭염 실험, 외기34도 4시간 방치시 대시보드 85.5도",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145408"
-        },
-        {
-            "title": "\"승률 2%면 충분하다\".. F1 전설들이 인정한 해밀턴의 부활",
-            "category": "모터스포츠·이슈",
-            "issue": "F1 해밀턴 8회 챔프 도전 평가(스페인GP 우승, 요한손·베르거·피티팔디 발언)",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145464"
-        },
-        {
-            "title": "숨은 수수료 100만원, 이제 중고차 광고가격이 진짜가 된다",
-            "category": "중고차·시장동향",
-            "issue": "국토교통부 중고차 시장 개혁안(최종가격 표시 의무화·7일 환불제·성능기록부 강화)",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145441"
-        },
-        {
-            "title": "호주 정부가 당신 차의 위치 데이터를 들여다보기 시작했다",
-            "category": "브랜드·기업이슈",
-            "issue": "호주 정보위원회(OAIC), 현대차·토요타 커넥티드카 개인정보 공식조사 착수",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546470"
-        },
-        {
-            "title": "\"직접 운전 장면 소화했다\".. 포르쉐가 김무열을 고른 이유",
-            "category": "셀럽·연예인차",
-            "issue": "배우 김무열, 포르쉐 딜러 SSCL '프렌즈' 앰배서더 선정(카이엔 일렉트릭, 셀럽 에버그린)",
-            "source_url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03145526645517472"
-        }
-    ],
-    "0809": [
-        {
-            "title": "아반떼 최상위 트림, 쏘나타보다 150만원 비싸졌습니다",
-            "category": "신차·출시",
-            "issue": "아반떼·쏘나타 트림 가격 역전(인스퍼레이션 하이브리드 3699만원 vs 쏘나타 가솔린 3549만원)",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61287"
-        },
-        {
-            "title": "투싼 가솔린 2805만원, 하이브리드는 손익분기점부터 따져야 합니다",
-            "category": "신차·출시",
-            "issue": "투싼 가솔린·하이브리드 가격 비교 에버그린(2805만~3925만원)",
-            "source_url": ""
-        },
-        {
-            "title": "볼보 EX90, 정지 가속 4.2초에 에어서스펜션까지 붙였습니다",
-            "category": "전기차·친환경",
-            "issue": "볼보 EX90 퍼포먼스 시승기 종합(정지가속 4.2초, 듀얼체임버 에어서스펜션)",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145433"
-        },
-        {
-            "title": "아이오닉5 프레스티지 5915만원, EV6와 여기서 갈립니다",
-            "category": "전기차·친환경",
-            "issue": "아이오닉5·EV6 가격 비교 에버그린(4740만~5915만원 vs 4360만~5660만원)",
-            "source_url": ""
-        },
-        {
-            "title": "30년 만에 처음, 현대차·기아가 3D프린터 전용동을 지었습니다",
-            "category": "자동차산업·수출",
-            "issue": "현대차·기아 남양연구소 적층제조솔루션센터(AMSC) 신설",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546444"
-        },
-        {
-            "title": "기아 EV2가 살렸다는 배우, 그런데 이 차는 한국에 없습니다",
-            "category": "리콜·안전·정책",
-            "issue": "기아 EV2 미니 드라이버 프랑스 교차로 사고, 센터 에어백(국내 미출시)",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145486"
-        },
-        {
-            "title": "스타리아 하이브리드 3876만원, 카니발 대신 이걸 고르는 이유",
-            "category": "중고차·시장동향",
-            "issue": "스타리아 하이브리드·카니발 비교 에버그린(투어러 3876만원, 245마력)",
-            "source_url": ""
-        },
-        {
-            "title": "모델3는 2천만원대인데 모델Y는 4천만원대, 감가 속도가 다릅니다",
-            "category": "중고차·시장동향",
-            "issue": "테슬라 모델3·모델Y 중고 시세 비교(신차 300만원 차이, 중고 격차 확대)",
-            "source_url": ""
-        },
-        {
-            "title": "포르쉐 718은 전기로 확정, 카이엔은 1억3310만원 그대로입니다",
-            "category": "브랜드·기업이슈",
-            "issue": "포르쉐 718 전동화 확정, 카이엔 가솔린 1억3310만원 그대로",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61281"
-        },
-        {
-            "title": "신혜선도 이국주도.. 톱스타들이 오히려 작은 차를 타는 이유",
-            "category": "셀럽·연예인차",
-            "issue": "셀럽·연예인차 에버그린 - 신혜선(프라이드)·이국주(캐스퍼)·경수진(레이)·은혁 소형차 선택",
-            "source_url": ""
-        }
-    ],
-    "0810": [
-        {
-            "title": "2,398만원 아반떼, 계약 첫날 1만1094대.. 7세대 기록 깼습니다",
-            "category": "신차·출시",
-            "issue": "8세대 아반떼 계약 첫날 1만1094대, 7세대 기록(1만58대) 경신, 트림·하이브리드 비중",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61284"
-        },
-        {
-            "title": "7348만원 EV9, GV80이랑 값이 겹칩니다.. 뭘 사야 할까요",
-            "category": "신차·출시",
-            "issue": "EV9 vs GV80 가격대 겹침 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "아이오닉5 롱레인지, 코나 일렉트릭보다 딱 300만원 더 비쌌습니다",
-            "category": "전기차·친환경",
-            "issue": "아이오닉5 vs 코나 일렉트릭 가격·체급 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "BYD가 전고체 배터리 특허 6건 더 공개했습니다.. 2027년 시험생산",
-            "category": "전기차·친환경",
-            "issue": "BYD 전고체 배터리 특허 6건 공개, 2027년 시험생산·2030년 이후 양산",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61303"
-        },
-        {
-            "title": "쏘렌토 하이브리드, 3년 타도 신차값의 70% 받습니다",
-            "category": "중고차·시장동향",
-            "issue": "쏘렌토 하이브리드 감가율 vs 싼타페 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "카니발 하이브리드 4,091만원부터, 중고는 벌써 2,956만원까지 올랐습니다",
-            "category": "중고차·시장동향",
-            "issue": "카니발 하이브리드 신차·중고 가격 흐름(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "G90, GV80보다 4천만원 더 비싼데.. 안전사양 차이는 이만큼입니다",
-            "category": "리콜·안전·정책",
-            "issue": "G90 vs GV80 가격·안전사양 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "현대차·기아 7.6%, 중국 3사가 상반기 톱10에 나란히 들었습니다",
-            "category": "자동차산업·수출",
-            "issue": "상반기 글로벌 완성차 점유율 톱10, BYD·지리·체리 진입, 현대차기아 3위",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546505"
-        },
-        {
-            "title": "현대차·기아, 레드닷 17관왕.. 최우수상만 2개였습니다",
-            "category": "브랜드·기업이슈",
-            "issue": "현대차·기아 2026 레드닷 디자인 어워드 17관왕(최우수2·본상15)",
-            "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61298"
-        },
-        {
-            "title": "벤츠 AMG 앰버서더 손흥민, 정작 차고엔 벤츠가 없었습니다",
-            "category": "셀럽·연예인차",
-            "issue": "손흥민 벤츠 AMG 브랜드 앰버서더 vs 개인 소장 슈퍼카 컬렉션(페라리·벤틀리·아우디 등)",
-            "source_url": ""
-        }
-    ],
-    "0813": [
-        {
-            "title": "4,640만원 골프 vs 2,398만원 아반떼.. 그래도 한 달 118대는 팔렸다",
-            "category": "신차·출시",
-            "issue": "아반떼 vs 골프 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "GV80 기본형 6,790만원인데.. 최상위 트림은 4천만원 더 비쌌다",
-            "category": "신차·출시",
-            "issue": "GV80 트림별 가격(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "아이오닉9은 6,656만원.. 아이오닉5보다 3천만원 비싼 이유는 3열이었다",
-            "category": "전기차·친환경",
-            "issue": "아이오닉9 vs 아이오닉5 가격·3열 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "주행거리 똑같은데 EV6가 55만원 더 비싼 이유, 있었다",
-            "category": "전기차·친환경",
-            "issue": "EV6 vs 아이오닉5 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "밝기 규정의 2배.. 테슬라 모델Y, SW 업데이트로도 못 고치는 리콜 나왔다",
-            "category": "리콜·안전·정책",
-            "issue": "테슬라 모델Y·모델3 전조등 리콜(NHTSA 조사)",
-            "source_url": ""
-        },
-        {
-            "title": "국산차 다 내렸는데.. 쏘렌토 하이브리드만 유일하게 올랐다",
-            "category": "중고차·시장동향",
-            "issue": "8월 중고차 시세, 쏘렌토 하이브리드만 상승",
-            "source_url": ""
-        },
-        {
-            "title": "3,750만원 BYD PHEV, 다음 주부터 국내 인도 시작한다",
-            "category": "신차·출시",
-            "issue": "BYD 씨라이언6 DM-i 국내 출시",
-            "source_url": ""
-        },
-        {
-            "title": "폴스타가 김우빈을 앰배서더로 택한 이유, 이 SUV 보면 알겠다",
-            "category": "셀럽·연예인차",
-            "issue": "김우빈 폴스타3 브랜드 앰버서더(셀럽 에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "그랜저, 173대 차이로 테슬라 모델Y에 다시 밀렸다",
-            "category": "자동차산업·수출",
-            "issue": "7월 국내 신차 판매 그랜저 vs 테슬라모델Y",
-            "source_url": ""
-        },
-        {
-            "title": "국내 1위 현대차가 기아에 밀렸다.. 스포티지가 갈랐다",
-            "category": "자동차산업·수출",
-            "issue": "7월 국내 완성차 점유율 기아 39.9% 현대 33.6%",
-            "source_url": ""
-        }
-    ],
-    "0814": [
-        {
-            "title": "352마력, 연비 25%↑.. 제네시스 첫 하이브리드 GV80, 9월에 옵니다",
-            "category": "신차·출시",
-            "issue": "제네시스 GV80 하이브리드 9월 출시(352마력, 연비 25%개선)",
-            "source_url": "https://www.newsis.com/view/NISX20260813_0003747234"
-        },
-        {
-            "title": "4,091만원 카니발 vs 7,150만원 팰리세이드.. 대가족 픽은 갈립니다",
-            "category": "신차·출시",
-            "issue": "카니발 vs 팰리세이드 실구매가 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "3,399만원 스포티지 vs 3,896만원 쏘렌토.. 497만원 차이 이유 있었습니다",
-            "category": "전기차·친환경",
-            "issue": "스포티지 vs 쏘렌토 하이브리드 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "1,230만원 더 비싼 카이엔 하이브리드.. 그래도 사는 사람들 이유 있었습니다",
-            "category": "전기차·친환경",
-            "issue": "포르쉐 카이엔 가솔린 vs 하이브리드 유지비(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "다 떨어지는데 테슬라만 3%대 올랐다.. 8월 중고차 시세, 이유 있었습니다",
-            "category": "중고차·시장동향",
-            "issue": "8월 중고차 시세, 테슬라 모델3·모델Y만 상승(FSD 적용 확대)",
-            "source_url": "https://www.autotribune.co.kr/news/articleView.html?idxno=44577"
-        },
-        {
-            "title": "8년 끌던 BMW 화재 소송, 차주 120명이 결국 졌습니다",
-            "category": "리콜·안전·정책",
-            "issue": "BMW 연쇄화재(2018) 손배소 1심 원고 패소, 차주 120명",
-            "source_url": "https://www.newspim.com/news/view/20260813000633"
-        },
-        {
-            "title": "9,748만원 G90, 1억 5,960만원 S클래스 대신 골라야 하는 이유 있었습니다",
-            "category": "브랜드·기업이슈",
-            "issue": "G90 vs 벤츠 S클래스 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "정의선 \"IT 기업보다 더 IT 기업 같은 회사\".. 8년 만에 3만명이 씁니다",
-            "category": "브랜드·기업이슈",
-            "issue": "현대차그룹 H Chat Pro 사용자 3만명, AI 전사적 확산",
-            "source_url": "https://www.ajunews.com/view/20260812141251966"
-        },
-        {
-            "title": "김혜수는 XC90 탄다는데.. 볼보가 신작 드라마에 통 크게 쐈습니다",
-            "category": "셀럽·연예인차",
-            "issue": "김혜수·조여정 볼보 XC90·S90 쿠팡플레이 협찬(셀럽 에버그린)",
-            "source_url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2459194"
-        },
-        {
-            "title": "1분 41초 6.. 람보르기니가 호켄하임링에서 세운 새 기록입니다",
-            "category": "모터스포츠·이슈",
-            "issue": "람보르기니 레부엘토 SV 호켄하임링 양산 슈퍼카 랩타임 신기록",
-            "source_url": "https://www.motortrend.kr/news/articleView.html?idxno=2840"
-        }
-    ],
-    "0815": [
-        {
-            "title": "카이엔 쿠페 일렉트릭, 10월 서울 문화비축기지서 국내 최초 공개됩니다",
-            "category": "신차·출시",
-            "issue": "포르쉐 카이엔 쿠페 일렉트릭 국내 최초 공개(포르쉐 바이브 서울 10월)",
-            "source_url": ""
-        },
-        {
-            "title": "아반떼 2,034만원 vs 코나 2,955만원.. 첫 차라면 얼마 차이가 맞나요",
-            "category": "신차·출시",
-            "issue": "아반떼 vs 코나 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "아이오닉9 7,941만원 vs EV9 6,412만원.. 300만원 차이 이유 있었습니다",
-            "category": "전기차·친환경",
-            "issue": "아이오닉9 vs EV9 가격·주행거리 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "모델Y 1년 감가율 18%.. 아이오닉5와 비교하면 이 정도 차이입니다",
-            "category": "전기차·친환경",
-            "issue": "테슬라 모델Y vs 아이오닉5 중고 감가율 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "7월 자동차 수출 62.4억 달러 역대 최대.. 친환경차가 41.5%였습니다",
-            "category": "자동차산업·수출",
-            "issue": "7월 자동차 수출 62.4억달러 역대 최대, 친환경차 41.5%",
-            "source_url": "https://www.autoherald.co.kr/news/articleView.html?idxno=61333"
-        },
-        {
-            "title": "아우디 신형 A6, 8월 19일부터 리콜.. 4개월 만에 출고 중단됐습니다",
-            "category": "리콜·안전·정책",
-            "issue": "아우디 신형 A6 암레스트 결함 출고중단·8/19 리콜",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546647"
-        },
-        {
-            "title": "그랜저 중고 4천만원대면.. G80 2023년식 5,268만원과 이 정도 차이입니다",
-            "category": "중고차·시장동향",
-            "issue": "그랜저 vs G80 중고 시세 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "벤츠 E클래스, 8월에 사면 보증이 최대 4년·13만km로 늘어납니다",
-            "category": "브랜드·기업이슈",
-            "issue": "메르세데스벤츠 E클래스 8월 보증 최대 4년·13만km 연장",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44320"
-        },
-        {
-            "title": "GV70 5,298만원 vs G80 6,070만원.. 제네시스 안에서 고민된다면",
-            "category": "브랜드·기업이슈",
-            "issue": "GV70 vs G80 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "손흥민이 함께한 현대차 새 캠페인, 2026 월드컵 앞두고 나온 진짜 이유",
-            "category": "셀럽·연예인차",
-            "issue": "손흥민 현대차 월드컵 파트너십 캠페인 Next Starts Now(셀럽 에버그린)",
-            "source_url": ""
-        }
-    ],
-    "0816": [
-        {
-            "title": "쏘나타 프리미엄 2,826만원, 인스퍼레이션은 3,549만원.. 723만원 이렇게 벌어졌다",
-            "category": "신차·출시",
-            "issue": "쏘나타 디 엣지 트림별 가격·사양 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "카니발 하이브리드 4,091만원, 가솔린보다 455만원 더 받는 이유 있었다",
-            "category": "신차·출시",
-            "issue": "카니발 하이브리드 vs 가솔린 가격·연비 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "기아 EV3, 미국서 4,450만원부터.. 국내보다 이 정도 차이 났다",
-            "category": "전기차·친환경",
-            "issue": "EV3 미국 가격 공개(3만1,385~4만7,385달러) vs 국내가 비교",
-            "source_url": ""
-        },
-        {
-            "title": "포르쉐 전기차 판매, 2년 반 만에 4분의 1로.. 결국 카이엔만 남는다는 얘기 나온다",
-            "category": "전기차·친환경",
-            "issue": "포르쉐 타이칸 판매급감·영업이익률 급락, 2030 단종설(비르트샤프츠보헤 보도)",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546665"
-        },
-        {
-            "title": "GV80 하이브리드, 렉서스 RX 잡으러 미국 갔다.. 출력 16% 토크 26% 올랐다",
-            "category": "자동차산업·수출",
-            "issue": "GV80 하이브리드 미국 시장 반응, 렉서스 RX 비교, 제네시스 상반기 미국판매 역대최대",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145686"
-        },
-        {
-            "title": "BMW 무상점검, 10월 2일까지.. 소모품·공임 20% 할인에 최대 30% 더 빠집니다",
-            "category": "리콜·안전·정책",
-            "issue": "BMW그룹코리아 8/18~10/2 무상점검·정비할인 캠페인",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44315"
-        },
-        {
-            "title": "8월 중고차 비수기인데.. 테슬라·쏘렌토만 나 홀로 시세 올랐다",
-            "category": "중고차·시장동향",
-            "issue": "8월 중고차 시세, 테슬라 모델3·모델Y·쏘렌토HEV만 상승(엔카 데이터)",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44300"
-        },
-        {
-            "title": "벤츠 E클래스 중고값, 한 달 새 4.10% 뚝.. 수입차 평균보다 4배 더 빠졌다",
-            "category": "중고차·시장동향",
-            "issue": "벤츠 E클래스·C클래스 중고시세 급락, 신차판매 부진 연계 분석",
-            "source_url": "https://www.autoherald.co.kr/news/articleView.html?idxno=61319"
-        },
-        {
-            "title": "정의선, 상반기 45억 받았다.. 현대차 22.5억·기아 13.5억·모비스 9억",
-            "category": "브랜드·기업이슈",
-            "issue": "정의선 회장 상반기 보수 공개(반기보고서), 3사 총 45억원",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145694"
-        },
-        {
-            "title": "현빈, 캐딜락 앰버서더로 낙점.. 1억 5,500만원 에스컬레이드가 그 이유였다",
-            "category": "셀럽·연예인차",
-            "issue": "현빈 캐딜락 에스컬레이드 브랜드 앰버서더 발탁(셀럽 에버그린)",
-            "source_url": ""
-        }
-    ],
-    "0817": [
-        {
-            "title": "아이오닉9 6,903만원, 팰리세이드 하이브리드는 4,982만원.. 2천만원 차이 이유 있었습니다",
-            "category": "신차·출시",
-            "issue": "아이오닉9 vs 팰리세이드 하이브리드 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "투싼·싼타페, 미국·유럽엔 파는 PHEV가 국내엔 없습니다.. 그 자리, 수입차가 채웠습니다",
-            "category": "신차·출시",
-            "issue": "국내 PHEV 시장 6925대, 투싼·싼타페 PHEV 국내 미출시",
-            "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546670"
-        },
-        {
-            "title": "코나 일렉트릭 트림 75% 줄었다는데.. EV6랑 비교하면 진짜 저렴한 걸까요",
-            "category": "전기차·친환경",
-            "issue": "코나 일렉트릭 2026년형 트림 축소 vs EV6 가격 비교",
-            "source_url": ""
-        },
-        {
-            "title": "2,990만원 무쏘부터 1억6천만원 사이버트럭까지.. 국내 픽업 등록, 19% 늘었습니다",
-            "category": "자동차산업·수출",
-            "issue": "상반기 픽업트럭 등록 18.8%↑, 무쏘·타스만·사이버트럭·램1500",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145506"
-        },
-        {
-            "title": "투싼 하이브리드 3,270만원, 스포티지는 3,346만원.. 76만원 차이, 안전사양이 갈랐습니다",
-            "category": "리콜·안전·정책",
-            "issue": "투싼 vs 스포티지 하이브리드 가격·안전사양 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "스타리아 중고 2024년식 3,310만원.. 카니발과 비교하면 감가가 이만큼 다릅니다",
-            "category": "중고차·시장동향",
-            "issue": "스타리아 vs 카니발 중고 시세 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "일론 머스크, 작년 보수만 224조원.. 테슬라 직원 평균연봉의 5,387배였습니다",
-            "category": "브랜드·기업이슈",
-            "issue": "머스크 2025년 보수 1580억달러(224조원), AFL-CIO 보고서",
-            "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145719"
-        },
-        {
-            "title": "김무열, 포르쉐 딜러 4번째 앰버서더 됐다는데.. 받은 차가 1억8천만원 카이엔이었습니다",
-            "category": "셀럽·연예인차",
-            "issue": "김무열 포르쉐 SSCL 프렌즈 4번째 앰버서더, 카이엔 일렉트릭(셀럽 에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "한국인 최초 F1 도전 이규호, GB3 5라운드 세 경기 모두 순위를 끌어올렸습니다",
-            "category": "모터스포츠·이슈",
-            "issue": "이규호 GB3 5라운드 성적, 제네시스 마그마 레이싱",
-            "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44272"
-        },
-        {
-            "title": "쏘렌토 풀옵션 살 돈이면 GV70 산다는데.. 진짜 그럴까요, 4천만원대 중반으로 확인했습니다",
-            "category": "브랜드·기업이슈",
-            "issue": "쏘렌토 하이브리드 풀옵션 vs GV70 할인가 비교(에버그린+실측)",
-            "source_url": "https://www.news-wa.com/article/automobiles/new-car/2026/07/11/20260711500023"
-        }
-    ],
-    "0818": [
-        {
-            "title": "7,580만원 523d부터 1억 2,350만원 550e까지.. BMW 5시리즈, 이렇게 벌어졌다",
-            "category": "신차·출시",
-            "issue": "BMW 5시리즈 523d~550e 트림별 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "그랜저 하이브리드 4,354만원, 쏘나타는 3,595만원.. 759만원 차이 이유 있었습니다",
-            "category": "전기차·친환경",
-            "issue": "그랜저 하이브리드 vs 쏘나타 하이브리드 가격·연비 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "테슬라 모델3 4,199만원, 아이오닉5는 4,740만원.. 보조금까지 넣으면 뒤집혔습니다",
-            "category": "전기차·친환경",
-            "issue": "테슬라 모델3 vs 아이오닉5 가격·보조금·주행거리 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "EV9 6,197만원, GV70 일렉트리파이드는 7천만원대.. 1천만원 차이 이유 있었습니다",
-            "category": "전기차·친환경",
-            "issue": "EV9 vs GV70 일렉트리파이드 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "기아·볼보·BMW·BYD·KGM, 전동화 신차 12종 코엑스에 모입니다.. 8월 25일부터",
-            "category": "자동차산업·수출",
-            "issue": "EV트렌드코리아 2026, 8/25~27 코엑스 기아·KGM·볼보·BMW·BYD 12종 전시(RSS 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "무면허 사고 4천건 중 28%가 19세 이하.. 절반 이상이 전동킥보드였습니다",
-            "category": "리콜·안전·정책",
-            "issue": "무면허운전 사고 19세 이하 28%, 63.4%가 PM 사고(도로교통공단, RSS 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "쏘렌토 하이브리드 3년 감가 28~30%, 싼타페와 비교하면 이 정도 차이였습니다",
-            "category": "중고차·시장동향",
-            "issue": "쏘렌토 하이브리드 vs 싼타페 하이브리드 중고 감가율·시세 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "현대차그룹 상반기 매출 221조인데 영업이익은 17% 급감.. 그랜저까지 발목 잡았다",
-            "category": "브랜드·기업이슈",
-            "issue": "현대차그룹 6개 계열사 상반기 영업이익 16.7%↓, 매출 221조(RSS 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "GV80 6,790만원부터, G90은 7,903만원부터.. 제네시스 안에서 이렇게 갈렸습니다",
-            "category": "브랜드·기업이슈",
-            "issue": "GV80 vs G90 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "배우 정준원, 포르쉐 딜러 20주년 1호 앰버서더였다.. 받은 차는 마칸 일렉트릭 4S",
-            "category": "셀럽·연예인차",
-            "issue": "정준원 포르쉐 SSCL 프렌즈 1호, 마칸 일렉트릭 4S(셀럽 에버그린)",
-            "source_url": ""
-        }
-    ],
-    "0819": [
-        {
-            "title": "팰리세이드 하이루프 9인승이 7인승보다 140만원 더 쌉니다.. 이유가 있었습니다",
-            "category": "신차·출시",
-            "issue": "팰리세이드 하이루프 하이브리드 7·9인승 KENCIS 인증(RSS 실측, 단독)",
-            "source_url": ""
-        },
-        {
-            "title": "GV80 하이브리드 9월 출시, 출력 16%·토크 26% 올랐다.. 렉서스 RX350h 정조준",
-            "category": "신차·출시",
-            "issue": "GV80 하이브리드 9월 출시, 352마력 신형 시스템 vs 렉서스 RX350h(RSS 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "EV6와 아이오닉5, 배터리·충전은 똑같은데 계약서 도장은 다르게 찍힙니다",
-            "category": "전기차·친환경",
-            "issue": "EV6 vs 아이오닉5 배터리·충전속도 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "투싼 하이브리드 복합연비 16.2km/L, 1등급 받았습니다.. 스포티지는 형제차인데",
-            "category": "전기차·친환경",
-            "issue": "투싼 vs 스포티지 하이브리드 연비 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "미국서 2만대 리콜, 독일에서도 밀렸다.. 테슬라 모델Y의 요즘",
-            "category": "리콜·안전·정책",
-            "issue": "테슬라 모델Y·모델3 헤드라이트 리콜 2만349대 + 독일서 EV5에 밀림(RSS+WebSearch 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "7월 자동차 수출 62억 3,800만 달러, 역대 최대.. 친환경차가 다 했다",
-            "category": "자동차산업·수출",
-            "issue": "7월 자동차 수출 62억 3,800만 달러 역대최대, 친환경차 주도(RSS 실측, 쏘렌토·EV6 연계)",
-            "source_url": ""
-        },
-        {
-            "title": "아반떼 2,083만원, 쏘나타는 3천만원대 중반.. 2024년식 중고 격차 이 정도였다",
-            "category": "중고차·시장동향",
-            "issue": "쏘나타 vs 아반떼 2024년식 중고시세 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "G80 6,070만원, G90은 7,903만원.. 같은 제네시스인데 1,833만원 벌어졌다",
-            "category": "브랜드·기업이슈",
-            "issue": "G80 vs G90 가격 비교(에버그린)",
-            "source_url": ""
-        },
-        {
-            "title": "8월 22일, 수도권 유일 나이트 레이스가 용인에서 열립니다.. 쇼미더머니까지 붙었다",
-            "category": "모터스포츠·이슈",
-            "issue": "슈퍼레이스 용인 나이트레이스 X 쇼미더머니 8/22 개최(RSS 실측)",
-            "source_url": ""
-        },
-        {
-            "title": "배우 임지연, 벤츠 딜러 40주년 첫 앰버서더 됐다.. 받은 차가 마이바흐였다",
-            "category": "셀럽·연예인차",
-            "issue": "임지연 한성자동차 벤츠 컬처보야지 1호 앰버서더, 마이바흐S580(셀럽 에버그린)",
-            "source_url": ""
-        }
-    ]
+  "0802": [
+    {
+      "title": "12년 걸린 100만대, 6년 만에 900만대 더 만든 전기차 회사",
+      "category": "전기차·친환경",
+      "issue": "테슬라 누적 전기차 생산 1000만대 돌파",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145294"
+    },
+    {
+      "title": "\"마음에 안 들면 돌려주세요\"..르노코리아가 내건 파격 조건",
+      "category": "브랜드·기업이슈",
+      "issue": "르노코리아 그랑 콜레오스 60일 반납 보장 프로그램 8월 연장",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546326"
+    },
+    {
+      "title": "글로벌 판매 현대차 제친 BYD, 지난달 41만대 더 팔았다",
+      "category": "자동차산업·수출",
+      "issue": "BYD 7월 글로벌 판매 현대차 추월, 체리그룹 기아 추격",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546330"
+    },
+    {
+      "title": "정의선, 튀르키예로 날아가 아이오닉3 생산라인 직접 챙겼다",
+      "category": "자동차산업·수출",
+      "issue": "정의선 회장 튀르키예 공장 방문, 아이오닉3 유럽 생산 점검",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61229"
+    },
+    {
+      "title": "아이오닉9 550만원 내렸다..현대차·제네시스 12개 차종 할인",
+      "category": "신차·출시",
+      "issue": "현대차·제네시스 8월 썸머 페스타 12개 차종 할인 확대",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145301"
+    },
+    {
+      "title": "현대차·기아, 미국서 7월에만 15만대 넘게 팔았다",
+      "category": "자동차산업·수출",
+      "issue": "현대차·기아 미국 7월 판매 역대 최고 실적, 누적 100만대 돌파",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61228"
+    },
+    {
+      "title": "제네시스 GV90, 벤츠도 없는 문 달았다.. \"롤스로이스급\" 확정",
+      "category": "신차·출시",
+      "issue": "제네시스 GV90 코치도어 확정",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61226"
+    },
+    {
+      "title": "핸들 꺾이는데 경고도 없다.. 테슬라 120만대 결함 조사",
+      "category": "리콜·안전·정책",
+      "issue": "테슬라 모델3·모델Y 120만대 서스펜션 결함 예비조사",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61225"
+    },
+    {
+      "title": "1500달러 보상한다는데 한국은 0원.. 볼보 무슨 일이길래",
+      "category": "리콜·안전·정책",
+      "issue": "볼보 EX90·ES90 아이리스 라이다 철회 및 국가별 보상",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61218"
+    },
+    {
+      "title": "노리스도 러셀도 여길 거쳤다.. 한국인 최초 F1 도전 이규호",
+      "category": "모터스포츠·이슈",
+      "issue": "이규호 한국인 최초 F1 도전, GB3 실버스톤 5라운드",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44241"
+    },
+    {
+      "title": "내연기관 줄어드는데 전기차만 두 배.. 중고차 시장 판도 바뀐다",
+      "category": "중고차·시장동향",
+      "issue": "상반기 중고차 전기차 판매 두 배 증가, 제네시스 G80 1위",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44240"
+    },
+    {
+      "title": "직원 1만5천명 공장 앞에 시위대 6천명.. 아우디 A8 위기",
+      "category": "브랜드·기업이슈",
+      "issue": "아우디 A8 생산 네카줄름 공장 폐쇄 위기, 6000명 시위",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61216"
+    }
+  ],
+  "0804": [
+    {
+      "title": "7만대 격차가 2만대로.. 기아가 현대를 코앞까지 쫓아왔다",
+      "category": "자동차산업·수출",
+      "issue": "현대차·기아 7월 국내 판매 격차 2만대로 축소, 신차 전략 대비",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546393"
+    },
+    {
+      "title": "제네시스 전기차 사면 대한항공 1만 마일.. 계산해보니 놀랍다",
+      "category": "브랜드·기업이슈",
+      "issue": "제네시스 전기차 구매시 대한항공 마일리지 1만 마일 연말까지 지급",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546386"
+    },
+    {
+      "title": "현대차 9조원 투자에 정부가 움직였다.. 관세 장벽부터 걷었다",
+      "category": "자동차산업·수출",
+      "issue": "현대차그룹 새만금 9조원 투자 가속, 정부 관세 대응 병행",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546395"
+    },
+    {
+      "title": "손흥민이 탄다고 알려진 그 SUV.. 이유가 있었다",
+      "category": "셀럽·연예인차",
+      "issue": "에버그린 - 스타들이 즐겨 찾는 대형 프리미엄 SUV급(GV80 등)",
+      "source_url": ""
+    },
+    {
+      "title": "BYD코리아 전시장 35곳 돌파.. 조용히 안방을 파고들었다",
+      "category": "브랜드·기업이슈",
+      "issue": "BYD코리아 국내 35번째 전시장(동대문) 오픈",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44246"
+    },
+    {
+      "title": "테슬라 모델Y 중고가 4300만원…반값 이벤트가 알려준 시세",
+      "category": "중고차·시장동향",
+      "issue": "케이카 '반갑다 반값차' 프로모션, 중고 테슬라 모델Y 정가 4300만원 공개",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145317"
+    },
+    {
+      "title": "\"20년 전 쌍용차 악몽\"…KGM, 다시 중국 자본과 손잡았다",
+      "category": "브랜드·기업이슈",
+      "issue": "KGM-체리자동차 7500만달러 전략적 투자 계약, 상하이자동차 트라우마 재조명",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61245"
+    }
+  ],
+  "0805": [
+    {
+      "title": "아우디 첫 대형 SUV, 벤츠 GLS도 못 단 문을 달았다",
+      "category": "신차·출시",
+      "issue": "아우디 브랜드 최초 풀사이즈 SUV 'Q9' 공개, 오토매틱 도어·커브드 OLED",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44233"
+    },
+    {
+      "title": "신차 10대 중 6대는 친환경차.. 독일차는 과반 깨졌다",
+      "category": "전기차·친환경",
+      "issue": "상반기 신차등록 친환경차 57.8%, 중국산 수입차 41.2%로 독일 브랜드 과반 붕괴",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145377"
+    },
+    {
+      "title": "EX40보다 크고 더 싸다.. 볼보가 새 전기차를 준비했다",
+      "category": "전기차·친환경",
+      "issue": "볼보 EX50 2027년 가을 출시 예고, EX40보다 크고 저렴한 가격대",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61263"
+    },
+    {
+      "title": "내수 766대인데 수출 4만대 넘었다.. 트랙스의 반전",
+      "category": "자동차산업·수출",
+      "issue": "한국GM 7월 판매 4만2119대(+30.6%), 트랙스·트레일블레이저 수출 견인",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145355"
+    },
+    {
+      "title": "너무 싸서 이상했던 중국차, 비밀은 부품에 있었다",
+      "category": "자동차산업·수출",
+      "issue": "중국 완성차 부품 공용화 전략과 가격 경쟁력, 일본·유럽 대응",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61264"
+    },
+    {
+      "title": "9월 10일부터 교통사고 치료, 8주 넘기면 심사받는다",
+      "category": "리콜·안전·정책",
+      "issue": "경상환자(상해등급 12~14급) 8주 초과 치료시 전문의료인 검토 제도 시행",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546397"
+    },
+    {
+      "title": "폭우에 진흙탕 된 핀란드, 한국타이어가 버텨냈다",
+      "category": "모터스포츠·이슈",
+      "issue": "WRC 핀란드 랠리 폭우 속 한국타이어 다이나프로 R213, 토요타 파야리 2연승",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145361"
+    },
+    {
+      "title": "휴가 끝나면 매물 쏟아진다.. 8월에 중고차 사는 법",
+      "category": "중고차·시장동향",
+      "issue": "에버그린 - 8월 중고차 매물 증가기 침수차 확인·감가상각 가이드",
+      "source_url": ""
+    },
+    {
+      "title": "21만원 내면 벤츠가 내 차 출생증명서를 준다",
+      "category": "브랜드·기업이슈",
+      "issue": "벤츠 클래식 스토어 1986~2010년산 대상 출생증명서 발급 서비스(130유로)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61253"
+    },
+    {
+      "title": "\"포르쉐가 오는데 너무 멋있었다\".. 유재석이 고른 차",
+      "category": "셀럽·연예인차",
+      "issue": "유재석 유튜브 <뜬뜬> 발언 기반, 그랜저→체어맨W→프라다→포르쉐 파나메라 차량 이력",
+      "source_url": ""
+    }
+  ],
+  "0806": [
+    {
+      "title": "336만원 더 비싸졌는데.. 아반떼 8세대, 그래도 계약 몰리는 이유",
+      "category": "신차·출시",
+      "issue": "현대차 8세대 아반떼 사전계약 개시, 가솔린 2398만원부터(기존대비 336만원↑)",
+      "source_url": ""
+    },
+    {
+      "title": "1700km까지 간다는 SUV, 어느 스마트폰 회사가 만들었다",
+      "category": "신차·출시",
+      "issue": "샤오미 첫 EREV SUV 스카이노마드 N70·N90 공개, 최대 1705km 주행",
+      "source_url": ""
+    },
+    {
+      "title": "438km 가는 3열 전기 SUV, 캐딜락이 인증까지 마쳤다",
+      "category": "전기차·친환경",
+      "issue": "캐딜락 비스틱 국내 주행거리 인증 완료(복합 438km)",
+      "source_url": ""
+    },
+    {
+      "title": "국산 세단 다 제쳤다.. 지난달 신차 판매 1위는 테슬라 모델Y였다",
+      "category": "전기차·친환경",
+      "issue": "테슬라 모델Y 7월 수입차 판매 1위(1만237대), 기아 EV3 국산 전기차 1위",
+      "source_url": ""
+    },
+    {
+      "title": "매출은 늘었는데 이익률은 줄었다.. 토요타에 무슨 일이",
+      "category": "자동차산업·수출",
+      "issue": "토요타 2027 회계연도 1분기 매출 10.4%↑ 영업이익률 7.9%로 하락",
+      "source_url": ""
+    },
+    {
+      "title": "작은 차 탄 사람이 더 많이 죽는다.. 미국 사고 데이터가 말해준 사실",
+      "category": "리콜·안전·정책",
+      "issue": "IIHS 운전자 사망률 조사, 소형차 최고 170명/대형트럭 상대사망률 204명",
+      "source_url": ""
+    },
+    {
+      "title": "7분 32초070.. 뉘르부르크링서 새 역사 쓴 전기 세단",
+      "category": "모터스포츠·이슈",
+      "issue": "메르세데스-AMG CLA45 전기 세단 뉘르부르크링 노르트슐라이페 신기록",
+      "source_url": ""
+    },
+    {
+      "title": "\"고객을 잊었다\" 직접 인정한 메르세데스, 버튼을 다시 달았다",
+      "category": "브랜드·기업이슈",
+      "issue": "벤츠 칼레니우스 CEO 터치스크린 중심 설계 반성 발언, 물리버튼 복귀",
+      "source_url": ""
+    },
+    {
+      "title": "새 차 받으려면 28개월 걸린다는 이 경차, 중고가 더 비싸졌다",
+      "category": "중고차·시장동향",
+      "issue": "현대 캐스퍼 출고대란(최대 28개월), 중고 시세 신차 대비 최대 377만원 웃돈",
+      "source_url": ""
+    },
+    {
+      "title": "구자욱과 최나연이 나란히 받았다.. 코오롱모터스가 고른 1억 7천만원대 세단",
+      "category": "셀럽·연예인차",
+      "issue": "코오롱모터스, 구자욱·최나연을 BMW 7시리즈 740i 브랜드 앰버서더로 선정",
+      "source_url": ""
+    }
+  ],
+  "0807": [
+    {
+      "title": "롤스로이스만 달던 문, 제네시스가 이달 그대로 가져온다",
+      "category": "신차·출시",
+      "issue": "제네시스 GV90 이달 공개, 롤스로이스급 코치도어 (카 매거진 인터뷰)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546439"
+    },
+    {
+      "title": "10년 걸린 프로젝트 첫 결과물, 심사위원 만점에 가까운 점수를 받았다",
+      "category": "신차·출시",
+      "issue": "BMW iX3 한국자동차기자협회 8월의 차 선정 (노이에 클라쎄)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546457"
+    },
+    {
+      "title": "철에서 나온 부산물로 배터리를 만든다는데, 계산해보니 맞아떨어졌다",
+      "category": "전기차·친환경",
+      "issue": "포스코퓨처엠 LFP 양극재 6년 19만톤 공급, 북미 ESS 공략",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546468"
+    },
+    {
+      "title": "출시 1년도 안 된 국산 전기밴이 유럽 12개국을 이미 접수했다",
+      "category": "전기차·친환경",
+      "issue": "기아 PV5 유럽 소형 전기밴 시장 점유율 37% 1위",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61277"
+    },
+    {
+      "title": "중국차 그룹 하나가 한 달 만에 25만대를 팔았다.. 성장률이 더 놀랍다",
+      "category": "자동차산업·수출",
+      "issue": "지리자동차그룹 7월 25만대 판매, 지커 111% 급증",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546461"
+    },
+    {
+      "title": "그랜저·카니발 등 51만대, 정부가 하루 만에 리콜 명단을 발표했다",
+      "category": "리콜·안전·정책",
+      "issue": "그랜저·카니발 등 13개 차종 51만2393대 리콜 (국토교통부)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546441"
+    },
+    {
+      "title": "세 경기 모두 그리드보다 순위를 끌어올렸다.. 이규호가 만든 흐름",
+      "category": "모터스포츠·이슈",
+      "issue": "이규호 GB3 실버스톤 5라운드 세 경기 순위 상승",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44272"
+    },
+    {
+      "title": "리콜 통보 받은 차, 중고로 팔 때 진짜 손해일까요",
+      "category": "중고차·시장동향",
+      "issue": "리콜 통보 차량 중고 시세 영향 (에버그린, 그랜저·카니발 리콜 연계)",
+      "source_url": ""
+    },
+    {
+      "title": "16년째 이어온 파트너십, 이번엔 BMW 플래그십 전기 세단 차례였다",
+      "category": "브랜드·기업이슈",
+      "issue": "한국타이어 아이온, BMW 7시리즈 전기 모델 신차용 공급 16년 파트너십",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546453"
+    },
+    {
+      "title": "골프 진행자를 벤츠 앰버서더로 뽑은 이유, 취향이 아니라 계산이었다",
+      "category": "셀럽·연예인차",
+      "issue": "한성자동차 진달래 아나운서 벤츠 브랜드 앰버서더 선정 (셀럽 에버그린)",
+      "source_url": "https://www.etnews.com/20260623000105"
+    }
+  ],
+  "0808": [
+    {
+      "title": "번호판이 범퍼로 내려갔다.. 다음 투싼은 이렇게 바뀐다",
+      "category": "신차·출시",
+      "issue": "차세대 투싼 추정 연구용 모형, 현대차 UX스튜디오 상하이서 포착 (디자인 유출)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61293"
+    },
+    {
+      "title": "단 89대, BMW가 이 여름 마지막으로 풀었다",
+      "category": "신차·출시",
+      "issue": "BMW코리아 8월 온라인 한정판 3종(7시리즈 네로루쏘·X7·M340i투어링) 89대",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44283"
+    },
+    {
+      "title": "완전히 접힌다더니.. 포르쉐가 결국 전기로 만들기로 했다",
+      "category": "전기차·친환경",
+      "issue": "포르쉐 CEO 라이터스, 박스터·카이맨(718) 전동화 프로젝트 예정대로 확정",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61281"
+    },
+    {
+      "title": "7000만원대 전기 SUV, 루시드가 1년 더 미뤘다",
+      "category": "전기차·친환경",
+      "issue": "루시드 중형 전기 SUV '코스모스' 출시 2026→2027년 연기",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145420"
+    },
+    {
+      "title": "20년 손잡은 파트너는 남기고, 쉐보레 간판만 내리기로 했다",
+      "category": "자동차산업·수출",
+      "issue": "GM, 쉐보레 브랜드 현지(중국) 판매 전격 중단·SAIC 합작 생산은 20년 연장",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546484"
+    },
+    {
+      "title": "닫아놓은 검은색 차, 4시간 뒤 대시보드는 85도였다",
+      "category": "리콜·안전·정책",
+      "issue": "한국도로교통공단 폭염 실험, 외기34도 4시간 방치시 대시보드 85.5도",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145408"
+    },
+    {
+      "title": "\"승률 2%면 충분하다\".. F1 전설들이 인정한 해밀턴의 부활",
+      "category": "모터스포츠·이슈",
+      "issue": "F1 해밀턴 8회 챔프 도전 평가(스페인GP 우승, 요한손·베르거·피티팔디 발언)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145464"
+    },
+    {
+      "title": "숨은 수수료 100만원, 이제 중고차 광고가격이 진짜가 된다",
+      "category": "중고차·시장동향",
+      "issue": "국토교통부 중고차 시장 개혁안(최종가격 표시 의무화·7일 환불제·성능기록부 강화)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145441"
+    },
+    {
+      "title": "호주 정부가 당신 차의 위치 데이터를 들여다보기 시작했다",
+      "category": "브랜드·기업이슈",
+      "issue": "호주 정보위원회(OAIC), 현대차·토요타 커넥티드카 개인정보 공식조사 착수",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546470"
+    },
+    {
+      "title": "\"직접 운전 장면 소화했다\".. 포르쉐가 김무열을 고른 이유",
+      "category": "셀럽·연예인차",
+      "issue": "배우 김무열, 포르쉐 딜러 SSCL '프렌즈' 앰배서더 선정(카이엔 일렉트릭, 셀럽 에버그린)",
+      "source_url": "https://edaily.co.kr/News/Read?mediaCodeNo=257&newsId=03145526645517472"
+    }
+  ],
+  "0809": [
+    {
+      "title": "아반떼 최상위 트림, 쏘나타보다 150만원 비싸졌습니다",
+      "category": "신차·출시",
+      "issue": "아반떼·쏘나타 트림 가격 역전(인스퍼레이션 하이브리드 3699만원 vs 쏘나타 가솔린 3549만원)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61287"
+    },
+    {
+      "title": "투싼 가솔린 2805만원, 하이브리드는 손익분기점부터 따져야 합니다",
+      "category": "신차·출시",
+      "issue": "투싼 가솔린·하이브리드 가격 비교 에버그린(2805만~3925만원)",
+      "source_url": ""
+    },
+    {
+      "title": "볼보 EX90, 정지 가속 4.2초에 에어서스펜션까지 붙였습니다",
+      "category": "전기차·친환경",
+      "issue": "볼보 EX90 퍼포먼스 시승기 종합(정지가속 4.2초, 듀얼체임버 에어서스펜션)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145433"
+    },
+    {
+      "title": "아이오닉5 프레스티지 5915만원, EV6와 여기서 갈립니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉5·EV6 가격 비교 에버그린(4740만~5915만원 vs 4360만~5660만원)",
+      "source_url": ""
+    },
+    {
+      "title": "30년 만에 처음, 현대차·기아가 3D프린터 전용동을 지었습니다",
+      "category": "자동차산업·수출",
+      "issue": "현대차·기아 남양연구소 적층제조솔루션센터(AMSC) 신설",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546444"
+    },
+    {
+      "title": "기아 EV2가 살렸다는 배우, 그런데 이 차는 한국에 없습니다",
+      "category": "리콜·안전·정책",
+      "issue": "기아 EV2 미니 드라이버 프랑스 교차로 사고, 센터 에어백(국내 미출시)",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145486"
+    },
+    {
+      "title": "스타리아 하이브리드 3876만원, 카니발 대신 이걸 고르는 이유",
+      "category": "중고차·시장동향",
+      "issue": "스타리아 하이브리드·카니발 비교 에버그린(투어러 3876만원, 245마력)",
+      "source_url": ""
+    },
+    {
+      "title": "모델3는 2천만원대인데 모델Y는 4천만원대, 감가 속도가 다릅니다",
+      "category": "중고차·시장동향",
+      "issue": "테슬라 모델3·모델Y 중고 시세 비교(신차 300만원 차이, 중고 격차 확대)",
+      "source_url": ""
+    },
+    {
+      "title": "포르쉐 718은 전기로 확정, 카이엔은 1억3310만원 그대로입니다",
+      "category": "브랜드·기업이슈",
+      "issue": "포르쉐 718 전동화 확정, 카이엔 가솔린 1억3310만원 그대로",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61281"
+    },
+    {
+      "title": "신혜선도 이국주도.. 톱스타들이 오히려 작은 차를 타는 이유",
+      "category": "셀럽·연예인차",
+      "issue": "셀럽·연예인차 에버그린 - 신혜선(프라이드)·이국주(캐스퍼)·경수진(레이)·은혁 소형차 선택",
+      "source_url": ""
+    }
+  ],
+  "0810": [
+    {
+      "title": "2,398만원 아반떼, 계약 첫날 1만1094대.. 7세대 기록 깼습니다",
+      "category": "신차·출시",
+      "issue": "8세대 아반떼 계약 첫날 1만1094대, 7세대 기록(1만58대) 경신, 트림·하이브리드 비중",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61284"
+    },
+    {
+      "title": "7348만원 EV9, GV80이랑 값이 겹칩니다.. 뭘 사야 할까요",
+      "category": "신차·출시",
+      "issue": "EV9 vs GV80 가격대 겹침 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉5 롱레인지, 코나 일렉트릭보다 딱 300만원 더 비쌌습니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉5 vs 코나 일렉트릭 가격·체급 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "BYD가 전고체 배터리 특허 6건 더 공개했습니다.. 2027년 시험생산",
+      "category": "전기차·친환경",
+      "issue": "BYD 전고체 배터리 특허 6건 공개, 2027년 시험생산·2030년 이후 양산",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61303"
+    },
+    {
+      "title": "쏘렌토 하이브리드, 3년 타도 신차값의 70% 받습니다",
+      "category": "중고차·시장동향",
+      "issue": "쏘렌토 하이브리드 감가율 vs 싼타페 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "카니발 하이브리드 4,091만원부터, 중고는 벌써 2,956만원까지 올랐습니다",
+      "category": "중고차·시장동향",
+      "issue": "카니발 하이브리드 신차·중고 가격 흐름(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "G90, GV80보다 4천만원 더 비싼데.. 안전사양 차이는 이만큼입니다",
+      "category": "리콜·안전·정책",
+      "issue": "G90 vs GV80 가격·안전사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "현대차·기아 7.6%, 중국 3사가 상반기 톱10에 나란히 들었습니다",
+      "category": "자동차산업·수출",
+      "issue": "상반기 글로벌 완성차 점유율 톱10, BYD·지리·체리 진입, 현대차기아 3위",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546505"
+    },
+    {
+      "title": "현대차·기아, 레드닷 17관왕.. 최우수상만 2개였습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "현대차·기아 2026 레드닷 디자인 어워드 17관왕(최우수2·본상15)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61298"
+    },
+    {
+      "title": "벤츠 AMG 앰버서더 손흥민, 정작 차고엔 벤츠가 없었습니다",
+      "category": "셀럽·연예인차",
+      "issue": "손흥민 벤츠 AMG 브랜드 앰버서더 vs 개인 소장 슈퍼카 컬렉션(페라리·벤틀리·아우디 등)",
+      "source_url": ""
+    }
+  ],
+  "0813": [
+    {
+      "title": "4,640만원 골프 vs 2,398만원 아반떼.. 그래도 한 달 118대는 팔렸다",
+      "category": "신차·출시",
+      "issue": "아반떼 vs 골프 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "GV80 기본형 6,790만원인데.. 최상위 트림은 4천만원 더 비쌌다",
+      "category": "신차·출시",
+      "issue": "GV80 트림별 가격(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉9은 6,656만원.. 아이오닉5보다 3천만원 비싼 이유는 3열이었다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉9 vs 아이오닉5 가격·3열 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "주행거리 똑같은데 EV6가 55만원 더 비싼 이유, 있었다",
+      "category": "전기차·친환경",
+      "issue": "EV6 vs 아이오닉5 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "밝기 규정의 2배.. 테슬라 모델Y, SW 업데이트로도 못 고치는 리콜 나왔다",
+      "category": "리콜·안전·정책",
+      "issue": "테슬라 모델Y·모델3 전조등 리콜(NHTSA 조사)",
+      "source_url": ""
+    },
+    {
+      "title": "국산차 다 내렸는데.. 쏘렌토 하이브리드만 유일하게 올랐다",
+      "category": "중고차·시장동향",
+      "issue": "8월 중고차 시세, 쏘렌토 하이브리드만 상승",
+      "source_url": ""
+    },
+    {
+      "title": "3,750만원 BYD PHEV, 다음 주부터 국내 인도 시작한다",
+      "category": "신차·출시",
+      "issue": "BYD 씨라이언6 DM-i 국내 출시",
+      "source_url": ""
+    },
+    {
+      "title": "폴스타가 김우빈을 앰배서더로 택한 이유, 이 SUV 보면 알겠다",
+      "category": "셀럽·연예인차",
+      "issue": "김우빈 폴스타3 브랜드 앰버서더(셀럽 에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "그랜저, 173대 차이로 테슬라 모델Y에 다시 밀렸다",
+      "category": "자동차산업·수출",
+      "issue": "7월 국내 신차 판매 그랜저 vs 테슬라모델Y",
+      "source_url": ""
+    },
+    {
+      "title": "국내 1위 현대차가 기아에 밀렸다.. 스포티지가 갈랐다",
+      "category": "자동차산업·수출",
+      "issue": "7월 국내 완성차 점유율 기아 39.9% 현대 33.6%",
+      "source_url": ""
+    }
+  ],
+  "0814": [
+    {
+      "title": "352마력, 연비 25%↑.. 제네시스 첫 하이브리드 GV80, 9월에 옵니다",
+      "category": "신차·출시",
+      "issue": "제네시스 GV80 하이브리드 9월 출시(352마력, 연비 25%개선)",
+      "source_url": "https://www.newsis.com/view/NISX20260813_0003747234"
+    },
+    {
+      "title": "4,091만원 카니발 vs 7,150만원 팰리세이드.. 대가족 픽은 갈립니다",
+      "category": "신차·출시",
+      "issue": "카니발 vs 팰리세이드 실구매가 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "3,399만원 스포티지 vs 3,896만원 쏘렌토.. 497만원 차이 이유 있었습니다",
+      "category": "전기차·친환경",
+      "issue": "스포티지 vs 쏘렌토 하이브리드 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "1,230만원 더 비싼 카이엔 하이브리드.. 그래도 사는 사람들 이유 있었습니다",
+      "category": "전기차·친환경",
+      "issue": "포르쉐 카이엔 가솔린 vs 하이브리드 유지비(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "다 떨어지는데 테슬라만 3%대 올랐다.. 8월 중고차 시세, 이유 있었습니다",
+      "category": "중고차·시장동향",
+      "issue": "8월 중고차 시세, 테슬라 모델3·모델Y만 상승(FSD 적용 확대)",
+      "source_url": "https://www.autotribune.co.kr/news/articleView.html?idxno=44577"
+    },
+    {
+      "title": "8년 끌던 BMW 화재 소송, 차주 120명이 결국 졌습니다",
+      "category": "리콜·안전·정책",
+      "issue": "BMW 연쇄화재(2018) 손배소 1심 원고 패소, 차주 120명",
+      "source_url": "https://www.newspim.com/news/view/20260813000633"
+    },
+    {
+      "title": "9,748만원 G90, 1억 5,960만원 S클래스 대신 골라야 하는 이유 있었습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "G90 vs 벤츠 S클래스 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "정의선 \"IT 기업보다 더 IT 기업 같은 회사\".. 8년 만에 3만명이 씁니다",
+      "category": "브랜드·기업이슈",
+      "issue": "현대차그룹 H Chat Pro 사용자 3만명, AI 전사적 확산",
+      "source_url": "https://www.ajunews.com/view/20260812141251966"
+    },
+    {
+      "title": "김혜수는 XC90 탄다는데.. 볼보가 신작 드라마에 통 크게 쐈습니다",
+      "category": "셀럽·연예인차",
+      "issue": "김혜수·조여정 볼보 XC90·S90 쿠팡플레이 협찬(셀럽 에버그린)",
+      "source_url": "http://www.enewstoday.co.kr/news/articleView.html?idxno=2459194"
+    },
+    {
+      "title": "1분 41초 6.. 람보르기니가 호켄하임링에서 세운 새 기록입니다",
+      "category": "모터스포츠·이슈",
+      "issue": "람보르기니 레부엘토 SV 호켄하임링 양산 슈퍼카 랩타임 신기록",
+      "source_url": "https://www.motortrend.kr/news/articleView.html?idxno=2840"
+    }
+  ],
+  "0815": [
+    {
+      "title": "카이엔 쿠페 일렉트릭, 10월 서울 문화비축기지서 국내 최초 공개됩니다",
+      "category": "신차·출시",
+      "issue": "포르쉐 카이엔 쿠페 일렉트릭 국내 최초 공개(포르쉐 바이브 서울 10월)",
+      "source_url": ""
+    },
+    {
+      "title": "아반떼 2,034만원 vs 코나 2,955만원.. 첫 차라면 얼마 차이가 맞나요",
+      "category": "신차·출시",
+      "issue": "아반떼 vs 코나 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉9 7,941만원 vs EV9 6,412만원.. 300만원 차이 이유 있었습니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉9 vs EV9 가격·주행거리 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "모델Y 1년 감가율 18%.. 아이오닉5와 비교하면 이 정도 차이입니다",
+      "category": "전기차·친환경",
+      "issue": "테슬라 모델Y vs 아이오닉5 중고 감가율 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "7월 자동차 수출 62.4억 달러 역대 최대.. 친환경차가 41.5%였습니다",
+      "category": "자동차산업·수출",
+      "issue": "7월 자동차 수출 62.4억달러 역대 최대, 친환경차 41.5%",
+      "source_url": "https://www.autoherald.co.kr/news/articleView.html?idxno=61333"
+    },
+    {
+      "title": "아우디 신형 A6, 8월 19일부터 리콜.. 4개월 만에 출고 중단됐습니다",
+      "category": "리콜·안전·정책",
+      "issue": "아우디 신형 A6 암레스트 결함 출고중단·8/19 리콜",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546647"
+    },
+    {
+      "title": "그랜저 중고 4천만원대면.. G80 2023년식 5,268만원과 이 정도 차이입니다",
+      "category": "중고차·시장동향",
+      "issue": "그랜저 vs G80 중고 시세 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "벤츠 E클래스, 8월에 사면 보증이 최대 4년·13만km로 늘어납니다",
+      "category": "브랜드·기업이슈",
+      "issue": "메르세데스벤츠 E클래스 8월 보증 최대 4년·13만km 연장",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44320"
+    },
+    {
+      "title": "GV70 5,298만원 vs G80 6,070만원.. 제네시스 안에서 고민된다면",
+      "category": "브랜드·기업이슈",
+      "issue": "GV70 vs G80 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "손흥민이 함께한 현대차 새 캠페인, 2026 월드컵 앞두고 나온 진짜 이유",
+      "category": "셀럽·연예인차",
+      "issue": "손흥민 현대차 월드컵 파트너십 캠페인 Next Starts Now(셀럽 에버그린)",
+      "source_url": ""
+    }
+  ],
+  "0816": [
+    {
+      "title": "쏘나타 프리미엄 2,826만원, 인스퍼레이션은 3,549만원.. 723만원 이렇게 벌어졌다",
+      "category": "신차·출시",
+      "issue": "쏘나타 디 엣지 트림별 가격·사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "카니발 하이브리드 4,091만원, 가솔린보다 455만원 더 받는 이유 있었다",
+      "category": "신차·출시",
+      "issue": "카니발 하이브리드 vs 가솔린 가격·연비 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "기아 EV3, 미국서 4,450만원부터.. 국내보다 이 정도 차이 났다",
+      "category": "전기차·친환경",
+      "issue": "EV3 미국 가격 공개(3만1,385~4만7,385달러) vs 국내가 비교",
+      "source_url": ""
+    },
+    {
+      "title": "포르쉐 전기차 판매, 2년 반 만에 4분의 1로.. 결국 카이엔만 남는다는 얘기 나온다",
+      "category": "전기차·친환경",
+      "issue": "포르쉐 타이칸 판매급감·영업이익률 급락, 2030 단종설(비르트샤프츠보헤 보도)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546665"
+    },
+    {
+      "title": "GV80 하이브리드, 렉서스 RX 잡으러 미국 갔다.. 출력 16% 토크 26% 올랐다",
+      "category": "자동차산업·수출",
+      "issue": "GV80 하이브리드 미국 시장 반응, 렉서스 RX 비교, 제네시스 상반기 미국판매 역대최대",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145686"
+    },
+    {
+      "title": "BMW 무상점검, 10월 2일까지.. 소모품·공임 20% 할인에 최대 30% 더 빠집니다",
+      "category": "리콜·안전·정책",
+      "issue": "BMW그룹코리아 8/18~10/2 무상점검·정비할인 캠페인",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44315"
+    },
+    {
+      "title": "8월 중고차 비수기인데.. 테슬라·쏘렌토만 나 홀로 시세 올랐다",
+      "category": "중고차·시장동향",
+      "issue": "8월 중고차 시세, 테슬라 모델3·모델Y·쏘렌토HEV만 상승(엔카 데이터)",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44300"
+    },
+    {
+      "title": "벤츠 E클래스 중고값, 한 달 새 4.10% 뚝.. 수입차 평균보다 4배 더 빠졌다",
+      "category": "중고차·시장동향",
+      "issue": "벤츠 E클래스·C클래스 중고시세 급락, 신차판매 부진 연계 분석",
+      "source_url": "https://www.autoherald.co.kr/news/articleView.html?idxno=61319"
+    },
+    {
+      "title": "정의선, 상반기 45억 받았다.. 현대차 22.5억·기아 13.5억·모비스 9억",
+      "category": "브랜드·기업이슈",
+      "issue": "정의선 회장 상반기 보수 공개(반기보고서), 3사 총 45억원",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145694"
+    },
+    {
+      "title": "현빈, 캐딜락 앰버서더로 낙점.. 1억 5,500만원 에스컬레이드가 그 이유였다",
+      "category": "셀럽·연예인차",
+      "issue": "현빈 캐딜락 에스컬레이드 브랜드 앰버서더 발탁(셀럽 에버그린)",
+      "source_url": ""
+    }
+  ],
+  "0817": [
+    {
+      "title": "아이오닉9 6,903만원, 팰리세이드 하이브리드는 4,982만원.. 2천만원 차이 이유 있었습니다",
+      "category": "신차·출시",
+      "issue": "아이오닉9 vs 팰리세이드 하이브리드 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "투싼·싼타페, 미국·유럽엔 파는 PHEV가 국내엔 없습니다.. 그 자리, 수입차가 채웠습니다",
+      "category": "신차·출시",
+      "issue": "국내 PHEV 시장 6925대, 투싼·싼타페 PHEV 국내 미출시",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546670"
+    },
+    {
+      "title": "코나 일렉트릭 트림 75% 줄었다는데.. EV6랑 비교하면 진짜 저렴한 걸까요",
+      "category": "전기차·친환경",
+      "issue": "코나 일렉트릭 2026년형 트림 축소 vs EV6 가격 비교",
+      "source_url": ""
+    },
+    {
+      "title": "2,990만원 무쏘부터 1억6천만원 사이버트럭까지.. 국내 픽업 등록, 19% 늘었습니다",
+      "category": "자동차산업·수출",
+      "issue": "상반기 픽업트럭 등록 18.8%↑, 무쏘·타스만·사이버트럭·램1500",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145506"
+    },
+    {
+      "title": "투싼 하이브리드 3,270만원, 스포티지는 3,346만원.. 76만원 차이, 안전사양이 갈랐습니다",
+      "category": "리콜·안전·정책",
+      "issue": "투싼 vs 스포티지 하이브리드 가격·안전사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "스타리아 중고 2024년식 3,310만원.. 카니발과 비교하면 감가가 이만큼 다릅니다",
+      "category": "중고차·시장동향",
+      "issue": "스타리아 vs 카니발 중고 시세 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "일론 머스크, 작년 보수만 224조원.. 테슬라 직원 평균연봉의 5,387배였습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "머스크 2025년 보수 1580억달러(224조원), AFL-CIO 보고서",
+      "source_url": "https://www.gpkorea.com/news/articleView.html?idxno=145719"
+    },
+    {
+      "title": "김무열, 포르쉐 딜러 4번째 앰버서더 됐다는데.. 받은 차가 1억8천만원 카이엔이었습니다",
+      "category": "셀럽·연예인차",
+      "issue": "김무열 포르쉐 SSCL 프렌즈 4번째 앰버서더, 카이엔 일렉트릭(셀럽 에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "한국인 최초 F1 도전 이규호, GB3 5라운드 세 경기 모두 순위를 끌어올렸습니다",
+      "category": "모터스포츠·이슈",
+      "issue": "이규호 GB3 5라운드 성적, 제네시스 마그마 레이싱",
+      "source_url": "https://www.motorgraph.com/news/articleView.html?idxno=44272"
+    },
+    {
+      "title": "쏘렌토 풀옵션 살 돈이면 GV70 산다는데.. 진짜 그럴까요, 4천만원대 중반으로 확인했습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "쏘렌토 하이브리드 풀옵션 vs GV70 할인가 비교(에버그린+실측)",
+      "source_url": "https://www.news-wa.com/article/automobiles/new-car/2026/07/11/20260711500023"
+    }
+  ],
+  "0818": [
+    {
+      "title": "7,580만원 523d부터 1억 2,350만원 550e까지.. BMW 5시리즈, 이렇게 벌어졌다",
+      "category": "신차·출시",
+      "issue": "BMW 5시리즈 523d~550e 트림별 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "그랜저 하이브리드 4,354만원, 쏘나타는 3,595만원.. 759만원 차이 이유 있었습니다",
+      "category": "전기차·친환경",
+      "issue": "그랜저 하이브리드 vs 쏘나타 하이브리드 가격·연비 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "테슬라 모델3 4,199만원, 아이오닉5는 4,740만원.. 보조금까지 넣으면 뒤집혔습니다",
+      "category": "전기차·친환경",
+      "issue": "테슬라 모델3 vs 아이오닉5 가격·보조금·주행거리 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "EV9 6,197만원, GV70 일렉트리파이드는 7천만원대.. 1천만원 차이 이유 있었습니다",
+      "category": "전기차·친환경",
+      "issue": "EV9 vs GV70 일렉트리파이드 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "기아·볼보·BMW·BYD·KGM, 전동화 신차 12종 코엑스에 모입니다.. 8월 25일부터",
+      "category": "자동차산업·수출",
+      "issue": "EV트렌드코리아 2026, 8/25~27 코엑스 기아·KGM·볼보·BMW·BYD 12종 전시(RSS 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "무면허 사고 4천건 중 28%가 19세 이하.. 절반 이상이 전동킥보드였습니다",
+      "category": "리콜·안전·정책",
+      "issue": "무면허운전 사고 19세 이하 28%, 63.4%가 PM 사고(도로교통공단, RSS 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "쏘렌토 하이브리드 3년 감가 28~30%, 싼타페와 비교하면 이 정도 차이였습니다",
+      "category": "중고차·시장동향",
+      "issue": "쏘렌토 하이브리드 vs 싼타페 하이브리드 중고 감가율·시세 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "현대차그룹 상반기 매출 221조인데 영업이익은 17% 급감.. 그랜저까지 발목 잡았다",
+      "category": "브랜드·기업이슈",
+      "issue": "현대차그룹 6개 계열사 상반기 영업이익 16.7%↓, 매출 221조(RSS 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "GV80 6,790만원부터, G90은 7,903만원부터.. 제네시스 안에서 이렇게 갈렸습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "GV80 vs G90 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "배우 정준원, 포르쉐 딜러 20주년 1호 앰버서더였다.. 받은 차는 마칸 일렉트릭 4S",
+      "category": "셀럽·연예인차",
+      "issue": "정준원 포르쉐 SSCL 프렌즈 1호, 마칸 일렉트릭 4S(셀럽 에버그린)",
+      "source_url": ""
+    }
+  ],
+  "0819": [
+    {
+      "title": "팰리세이드 하이루프 9인승이 7인승보다 140만원 더 쌉니다.. 이유가 있었습니다",
+      "category": "신차·출시",
+      "issue": "팰리세이드 하이루프 하이브리드 7·9인승 KENCIS 인증(RSS 실측, 단독)",
+      "source_url": ""
+    },
+    {
+      "title": "GV80 하이브리드 9월 출시, 출력 16%·토크 26% 올랐다.. 렉서스 RX350h 정조준",
+      "category": "신차·출시",
+      "issue": "GV80 하이브리드 9월 출시, 352마력 신형 시스템 vs 렉서스 RX350h(RSS 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "EV6와 아이오닉5, 배터리·충전은 똑같은데 계약서 도장은 다르게 찍힙니다",
+      "category": "전기차·친환경",
+      "issue": "EV6 vs 아이오닉5 배터리·충전속도 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "투싼 하이브리드 복합연비 16.2km/L, 1등급 받았습니다.. 스포티지는 형제차인데",
+      "category": "전기차·친환경",
+      "issue": "투싼 vs 스포티지 하이브리드 연비 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "미국서 2만대 리콜, 독일에서도 밀렸다.. 테슬라 모델Y의 요즘",
+      "category": "리콜·안전·정책",
+      "issue": "테슬라 모델Y·모델3 헤드라이트 리콜 2만349대 + 독일서 EV5에 밀림(RSS+WebSearch 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "7월 자동차 수출 62억 3,800만 달러, 역대 최대.. 친환경차가 다 했다",
+      "category": "자동차산업·수출",
+      "issue": "7월 자동차 수출 62억 3,800만 달러 역대최대, 친환경차 주도(RSS 실측, 쏘렌토·EV6 연계)",
+      "source_url": ""
+    },
+    {
+      "title": "아반떼 2,083만원, 쏘나타는 3천만원대 중반.. 2024년식 중고 격차 이 정도였다",
+      "category": "중고차·시장동향",
+      "issue": "쏘나타 vs 아반떼 2024년식 중고시세 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "G80 6,070만원, G90은 7,903만원.. 같은 제네시스인데 1,833만원 벌어졌다",
+      "category": "브랜드·기업이슈",
+      "issue": "G80 vs G90 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "8월 22일, 수도권 유일 나이트 레이스가 용인에서 열립니다.. 쇼미더머니까지 붙었다",
+      "category": "모터스포츠·이슈",
+      "issue": "슈퍼레이스 용인 나이트레이스 X 쇼미더머니 8/22 개최(RSS 실측)",
+      "source_url": ""
+    },
+    {
+      "title": "배우 임지연, 벤츠 딜러 40주년 첫 앰버서더 됐다.. 받은 차가 마이바흐였다",
+      "category": "셀럽·연예인차",
+      "issue": "임지연 한성자동차 벤츠 컬처보야지 1호 앰버서더, 마이바흐S580(셀럽 에버그린)",
+      "source_url": ""
+    }
+  ],
+  "0820": [
+    {
+      "title": "전장만 60mm 커졌다, 5세대 완전변경 디 올 뉴 투싼 세계 최초 공개",
+      "category": "신차·출시",
+      "issue": "전장만 60mm 커졌다, 5세대 완전변경 디 올 뉴 투싼 세계 최초 공개",
+      "source_url": ""
+    },
+    {
+      "title": "아반떼 하이브리드 3,042만원, 코나는 2,955만원.. 87만원 차이 이유 있었다",
+      "category": "신차·출시",
+      "issue": "아반떼 하이브리드 3,042만원, 코나는 2,955만원.. 87만원 차이 이유 있었다",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉9 트렁크 338L, 팰리세이드는 348L.. 3열 접으면 순위가 뒤집힙니다",
+      "category": "전기차·친환경",
+      "issue": "아이오닉9 트렁크 338L, 팰리세이드는 348L.. 3열 접으면 순위가 뒤집힙니다",
+      "source_url": ""
+    },
+    {
+      "title": "EV6·EV9, 이제 '움직이는 ESS' 된다.. 현대차그룹 새 에너지 브랜드 나왔다",
+      "category": "전기차·친환경",
+      "issue": "EV6·EV9, 이제 '움직이는 ESS' 된다.. 현대차그룹 새 에너지 브랜드 나왔다",
+      "source_url": ""
+    },
+    {
+      "title": "전기차 검사, 이제 내연기관과 다르게 받습니다.. 배터리 진단정보 의무 제출",
+      "category": "리콜·안전·정책",
+      "issue": "전기차 검사, 이제 내연기관과 다르게 받습니다.. 배터리 진단정보 의무 제출",
+      "source_url": ""
+    },
+    {
+      "title": "중고차 10명 중 7명, 이것 때문에 구매 망설였습니다.. 정체는 침수차",
+      "category": "중고차·시장동향",
+      "issue": "중고차 10명 중 7명, 이것 때문에 구매 망설였습니다.. 정체는 침수차",
+      "source_url": ""
+    },
+    {
+      "title": "그랜저 2024년식 3,627만원, 스타리아는 3,310만원.. 감가 속도가 달랐다",
+      "category": "중고차·시장동향",
+      "issue": "그랜저 2024년식 3,627만원, 스타리아는 3,310만원.. 감가 속도가 달랐다",
+      "source_url": ""
+    },
+    {
+      "title": "현대차 노조, 10년 만에 전면파업.. 21일 8시간 라인이 멈춥니다",
+      "category": "브랜드·기업이슈",
+      "issue": "현대차 노조, 10년 만에 전면파업.. 21일 8시간 라인이 멈춥니다",
+      "source_url": ""
+    },
+    {
+      "title": "카이엔 타이어 한 세트 200만원, GV80은 정비망이 다르다.. 5년 유지비 격차",
+      "category": "브랜드·기업이슈",
+      "issue": "카이엔 타이어 한 세트 200만원, GV80은 정비망이 다르다.. 5년 유지비 격차",
+      "source_url": ""
+    },
+    {
+      "title": "사격 김예지, 국내 최초 테슬라 앰배서더 됐다.. 머스크가 직접 반한 이유",
+      "category": "셀럽·연예인차",
+      "issue": "사격 김예지, 국내 최초 테슬라 앰배서더 됐다.. 머스크가 직접 반한 이유",
+      "source_url": ""
+    }
+  ]
 }
