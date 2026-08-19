@@ -305,34 +305,43 @@ def _pad_to_square(im, blur=18):
     return canvas
 
 
-def smart_square(path, size=1400, fill=0.92):
-    """차를 잘리지 않게, 그러면서 프레임을 꽉 채워 정사각으로 만든다.
+def smart_fit(path, long_side=1400, fill=0.94):
+    """차가 프레임을 꽉 채우게 다듬되 **원본 비율을 유지**한다.
 
-    프레스 컷은 배경이 단색(흰/검)이라 '차의 실제 경계'를 찾을 수 있다.
-    그 경계를 통째로 담는 정사각 창을 잡아 여백을 고르게 두고 크게 배치한다
-    → 앞뒤 범퍼가 잘리지 않으면서도 차가 프레임을 꽉 채운다.
-    (2026-08-08: 중앙크롭은 앞뒤가 잘리고, 전체담기는 여백만 커지던 문제 해결)"""
+    2026-08-20 사용자 지시로 정사각 강제를 폐기했다.
+      "넣는 이미지가 꼭 정방향 정사각형일 필요 없어.
+       자동차 이상하게 자르지 말고 포인트 잘 살려라."
+    예전 smart_square 는 정사각 창이 원본보다 커지면 _pad_to_square 로 위아래를
+    흐린 띠로 때웠다. 그 결과 실제 사진이 세로의 절반만 남고 차가 잘렸다
+    (라이브러리 539장이 전부 1400x1400 으로 그렇게 저장돼 있었다).
+    네이버 블로그는 어떤 비율이든 그대로 보여준다 — 정사각을 고집할 이유가 없다.
+
+    창은 **원본과 같은 비율**로 잡는다. 그래야 어떤 경우에도 띠가 안 생긴다.
+    """
     from PIL import Image
     im = _load_on_white(path)
     W, H = im.size
     box = _subject_bbox(im)
     if box:
         x0, y0, x1, y1 = box
-        bw, bh = x1 - x0, y1 - y0
-        # 차가 프레임의 fill 을 차지하도록 정사각 창을 잡고, 원본 배경을 그대로 담는다.
-        # ★ 창은 어떤 경우에도 피사체보다 작아지면 안 된다 — 작아지는 순간 차가 잘린다.
-        side = min(max(W, H), int(max(bw, bh) / fill))
-        side = max(side, bw, bh)
-        cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
-        sx = max(0, min(W - min(side, W), cx - side // 2))
-        sy = max(0, min(H - min(side, H), cy - side // 2))
-        crop = im.crop((sx, sy, min(W, sx + side), min(H, sy + side)))
-        # 원본이 모자라 창이 정사각이 안 되면, 자르는 게 아니라 가장자리로 채운다
-        crop = _pad_to_square(crop)
-        crop = crop.resize((size, size), Image.LANCZOS)
-        crop.save(path, "JPEG", quality=94, subsampling=1)
-        return crop
-    return fit_square_pad(path, size)
+        bw, bh = max(1, x1 - x0), max(1, y1 - y0)
+        ar = W / H
+        nw, nh = bw / fill, bh / fill
+        if nw / nh > ar:
+            win_w, win_h = nw, nw / ar
+        else:
+            win_h, win_w = nh, nh * ar
+        win_w, win_h = min(win_w, W), min(win_h, H)
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        sx = int(max(0, min(W - win_w, cx - win_w / 2)))
+        sy = int(max(0, min(H - win_h, cy - win_h / 2)))
+        im = im.crop((sx, sy, sx + int(win_w), sy + int(win_h)))
+    sc = long_side / max(im.size)
+    if sc < 1:
+        im = im.resize((max(1, round(im.width * sc)),
+                        max(1, round(im.height * sc))), Image.LANCZOS)
+    im.save(path, "JPEG", quality=94, subsampling=1)
+    return im
 
 
 def subject_cut_off(im, margin_ratio=200):
@@ -497,9 +506,9 @@ def main():
                 # ★ 2026-08-14: 여기서 fit_square_pad 를 부르고 있었다 — 그 함수는 가로세로비
                 #   1.34 까지 좌우를 잘라낸다. 현대 vr360 원본은 940x515(1.82)라 매번 최대치로
                 #   잘렸고, 측면·후측면 컷은 앞뒤 범퍼가 통째로 날아갔다(사용자 신고, 0813/9
-                #   그랜저). 차 경계를 찾아 절대 자르지 않는 smart_square 가 이미 있었는데
+                #   그랜저). 차 경계를 찾아 절대 자르지 않는 smart_fit 가 이미 있었는데
                 #   호출부에 연결이 안 된 죽은 코드였다.
-                out = smart_square(path, size=1400)
+                out = smart_fit(path, long_side=1400)
                 if "interior" not in u.lower() and subject_cut_off(out):
                     print(f"   [경고] {name}: 차가 프레임 가장자리에 닿는다(잘렸을 수 있음)")
                 idx[name] = {

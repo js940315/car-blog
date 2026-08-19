@@ -705,18 +705,19 @@ def build_one(article, out_dir):
             im = Image.open(src).convert("RGB")
             w, h = im.size
             ratio = max(w, h) / max(1, min(w, h))
-            # ASPECT_TOL 안이면 중앙 크롭으로 꽉 채운다. 1.25 이하에서 잘리는 건
-            # 가장자리 12% 뿐이라 차 앞뒤가 날아가지 않는다(8/13 사고는 3:2 원본이었다).
-            # 벗어나면 띠를 채우지 않고 **경고를 남긴다** — 그런 사진은 애초에
-            # 후보로 올리면 안 된다(위 ASPECT_TOL 주석 참조).
-            if ratio > ASPECT_TOL:
+            # 2026-08-20 사용자 지시: **정사각 강제 폐기.**
+            #   "넣는 이미지가 꼭 정방향 정사각형일 필요 없어.
+            #    자동차 이상하게 자르지 말고 포인트 잘 살려라."
+            # 정사각으로 만들려고 중앙 크롭하면 와이드 프레스컷의 앞뒤 범퍼가
+            # 날아간다. 네이버 블로그는 어떤 비율이든 그대로 보여준다.
+            # 이제 자르지 않고 긴 변만 줄인다.
+            if ratio > ASPECT_TOL * 2:
                 aspect_problems.append(
-                    f"{img_name}: 비율 {w}x{h}({ratio:.2f}:1) — 풀화면이 안 된다. "
-                    f"{ASPECT_TOL} 이하 사진으로 교체해라(띠를 채우지 않는다)")
-            side = min(w, h)
-            im = im.crop(((w - side) // 2, (h - side) // 2,
-                          (w - side) // 2 + side, (h - side) // 2 + side))
-            im = im.resize((1080, 1080), Image.LANCZOS)
+                    f"{img_name}: 비율 {w}x{h}({ratio:.2f}:1) — 너무 길쭉하다")
+            sc = 1080 / max(w, h)
+            if sc < 1:
+                im = im.resize((max(1, round(w * sc)), max(1, round(h * sc))),
+                               Image.LANCZOS)
             im.save(os.path.join(out_dir, img_name), "JPEG", quality=94, subsampling=1)
             image_map[str(idx)] = img_name
         except Exception as e:
