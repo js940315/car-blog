@@ -84,6 +84,8 @@ CATEGORIES = {
     "BMW차": ["BMW X5 car", "BMW 3 Series car"],
     "폭스바겐차": ["Volkswagen Golf car", "Volkswagen Tiguan SUV"],
     "볼보차": ["Volvo XC60 car", "Volvo XC90 SUV"],
+    # 폴스타는 볼보와 별개 브랜드다. 볼보차 버킷을 쓰면 엉뚱한 로고가 나가므로 전용 버킷을 둔다.
+    "폴스타차": ["Polestar 2 car", "Polestar 3 SUV", "Polestar 4 car"],
     "포르쉐차": ["Porsche 911 car", "Porsche Cayenne SUV"],
     "렉서스차": ["Lexus ES car", "Lexus RX SUV"],
     "토요타차": ["Toyota Camry car", "Toyota RAV4 SUV"],
@@ -143,6 +145,7 @@ CATEGORIES = {
     # 못 쓴다는 게 0815~0816에 실측 확인됨(다음 세션 할 일 -2). 포르쉐는 프레스 모델로
     # 자주 나오니 전용 무로고 실내 버킷을 따로 둔다.
     "실내포르쉐": ["Porsche Cayenne interior dashboard", "Porsche interior cockpit steering"],
+    "실내폴스타": ["Polestar 2 dashboard", "Polestar 3 cockpit", "Polestar interieur"],
 }
 
 
