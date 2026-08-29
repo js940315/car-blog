@@ -10,10 +10,20 @@
 (=KST 08-30 04:37~05:10)이었다. → 계속 유효한 패턴: git log 커밋시각 + 현재 UTC 대조로
 오늘이 0830임을 판단했다.
 
-### 브랜치: 하네스 배정은 `main-64qpoi`였지만 스케줄 프롬프트대로 처음부터 main에서 작업
-로컬이 이미 `origin/main`과 동일한 상태였다(`git branch --show-current`로 `main-64qpoi` 확인 후
-`main` 워크플로만 사용 — 별도 브랜치 생성 없이 원격 `main`을 직접 갱신). 커밋 후 `git push -u
-origin main`, `git ls-remote origin main`으로 로컬 HEAD와 원격 해시 일치 확인 완료(아래 참조).
+### ★★★ 브랜치 사고 발견·회피 — `git push origin main`이 엉뚱한 로컬 브랜치를 밀어넣을 뻔했다
+하네스 배정은 `main-64qpoi`였고, 실제 작업도 이 브랜치에서 커밋까지는 정상 진행했다. 그런데
+`git push -u origin main`을 실행하니 **"non-fast-forward" 거부**가 떴다 — 원인을 보니 이 저장소엔
+**로컬에 `main`이라는 별도 브랜치가 이미 존재**했고(오래전 세션이 만들어 둔 것으로 추정, 966177b에
+멈춰 9커밋 뒤처진 상태), `git push origin main`은 **현재 체크아웃한 `main-64qpoi`가 아니라 이
+정체된 로컬 `main` 브랜치**를 원격으로 밀려 했던 것이다(브랜치 이름이 같으면 현재 체크아웃
+여부와 무관하게 그 이름의 로컬 ref가 우선한다). 그대로 강제 push했다면 원격 main이 9커밋
+뒤로 되돌아갈 뻔한 사고였다. **해결**: `git push origin HEAD:main`으로 "현재 커밋"을 명시적으로
+origin main에 밀어 정상 반영했다(`git ls-remote origin main`으로 로컬 HEAD와 해시 일치 확인 완료,
+아래 커밋 해시 참조). **다음 세션 교훈**: `git branch -vv`로 로컬에 이름이 겹치는 낡은 `main`
+브랜치가 있는지 먼저 확인할 것. push 직전엔 `git push origin main` 대신 **`git push origin
+HEAD:main`을 기본으로 쓸 것** — 현재 브랜치가 무엇이든 그 HEAD를 정확히 origin main에 반영하므로
+이런 브랜치 이름 충돌 사고 자체를 원천 차단한다. 로컬 `main`을 정리(삭제 또는 origin/main으로
+리셋)해두면 다음 세션에서 이 함정이 재발하지 않는다(이번 세션은 시간상 정리하지 않고 우회만 했다).
 
 ### 소재 — RSS 4/4 정상 수신(4개 전부 1차 성공, 단 파일명 겹침 버그를 직접 겪음)
 모터그래프·오토헤럴드·오토데일리·지피코리아 전부 브라우저 UA로 정상 수신. **주의: `curl -o`로 4개
