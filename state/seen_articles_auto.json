@@ -1644,5 +1644,73 @@
       "issue": "셀럽·연예인차 에버그린 - 신혜선(기아 프라이드, 단종) → 기아 레이(2026년형 1,490만~2,003만원)",
       "source_url": ""
     }
+  ],
+  "0831": [
+    {
+      "title": "GV70 5,318만원, G90은 9,748만원.. 제네시스 안에서 갈리는 4,430만원",
+      "category": "신차·출시",
+      "issue": "GV70 vs G90 2026년형 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "코나 3,185만원, 투싼은 3,407만원.. 222만원 차이, 뭐가 다를까",
+      "category": "신차·출시",
+      "issue": "코나 vs 투싼 2026년형 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "아이오닉5 4,740만원, EV6는 4,660만원.. 80만원인데 왜 갈릴까",
+      "category": "전기차·친환경",
+      "issue": "아이오닉5 vs EV6 2026년형 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "GV80 6,790만원, 아이오닉9은 6,490만원.. 대형 SUV 두 갈래 길",
+      "category": "전기차·친환경",
+      "issue": "GV80 vs 아이오닉9 내연·전기 대형SUV 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "BMW 520i 6,980만원, 쏘나타는 2,826만원.. 4,154만원 격차 뭘 살까",
+      "category": "브랜드·기업이슈",
+      "issue": "BMW5시리즈 vs 쏘나타 준대형세단 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "2025년식 카니발 4,932만원, 스타리아는 3,586만원.. 1,346만원의 정체",
+      "category": "중고차·시장동향",
+      "issue": "카니발 vs 스타리아 2025년식 중고시세 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "폴스타, 볼보 영업통을 이사회에 앉혔다.. 판매망 확대 신호탄",
+      "category": "브랜드·기업이슈",
+      "issue": "폴스타 이사회 아렉 노윈스키(볼보 영업총괄) 선임, 8/30 보도(RSS 실측)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546967"
+    },
+    {
+      "title": "중국 로보택시 200대, 서울 강남에 들어온다.. 2028년이 목표입니다",
+      "category": "자동차산업·수출",
+      "issue": "포니.ai-퓨처링크 합작법인, 서울 강남 로보택시 200대 2028년 목표(RSS 실측)",
+      "source_url": "https://www.autodaily.co.kr/news/articleView.html?idxno=546965"
+    },
+    {
+      "title": "경찰 통계엔 1%인데 실제론 7배.. 운전 중 스마트폰, 이래서 위험합니다",
+      "category": "리콜·안전·정책",
+      "issue": "IIHS·CMT 운전중 스마트폰 사용 실측 조사, 경찰통계 대비 7배(WebFetch 확인)",
+      "source_url": "http://www.autoherald.co.kr/news/articleView.html?idxno=61450"
+    },
+    {
+      "title": "\"연예인은 뭘 타나 했더니\" 남규리가 공개한 3억원대 드림카",
+      "category": "셀럽·연예인차",
+      "issue": "남규리 개인 인스타그램 포르쉐 911 타르가4 GTS 공개(셀럽 에버그린)",
+      "source_url": "https://topictree.co.kr/automobiles/news/namgyuri-porsche-911-targa-4-gts/"
+    },
+    {
+      "title": "[인물기록] 남규리 (포르쉐 911 타르가 4 GTS)",
+      "category": "인물기록",
+      "issue": "남규리, 최근 21일 이상 등장 없음(신규 활용). 신규 사진 소싱(남규리_0.jpg, Commons CC BY 2.0).",
+      "source_url": ""
+    }
   ]
 }
