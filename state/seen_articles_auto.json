@@ -1712,5 +1712,73 @@
       "issue": "남규리, 최근 21일 이상 등장 없음(신규 활용). 신규 사진 소싱(남규리_0.jpg, Commons CC BY 2.0).",
       "source_url": ""
     }
+  ],
+  "0901": [
+    {
+      "title": "팰리세이드 4,383만원, 싼타페는 3,606만원부터.. 777만원 격차 뭐가 다를까",
+      "category": "신차·출시",
+      "issue": "팰리세이드 vs 싼타페 트림별 가격·체급 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "쏘렌토 하이브리드 3,896만원, 스포티지는 3,346만원.. 550만원 차이 뭘 더 받나",
+      "category": "신차·출시",
+      "issue": "쏘렌토 vs 스포티지 하이브리드 트림별 가격 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "EV9 라이트 트림 신설, 가격은 6,642만원부터.. 700만원 낮췄습니다",
+      "category": "전기차·친환경",
+      "issue": "2026년형 EV9 롱레인지 라이트 트림 신설(에버그린+실측 트림가)",
+      "source_url": ""
+    },
+    {
+      "title": "볼보 ES90, 1회 충전 520km 인증 마쳤다.. 10월부터 진짜 출고 시작합니다",
+      "category": "전기차·친환경",
+      "issue": "볼보 ES90 국내 주행거리 520km 인증, 10월 출고, 사전계약 3천대(RSS 실측)",
+      "source_url": "https://www.autotribune.co.kr/news/articleView.html?idxno=45189"
+    },
+    {
+      "title": "폭스바겐, 10만명 감원설까지.. 국내 판매엔 어떤 영향 있을까요",
+      "category": "자동차산업·수출",
+      "issue": "폭스바겐그룹 5만→10만명 감원 확대 검토, 독일 공장 최대 4곳 폐쇄(WebSearch 확인)",
+      "source_url": ""
+    },
+    {
+      "title": "그랜저 하이브리드 4,354만원, 아반떼는 3,115만원.. 1,239만원 안전사양 차이 있었다",
+      "category": "리콜·안전·정책",
+      "issue": "그랜저 vs 아반떼 하이브리드 가격·안전사양 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "2024년식 EV9 중고 5,700만원, 팰리세이드는 3,500만원대.. 전기 대형 SUV 감가 이렇습니다",
+      "category": "중고차·시장동향",
+      "issue": "EV9 vs 팰리세이드 중고 시세·감가율 비교(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "벤츠 첫 전기 GLC, 9,000만원부터.. 사전계약 700대 넘었습니다",
+      "category": "브랜드·기업이슈",
+      "issue": "한성자동차 일렉트릭 GLC 사전계약 700대 돌파, 9000만/9480만원(RSS 실측)",
+      "source_url": "https://www.autotribune.co.kr/news/articleView.html?idxno=45197"
+    },
+    {
+      "title": "스포티지 3,346만원, EV9은 6,642만원.. 같은 기아인데 두 배 차이 났다",
+      "category": "브랜드·기업이슈",
+      "issue": "스포티지 vs EV9 가격대 비교, 기아 SUV 라인업 입구·정점(에버그린)",
+      "source_url": ""
+    },
+    {
+      "title": "'드림카였다' 육성재가 직접 공개한 차, BMW X6 M50i였습니다",
+      "category": "셀럽·연예인차",
+      "issue": "비투비 육성재 유튜브 '이차저차' BMW X6 M50i 공개(셀럽 에버그린)",
+      "source_url": "https://www.cosmopolitan.co.kr/article/1905071"
+    },
+    {
+      "title": "[인물기록] 육성재",
+      "category": "인물기록",
+      "issue": "육성재, 신규 활용(첫 등장). 신규 사진 소싱(육성재_0.jpg·1.jpg, Wikimedia Commons CC BY/CC BY-SA).",
+      "source_url": ""
+    }
   ]
 }
