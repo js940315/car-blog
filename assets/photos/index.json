@@ -7426,5 +7426,46 @@
     "처리": "인물 사진 · 정사각 1400px",
     "검색어": "Yoo Jae-suk",
     "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "임영웅_0.jpg": {
+    "카테고리": "임영웅",
+    "license": "CC BY 3.0",
+    "credit": "File:Lim Young-woong in an ad for 구전녹용 (June 2020) (cropped).jpg",
+    "attribution_required": true,
+    "처리": "인물 사진 · 정사각 1400px",
+    "검색어": "Lim Young-woong",
+    "검수": "미확인 — 반드시 눈으로 본인인지 확인"
+  },
+  "에스컬레이드_0.jpg": {
+    "license": "by-sa",
+    "credit": "사진 : Wlb5V / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "source": "https://commons.wikimedia.org/w/index.php?curid=163003243",
+    "query": "cadillac escalade interior",
+    "title": "2025 Cadillac Escalade IQ Interior"
+  },
+  "에스컬레이드_1.jpg": {
+    "license": "by-sa",
+    "credit": "사진 : Damian B Oh / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "source": "https://commons.wikimedia.org/w/index.php?curid=197209335",
+    "query": "cadillac escalade interior",
+    "title": "Cadillac Escalade IQ Premium Sport BT1YL Camelia Brown (8)"
+  },
+  "에스컬레이드_2.jpg": {
+    "license": "by-sa",
+    "credit": "사진 : Damian B Oh / CC BY-SA 4.0 / wikimedia",
+    "attribution_required": true,
+    "source": "https://commons.wikimedia.org/w/index.php?curid=197210707",
+    "query": "cadillac escalade interior",
+    "title": "Cadillac Escalade Premium Luxury Platinum GMTT1UL FL Jet Black (3)"
+  },
+  "에스컬레이드_3.jpg": {
+    "license": "by-sa",
+    "credit": "사진 : No machine-readable author provided. Sfoskett~commonswiki assumed (based on copyright claims). / CC BY-SA 3.0 / wikimedia",
+    "attribution_required": true,
+    "source": "https://commons.wikimedia.org/w/index.php?curid=207673",
+    "query": "cadillac escalade interior",
+    "title": "2003 Cadillac Escalade EXT interior"
   }
 }
