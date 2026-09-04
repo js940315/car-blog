@@ -9,8 +9,19 @@
 20:12(=KST 09-04 05:12)에 origin/main에 올라가 있었고, 세션 진입 시점 컨테이너 UTC는
 19:37(=KST 09-05 04:37)이었다. → 오늘은 0905로 판단하고 진행했다.
 
-### 브랜치: 하네스 배정은 `main-gxwes0`였지만 스케줄 프롬프트대로 처음부터 main에서 작업
-`git branch --show-current`로 확인 후 이미 main이었고, origin/main과 동일한 상태에서 시작했다.
+### ★★★ 브랜치 사고 재발 직전까지 갔다 — 이번엔 커밋 직전에 발견해 복구했다
+`git branch --show-current`를 세션 **시작 시점**엔 확인했지만 `main-gxwes0`였다는 걸
+확인만 하고 **`git checkout main`으로 넘어가지 않은 채** 몇 시간 동안 작업·커밋을
+그대로 `main-gxwes0`에서 진행했다(2026-08-13 사고와 완전히 같은 패턴). `git push`
+직후 원격에 `main-gxwes0`가 새 브랜치로 올라간 걸 보고서야 알아챘다. 복구 절차:
+`git checkout main && git reset --hard origin/main && git merge --ff-only main-gxwes0`
+로 커밋을 main에 그대로 옮긴 뒤 `git push -u origin main`, `git ls-remote origin main`
+으로 해시 일치 확인 완료(둘 다 6ceee9d). 원격에 남은 `main-gxwes0` 브랜치는 지우지
+않았다(같은 커밋을 가리키고 있어 해는 없지만, 다음 세션이 실수로 그 브랜치에서
+다시 작업하지 않도록 주의). **다음 세션 교훈**: `git branch --show-current`로
+"확인"하는 것과 실제로 `git checkout main`을 실행하는 것은 다른 행동이다 — 스케줄
+프롬프트가 시키는 대로 **반드시 확인 직후 바로 `git checkout main`을 실행할 것**,
+확인만 하고 넘어가면 이번처럼 몇 시간 뒤에야 발견하게 된다.
 
 ### ★★★ build_posts.py 동작 원리 재확인 — 이미지 마커·빈 줄은 손으로 안 넣어도 된다
 body_paragraphs 안에 【N번 사진】 마커나 점자빈칸(⠀⠀⠀) 빈 줄을 직접 넣어도 `build_one()`이
